@@ -1,0 +1,58 @@
+model,disease,target_drug,top1_prediction,target_rank,top5_predictions,top1_path_length,top1_grounded_within_3_hops
+lexical_baseline,bacterial infection,vancomycin,amoxicillin clavulanate,27,amoxicillin clavulanate | benzalkonium chloride lidocaine | fluocinolone neomycin | sulfamethoxazole trimethoprim | abacavir,1,True
+lexical_baseline,bladder cancer,doxorubicin,cisplatin,10,cisplatin | fluorouracil | amoxicillin | anastrozole | bevacizumab,1,True
+lexical_baseline,cancer,vinblastine,fluorouracil,17,fluorouracil | anastrozole | bevacizumab | capecitabine | carboplatin,1,True
+lexical_baseline,chronic myelogenous leukemia,imatinib,anagrelide,8,anagrelide | cyclophosphamide | cytarabine | ponatinib | chlorambucil,1,True
+lexical_baseline,colorectal cancer,bevacizumab,cetuximab,4,cetuximab | fluorouracil | anastrozole | bevacizumab | capecitabine,1,True
+lexical_baseline,diffuse large b cell lymphoma,rituximab,doxorubicin,13,doxorubicin | tisagenlecleucel | cytarabine | romidepsin | pralatrexate,1,True
+lexical_baseline,emergency contraception postcoital contraception,levonorgestrel,ethinyl estradiol levonorgestrel,2,ethinyl estradiol levonorgestrel | levonorgestrel | abacavir | abobotulinumtoxina | acebutolol,1,True
+lexical_baseline,endometrial cancer,anastrozole,lenvatinib,5,lenvatinib | megestrol | pembrolizumab | fluorouracil | anastrozole,1,True
+lexical_baseline,head lice,piperonyl butoxide pyrethrins,acetic acid,3,acetic acid | malathion | piperonyl butoxide pyrethrins | pembrolizumab | abacavir,1,True
+lexical_baseline,high cholesterol,rosuvastatin,niacin,6,niacin | pravastatin | atorvastatin | fluvastatin | lovastatin,1,True
+lexical_baseline,inflammatory bowel disease,azathioprine,prednisone,7,prednisone | doxycycline | meloxicam | atropine hyoscyamine phenobarbital scopolamine | dicyclomine,1,True
+lexical_baseline,melanoma metastatic,talimogene laherparepvec,cobimetinib,5,cobimetinib | interferon alfa 2b | ipilimumab | pembrolizumab | talimogene laherparepvec,1,True
+lexical_baseline,organophosphate poisoning,atropine,atropine pralidoxime,2,atropine pralidoxime | atropine | pralidoxime | abacavir | abobotulinumtoxina,1,True
+lexical_baseline,pancreatic cancer,fluorouracil,capecitabine,4,capecitabine | cetuximab | sunitinib | fluorouracil | anastrozole,1,True
+lexical_baseline,rabbit fever tularemia,minocycline,doxycycline,3,doxycycline | streptomycin | minocycline | naproxen | canakinumab,1,True
+lexical_baseline,skin or soft tissue infection,amoxicillin clavulanate,amoxicillin,17,amoxicillin | azithromycin | cefdinir | clarithromycin | dicloxacillin,1,True
+lexical_baseline,tinea cruris,ketoconazole,econazole,5,econazole | betamethasone clotrimazole | clotrimazole | fluconazole | ketoconazole,1,True
+lexical_baseline,tinea pedis,econazole,betamethasone clotrimazole,6,betamethasone clotrimazole | clotrimazole | ketoconazole | miconazole | tolnaftate,1,True
+lexical_baseline,urinary tract infection,amoxicillin,amoxicillin clavulanate,11,amoxicillin clavulanate | cefuroxime | ciprofloxacin | levofloxacin | tamsulosin,1,True
+euclidean,bacterial infection,vancomycin,amoxicillin clavulanate,24,amoxicillin clavulanate | erythromycin | sulfamethoxazole trimethoprim | levofloxacin | cefpodoxime,1,True
+euclidean,bladder cancer,doxorubicin,cisplatin,21,cisplatin | tamoxifen | dexamethasone | amoxicillin clavulanate | atropine hyoscyamine phenobarbital scopolamine,1,True
+euclidean,cancer,vinblastine,cisplatin,9,cisplatin | fluorouracil | meloxicam | ofloxacin | paroxetine,2,True
+euclidean,chronic myelogenous leukemia,imatinib,ponatinib,12,ponatinib | anagrelide | cytarabine | rituximab | chlorambucil,1,True
+euclidean,colorectal cancer,bevacizumab,sunitinib,8,sunitinib | cetuximab | capecitabine | ketoconazole | octreotide,2,True
+euclidean,diffuse large b cell lymphoma,rituximab,tisagenlecleucel,40,tisagenlecleucel | doxorubicin | cabozantinib | romidepsin | capecitabine,1,True
+euclidean,emergency contraception postcoital contraception,levonorgestrel,ethinyl estradiol levonorgestrel,137,ethinyl estradiol levonorgestrel | duloxetine | pantoprazole | ibuprofen | carboplatin,1,True
+euclidean,endometrial cancer,anastrozole,pembrolizumab,51,pembrolizumab | lenvatinib | rosuvastatin | megestrol | penicillin g potassium,1,True
+euclidean,head lice,piperonyl butoxide pyrethrins,malathion,66,malathion | acetic acid | buprenorphine | oxybutynin | lanadelumab,1,True
+euclidean,high cholesterol,rosuvastatin,pravastatin,7,pravastatin | niacin | fluvastatin | penicillin g potassium | phytonadione,1,True
+euclidean,inflammatory bowel disease,azathioprine,prednisone,25,prednisone | chloramphenicol | atropine hyoscyamine phenobarbital scopolamine | tocilizumab | mifepristone,1,True
+euclidean,melanoma metastatic,talimogene laherparepvec,cobimetinib,16,cobimetinib | aspirin | sinecatechins | venlafaxine | cefotaxime,1,True
+euclidean,organophosphate poisoning,atropine,atropine pralidoxime,7,atropine pralidoxime | selenium | bupropion | collagenase clostridium histolyticum | iron sucrose,1,True
+euclidean,pancreatic cancer,fluorouracil,sunitinib,48,sunitinib | capecitabine | cetuximab | ketoconazole | lenalidomide,1,True
+euclidean,rabbit fever tularemia,minocycline,triamcinolone,14,triamcinolone | streptomycin | prednisone | albendazole | doxycycline,5,False
+euclidean,skin or soft tissue infection,amoxicillin clavulanate,dicloxacillin,37,dicloxacillin | cefdinir | levofloxacin | clarithromycin | azithromycin,1,True
+euclidean,tinea cruris,ketoconazole,econazole,15,econazole | fluconazole | selenium sulfide | tolnaftate | levodopa,1,True
+euclidean,tinea pedis,econazole,betamethasone clotrimazole,42,betamethasone clotrimazole | miconazole | clotrimazole | tolnaftate | pexidartinib,1,True
+euclidean,urinary tract infection,amoxicillin,ciprofloxacin,17,ciprofloxacin | cefuroxime | levofloxacin | amoxicillin clavulanate | penicillin v potassium,1,True
+rmf_rag_hyperbolic,bacterial infection,vancomycin,sulfamethoxazole trimethoprim,51,sulfamethoxazole trimethoprim | azithromycin | cefpodoxime | fluocinolone neomycin | erythromycin,2,True
+rmf_rag_hyperbolic,bladder cancer,doxorubicin,cisplatin,185,cisplatin | dicyclomine | fluorouracil | pseudoephedrine triprolidine | isosorbide mononitrate,1,True
+rmf_rag_hyperbolic,cancer,vinblastine,anastrozole,2,anastrozole | vinblastine | methylprednisolone | famciclovir | erlotinib,2,True
+rmf_rag_hyperbolic,chronic myelogenous leukemia,imatinib,cytarabine,9,cytarabine | fludarabine | asparaginase erwinia chrysanthemi | chlorambucil | anagrelide,1,True
+rmf_rag_hyperbolic,colorectal cancer,bevacizumab,carboplatin,13,carboplatin | trastuzumab | sunitinib | famciclovir | cisplatin,2,True
+rmf_rag_hyperbolic,diffuse large b cell lymphoma,rituximab,tisagenlecleucel,4,tisagenlecleucel | romidepsin | doxorubicin | rituximab | bevacizumab,1,True
+rmf_rag_hyperbolic,emergency contraception postcoital contraception,levonorgestrel,ethinyl estradiol levonorgestrel,12,ethinyl estradiol levonorgestrel | carboplatin | becaplermin | lansoprazole | megestrol,1,True
+rmf_rag_hyperbolic,endometrial cancer,anastrozole,megestrol,9,megestrol | methylprednisolone | famciclovir | carboplatin | erlotinib,1,True
+rmf_rag_hyperbolic,head lice,piperonyl butoxide pyrethrins,malathion,52,malathion | acetic acid | dicyclomine | fluoride | insulin glulisine,1,True
+rmf_rag_hyperbolic,high cholesterol,rosuvastatin,niacin,5,niacin | fluvastatin | lovastatin | pravastatin | rosuvastatin,1,True
+rmf_rag_hyperbolic,inflammatory bowel disease,azathioprine,aspirin,10,aspirin | amitriptyline | atropine hyoscyamine phenobarbital scopolamine | vincristine | valproic acid,4,False
+rmf_rag_hyperbolic,melanoma metastatic,talimogene laherparepvec,cobimetinib,7,cobimetinib | ipilimumab | interferon alfa 2b | mycophenolate mofetil | mebendazole,1,True
+rmf_rag_hyperbolic,organophosphate poisoning,atropine,atropine pralidoxime,2,atropine pralidoxime | atropine | bupropion | gadodiamide | cefotaxime,1,True
+rmf_rag_hyperbolic,pancreatic cancer,fluorouracil,sunitinib,46,sunitinib | cetuximab | famciclovir | trastuzumab | vinblastine,1,True
+rmf_rag_hyperbolic,rabbit fever tularemia,minocycline,streptomycin,20,streptomycin | doxycycline | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid | canakinumab | prednisone,1,True
+rmf_rag_hyperbolic,skin or soft tissue infection,amoxicillin clavulanate,clarithromycin,25,clarithromycin | benzalkonium chloride lidocaine | azithromycin | levofloxacin | dicloxacillin,1,True
+rmf_rag_hyperbolic,tinea cruris,ketoconazole,econazole,9,econazole | levodopa | betamethasone clotrimazole | atropine edrophonium | cholecalciferol,1,True
+rmf_rag_hyperbolic,tinea pedis,econazole,miconazole,14,miconazole | betamethasone clotrimazole | clotrimazole | tolnaftate | cholecalciferol,1,True
+rmf_rag_hyperbolic,urinary tract infection,amoxicillin,cefuroxime,12,cefuroxime | ciprofloxacin | levofloxacin | paromomycin | bezlotoxumab,1,True

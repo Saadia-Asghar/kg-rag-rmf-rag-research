@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/kg-rag-narrative/"
+title = "KG-RAG Narrative: The Gap & The Fix"
+description = "An 18-slide investigation deck that walks through 10 KG-RAG research papers and their methodologies, builds the case for a shared blind spot, then reveals RMF-RAG as the solution. Designed for research seminars and academic audiences who want to follow the evidence trail."
+version = "1.0.0"
+id = "artifacts/kg-rag-narrative"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kg-rag-narrative/" ]
+localPort = 26039
+
+[services.development]
+run = "pnpm --filter @workspace/kg-rag-narrative run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kg-rag-narrative", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kg-rag-narrative/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26039"
+BASE_PATH = "/kg-rag-narrative/"

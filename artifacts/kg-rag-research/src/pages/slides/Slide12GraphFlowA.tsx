@@ -1,0 +1,69 @@
+const ACCENT = '#3B82F6';
+
+export default function Slide12GraphFlowA() {
+  return (
+    <div className="relative w-screen h-screen overflow-hidden flex flex-col" style={{ background: '#06091A' }}>
+      <div className="absolute top-0 right-0 w-[40vw] h-[40vh] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%)' }} />
+      <div className="flex items-center gap-[1.5vw] px-[4vw] pt-[3.5vh] pb-[2vh]" style={{ borderBottom: '1px solid rgba(59,130,246,0.2)' }}>
+        <div className="flex items-center justify-center w-[4.5vw] h-[4.5vw] rounded-full font-display font-bold" style={{ background: `${ACCENT}18`, border: `2px solid ${ACCENT}`, color: ACCENT, fontSize: '1.8vw', fontFamily: 'Space Grotesk, sans-serif' }}>06</div>
+        <div>
+          <div className="font-display font-bold" style={{ fontSize: '2.2vw', color: '#F1F5F9', fontFamily: 'Space Grotesk, sans-serif' }}>GraphFlow — "Can KG-RAG Really Retrieve?"</div>
+          <div className="font-body" style={{ fontSize: '1.4vw', color: '#94A3B8', fontFamily: 'DM Sans, sans-serif' }}>Yu, Liu, Gu, Torr &amp; Zhou · NeurIPS 2025 · pp. 95653–95682</div>
+        </div>
+        <div className="ml-auto px-[1vw] py-[0.5vh] rounded font-body font-semibold" style={{ background: `${ACCENT}20`, color: ACCENT, fontSize: '1.3vw', border: `1px solid ${ACCENT}40`, fontFamily: 'DM Sans, sans-serif' }}>QUERY &amp; METHOD</div>
+      </div>
+      <div className="flex flex-1 gap-0 px-[4vw] py-[2.5vh]">
+        <div className="flex flex-col gap-[2.5vh] pr-[3vw]" style={{ flex: '0 0 52%', borderRight: '1px solid rgba(255,255,255,0.07)' }}>
+          <div>
+            <div className="font-mono uppercase tracking-widest mb-[1.2vh]" style={{ fontSize: '1.1vw', color: ACCENT, fontFamily: 'DM Mono, monospace' }}>The Research Question</div>
+            <p className="font-display font-semibold leading-snug" style={{ fontSize: '2vw', color: '#F1F5F9', fontFamily: 'Space Grotesk, sans-serif', textWrap: 'balance' }}>
+              Do current KG-RAG systems actually retrieve what they need — or are they just getting lucky? And can treating retrieval as a flow problem fix it?
+            </p>
+          </div>
+          <div>
+            <div className="font-mono uppercase tracking-widest mb-[1.2vh]" style={{ fontSize: '1.1vw', color: '#94A3B8', fontFamily: 'DM Mono, monospace' }}>The Core Problem</div>
+            <div className="flex flex-col gap-[1.2vh]">
+              {[
+                'Step-by-step KG traversal is brittle — one wrong hop derails the entire retrieval path',
+                'Reward is only given at the end ("did we get the right answer?") — no credit for useful intermediate steps',
+                'The retrieval policy has no way to learn which transitions are consistently useful across questions',
+              ].map((t, i) => (
+                <div key={i} className="flex gap-[1vw] items-start">
+                  <div className="mt-[0.5vh] w-[0.5vw] h-[0.5vw] rounded-full shrink-0" style={{ background: ACCENT }} />
+                  <span className="font-body" style={{ fontSize: '1.6vw', color: '#CBD5E1', fontFamily: 'DM Sans, sans-serif' }}>{t}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-lg p-[1.5vw]" style={{ background: `${ACCENT}0D`, border: `1px solid ${ACCENT}25` }}>
+            <div className="font-mono uppercase tracking-widest mb-[0.8vh]" style={{ fontSize: '1.1vw', color: '#94A3B8', fontFamily: 'DM Mono, monospace' }}>Tested On</div>
+            <p className="font-body" style={{ fontSize: '1.5vw', color: '#CBD5E1', fontFamily: 'DM Sans, sans-serif' }}>STaRK Benchmark — large-scale structured product search databases with multi-step reasoning requirements</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-[2vh] pl-[3vw]" style={{ flex: 1 }}>
+          <div className="font-mono uppercase tracking-widest mb-[0.5vh]" style={{ fontSize: '1.1vw', color: '#94A3B8', fontFamily: 'DM Mono, monospace' }}>The Methodology</div>
+          {[
+            { n: '1', title: 'Transition-Based Flow Matching', desc: 'Instead of one fixed path, model retrieval as a probability distribution over all possible next transitions in the KG at each step' },
+            { n: '2', title: 'Reward Factorization', desc: 'Decompose the final answer reward backward to each step — every useful transition gets partial credit, not just the final hop' },
+            { n: '3', title: 'Flow Estimator Training', desc: 'A learned policy guides retrieval toward KG regions likely to contain the answer — no expensive step-by-step supervision needed' },
+          ].map((s) => (
+            <div key={s.n} className="flex gap-[1vw] items-start">
+              <div className="shrink-0 flex items-center justify-center w-[2.8vw] h-[2.8vw] rounded-full font-display font-bold" style={{ background: `${ACCENT}15`, border: `1.5px solid ${ACCENT}50`, color: ACCENT, fontSize: '1.3vw', fontFamily: 'Space Grotesk, sans-serif' }}>{s.n}</div>
+              <div>
+                <div className="font-display font-semibold" style={{ fontSize: '1.5vw', color: '#F1F5F9', fontFamily: 'Space Grotesk, sans-serif' }}>{s.title}</div>
+                <div className="font-body" style={{ fontSize: '1.3vw', color: '#94A3B8', fontFamily: 'DM Sans, sans-serif' }}>{s.desc}</div>
+              </div>
+            </div>
+          ))}
+          <div className="rounded-xl p-[1.8vw] mt-[1vh]" style={{ background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.35)' }}>
+            <div className="font-mono uppercase tracking-widest mb-[0.8vh]" style={{ fontSize: '1.1vw', color: '#7C3AED', fontFamily: 'DM Mono, monospace' }}>Critical Distinction from RMF-RAG</div>
+            <p className="font-body" style={{ fontSize: '1.4vw', color: '#CBD5E1', fontFamily: 'DM Sans, sans-serif' }}>
+              GraphFlow uses <span style={{ color: '#3B82F6', fontWeight: 600 }}>Euclidean flow matching</span> — probability paths in flat space. RMF-RAG proposes <span style={{ color: '#7C3AED', fontWeight: 600 }}>Riemannian manifold flows</span> — geodesics in curved hyperbolic space. This is the key differentiator.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-[0.35vh]" style={{ background: ACCENT }} />
+    </div>
+  );
+}

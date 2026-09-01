@@ -1,0 +1,4002 @@
+[
+    {
+        "input": "Disease: Leishmaniasis. What is the recommended drug?",
+        "output": "amphotericin b lipid complex"
+    },
+    {
+        "input": "Disease: Irritable Bowel Syndrome. What is the recommended drug?",
+        "output": "dicyclomine"
+    },
+    {
+        "input": "Disease: Waldenstr\u00f6m Macroglobulinemia. What is the recommended drug?",
+        "output": "ibrutinib"
+    },
+    {
+        "input": "Disease: Pellagra. What is the recommended drug?",
+        "output": "niacin"
+    },
+    {
+        "input": "Disease: Periodic Limb Movement Disorder. What is the recommended drug?",
+        "output": "ropinirole"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Homozygous. What is the recommended drug?",
+        "output": "atorvastatin"
+    },
+    {
+        "input": "Disease: Ventricular Tachycardia. What is the recommended drug?",
+        "output": "mexiletine"
+    },
+    {
+        "input": "Disease: Coronary Artery Disease. What is the recommended drug?",
+        "output": "rivaroxaban"
+    },
+    {
+        "input": "Disease: Dermal Ulcer. What is the recommended drug?",
+        "output": "cadexomer iodine"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "glatiramer"
+    },
+    {
+        "input": "Disease: Traveler's Diarrhea. What is the recommended drug?",
+        "output": "ofloxacin"
+    },
+    {
+        "input": "Disease: Rabbit Fever (Tularemia). What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "cytarabine"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "fluocinonide"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "capecitabine"
+    },
+    {
+        "input": "Disease: Diarrhea. What is the recommended drug?",
+        "output": "codeine"
+    },
+    {
+        "input": "Disease: Depression. What is the recommended drug?",
+        "output": "citalopram"
+    },
+    {
+        "input": "Disease: Mycobacterium avium-intracellulare, Treatment. What is the recommended drug?",
+        "output": "streptomycin"
+    },
+    {
+        "input": "Disease: Erosive Esophagitis. What is the recommended drug?",
+        "output": "ranitidine"
+    },
+    {
+        "input": "Disease: Choriocarcinoma. What is the recommended drug?",
+        "output": "vinblastine"
+    },
+    {
+        "input": "Disease: Reflex Sympathetic Dystrophy Syndrome. What is the recommended drug?",
+        "output": "carbamazepine"
+    },
+    {
+        "input": "Disease: Sinus Symptoms. What is the recommended drug?",
+        "output": "acetaminophen / dextromethorphan / phenylephrine"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Allergic. What is the recommended drug?",
+        "output": "cromolyn"
+    },
+    {
+        "input": "Disease: Neuropathic Pain. What is the recommended drug?",
+        "output": "lidocaine"
+    },
+    {
+        "input": "Disease: Rhinorrhea. What is the recommended drug?",
+        "output": "triprolidine"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "trazodone"
+    },
+    {
+        "input": "Disease: Urinary Tract Stones. What is the recommended drug?",
+        "output": "tamsulosin"
+    },
+    {
+        "input": "Disease: Stomach Cancer. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Cerebral Spasticity. What is the recommended drug?",
+        "output": "trihexyphenidyl"
+    },
+    {
+        "input": "Disease: Impetigo. What is the recommended drug?",
+        "output": "mupirocin"
+    },
+    {
+        "input": "Disease: ADHD (Attention Deficit Hyperactivity Disorder). What is the recommended drug?",
+        "output": "amphetamine / dextroamphetamine"
+    },
+    {
+        "input": "Disease: Muscle Spasm (Involuntary Hypertonicity). What is the recommended drug?",
+        "output": "tizanidine"
+    },
+    {
+        "input": "Disease: Lichen Planus. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Obsessive Compulsive Disorder. What is the recommended drug?",
+        "output": "paroxetine"
+    },
+    {
+        "input": "Disease: Interstitial Cystitis. What is the recommended drug?",
+        "output": "pentosan polysulfate sodium"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "naproxen"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "naratriptan"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "hydrocortisone"
+    },
+    {
+        "input": "Disease: Crohn's Disease, Maintenance. What is the recommended drug?",
+        "output": "certolizumab"
+    },
+    {
+        "input": "Disease: Postpartum Depression. What is the recommended drug?",
+        "output": "venlafaxine"
+    },
+    {
+        "input": "Disease: Strep Throat (Streptococcal Pharyngitis). What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Dyslipidemia. What is the recommended drug?",
+        "output": "fluvastatin"
+    },
+    {
+        "input": "Disease: Paronychia. What is the recommended drug?",
+        "output": "gentamicin"
+    },
+    {
+        "input": "Disease: Obesity. What is the recommended drug?",
+        "output": "bupropion / naltrexone"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "betamethasone / clotrimazole"
+    },
+    {
+        "input": "Disease: Renal Failure. What is the recommended drug?",
+        "output": "furosemide"
+    },
+    {
+        "input": "Disease: Muscle Spasm (Involuntary Hypertonicity). What is the recommended drug?",
+        "output": "carisoprodol"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Chancroid. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "aldesleukin"
+    },
+    {
+        "input": "Disease: Migraine Prevention (Migraine Prophylaxis). What is the recommended drug?",
+        "output": "amitriptyline"
+    },
+    {
+        "input": "Disease: Hepatic Encephalopathy. What is the recommended drug?",
+        "output": "lactulose"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Prostatitis. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Reflex Sympathetic Dystrophy Syndrome. What is the recommended drug?",
+        "output": "carbamazepine"
+    },
+    {
+        "input": "Disease: Hypoparathyroidism. What is the recommended drug?",
+        "output": "calcium lactate"
+    },
+    {
+        "input": "Disease: Bacterial Skin Infection. What is the recommended drug?",
+        "output": "benzalkonium chloride / lidocaine"
+    },
+    {
+        "input": "Disease: Hypogonadism, Male. What is the recommended drug?",
+        "output": "methyltestosterone"
+    },
+    {
+        "input": "Disease: Nausea/Vomiting. What is the recommended drug?",
+        "output": "meclizine"
+    },
+    {
+        "input": "Disease: Dietary Fiber Supplementation. What is the recommended drug?",
+        "output": "psyllium"
+    },
+    {
+        "input": "Disease: Melanoma, Metastatic. What is the recommended drug?",
+        "output": "talimogene laherparepvec"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Nausea/Vomiting, Chemotherapy Induced. What is the recommended drug?",
+        "output": "dronabinol"
+    },
+    {
+        "input": "Disease: Cancer. What is the recommended drug?",
+        "output": "vinblastine"
+    },
+    {
+        "input": "Disease: Cerebral Arteriography. What is the recommended drug?",
+        "output": "iopromide"
+    },
+    {
+        "input": "Disease: Myxedema Coma. What is the recommended drug?",
+        "output": "levothyroxine"
+    },
+    {
+        "input": "Disease: Vaginal Yeast Infection. What is the recommended drug?",
+        "output": "boric acid"
+    },
+    {
+        "input": "Disease: Diffuse Large B-Cell Lymphoma. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Myelofibrosis. What is the recommended drug?",
+        "output": "ruxolitinib"
+    },
+    {
+        "input": "Disease: Drowsiness (Hypersomnia). What is the recommended drug?",
+        "output": "armodafinil"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "dutasteride / tamsulosin"
+    },
+    {
+        "input": "Disease: Parkinson's Disease. What is the recommended drug?",
+        "output": "carbidopa / levodopa"
+    },
+    {
+        "input": "Disease: Mitral Valve Prolapse. What is the recommended drug?",
+        "output": "labetalol"
+    },
+    {
+        "input": "Disease: Systemic Lupus Erythematosus. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Hepatocellular Carcinoma. What is the recommended drug?",
+        "output": "regorafenib"
+    },
+    {
+        "input": "Disease: Cyclic Vomiting Syndrome. What is the recommended drug?",
+        "output": "amitriptyline"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "gabapentin"
+    },
+    {
+        "input": "Disease: Head Lice. What is the recommended drug?",
+        "output": "acetic acid"
+    },
+    {
+        "input": "Disease: Diabetic Ketoacidosis. What is the recommended drug?",
+        "output": "insulin glulisine"
+    },
+    {
+        "input": "Disease: Cold Symptoms. What is the recommended drug?",
+        "output": "acetaminophen / chlorpheniramine / phenylephrine"
+    },
+    {
+        "input": "Disease: Streptococcal Infection. What is the recommended drug?",
+        "output": "penicillin v potassium"
+    },
+    {
+        "input": "Disease: Underactive Thyroid (Hypothyroidism). What is the recommended drug?",
+        "output": "liothyronine"
+    },
+    {
+        "input": "Disease: Endometrial Cancer. What is the recommended drug?",
+        "output": "megestrol"
+    },
+    {
+        "input": "Disease: Uterine Fibroids. What is the recommended drug?",
+        "output": "leuprolide"
+    },
+    {
+        "input": "Disease: Diabetes Mellitus. What is the recommended drug?",
+        "output": "insulin degludec"
+    },
+    {
+        "input": "Disease: Asthma. What is the recommended drug?",
+        "output": "levalbuterol"
+    },
+    {
+        "input": "Disease: Campylobacter Gastroenteritis. What is the recommended drug?",
+        "output": "ofloxacin"
+    },
+    {
+        "input": "Disease: Berylliosis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Glomerulonephritis. What is the recommended drug?",
+        "output": "penicillin g benzathine"
+    },
+    {
+        "input": "Disease: Systemic Mastocytosis. What is the recommended drug?",
+        "output": "cromolyn"
+    },
+    {
+        "input": "Disease: High Cholesterol. What is the recommended drug?",
+        "output": "niacin"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lamotrigine"
+    },
+    {
+        "input": "Disease: Zollinger-Ellison Syndrome. What is the recommended drug?",
+        "output": "lansoprazole"
+    },
+    {
+        "input": "Disease: Dietary Supplementation. What is the recommended drug?",
+        "output": "chondroitin / glucosamine"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Somatoform Pain Disorder. What is the recommended drug?",
+        "output": "desvenlafaxine"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "cefuroxime"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "aclidinium"
+    },
+    {
+        "input": "Disease: Clostridioides difficile Infection. What is the recommended drug?",
+        "output": "penicillin g potassium"
+    },
+    {
+        "input": "Disease: Supraventricular Tachycardia. What is the recommended drug?",
+        "output": "atenolol"
+    },
+    {
+        "input": "Disease: Vitamin/Mineral Supplementation during Pregnancy/Lactation. What is the recommended drug?",
+        "output": "ferrous sulfate"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "fluticasone"
+    },
+    {
+        "input": "Disease: Diabetes, Type 1. What is the recommended drug?",
+        "output": "insulin lispro"
+    },
+    {
+        "input": "Disease: Varicella-Zoster. What is the recommended drug?",
+        "output": "foscarnet"
+    },
+    {
+        "input": "Disease: Bradyarrhythmia. What is the recommended drug?",
+        "output": "atropine"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Bacterial. What is the recommended drug?",
+        "output": "dexamethasone / tobramycin"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "glasdegib"
+    },
+    {
+        "input": "Disease: Parkinson's Disease. What is the recommended drug?",
+        "output": "benztropine"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "lamotrigine"
+    },
+    {
+        "input": "Disease: Ventricular Tachycardia. What is the recommended drug?",
+        "output": "lidocaine"
+    },
+    {
+        "input": "Disease: Back Pain. What is the recommended drug?",
+        "output": "acetaminophen / hydrocodone"
+    },
+    {
+        "input": "Disease: Lice. What is the recommended drug?",
+        "output": "piperonyl butoxide / pyrethrins"
+    },
+    {
+        "input": "Disease: Lewy Body Dementia. What is the recommended drug?",
+        "output": "donepezil"
+    },
+    {
+        "input": "Disease: Prevention of Dental Caries. What is the recommended drug?",
+        "output": "fluoride"
+    },
+    {
+        "input": "Disease: Hepatocellular Carcinoma. What is the recommended drug?",
+        "output": "lenvatinib"
+    },
+    {
+        "input": "Disease: Headache. What is the recommended drug?",
+        "output": "trazodone"
+    },
+    {
+        "input": "Disease: Factor IX Deficiency. What is the recommended drug?",
+        "output": "factor ix complex"
+    },
+    {
+        "input": "Disease: Migraine Prevention (Migraine Prophylaxis). What is the recommended drug?",
+        "output": "olmesartan"
+    },
+    {
+        "input": "Disease: Atrial Fibrillation. What is the recommended drug?",
+        "output": "dronedarone"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Melanoma. What is the recommended drug?",
+        "output": "talimogene laherparepvec"
+    },
+    {
+        "input": "Disease: Pharyngitis. What is the recommended drug?",
+        "output": "ampicillin"
+    },
+    {
+        "input": "Disease: Cough. What is the recommended drug?",
+        "output": "dextromethorphan / guaifenesin"
+    },
+    {
+        "input": "Disease: Deep Vein Thrombosis, Prophylaxis. What is the recommended drug?",
+        "output": "dalteparin"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "tamsulosin"
+    },
+    {
+        "input": "Disease: Endometrial Cancer. What is the recommended drug?",
+        "output": "megestrol"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "sulindac"
+    },
+    {
+        "input": "Disease: Urticaria. What is the recommended drug?",
+        "output": "levocetirizine"
+    },
+    {
+        "input": "Disease: Minor Burns. What is the recommended drug?",
+        "output": "vitamin a & d"
+    },
+    {
+        "input": "Disease: Rabbit Fever (Tularemia). What is the recommended drug?",
+        "output": "streptomycin"
+    },
+    {
+        "input": "Disease: Pancreatic Cancer. What is the recommended drug?",
+        "output": "cetuximab"
+    },
+    {
+        "input": "Disease: Alcohol Withdrawal. What is the recommended drug?",
+        "output": "clorazepate"
+    },
+    {
+        "input": "Disease: Prosthetic Heart Valves - Thrombosis Prophylaxis. What is the recommended drug?",
+        "output": "warfarin"
+    },
+    {
+        "input": "Disease: Inflammatory Bowel Disease. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Hypokalemia. What is the recommended drug?",
+        "output": "potassium gluconate"
+    },
+    {
+        "input": "Disease: Urinary Tract Stones. What is the recommended drug?",
+        "output": "magnesium oxide"
+    },
+    {
+        "input": "Disease: Behcet's Disease. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: Bacterial Skin Infection. What is the recommended drug?",
+        "output": "benzalkonium chloride / lidocaine"
+    },
+    {
+        "input": "Disease: Ovarian Cancer. What is the recommended drug?",
+        "output": "olaparib"
+    },
+    {
+        "input": "Disease: GERD. What is the recommended drug?",
+        "output": "ranitidine"
+    },
+    {
+        "input": "Disease: Supraventricular Tachycardia. What is the recommended drug?",
+        "output": "bisoprolol"
+    },
+    {
+        "input": "Disease: Dientamoeba fragilis. What is the recommended drug?",
+        "output": "metronidazole"
+    },
+    {
+        "input": "Disease: Bladder Cancer. What is the recommended drug?",
+        "output": "cisplatin"
+    },
+    {
+        "input": "Disease: Linear IgA Disease. What is the recommended drug?",
+        "output": "colchicine"
+    },
+    {
+        "input": "Disease: Seizures (Convulsions). What is the recommended drug?",
+        "output": "phenytoin"
+    },
+    {
+        "input": "Disease: Adrenogenital Syndrome. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "meloxicam"
+    },
+    {
+        "input": "Disease: Nonketotic Hyperosmolar Syndrome. What is the recommended drug?",
+        "output": "insulin glulisine"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "dicloxacillin"
+    },
+    {
+        "input": "Disease: Pancreatic Cancer. What is the recommended drug?",
+        "output": "fluorouracil"
+    },
+    {
+        "input": "Disease: ADHD (Attention Deficit Hyperactivity Disorder). What is the recommended drug?",
+        "output": "guanfacine"
+    },
+    {
+        "input": "Disease: Keratitis. What is the recommended drug?",
+        "output": "prednisolone"
+    },
+    {
+        "input": "Disease: Nausea/Vomiting. What is the recommended drug?",
+        "output": "promethazine"
+    },
+    {
+        "input": "Disease: GERD. What is the recommended drug?",
+        "output": "omeprazole / sodium bicarbonate"
+    },
+    {
+        "input": "Disease: Ocular Rosacea. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Hyperlipoproteinemia. What is the recommended drug?",
+        "output": "niacin"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "betamethasone"
+    },
+    {
+        "input": "Disease: Kaposi's Sarcoma. What is the recommended drug?",
+        "output": "vinblastine"
+    },
+    {
+        "input": "Disease: Chronic Fatigue Syndrome. What is the recommended drug?",
+        "output": "duloxetine"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "amlodipine / atorvastatin"
+    },
+    {
+        "input": "Disease: Indigestion. What is the recommended drug?",
+        "output": "famotidine"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "acetaminophen"
+    },
+    {
+        "input": "Disease: Diaper Rash. What is the recommended drug?",
+        "output": "menthol / zinc oxide"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "isotretinoin"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "clindamycin"
+    },
+    {
+        "input": "Disease: Raynaud's Syndrome. What is the recommended drug?",
+        "output": "isoxsuprine"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Panic Disorder. What is the recommended drug?",
+        "output": "paroxetine"
+    },
+    {
+        "input": "Disease: Opiate Dependence - Induction. What is the recommended drug?",
+        "output": "buprenorphine"
+    },
+    {
+        "input": "Disease: Deep Vein Thrombosis. What is the recommended drug?",
+        "output": "rivaroxaban"
+    },
+    {
+        "input": "Disease: Primary Biliary Cholangitis. What is the recommended drug?",
+        "output": "colchicine"
+    },
+    {
+        "input": "Disease: Vitamin D Insufficiency. What is the recommended drug?",
+        "output": "cholecalciferol"
+    },
+    {
+        "input": "Disease: Pathological Hypersecretory Conditions. What is the recommended drug?",
+        "output": "esomeprazole"
+    },
+    {
+        "input": "Disease: Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "bleomycin"
+    },
+    {
+        "input": "Disease: Hereditary Angioedema. What is the recommended drug?",
+        "output": "lanadelumab"
+    },
+    {
+        "input": "Disease: Haemophilus influenzae Prophylaxis. What is the recommended drug?",
+        "output": "diphtheria toxoid / haemophilus b conjugate (prp-t) vaccine / pertussis, acellular / poliovirus vaccine, inactivated / tetanus toxoid"
+    },
+    {
+        "input": "Disease: ICU Agitation. What is the recommended drug?",
+        "output": "lorazepam"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "cytarabine liposomal / daunorubicin liposomal"
+    },
+    {
+        "input": "Disease: Spondylolisthesis. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Bladder Infection. What is the recommended drug?",
+        "output": "amoxicillin"
+    },
+    {
+        "input": "Disease: Nonalcoholic Fatty Liver Disease. What is the recommended drug?",
+        "output": "orlistat"
+    },
+    {
+        "input": "Disease: Strep Throat (Streptococcal Pharyngitis). What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Hyperekplexia. What is the recommended drug?",
+        "output": "divalproex sodium"
+    },
+    {
+        "input": "Disease: Occupational Exposure. What is the recommended drug?",
+        "output": "emtricitabine"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "tretinoin"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "imatinib"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Cyclothymic Disorder. What is the recommended drug?",
+        "output": "divalproex sodium"
+    },
+    {
+        "input": "Disease: Nasal Polyps. What is the recommended drug?",
+        "output": "beclomethasone"
+    },
+    {
+        "input": "Disease: Familial Mediterranean Fever. What is the recommended drug?",
+        "output": "canakinumab"
+    },
+    {
+        "input": "Disease: Venous Thromboembolism. What is the recommended drug?",
+        "output": "dextran, low molecular weight"
+    },
+    {
+        "input": "Disease: Gaucher Disease. What is the recommended drug?",
+        "output": "velaglucerase alfa"
+    },
+    {
+        "input": "Disease: Noninfectious Colitis. What is the recommended drug?",
+        "output": "dicyclomine"
+    },
+    {
+        "input": "Disease: Manscaping Pain. What is the recommended drug?",
+        "output": "lidocaine"
+    },
+    {
+        "input": "Disease: Rhabdomyosarcoma. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: Endometriosis. What is the recommended drug?",
+        "output": "danazol"
+    },
+    {
+        "input": "Disease: Exchange Transfusion. What is the recommended drug?",
+        "output": "calcium gluconate"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "cabozantinib"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "pomalidomide"
+    },
+    {
+        "input": "Disease: Human Papillomavirus Prophylaxis. What is the recommended drug?",
+        "output": "human papillomavirus vaccine"
+    },
+    {
+        "input": "Disease: Barrett's Esophagus. What is the recommended drug?",
+        "output": "pantoprazole"
+    },
+    {
+        "input": "Disease: Pneumonia. What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Lambert-Eaton Myasthenic Syndrome. What is the recommended drug?",
+        "output": "amifampridine"
+    },
+    {
+        "input": "Disease: COPD, Maintenance. What is the recommended drug?",
+        "output": "fluticasone / salmeterol"
+    },
+    {
+        "input": "Disease: McCune-Albright Syndrome. What is the recommended drug?",
+        "output": "tamoxifen"
+    },
+    {
+        "input": "Disease: Postpartum Depression. What is the recommended drug?",
+        "output": "citalopram"
+    },
+    {
+        "input": "Disease: Seizures (Convulsions). What is the recommended drug?",
+        "output": "diazepam"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "gentian violet"
+    },
+    {
+        "input": "Disease: Pain. What is the recommended drug?",
+        "output": "oxycodone"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Autism. What is the recommended drug?",
+        "output": "ziprasidone"
+    },
+    {
+        "input": "Disease: Weight Loss. What is the recommended drug?",
+        "output": "phentermine"
+    },
+    {
+        "input": "Disease: Ewing's Sarcoma. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Cytokine Release Syndrome. What is the recommended drug?",
+        "output": "tocilizumab"
+    },
+    {
+        "input": "Disease: Left Ventricular Dysfunction. What is the recommended drug?",
+        "output": "quinapril"
+    },
+    {
+        "input": "Disease: Nephrolithiasis. What is the recommended drug?",
+        "output": "potassium citrate"
+    },
+    {
+        "input": "Disease: Pruritus. What is the recommended drug?",
+        "output": "cyproheptadine"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Otitis Media. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Inflammatory Conditions. What is the recommended drug?",
+        "output": "meloxicam"
+    },
+    {
+        "input": "Disease: Acute Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "asparaginase escherichia coli"
+    },
+    {
+        "input": "Disease: Prevention of Bladder infection (Cystitis Prophylaxis). What is the recommended drug?",
+        "output": "sulfamethoxazole / trimethoprim"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "econazole"
+    },
+    {
+        "input": "Disease: Chronic Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "rituximab"
+    },
+    {
+        "input": "Disease: Bronchitis. What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "l-methylfolate"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "ciprofloxacin"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "ciclopirox"
+    },
+    {
+        "input": "Disease: Pancreatic Cancer. What is the recommended drug?",
+        "output": "sunitinib"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "pomalidomide"
+    },
+    {
+        "input": "Disease: Lymphoma. What is the recommended drug?",
+        "output": "pralatrexate"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "naproxen"
+    },
+    {
+        "input": "Disease: Deep Vein Thrombosis Prophylaxis after Hip Replacement Surgery. What is the recommended drug?",
+        "output": "dalteparin"
+    },
+    {
+        "input": "Disease: Nonketotic Hyperosmolar Syndrome. What is the recommended drug?",
+        "output": "insulin lispro"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Allergic. What is the recommended drug?",
+        "output": "nedocromil"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Cutaneous T-cell Lymphoma. What is the recommended drug?",
+        "output": "romidepsin"
+    },
+    {
+        "input": "Disease: Keratosis. What is the recommended drug?",
+        "output": "imiquimod"
+    },
+    {
+        "input": "Disease: Human Papilloma Virus. What is the recommended drug?",
+        "output": "imiquimod"
+    },
+    {
+        "input": "Disease: Uveitis. What is the recommended drug?",
+        "output": "dexamethasone / neomycin / polymyxin b"
+    },
+    {
+        "input": "Disease: Joint Infection. What is the recommended drug?",
+        "output": "amikacin"
+    },
+    {
+        "input": "Disease: Agitated State. What is the recommended drug?",
+        "output": "loxapine"
+    },
+    {
+        "input": "Disease: Actinomycosis. What is the recommended drug?",
+        "output": "penicillin g sodium"
+    },
+    {
+        "input": "Disease: Melanoma. What is the recommended drug?",
+        "output": "dacarbazine"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Strep Throat (Streptococcal Pharyngitis). What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Diabetic Macular Edema. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "minocycline"
+    },
+    {
+        "input": "Disease: Polycystic Kidney Disease. What is the recommended drug?",
+        "output": "enalapril"
+    },
+    {
+        "input": "Disease: Osteosarcoma. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "betamethasone"
+    },
+    {
+        "input": "Disease: Glomerulonephritis. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Heterozygous. What is the recommended drug?",
+        "output": "rosuvastatin"
+    },
+    {
+        "input": "Disease: Facial Wrinkles. What is the recommended drug?",
+        "output": "tazarotene"
+    },
+    {
+        "input": "Disease: Pruritus. What is the recommended drug?",
+        "output": "diphenhydramine"
+    },
+    {
+        "input": "Disease: Primary Hyperaldosteronism Diagnosis. What is the recommended drug?",
+        "output": "spironolactone"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "clobetasol"
+    },
+    {
+        "input": "Disease: Pneumonia. What is the recommended drug?",
+        "output": "ceftriaxone"
+    },
+    {
+        "input": "Disease: Cervical Cancer. What is the recommended drug?",
+        "output": "cisplatin"
+    },
+    {
+        "input": "Disease: Granulomatosis with Polyangiitis. What is the recommended drug?",
+        "output": "etanercept"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "cortisone"
+    },
+    {
+        "input": "Disease: Gestational Diabetes. What is the recommended drug?",
+        "output": "insulin isophane / insulin regular"
+    },
+    {
+        "input": "Disease: Obsessive Compulsive Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Bacterial Vaginitis. What is the recommended drug?",
+        "output": "metronidazole"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Hypogonadism, Male. What is the recommended drug?",
+        "output": "follicle stimulating hormone"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Aspiration Pneumonia. What is the recommended drug?",
+        "output": "metronidazole"
+    },
+    {
+        "input": "Disease: Diaper Rash. What is the recommended drug?",
+        "output": "miconazole / zinc oxide"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Heterozygous. What is the recommended drug?",
+        "output": "simvastatin"
+    },
+    {
+        "input": "Disease: Post Traumatic Stress Disorder. What is the recommended drug?",
+        "output": "aripiprazole"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Supraventricular Tachycardia. What is the recommended drug?",
+        "output": "verapamil"
+    },
+    {
+        "input": "Disease: Skin and Structure Infection. What is the recommended drug?",
+        "output": "minocycline"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Major Depressive Disorder. What is the recommended drug?",
+        "output": "bupropion"
+    },
+    {
+        "input": "Disease: Cough. What is the recommended drug?",
+        "output": "homatropine / hydrocodone"
+    },
+    {
+        "input": "Disease: Plague. What is the recommended drug?",
+        "output": "chloramphenicol"
+    },
+    {
+        "input": "Disease: Cholecystitis. What is the recommended drug?",
+        "output": "cefoxitin"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "olanzapine"
+    },
+    {
+        "input": "Disease: Dysuria. What is the recommended drug?",
+        "output": "oxybutynin"
+    },
+    {
+        "input": "Disease: Endometritis. What is the recommended drug?",
+        "output": "cefoxitin"
+    },
+    {
+        "input": "Disease: Ankylosing Spondylitis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Peptic Ulcer. What is the recommended drug?",
+        "output": "glycopyrrolate"
+    },
+    {
+        "input": "Disease: Pulmonary Fibrosis. What is the recommended drug?",
+        "output": "mycophenolate mofetil"
+    },
+    {
+        "input": "Disease: Alcohol Withdrawal. What is the recommended drug?",
+        "output": "baclofen"
+    },
+    {
+        "input": "Disease: Venomous Scorpion Bite. What is the recommended drug?",
+        "output": "antivenom (centruroides scorpion)"
+    },
+    {
+        "input": "Disease: Skin and Structure Infection. What is the recommended drug?",
+        "output": "mupirocin"
+    },
+    {
+        "input": "Disease: Still's Disease. What is the recommended drug?",
+        "output": "anakinra"
+    },
+    {
+        "input": "Disease: Persistent Depressive Disorder. What is the recommended drug?",
+        "output": "fluoxetine"
+    },
+    {
+        "input": "Disease: Condylomata Acuminata. What is the recommended drug?",
+        "output": "podofilox"
+    },
+    {
+        "input": "Disease: Melanoma. What is the recommended drug?",
+        "output": "interferon alfa-2b"
+    },
+    {
+        "input": "Disease: Vulvodynia. What is the recommended drug?",
+        "output": "paroxetine"
+    },
+    {
+        "input": "Disease: Birth Control (Contraception). What is the recommended drug?",
+        "output": "levonorgestrel"
+    },
+    {
+        "input": "Disease: Hyperhidrosis. What is the recommended drug?",
+        "output": "glycopyrronium"
+    },
+    {
+        "input": "Disease: Head Lice. What is the recommended drug?",
+        "output": "malathion"
+    },
+    {
+        "input": "Disease: Clostridioides difficile Infection. What is the recommended drug?",
+        "output": "penicillin g sodium"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "amlodipine / atorvastatin"
+    },
+    {
+        "input": "Disease: Tendonitis. What is the recommended drug?",
+        "output": "meloxicam"
+    },
+    {
+        "input": "Disease: Panic Disorder. What is the recommended drug?",
+        "output": "alprazolam"
+    },
+    {
+        "input": "Disease: Nonalcoholic Fatty Liver Disease. What is the recommended drug?",
+        "output": "ursodiol"
+    },
+    {
+        "input": "Disease: Chronic Myofascial Pain. What is the recommended drug?",
+        "output": "clonazepam"
+    },
+    {
+        "input": "Disease: Pruritus. What is the recommended drug?",
+        "output": "ammonium lactate"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "temazepam"
+    },
+    {
+        "input": "Disease: Pneumonia. What is the recommended drug?",
+        "output": "moxifloxacin"
+    },
+    {
+        "input": "Disease: Vaginal Yeast Infection. What is the recommended drug?",
+        "output": "fluconazole"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "diclofenac"
+    },
+    {
+        "input": "Disease: Squamous Cell Carcinoma. What is the recommended drug?",
+        "output": "cetuximab"
+    },
+    {
+        "input": "Disease: Irritable Bowel Syndrome. What is the recommended drug?",
+        "output": "atropine / hyoscyamine / phenobarbital / scopolamine"
+    },
+    {
+        "input": "Disease: Dissociative Identity Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Vitamin/Mineral Supplementation and Deficiency. What is the recommended drug?",
+        "output": "selenium"
+    },
+    {
+        "input": "Disease: Narcolepsy. What is the recommended drug?",
+        "output": "dextroamphetamine"
+    },
+    {
+        "input": "Disease: Upper Respiratory Tract Infection. What is the recommended drug?",
+        "output": "cefixime"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "nitroglycerin"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "mometasone"
+    },
+    {
+        "input": "Disease: Follicular Lymphoma. What is the recommended drug?",
+        "output": "rituximab"
+    },
+    {
+        "input": "Disease: Hepatocellular Carcinoma. What is the recommended drug?",
+        "output": "nivolumab"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "meloxicam"
+    },
+    {
+        "input": "Disease: GERD. What is the recommended drug?",
+        "output": "omeprazole / sodium bicarbonate"
+    },
+    {
+        "input": "Disease: GERD. What is the recommended drug?",
+        "output": "famotidine"
+    },
+    {
+        "input": "Disease: Non-Small Cell Lung Cancer. What is the recommended drug?",
+        "output": "crizotinib"
+    },
+    {
+        "input": "Disease: Aseptic Necrosis. What is the recommended drug?",
+        "output": "naproxen"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "sorafenib"
+    },
+    {
+        "input": "Disease: Multiple Endocrine Adenomas. What is the recommended drug?",
+        "output": "omeprazole"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "meloxicam"
+    },
+    {
+        "input": "Disease: Chronic Inflammatory Demyelinating Polyradiculoneuropathy. What is the recommended drug?",
+        "output": "immune globulin intravenous and subcutaneous"
+    },
+    {
+        "input": "Disease: Anticoagulation During Pregnancy. What is the recommended drug?",
+        "output": "heparin"
+    },
+    {
+        "input": "Disease: Bronchogenic Carcinoma. What is the recommended drug?",
+        "output": "cimetidine"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "interferon beta-1a"
+    },
+    {
+        "input": "Disease: Prostatitis. What is the recommended drug?",
+        "output": "oxybutynin"
+    },
+    {
+        "input": "Disease: Whipworm Infection. What is the recommended drug?",
+        "output": "albendazole"
+    },
+    {
+        "input": "Disease: Rhinorrhea. What is the recommended drug?",
+        "output": "acetaminophen / chlorpheniramine"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Intravenous Urography. What is the recommended drug?",
+        "output": "ioversol"
+    },
+    {
+        "input": "Disease: Systemic Sclerosis. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "oxybutynin"
+    },
+    {
+        "input": "Disease: Abnormal Uterine Bleeding. What is the recommended drug?",
+        "output": "ethinyl estradiol / norethindrone"
+    },
+    {
+        "input": "Disease: Fatigue. What is the recommended drug?",
+        "output": "amphetamine / dextroamphetamine"
+    },
+    {
+        "input": "Disease: Delayed Puberty, Male. What is the recommended drug?",
+        "output": "methyltestosterone"
+    },
+    {
+        "input": "Disease: Seizures (Convulsions). What is the recommended drug?",
+        "output": "diazepam"
+    },
+    {
+        "input": "Disease: Swine Flu. What is the recommended drug?",
+        "output": "peramivir"
+    },
+    {
+        "input": "Disease: Urticaria. What is the recommended drug?",
+        "output": "levocetirizine"
+    },
+    {
+        "input": "Disease: Hereditary Angioedema. What is the recommended drug?",
+        "output": "conestat alfa"
+    },
+    {
+        "input": "Disease: Meningitis. What is the recommended drug?",
+        "output": "ampicillin"
+    },
+    {
+        "input": "Disease: Chronic Inflammatory Demyelinating Polyradiculoneuropathy. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: Spinal Muscular Atrophy. What is the recommended drug?",
+        "output": "nusinersen"
+    },
+    {
+        "input": "Disease: Muscle Spasm (Involuntary Hypertonicity). What is the recommended drug?",
+        "output": "methocarbamol"
+    },
+    {
+        "input": "Disease: Cushing's Syndrome. What is the recommended drug?",
+        "output": "mifepristone"
+    },
+    {
+        "input": "Disease: Coccidioidomycosis, Meningitis. What is the recommended drug?",
+        "output": "amphotericin b"
+    },
+    {
+        "input": "Disease: Post Traumatic Stress Disorder. What is the recommended drug?",
+        "output": "venlafaxine"
+    },
+    {
+        "input": "Disease: Ulcerative Colitis. What is the recommended drug?",
+        "output": "budesonide"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "gabapentin"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "enoxaparin"
+    },
+    {
+        "input": "Disease: CMV Retinitis. What is the recommended drug?",
+        "output": "cidofovir"
+    },
+    {
+        "input": "Disease: Respiratory Syncytial Virus. What is the recommended drug?",
+        "output": "ribavirin"
+    },
+    {
+        "input": "Disease: Urinary Incontinence. What is the recommended drug?",
+        "output": "fesoterodine"
+    },
+    {
+        "input": "Disease: Bacterial Infection. What is the recommended drug?",
+        "output": "vancomycin"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "idarubicin"
+    },
+    {
+        "input": "Disease: Cushing's Syndrome. What is the recommended drug?",
+        "output": "cyproheptadine"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "temazepam"
+    },
+    {
+        "input": "Disease: Pancreatic Cancer. What is the recommended drug?",
+        "output": "capecitabine"
+    },
+    {
+        "input": "Disease: High Blood Pressure (Hypertension). What is the recommended drug?",
+        "output": "atenolol"
+    },
+    {
+        "input": "Disease: Constipation. What is the recommended drug?",
+        "output": "magnesium citrate"
+    },
+    {
+        "input": "Disease: Cluster-Tic Syndrome. What is the recommended drug?",
+        "output": "valproic acid"
+    },
+    {
+        "input": "Disease: Vaginal Yeast Infection. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Systemic Lupus Erythematosus. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Postmenopausal Symptoms. What is the recommended drug?",
+        "output": "gabapentin"
+    },
+    {
+        "input": "Disease: Melanoma, Metastatic. What is the recommended drug?",
+        "output": "cobimetinib"
+    },
+    {
+        "input": "Disease: Hemangioma. What is the recommended drug?",
+        "output": "propranolol"
+    },
+    {
+        "input": "Disease: Tetanus. What is the recommended drug?",
+        "output": "diazepam"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "pomalidomide"
+    },
+    {
+        "input": "Disease: Bleeding Disorder. What is the recommended drug?",
+        "output": "goserelin"
+    },
+    {
+        "input": "Disease: Prostate Cancer. What is the recommended drug?",
+        "output": "triptorelin"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "azithromycin"
+    },
+    {
+        "input": "Disease: Human Papilloma Virus. What is the recommended drug?",
+        "output": "resorcinol"
+    },
+    {
+        "input": "Disease: Heart Failure (Congestive Heart Failure). What is the recommended drug?",
+        "output": "amlodipine"
+    },
+    {
+        "input": "Disease: Follicle Stimulation. What is the recommended drug?",
+        "output": "follicle stimulating hormone"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "anastrozole"
+    },
+    {
+        "input": "Disease: Erythroblastopenia. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Head and Neck Cancer. What is the recommended drug?",
+        "output": "pembrolizumab"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "quetiapine"
+    },
+    {
+        "input": "Disease: Hepatocellular Carcinoma. What is the recommended drug?",
+        "output": "nivolumab"
+    },
+    {
+        "input": "Disease: Small Bowel Bacterial Overgrowth. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Diabetic Ketoacidosis. What is the recommended drug?",
+        "output": "insulin regular"
+    },
+    {
+        "input": "Disease: Aspergillosis, Invasive. What is the recommended drug?",
+        "output": "amphotericin b liposomal"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "clonidine"
+    },
+    {
+        "input": "Disease: Bacterial Skin Infection. What is the recommended drug?",
+        "output": "sulfamethoxazole / trimethoprim"
+    },
+    {
+        "input": "Disease: Juvenile Rheumatoid Arthritis. What is the recommended drug?",
+        "output": "etanercept"
+    },
+    {
+        "input": "Disease: Kidney Infections (Pyelonephritis). What is the recommended drug?",
+        "output": "cefotaxime"
+    },
+    {
+        "input": "Disease: SAPHO Syndrome. What is the recommended drug?",
+        "output": "infliximab"
+    },
+    {
+        "input": "Disease: Thyroid Cancer. What is the recommended drug?",
+        "output": "lenvatinib"
+    },
+    {
+        "input": "Disease: Constipation, Chronic. What is the recommended drug?",
+        "output": "polyethylene glycol 3350 with electrolytes"
+    },
+    {
+        "input": "Disease: Scleroderma. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "glatiramer"
+    },
+    {
+        "input": "Disease: Corneal Ulcer. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Soft Tissue Sarcoma. What is the recommended drug?",
+        "output": "pazopanib"
+    },
+    {
+        "input": "Disease: Prostate Cancer. What is the recommended drug?",
+        "output": "estradiol"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "lamotrigine"
+    },
+    {
+        "input": "Disease: Anxiety and Stress. What is the recommended drug?",
+        "output": "citalopram"
+    },
+    {
+        "input": "Disease: Postpartum Depression. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Organophosphate Poisoning. What is the recommended drug?",
+        "output": "atropine / pralidoxime"
+    },
+    {
+        "input": "Disease: Systemic Lupus Erythematosus. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Cutaneous Bacillus anthracis. What is the recommended drug?",
+        "output": "procaine penicillin"
+    },
+    {
+        "input": "Disease: Diabetic Kidney Disease (Diabetic Nephropathy). What is the recommended drug?",
+        "output": "perindopril"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "glasdegib"
+    },
+    {
+        "input": "Disease: Reversal of Sedation. What is the recommended drug?",
+        "output": "flumazenil"
+    },
+    {
+        "input": "Disease: Diaper Rash. What is the recommended drug?",
+        "output": "zinc oxide"
+    },
+    {
+        "input": "Disease: Condylomata Acuminata. What is the recommended drug?",
+        "output": "sinecatechins"
+    },
+    {
+        "input": "Disease: Body Dysmorphic Disorder. What is the recommended drug?",
+        "output": "paroxetine"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "diclofenac"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "risperidone"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "capecitabine"
+    },
+    {
+        "input": "Disease: Prevention of Bladder infection (Cystitis Prophylaxis). What is the recommended drug?",
+        "output": "methenamine"
+    },
+    {
+        "input": "Disease: Colorectal Cancer. What is the recommended drug?",
+        "output": "bevacizumab"
+    },
+    {
+        "input": "Disease: Endometritis. What is the recommended drug?",
+        "output": "gentamicin"
+    },
+    {
+        "input": "Disease: Mucopolysaccharidosis Type VII. What is the recommended drug?",
+        "output": "vestronidase alfa"
+    },
+    {
+        "input": "Disease: Interstitial Cystitis. What is the recommended drug?",
+        "output": "phenazopyridine"
+    },
+    {
+        "input": "Disease: Perioral Dermatitis. What is the recommended drug?",
+        "output": "clindamycin"
+    },
+    {
+        "input": "Disease: Folic Acid Antagonist Overdose. What is the recommended drug?",
+        "output": "leucovorin"
+    },
+    {
+        "input": "Disease: Prevention of Hypokalemia. What is the recommended drug?",
+        "output": "potassium gluconate"
+    },
+    {
+        "input": "Disease: Leukemia. What is the recommended drug?",
+        "output": "fludarabine"
+    },
+    {
+        "input": "Disease: Hyperlipoproteinemia Type IIa, Elevated LDL. What is the recommended drug?",
+        "output": "rosuvastatin"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Rheumatoid Arthritis. What is the recommended drug?",
+        "output": "sulfasalazine"
+    },
+    {
+        "input": "Disease: Deep Vein Thrombosis, Prophylaxis. What is the recommended drug?",
+        "output": "enoxaparin"
+    },
+    {
+        "input": "Disease: Seizures (Convulsions). What is the recommended drug?",
+        "output": "zonisamide"
+    },
+    {
+        "input": "Disease: Choriocarcinoma. What is the recommended drug?",
+        "output": "vinblastine"
+    },
+    {
+        "input": "Disease: Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "chlorambucil"
+    },
+    {
+        "input": "Disease: Malaria Prevention (Malaria Prophylaxis). What is the recommended drug?",
+        "output": "primaquine"
+    },
+    {
+        "input": "Disease: Hemophilia B. What is the recommended drug?",
+        "output": "factor ix complex"
+    },
+    {
+        "input": "Disease: Abortion. What is the recommended drug?",
+        "output": "oxytocin"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Hyperhidrosis. What is the recommended drug?",
+        "output": "glycopyrronium"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "tolnaftate"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "ibritumomab"
+    },
+    {
+        "input": "Disease: Ascariasis. What is the recommended drug?",
+        "output": "albendazole"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "ponatinib"
+    },
+    {
+        "input": "Disease: IV Catheter Clot. What is the recommended drug?",
+        "output": "alteplase"
+    },
+    {
+        "input": "Disease: Respiratory Syncytial Virus. What is the recommended drug?",
+        "output": "ribavirin"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "acitretin"
+    },
+    {
+        "input": "Disease: Otitis Media. What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Motion Sickness. What is the recommended drug?",
+        "output": "scopolamine"
+    },
+    {
+        "input": "Disease: Esophageal Spasm. What is the recommended drug?",
+        "output": "isosorbide dinitrate"
+    },
+    {
+        "input": "Disease: Aspiration Pneumonia. What is the recommended drug?",
+        "output": "clindamycin"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lamotrigine"
+    },
+    {
+        "input": "Disease: Bacteremia. What is the recommended drug?",
+        "output": "ceftazidime"
+    },
+    {
+        "input": "Disease: Gnathostomiasis. What is the recommended drug?",
+        "output": "albendazole"
+    },
+    {
+        "input": "Disease: HIV Infection. What is the recommended drug?",
+        "output": "emtricitabine / tenofovir"
+    },
+    {
+        "input": "Disease: Primary Biliary Cholangitis. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Heterozygous. What is the recommended drug?",
+        "output": "lovastatin"
+    },
+    {
+        "input": "Disease: Leishmaniasis. What is the recommended drug?",
+        "output": "allopurinol"
+    },
+    {
+        "input": "Disease: Diffuse Large B-Cell Lymphoma. What is the recommended drug?",
+        "output": "tisagenlecleucel"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Monkeypox Prophylaxis. What is the recommended drug?",
+        "output": "smallpox and monkeypox vaccine"
+    },
+    {
+        "input": "Disease: Cough. What is the recommended drug?",
+        "output": "dextromethorphan / guaifenesin"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "quetiapine"
+    },
+    {
+        "input": "Disease: STD Prophylaxis. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Uveitis. What is the recommended drug?",
+        "output": "cyclopentolate"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "clozapine"
+    },
+    {
+        "input": "Disease: Cervicitis. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Gout. What is the recommended drug?",
+        "output": "febuxostat"
+    },
+    {
+        "input": "Disease: Somatoform Pain Disorder. What is the recommended drug?",
+        "output": "venlafaxine"
+    },
+    {
+        "input": "Disease: Atrial Fibrillation. What is the recommended drug?",
+        "output": "flecainide"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "betamethasone"
+    },
+    {
+        "input": "Disease: Opiate Dependence. What is the recommended drug?",
+        "output": "naltrexone"
+    },
+    {
+        "input": "Disease: Diabetic Kidney Disease (Diabetic Nephropathy). What is the recommended drug?",
+        "output": "ramipril"
+    },
+    {
+        "input": "Disease: Obesity. What is the recommended drug?",
+        "output": "topiramate"
+    },
+    {
+        "input": "Disease: Nausea/Vomiting, Chemotherapy Induced. What is the recommended drug?",
+        "output": "palonosetron"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "capecitabine"
+    },
+    {
+        "input": "Disease: Gastric Cancer. What is the recommended drug?",
+        "output": "trastuzumab"
+    },
+    {
+        "input": "Disease: Dermal Ulcer. What is the recommended drug?",
+        "output": "becaplermin"
+    },
+    {
+        "input": "Disease: Constipation. What is the recommended drug?",
+        "output": "docusate"
+    },
+    {
+        "input": "Disease: Arrhythmia. What is the recommended drug?",
+        "output": "disopyramide"
+    },
+    {
+        "input": "Disease: Anal Cancer. What is the recommended drug?",
+        "output": "cisplatin"
+    },
+    {
+        "input": "Disease: Pityriasis rubra pilaris. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Ventricular Tachycardia. What is the recommended drug?",
+        "output": "lidocaine"
+    },
+    {
+        "input": "Disease: Multicentric Castleman\u2019s Disease. What is the recommended drug?",
+        "output": "siltuximab"
+    },
+    {
+        "input": "Disease: Anxiety and Stress. What is the recommended drug?",
+        "output": "fluvoxamine"
+    },
+    {
+        "input": "Disease: Reflex Sympathetic Dystrophy Syndrome. What is the recommended drug?",
+        "output": "milnacipran"
+    },
+    {
+        "input": "Disease: Cough. What is the recommended drug?",
+        "output": "guaifenesin"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "amlodipine"
+    },
+    {
+        "input": "Disease: Tinea Cruris. What is the recommended drug?",
+        "output": "econazole"
+    },
+    {
+        "input": "Disease: Sexual Dysfunction, SSRI Induced. What is the recommended drug?",
+        "output": "cyproheptadine"
+    },
+    {
+        "input": "Disease: Alopecia. What is the recommended drug?",
+        "output": "minoxidil"
+    },
+    {
+        "input": "Disease: Osteoporosis. What is the recommended drug?",
+        "output": "hydrochlorothiazide"
+    },
+    {
+        "input": "Disease: Allergic Urticaria. What is the recommended drug?",
+        "output": "tetracaine"
+    },
+    {
+        "input": "Disease: Renal Failure. What is the recommended drug?",
+        "output": "torsemide"
+    },
+    {
+        "input": "Disease: Pheochromocytoma. What is the recommended drug?",
+        "output": "propranolol"
+    },
+    {
+        "input": "Disease: Nonalcoholic Fatty Liver Disease. What is the recommended drug?",
+        "output": "orlistat"
+    },
+    {
+        "input": "Disease: Candidemia. What is the recommended drug?",
+        "output": "amphotericin b lipid complex"
+    },
+    {
+        "input": "Disease: Head Lice. What is the recommended drug?",
+        "output": "piperonyl butoxide / pyrethrins"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Chronic Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "chlorambucil"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "nabumetone"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "olodaterol"
+    },
+    {
+        "input": "Disease: Nausea/Vomiting, Chemotherapy Induced. What is the recommended drug?",
+        "output": "lorazepam"
+    },
+    {
+        "input": "Disease: Urticaria. What is the recommended drug?",
+        "output": "famotidine"
+    },
+    {
+        "input": "Disease: Hyperthyroidism. What is the recommended drug?",
+        "output": "methimazole"
+    },
+    {
+        "input": "Disease: Upper Respiratory Tract Infection. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "temsirolimus"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "prazosin"
+    },
+    {
+        "input": "Disease: Poliomyelitis Prophylaxis. What is the recommended drug?",
+        "output": "diphtheria toxoid / pertussis, acellular / poliovirus vaccine, inactivated / tetanus toxoid"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "venetoclax"
+    },
+    {
+        "input": "Disease: Non-Small Cell Lung Cancer. What is the recommended drug?",
+        "output": "gefitinib"
+    },
+    {
+        "input": "Disease: Giardiasis. What is the recommended drug?",
+        "output": "metronidazole"
+    },
+    {
+        "input": "Disease: Aseptic Necrosis. What is the recommended drug?",
+        "output": "aspirin"
+    },
+    {
+        "input": "Disease: Frozen Shoulder. What is the recommended drug?",
+        "output": "indomethacin"
+    },
+    {
+        "input": "Disease: Amebiasis. What is the recommended drug?",
+        "output": "tinidazole"
+    },
+    {
+        "input": "Disease: Radiculopathy. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Melioidosis. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "betamethasone"
+    },
+    {
+        "input": "Disease: Ophthalmic Surgery. What is the recommended drug?",
+        "output": "proparacaine"
+    },
+    {
+        "input": "Disease: Tinea Cruris. What is the recommended drug?",
+        "output": "econazole"
+    },
+    {
+        "input": "Disease: Tinea Pedis. What is the recommended drug?",
+        "output": "miconazole"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "cefuroxime"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "olodaterol / tiotropium"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "diclofenac"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "trazodone"
+    },
+    {
+        "input": "Disease: Photoaging of the Skin (Dermatoheliosis). What is the recommended drug?",
+        "output": "tretinoin"
+    },
+    {
+        "input": "Disease: Pulmonary Hypertension. What is the recommended drug?",
+        "output": "tadalafil"
+    },
+    {
+        "input": "Disease: Bacterial Infection. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Dermal Ulcer. What is the recommended drug?",
+        "output": "becaplermin"
+    },
+    {
+        "input": "Disease: Coccidioidomycosis. What is the recommended drug?",
+        "output": "amphotericin b lipid complex"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lamotrigine"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "doxazosin"
+    },
+    {
+        "input": "Disease: Prevention of Cardiovascular Disease. What is the recommended drug?",
+        "output": "simvastatin"
+    },
+    {
+        "input": "Disease: Eye Redness. What is the recommended drug?",
+        "output": "fluorometholone"
+    },
+    {
+        "input": "Disease: Hyperlipoproteinemia Type IV, Elevated VLDL. What is the recommended drug?",
+        "output": "rosuvastatin"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "anagrelide"
+    },
+    {
+        "input": "Disease: Influenza Prophylaxis. What is the recommended drug?",
+        "output": "rimantadine"
+    },
+    {
+        "input": "Disease: Pulmonary Hypertension. What is the recommended drug?",
+        "output": "macitentan"
+    },
+    {
+        "input": "Disease: Hyperhomocysteinemia. What is the recommended drug?",
+        "output": "multivitamin"
+    },
+    {
+        "input": "Disease: HIV Infection. What is the recommended drug?",
+        "output": "abacavir"
+    },
+    {
+        "input": "Disease: Warts. What is the recommended drug?",
+        "output": "fluorouracil"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "buspirone"
+    },
+    {
+        "input": "Disease: Paranoid Disorder. What is the recommended drug?",
+        "output": "risperidone"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "fluticasone / vilanterol"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "mometasone"
+    },
+    {
+        "input": "Disease: Hypoactive Sexual Desire Disorder. What is the recommended drug?",
+        "output": "bremelanotide"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "cefdinir"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Allergic Rhinitis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "olanzapine"
+    },
+    {
+        "input": "Disease: Alzheimer's Disease. What is the recommended drug?",
+        "output": "donepezil"
+    },
+    {
+        "input": "Disease: Strep Throat (Streptococcal Pharyngitis). What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Atrial Fibrillation. What is the recommended drug?",
+        "output": "diltiazem"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "alprazolam"
+    },
+    {
+        "input": "Disease: Forehead Lines. What is the recommended drug?",
+        "output": "onabotulinumtoxinA"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "bortezomib"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "flurazepam"
+    },
+    {
+        "input": "Disease: Glomerulonephritis. What is the recommended drug?",
+        "output": "penicillin g benzathine"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "metoprolol"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "cytarabine"
+    },
+    {
+        "input": "Disease: Chronic Idiopathic Constipation. What is the recommended drug?",
+        "output": "plecanatide"
+    },
+    {
+        "input": "Disease: Pancreatitis. What is the recommended drug?",
+        "output": "albumin human"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Bacterial. What is the recommended drug?",
+        "output": "gentamicin"
+    },
+    {
+        "input": "Disease: Bartonellosis. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Pelvic Inflammatory Disease. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Pheochromocytoma Diagnosis. What is the recommended drug?",
+        "output": "phentolamine"
+    },
+    {
+        "input": "Disease: Sexual Dysfunction, SSRI Induced. What is the recommended drug?",
+        "output": "dextroamphetamine"
+    },
+    {
+        "input": "Disease: Dermatological Disorders. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Dermal Ulcer. What is the recommended drug?",
+        "output": "becaplermin"
+    },
+    {
+        "input": "Disease: Laryngopharyngeal Reflux. What is the recommended drug?",
+        "output": "famotidine"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "azithromycin"
+    },
+    {
+        "input": "Disease: Dupuytren's contracture. What is the recommended drug?",
+        "output": "collagenase clostridium histolyticum"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "mirabegron"
+    },
+    {
+        "input": "Disease: Ulcerative Colitis. What is the recommended drug?",
+        "output": "clonidine"
+    },
+    {
+        "input": "Disease: Inflammatory Bowel Disease. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: Trigeminal Neuralgia. What is the recommended drug?",
+        "output": "oxcarbazepine"
+    },
+    {
+        "input": "Disease: Ventricular Tachycardia. What is the recommended drug?",
+        "output": "acebutolol"
+    },
+    {
+        "input": "Disease: Hypotension. What is the recommended drug?",
+        "output": "phenylephrine"
+    },
+    {
+        "input": "Disease: Muckle Wells Syndrome. What is the recommended drug?",
+        "output": "rilonacept"
+    },
+    {
+        "input": "Disease: High Cholesterol. What is the recommended drug?",
+        "output": "pravastatin"
+    },
+    {
+        "input": "Disease: Hereditary Angioedema. What is the recommended drug?",
+        "output": "C1 esterase inhibitor (human)"
+    },
+    {
+        "input": "Disease: Chronic Eosinophilic Leukemia. What is the recommended drug?",
+        "output": "imatinib"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "gentian violet"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "levalbuterol"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Agitated State. What is the recommended drug?",
+        "output": "aripiprazole"
+    },
+    {
+        "input": "Disease: Bone infection (Osteomyelitis). What is the recommended drug?",
+        "output": "clindamycin"
+    },
+    {
+        "input": "Disease: Idiopathic Thrombocytopenic Purpura. What is the recommended drug?",
+        "output": "cyclosporine"
+    },
+    {
+        "input": "Disease: HIV Infection. What is the recommended drug?",
+        "output": "efavirenz / emtricitabine / tenofovir"
+    },
+    {
+        "input": "Disease: Adenosine Deaminase Deficiency. What is the recommended drug?",
+        "output": "elapegademase"
+    },
+    {
+        "input": "Disease: Epilepsy. What is the recommended drug?",
+        "output": "levetiracetam"
+    },
+    {
+        "input": "Disease: Anthrax. What is the recommended drug?",
+        "output": "penicillin g potassium"
+    },
+    {
+        "input": "Disease: Angina Pectoris Prophylaxis. What is the recommended drug?",
+        "output": "aspirin"
+    },
+    {
+        "input": "Disease: Panic Disorder. What is the recommended drug?",
+        "output": "buspirone"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "risperidone"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "cytarabine"
+    },
+    {
+        "input": "Disease: Induced Hypotension. What is the recommended drug?",
+        "output": "nitroprusside"
+    },
+    {
+        "input": "Disease: Bulimia. What is the recommended drug?",
+        "output": "fluoxetine"
+    },
+    {
+        "input": "Disease: HIV Infection. What is the recommended drug?",
+        "output": "emtricitabine / tenofovir"
+    },
+    {
+        "input": "Disease: Nephrotic Syndrome. What is the recommended drug?",
+        "output": "mycophenolate mofetil"
+    },
+    {
+        "input": "Disease: Melanoma. What is the recommended drug?",
+        "output": "pembrolizumab"
+    },
+    {
+        "input": "Disease: Evan's Syndrome. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: Bladder Infection. What is the recommended drug?",
+        "output": "cefpodoxime"
+    },
+    {
+        "input": "Disease: Breast Cancer, Male. What is the recommended drug?",
+        "output": "tamoxifen"
+    },
+    {
+        "input": "Disease: Gastrointestinal Hemorrhage. What is the recommended drug?",
+        "output": "aluminum hydroxide"
+    },
+    {
+        "input": "Disease: High Cholesterol. What is the recommended drug?",
+        "output": "niacin"
+    },
+    {
+        "input": "Disease: Abnormal Uterine Bleeding. What is the recommended drug?",
+        "output": "desogestrel / ethinyl estradiol"
+    },
+    {
+        "input": "Disease: Sinus Symptoms. What is the recommended drug?",
+        "output": "acetaminophen / phenylephrine"
+    },
+    {
+        "input": "Disease: Gonococcal Infection, Uncomplicated. What is the recommended drug?",
+        "output": "ciprofloxacin"
+    },
+    {
+        "input": "Disease: Gender Dysphoria. What is the recommended drug?",
+        "output": "progesterone"
+    },
+    {
+        "input": "Disease: Nerve Agent Poisoning. What is the recommended drug?",
+        "output": "pralidoxime"
+    },
+    {
+        "input": "Disease: Chronic Pain. What is the recommended drug?",
+        "output": "methadone"
+    },
+    {
+        "input": "Disease: Diabetic Ketoacidosis. What is the recommended drug?",
+        "output": "insulin glulisine"
+    },
+    {
+        "input": "Disease: Raynaud's Syndrome. What is the recommended drug?",
+        "output": "doxazosin"
+    },
+    {
+        "input": "Disease: Adult Human Growth Hormone Deficiency. What is the recommended drug?",
+        "output": "somatropin"
+    },
+    {
+        "input": "Disease: Restless Legs Syndrome. What is the recommended drug?",
+        "output": "ropinirole"
+    },
+    {
+        "input": "Disease: Epilepsy. What is the recommended drug?",
+        "output": "phenytoin"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "tacrolimus"
+    },
+    {
+        "input": "Disease: Bacterial Vaginitis. What is the recommended drug?",
+        "output": "clindamycin"
+    },
+    {
+        "input": "Disease: NSAID-Induced Gastric Ulcer. What is the recommended drug?",
+        "output": "lansoprazole"
+    },
+    {
+        "input": "Disease: Chronic Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "bendamustine"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "dalfampridine"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "aripiprazole"
+    },
+    {
+        "input": "Disease: Emergency Contraception (Postcoital Contraception). What is the recommended drug?",
+        "output": "ethinyl estradiol / levonorgestrel"
+    },
+    {
+        "input": "Disease: Abnormal Uterine Bleeding. What is the recommended drug?",
+        "output": "ethinyl estradiol / norgestimate"
+    },
+    {
+        "input": "Disease: Bacterial Skin Infection. What is the recommended drug?",
+        "output": "fluocinolone / neomycin"
+    },
+    {
+        "input": "Disease: Bartonellosis. What is the recommended drug?",
+        "output": "azithromycin"
+    },
+    {
+        "input": "Disease: Allergies. What is the recommended drug?",
+        "output": "triprolidine"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "trolamine salicylate"
+    },
+    {
+        "input": "Disease: Renal Cell Carcinoma. What is the recommended drug?",
+        "output": "aldesleukin"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "bendamustine"
+    },
+    {
+        "input": "Disease: Hepatitis C. What is the recommended drug?",
+        "output": "dasabuvir / ombitasvir / paritaprevir / ritonavir"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "bendamustine"
+    },
+    {
+        "input": "Disease: Surgical Prophylaxis. What is the recommended drug?",
+        "output": "cefotaxime"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "zolpidem"
+    },
+    {
+        "input": "Disease: Motion Sickness. What is the recommended drug?",
+        "output": "promethazine"
+    },
+    {
+        "input": "Disease: Hypothyroidism, After Thyroid Removal (Hypothyroidism, Post-Thyroidectomy). What is the recommended drug?",
+        "output": "levothyroxine"
+    },
+    {
+        "input": "Disease: Alzheimer's Disease. What is the recommended drug?",
+        "output": "donepezil / memantine"
+    },
+    {
+        "input": "Disease: Wilms' Tumor (Nephroblastoma). What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Bacterial Endocarditis Prevention (Bacterial Endocarditis Prophylaxis). What is the recommended drug?",
+        "output": "gentamicin"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Dietary Supplementation. What is the recommended drug?",
+        "output": "ascorbic acid"
+    },
+    {
+        "input": "Disease: Hypercalcemia of Malignancy. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "paroxetine"
+    },
+    {
+        "input": "Disease: Psoriasis. What is the recommended drug?",
+        "output": "mometasone"
+    },
+    {
+        "input": "Disease: Calcium Oxalate Calculi with Hyperuricosuria. What is the recommended drug?",
+        "output": "allopurinol"
+    },
+    {
+        "input": "Disease: Q Fever. What is the recommended drug?",
+        "output": "minocycline"
+    },
+    {
+        "input": "Disease: Psittacosis. What is the recommended drug?",
+        "output": "tetracycline"
+    },
+    {
+        "input": "Disease: Leprosy, Tuberculoid. What is the recommended drug?",
+        "output": "rifampin"
+    },
+    {
+        "input": "Disease: Diabetic Kidney Disease (Diabetic Nephropathy). What is the recommended drug?",
+        "output": "trandolapril"
+    },
+    {
+        "input": "Disease: Atrial Fibrillation. What is the recommended drug?",
+        "output": "digoxin"
+    },
+    {
+        "input": "Disease: Short Stature for Age. What is the recommended drug?",
+        "output": "somatropin"
+    },
+    {
+        "input": "Disease: Wilms' Tumor (Nephroblastoma). What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "tretinoin"
+    },
+    {
+        "input": "Disease: Testicular Cancer. What is the recommended drug?",
+        "output": "vinblastine"
+    },
+    {
+        "input": "Disease: Anticholinesterase Poisoning. What is the recommended drug?",
+        "output": "atropine"
+    },
+    {
+        "input": "Disease: AIDS Related Wasting. What is the recommended drug?",
+        "output": "megestrol"
+    },
+    {
+        "input": "Disease: Tardive Dyskinesia. What is the recommended drug?",
+        "output": "tetrabenazine"
+    },
+    {
+        "input": "Disease: Plaque Psoriasis. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Mitral Valve Prolapse. What is the recommended drug?",
+        "output": "bisoprolol"
+    },
+    {
+        "input": "Disease: Osteogenesis Imperfecta. What is the recommended drug?",
+        "output": "calcitonin"
+    },
+    {
+        "input": "Disease: Myelofibrosis. What is the recommended drug?",
+        "output": "ruxolitinib"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Bacterial. What is the recommended drug?",
+        "output": "ofloxacin"
+    },
+    {
+        "input": "Disease: Alzheimer's Disease. What is the recommended drug?",
+        "output": "ergoloid mesylates"
+    },
+    {
+        "input": "Disease: Bladder Infection. What is the recommended drug?",
+        "output": "cephalexin"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "lithium"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "ibrutinib"
+    },
+    {
+        "input": "Disease: Underactive Thyroid (Hypothyroidism). What is the recommended drug?",
+        "output": "liothyronine"
+    },
+    {
+        "input": "Disease: Diffuse Large B-Cell Lymphoma. What is the recommended drug?",
+        "output": "rituximab"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "trolamine salicylate"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "adapalene"
+    },
+    {
+        "input": "Disease: Seborrheic Dermatitis. What is the recommended drug?",
+        "output": "pyrithione zinc"
+    },
+    {
+        "input": "Disease: Mitral Valve Prolapse. What is the recommended drug?",
+        "output": "nebivolol"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Anthrax. What is the recommended drug?",
+        "output": "anthrax immune globulin intravenous"
+    },
+    {
+        "input": "Disease: Hypodermoclysis. What is the recommended drug?",
+        "output": "hyaluronidase"
+    },
+    {
+        "input": "Disease: COPD. What is the recommended drug?",
+        "output": "montelukast"
+    },
+    {
+        "input": "Disease: Mycoplasma Pneumonia. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Adenosine Deaminase Deficiency. What is the recommended drug?",
+        "output": "pegademase bovine"
+    },
+    {
+        "input": "Disease: Osteosarcoma. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Prostatitis. What is the recommended drug?",
+        "output": "cephalexin"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "cefuroxime"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "buspirone"
+    },
+    {
+        "input": "Disease: Production of Miosis. What is the recommended drug?",
+        "output": "carbachol"
+    },
+    {
+        "input": "Disease: Aspiration Pneumonia. What is the recommended drug?",
+        "output": "cilastatin / imipenem"
+    },
+    {
+        "input": "Disease: Glucagonoma. What is the recommended drug?",
+        "output": "octreotide"
+    },
+    {
+        "input": "Disease: Ovulation Induction. What is the recommended drug?",
+        "output": "follicle stimulating hormone"
+    },
+    {
+        "input": "Disease: Upper Respiratory Tract Infection. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lithium"
+    },
+    {
+        "input": "Disease: Multiple Sclerosis. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Nasal Polyps, Prevention. What is the recommended drug?",
+        "output": "beclomethasone"
+    },
+    {
+        "input": "Disease: Chronic Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "ibrutinib"
+    },
+    {
+        "input": "Disease: Rhinorrhea. What is the recommended drug?",
+        "output": "acetaminophen / dextromethorphan / doxylamine / phenylephrine"
+    },
+    {
+        "input": "Disease: Traveler's Diarrhea. What is the recommended drug?",
+        "output": "sulfamethoxazole / trimethoprim"
+    },
+    {
+        "input": "Disease: Whipworm Infection. What is the recommended drug?",
+        "output": "mebendazole"
+    },
+    {
+        "input": "Disease: Melanoma. What is the recommended drug?",
+        "output": "ipilimumab"
+    },
+    {
+        "input": "Disease: Influenza. What is the recommended drug?",
+        "output": "oseltamivir"
+    },
+    {
+        "input": "Disease: Laryngopharyngeal Reflux. What is the recommended drug?",
+        "output": "ranitidine"
+    },
+    {
+        "input": "Disease: Organ Transplant, Rejection Prophylaxis. What is the recommended drug?",
+        "output": "mycophenolate mofetil"
+    },
+    {
+        "input": "Disease: Influenza. What is the recommended drug?",
+        "output": "baloxavir marboxil"
+    },
+    {
+        "input": "Disease: Acute Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "miconazole"
+    },
+    {
+        "input": "Disease: Cough. What is the recommended drug?",
+        "output": "dextromethorphan / promethazine"
+    },
+    {
+        "input": "Disease: Post Traumatic Stress Disorder. What is the recommended drug?",
+        "output": "aripiprazole"
+    },
+    {
+        "input": "Disease: CMV Prophylaxis. What is the recommended drug?",
+        "output": "ganciclovir"
+    },
+    {
+        "input": "Disease: Lemierre's Syndrome. What is the recommended drug?",
+        "output": "chloramphenicol"
+    },
+    {
+        "input": "Disease: Nonketotic Hyperosmolar Syndrome. What is the recommended drug?",
+        "output": "insulin regular"
+    },
+    {
+        "input": "Disease: Fasciolopsis buski, Intestinal Fluke. What is the recommended drug?",
+        "output": "praziquantel"
+    },
+    {
+        "input": "Disease: Coronary Artery Disease. What is the recommended drug?",
+        "output": "rivaroxaban"
+    },
+    {
+        "input": "Disease: Bronchiectasis. What is the recommended drug?",
+        "output": "guaifenesin"
+    },
+    {
+        "input": "Disease: Chronic Idiopathic Constipation. What is the recommended drug?",
+        "output": "prucalopride"
+    },
+    {
+        "input": "Disease: Oral Thrush. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "ciclopirox"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "amoxicillin"
+    },
+    {
+        "input": "Disease: Hereditary Angioedema. What is the recommended drug?",
+        "output": "conestat alfa"
+    },
+    {
+        "input": "Disease: Thrombotic/Thromboembolic Disorder. What is the recommended drug?",
+        "output": "argatroban"
+    },
+    {
+        "input": "Disease: Cold Sores (Herpes Simplex Labialis). What is the recommended drug?",
+        "output": "famciclovir"
+    },
+    {
+        "input": "Disease: Reversal of Nondepolarizing Muscle Relaxants. What is the recommended drug?",
+        "output": "atropine / edrophonium"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "cyclobenzaprine"
+    },
+    {
+        "input": "Disease: Organophosphate Poisoning. What is the recommended drug?",
+        "output": "atropine"
+    },
+    {
+        "input": "Disease: Tinea Cruris. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "idarubicin"
+    },
+    {
+        "input": "Disease: Anemia, Sickle Cell. What is the recommended drug?",
+        "output": "glutamine"
+    },
+    {
+        "input": "Disease: Persistent Depressive Disorder. What is the recommended drug?",
+        "output": "fluoxetine"
+    },
+    {
+        "input": "Disease: Hypoprothrombinemia, Not Associated with Anticoagulant Therapy. What is the recommended drug?",
+        "output": "phytonadione"
+    },
+    {
+        "input": "Disease: Hookworm Infection (Necator or Ancylostoma). What is the recommended drug?",
+        "output": "mebendazole"
+    },
+    {
+        "input": "Disease: Seizures (Convulsions). What is the recommended drug?",
+        "output": "valproic acid"
+    },
+    {
+        "input": "Disease: High Cholesterol. What is the recommended drug?",
+        "output": "rosuvastatin"
+    },
+    {
+        "input": "Disease: Hypocalcemia. What is the recommended drug?",
+        "output": "calcitriol"
+    },
+    {
+        "input": "Disease: Bartonellosis. What is the recommended drug?",
+        "output": "azithromycin"
+    },
+    {
+        "input": "Disease: HIV Infection. What is the recommended drug?",
+        "output": "ritonavir"
+    },
+    {
+        "input": "Disease: Merkel Cell Carcinoma. What is the recommended drug?",
+        "output": "pembrolizumab"
+    },
+    {
+        "input": "Disease: Tinea Versicolor. What is the recommended drug?",
+        "output": "selenium sulfide"
+    },
+    {
+        "input": "Disease: Vitamin/Mineral Supplementation and Deficiency. What is the recommended drug?",
+        "output": "multivitamin with iron"
+    },
+    {
+        "input": "Disease: Gas. What is the recommended drug?",
+        "output": "aluminum hydroxide / magnesium hydroxide / simethicone"
+    },
+    {
+        "input": "Disease: Postpartum Depression. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Diabetes, Type 1. What is the recommended drug?",
+        "output": "insulin regular"
+    },
+    {
+        "input": "Disease: Epiglottitis. What is the recommended drug?",
+        "output": "ceftriaxone"
+    },
+    {
+        "input": "Disease: Glaucoma/Intraocular Hypertension. What is the recommended drug?",
+        "output": "brimonidine / timolol"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "aspirin / butalbital / caffeine"
+    },
+    {
+        "input": "Disease: High Blood Pressure (Hypertension). What is the recommended drug?",
+        "output": "valsartan"
+    },
+    {
+        "input": "Disease: Impetigo. What is the recommended drug?",
+        "output": "ammoniated mercury"
+    },
+    {
+        "input": "Disease: Raynaud's Syndrome. What is the recommended drug?",
+        "output": "amlodipine"
+    },
+    {
+        "input": "Disease: Prevention of Clostridioides difficile Infection Recurrence. What is the recommended drug?",
+        "output": "bezlotoxumab"
+    },
+    {
+        "input": "Disease: Systemic Mastocytosis. What is the recommended drug?",
+        "output": "cromolyn"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Soft Tissue Sarcoma. What is the recommended drug?",
+        "output": "trabectedin"
+    },
+    {
+        "input": "Disease: Prostatitis. What is the recommended drug?",
+        "output": "oxybutynin"
+    },
+    {
+        "input": "Disease: Supraventricular Tachycardia. What is the recommended drug?",
+        "output": "adenosine"
+    },
+    {
+        "input": "Disease: Obsessive Compulsive Disorder. What is the recommended drug?",
+        "output": "tramadol"
+    },
+    {
+        "input": "Disease: Ovarian Cancer. What is the recommended drug?",
+        "output": "paclitaxel"
+    },
+    {
+        "input": "Disease: Ulcerative Colitis, Active. What is the recommended drug?",
+        "output": "methylprednisolone"
+    },
+    {
+        "input": "Disease: Bleeding Disorder. What is the recommended drug?",
+        "output": "dextran, high molecular weight"
+    },
+    {
+        "input": "Disease: Headache. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Aseptic Necrosis. What is the recommended drug?",
+        "output": "alendronate"
+    },
+    {
+        "input": "Disease: Lice. What is the recommended drug?",
+        "output": "spinosad"
+    },
+    {
+        "input": "Disease: Eczema. What is the recommended drug?",
+        "output": "halobetasol"
+    },
+    {
+        "input": "Disease: Chronic Myelogenous Leukemia. What is the recommended drug?",
+        "output": "ponatinib"
+    },
+    {
+        "input": "Disease: Urinary Incontinence. What is the recommended drug?",
+        "output": "fesoterodine"
+    },
+    {
+        "input": "Disease: Arrhythmia. What is the recommended drug?",
+        "output": "propranolol"
+    },
+    {
+        "input": "Disease: Bacterial Endocarditis Prevention (Bacterial Endocarditis Prophylaxis). What is the recommended drug?",
+        "output": "ceftriaxone"
+    },
+    {
+        "input": "Disease: Neurosis. What is the recommended drug?",
+        "output": "nortriptyline"
+    },
+    {
+        "input": "Disease: Cold Symptoms. What is the recommended drug?",
+        "output": "chlorpheniramine"
+    },
+    {
+        "input": "Disease: Neuroleptic Malignant Syndrome. What is the recommended drug?",
+        "output": "carbidopa / levodopa"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "temazepam"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "carvedilol"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "nabumetone"
+    },
+    {
+        "input": "Disease: Reflex Sympathetic Dystrophy Syndrome. What is the recommended drug?",
+        "output": "carbamazepine"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "quetiapine"
+    },
+    {
+        "input": "Disease: Gynecological Conditions. What is the recommended drug?",
+        "output": "misoprostol"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "dutasteride"
+    },
+    {
+        "input": "Disease: Hepatitis C. What is the recommended drug?",
+        "output": "sofosbuvir / velpatasvir / voxilaprevir"
+    },
+    {
+        "input": "Disease: Ankylosing Spondylitis. What is the recommended drug?",
+        "output": "infliximab"
+    },
+    {
+        "input": "Disease: Cutaneous Larva Migrans. What is the recommended drug?",
+        "output": "ivermectin"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "idelalisib"
+    },
+    {
+        "input": "Disease: Cervical Cancer. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "amoxicillin"
+    },
+    {
+        "input": "Disease: Chemotherapy Toxicity. What is the recommended drug?",
+        "output": "amifostine"
+    },
+    {
+        "input": "Disease: Anthrax. What is the recommended drug?",
+        "output": "chloramphenicol"
+    },
+    {
+        "input": "Disease: Dysautonomia. What is the recommended drug?",
+        "output": "midodrine"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "diclofenac"
+    },
+    {
+        "input": "Disease: Keratoconjunctivitis. What is the recommended drug?",
+        "output": "hydrocortisone / neomycin / polymyxin b"
+    },
+    {
+        "input": "Disease: Reflex Sympathetic Dystrophy Syndrome. What is the recommended drug?",
+        "output": "doxepin"
+    },
+    {
+        "input": "Disease: Herpes Simplex. What is the recommended drug?",
+        "output": "acyclovir"
+    },
+    {
+        "input": "Disease: Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "nivolumab"
+    },
+    {
+        "input": "Disease: Irritable Bowel Syndrome. What is the recommended drug?",
+        "output": "cholestyramine"
+    },
+    {
+        "input": "Disease: Respiratory Depression. What is the recommended drug?",
+        "output": "doxapram"
+    },
+    {
+        "input": "Disease: Anthrax. What is the recommended drug?",
+        "output": "doxycycline"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "flavoxate"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "gabapentin"
+    },
+    {
+        "input": "Disease: Liver Fluke (Clornorchis sinensis). What is the recommended drug?",
+        "output": "albendazole"
+    },
+    {
+        "input": "Disease: Back Pain. What is the recommended drug?",
+        "output": "nabumetone"
+    },
+    {
+        "input": "Disease: Cold Symptoms. What is the recommended drug?",
+        "output": "acetaminophen / chlorpheniramine / phenylephrine"
+    },
+    {
+        "input": "Disease: Post Traumatic Stress Disorder. What is the recommended drug?",
+        "output": "mirtazapine"
+    },
+    {
+        "input": "Disease: Tinea Cruris. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Facial Wrinkles. What is the recommended drug?",
+        "output": "abobotulinumtoxinA"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "venetoclax"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "haloperidol"
+    },
+    {
+        "input": "Disease: Cutaneous Candidiasis. What is the recommended drug?",
+        "output": "terbinafine"
+    },
+    {
+        "input": "Disease: Bronchiectasis. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Hot Flashes. What is the recommended drug?",
+        "output": "venlafaxine"
+    },
+    {
+        "input": "Disease: Amebiasis. What is the recommended drug?",
+        "output": "nitazoxanide"
+    },
+    {
+        "input": "Disease: Adrenal Insufficiency. What is the recommended drug?",
+        "output": "cortisone"
+    },
+    {
+        "input": "Disease: Diarrhea. What is the recommended drug?",
+        "output": "octreotide"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "topiramate"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "enasidenib"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "everolimus"
+    },
+    {
+        "input": "Disease: Benign Prostatic Hyperplasia. What is the recommended drug?",
+        "output": "tadalafil"
+    },
+    {
+        "input": "Disease: Croup. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Persistent Depressive Disorder. What is the recommended drug?",
+        "output": "duloxetine"
+    },
+    {
+        "input": "Disease: Tetanus Prophylaxis. What is the recommended drug?",
+        "output": "diphtheria toxoid / hepatitis b pediatric vaccine / pertussis, acellular / poliovirus vaccine, inactivated / tetanus toxoid"
+    },
+    {
+        "input": "Disease: Somatoform Pain Disorder. What is the recommended drug?",
+        "output": "duloxetine"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "methotrexate"
+    },
+    {
+        "input": "Disease: Persistent Depressive Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Diabetes, Type 2. What is the recommended drug?",
+        "output": "metformin / sitagliptin"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Esophageal Spasm. What is the recommended drug?",
+        "output": "isosorbide mononitrate"
+    },
+    {
+        "input": "Disease: Paranoid Disorder. What is the recommended drug?",
+        "output": "quetiapine"
+    },
+    {
+        "input": "Disease: Mycobacterium kansasii. What is the recommended drug?",
+        "output": "isoniazid"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "flavoxate"
+    },
+    {
+        "input": "Disease: Acne. What is the recommended drug?",
+        "output": "tetracycline"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "levofloxacin"
+    },
+    {
+        "input": "Disease: CMV Prophylaxis. What is the recommended drug?",
+        "output": "valganciclovir"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "cytarabine liposomal / daunorubicin liposomal"
+    },
+    {
+        "input": "Disease: Heart Attack (Myocardial Infarction). What is the recommended drug?",
+        "output": "nitroglycerin"
+    },
+    {
+        "input": "Disease: Septicemia. What is the recommended drug?",
+        "output": "penicillin g potassium"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lurasidone"
+    },
+    {
+        "input": "Disease: Cold Sores (Herpes Simplex Labialis). What is the recommended drug?",
+        "output": "benzyl alcohol"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "fluconazole"
+    },
+    {
+        "input": "Disease: Antiphospholipid Syndrome. What is the recommended drug?",
+        "output": "aspirin"
+    },
+    {
+        "input": "Disease: Upper GI Hemorrhage. What is the recommended drug?",
+        "output": "famotidine"
+    },
+    {
+        "input": "Disease: Alcohol Withdrawal. What is the recommended drug?",
+        "output": "oxazepam"
+    },
+    {
+        "input": "Disease: Aspiration Pneumonia. What is the recommended drug?",
+        "output": "metronidazole"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "cytarabine liposomal / daunorubicin liposomal"
+    },
+    {
+        "input": "Disease: Amyotrophic Lateral Sclerosis. What is the recommended drug?",
+        "output": "edaravone"
+    },
+    {
+        "input": "Disease: Paranoid Disorder. What is the recommended drug?",
+        "output": "ziprasidone"
+    },
+    {
+        "input": "Disease: Crohn's Disease. What is the recommended drug?",
+        "output": "cyclosporine"
+    },
+    {
+        "input": "Disease: Narcolepsy. What is the recommended drug?",
+        "output": "methylphenidate"
+    },
+    {
+        "input": "Disease: Acute Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "asparaginase erwinia chrysanthemi"
+    },
+    {
+        "input": "Disease: Thalassemia. What is the recommended drug?",
+        "output": "deferiprone"
+    },
+    {
+        "input": "Disease: Drowsiness (Hypersomnia). What is the recommended drug?",
+        "output": "dextroamphetamine"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "divalproex sodium"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "quetiapine"
+    },
+    {
+        "input": "Disease: Obsessive Compulsive Disorder. What is the recommended drug?",
+        "output": "aripiprazole"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Asthma. What is the recommended drug?",
+        "output": "flunisolide"
+    },
+    {
+        "input": "Disease: Non-Small Cell Lung Cancer. What is the recommended drug?",
+        "output": "erlotinib"
+    },
+    {
+        "input": "Disease: Facial Wrinkles. What is the recommended drug?",
+        "output": "azficel-t"
+    },
+    {
+        "input": "Disease: Insomnia. What is the recommended drug?",
+        "output": "zolpidem"
+    },
+    {
+        "input": "Disease: Hyperhidrosis. What is the recommended drug?",
+        "output": "clonidine"
+    },
+    {
+        "input": "Disease: Diabetic Macular Edema. What is the recommended drug?",
+        "output": "ranibizumab"
+    },
+    {
+        "input": "Disease: Ophthalmic Surgery. What is the recommended drug?",
+        "output": "ketorolac / phenylephrine"
+    },
+    {
+        "input": "Disease: Abdominal Radiological Procedure. What is the recommended drug?",
+        "output": "vasopressin"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Bacterial. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Meningitis, Meningococcal. What is the recommended drug?",
+        "output": "meningococcal group B vaccine"
+    },
+    {
+        "input": "Disease: COPD, Acute. What is the recommended drug?",
+        "output": "epinephrine"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "gilteritinib"
+    },
+    {
+        "input": "Disease: Electromechanical Dissociation. What is the recommended drug?",
+        "output": "epinephrine"
+    },
+    {
+        "input": "Disease: Chronic Lymphocytic Leukemia. What is the recommended drug?",
+        "output": "fludarabine"
+    },
+    {
+        "input": "Disease: Parkinsonism. What is the recommended drug?",
+        "output": "levodopa"
+    },
+    {
+        "input": "Disease: Alkylating Agent Cystitis. What is the recommended drug?",
+        "output": "sodium bicarbonate"
+    },
+    {
+        "input": "Disease: Atrial Flutter. What is the recommended drug?",
+        "output": "propafenone"
+    },
+    {
+        "input": "Disease: Bipolar Disorder. What is the recommended drug?",
+        "output": "clonazepam"
+    },
+    {
+        "input": "Disease: Aphthous Ulcer. What is the recommended drug?",
+        "output": "benzocaine"
+    },
+    {
+        "input": "Disease: Human Papilloma Virus. What is the recommended drug?",
+        "output": "resorcinol"
+    },
+    {
+        "input": "Disease: Fallopian Tube Cancer. What is the recommended drug?",
+        "output": "bevacizumab"
+    },
+    {
+        "input": "Disease: Gender Dysphoria. What is the recommended drug?",
+        "output": "conjugated estrogens"
+    },
+    {
+        "input": "Disease: Polycystic Kidney Disease. What is the recommended drug?",
+        "output": "enalapril"
+    },
+    {
+        "input": "Disease: Systemic Lupus Erythematosus. What is the recommended drug?",
+        "output": "hydroxychloroquine"
+    },
+    {
+        "input": "Disease: Berylliosis. What is the recommended drug?",
+        "output": "prednisone"
+    },
+    {
+        "input": "Disease: Emergency Contraception (Postcoital Contraception). What is the recommended drug?",
+        "output": "levonorgestrel"
+    },
+    {
+        "input": "Disease: Squamous Cell Carcinoma. What is the recommended drug?",
+        "output": "cemiplimab"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "levofloxacin"
+    },
+    {
+        "input": "Disease: Supraventricular Tachycardia. What is the recommended drug?",
+        "output": "amiodarone"
+    },
+    {
+        "input": "Disease: Acute Myeloid Leukemia. What is the recommended drug?",
+        "output": "gilteritinib"
+    },
+    {
+        "input": "Disease: Iron Deficiency Anemia. What is the recommended drug?",
+        "output": "iron sucrose"
+    },
+    {
+        "input": "Disease: Lyme Disease, Neurologic. What is the recommended drug?",
+        "output": "tetracycline"
+    },
+    {
+        "input": "Disease: Anxiety and Stress. What is the recommended drug?",
+        "output": "citalopram"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: Hepatitis B Prevention (Hepatitis B Prophylaxis). What is the recommended drug?",
+        "output": "diphtheria toxoid / hepatitis b pediatric vaccine / pertussis, acellular / poliovirus vaccine, inactivated / tetanus toxoid"
+    },
+    {
+        "input": "Disease: Fever. What is the recommended drug?",
+        "output": "acetaminophen"
+    },
+    {
+        "input": "Disease: Bacterial Skin Infection. What is the recommended drug?",
+        "output": "bacitracin"
+    },
+    {
+        "input": "Disease: Tinea Corporis. What is the recommended drug?",
+        "output": "ketoconazole"
+    },
+    {
+        "input": "Disease: Trophoblastic Disease. What is the recommended drug?",
+        "output": "dinoprostone"
+    },
+    {
+        "input": "Disease: Bleeding Disorder. What is the recommended drug?",
+        "output": "goserelin"
+    },
+    {
+        "input": "Disease: Myasthenia Gravis. What is the recommended drug?",
+        "output": "neostigmine"
+    },
+    {
+        "input": "Disease: Tuberculosis, Extrapulmonary. What is the recommended drug?",
+        "output": "cycloserine"
+    },
+    {
+        "input": "Disease: Waldenstr\u00f6m Macroglobulinemia. What is the recommended drug?",
+        "output": "ibrutinib"
+    },
+    {
+        "input": "Disease: Rheumatoid Arthritis. What is the recommended drug?",
+        "output": "celecoxib"
+    },
+    {
+        "input": "Disease: Colorectal Cancer. What is the recommended drug?",
+        "output": "cetuximab"
+    },
+    {
+        "input": "Disease: Otitis Media. What is the recommended drug?",
+        "output": "amoxicillin / clavulanate"
+    },
+    {
+        "input": "Disease: Premenstrual Syndrome. What is the recommended drug?",
+        "output": "acetaminophen / pamabrom"
+    },
+    {
+        "input": "Disease: Neurotrophic Keratitis. What is the recommended drug?",
+        "output": "cenegermin"
+    },
+    {
+        "input": "Disease: Ovarian Cancer. What is the recommended drug?",
+        "output": "carboplatin"
+    },
+    {
+        "input": "Disease: Vascular Magnetic Resonance Imaging. What is the recommended drug?",
+        "output": "gadodiamide"
+    },
+    {
+        "input": "Disease: Chronic Myofascial Pain. What is the recommended drug?",
+        "output": "amitriptyline"
+    },
+    {
+        "input": "Disease: Pneumonia. What is the recommended drug?",
+        "output": "azithromycin"
+    },
+    {
+        "input": "Disease: Bladder Cancer. What is the recommended drug?",
+        "output": "doxorubicin"
+    },
+    {
+        "input": "Disease: Fever. What is the recommended drug?",
+        "output": "naproxen"
+    },
+    {
+        "input": "Disease: Tuberculosis, Active. What is the recommended drug?",
+        "output": "pyrazinamide"
+    },
+    {
+        "input": "Disease: Premenstrual Dysphoric Disorder. What is the recommended drug?",
+        "output": "sertraline"
+    },
+    {
+        "input": "Disease: Leprosy, Dapsone-Sensitive. What is the recommended drug?",
+        "output": "clofazimine"
+    },
+    {
+        "input": "Disease: Cancer. What is the recommended drug?",
+        "output": "fluorouracil"
+    },
+    {
+        "input": "Disease: Fish Tapeworm Infection (Diphyllobothrium latum). What is the recommended drug?",
+        "output": "paromomycin"
+    },
+    {
+        "input": "Disease: Eczema. What is the recommended drug?",
+        "output": "ranitidine"
+    },
+    {
+        "input": "Disease: Osteolytic Bone Lesions of Multiple Myeloma. What is the recommended drug?",
+        "output": "pamidronate"
+    },
+    {
+        "input": "Disease: Systemic Lupus Erythematosus. What is the recommended drug?",
+        "output": "mycophenolate mofetil"
+    },
+    {
+        "input": "Disease: Ventricular Tachycardia. What is the recommended drug?",
+        "output": "amiodarone"
+    },
+    {
+        "input": "Disease: Conjunctivitis, Bacterial. What is the recommended drug?",
+        "output": "erythromycin"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "ciprofloxacin"
+    },
+    {
+        "input": "Disease: Gonococcal Infection, Uncomplicated. What is the recommended drug?",
+        "output": "ceftriaxone"
+    },
+    {
+        "input": "Disease: Skin and Structure Infection. What is the recommended drug?",
+        "output": "linezolid"
+    },
+    {
+        "input": "Disease: Anxiety. What is the recommended drug?",
+        "output": "propranolol"
+    },
+    {
+        "input": "Disease: Clostridioides difficile Infection. What is the recommended drug?",
+        "output": "vancomycin"
+    },
+    {
+        "input": "Disease: Panic Disorder. What is the recommended drug?",
+        "output": "alprazolam"
+    },
+    {
+        "input": "Disease: Anesthesia. What is the recommended drug?",
+        "output": "propofol"
+    },
+    {
+        "input": "Disease: Anthrax. What is the recommended drug?",
+        "output": "penicillin g potassium"
+    },
+    {
+        "input": "Disease: Angina. What is the recommended drug?",
+        "output": "isosorbide mononitrate"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "ibrutinib"
+    },
+    {
+        "input": "Disease: Crohn's Disease. What is the recommended drug?",
+        "output": "sulfasalazine"
+    },
+    {
+        "input": "Disease: Adams-Stokes Syndrome. What is the recommended drug?",
+        "output": "isoproterenol"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "mirabegron"
+    },
+    {
+        "input": "Disease: Migraine. What is the recommended drug?",
+        "output": "almotriptan"
+    },
+    {
+        "input": "Disease: Endometrial Cancer. What is the recommended drug?",
+        "output": "pembrolizumab"
+    },
+    {
+        "input": "Disease: Myelodysplastic Diseases. What is the recommended drug?",
+        "output": "lenalidomide"
+    },
+    {
+        "input": "Disease: Non-Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Toothache. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Intertrigo. What is the recommended drug?",
+        "output": "clotrimazole"
+    },
+    {
+        "input": "Disease: Total Parenteral Nutrition. What is the recommended drug?",
+        "output": "chromic chloride hexahydrate"
+    },
+    {
+        "input": "Disease: Skin or Soft Tissue Infection. What is the recommended drug?",
+        "output": "clarithromycin"
+    },
+    {
+        "input": "Disease: Diabetic Ketoacidosis. What is the recommended drug?",
+        "output": "insulin lispro"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "moxifloxacin"
+    },
+    {
+        "input": "Disease: Failure to Thrive. What is the recommended drug?",
+        "output": "cyproheptadine"
+    },
+    {
+        "input": "Disease: Rheumatoid Arthritis. What is the recommended drug?",
+        "output": "diclofenac"
+    },
+    {
+        "input": "Disease: Iridocyclitis. What is the recommended drug?",
+        "output": "dexamethasone"
+    },
+    {
+        "input": "Disease: Hyperlipoproteinemia Type IIb, Elevated LDL   VLDL. What is the recommended drug?",
+        "output": "fenofibrate"
+    },
+    {
+        "input": "Disease: Hodgkin's Lymphoma. What is the recommended drug?",
+        "output": "chlorambucil"
+    },
+    {
+        "input": "Disease: Premenstrual Syndrome. What is the recommended drug?",
+        "output": "pamabrom"
+    },
+    {
+        "input": "Disease: Neuroblastoma. What is the recommended drug?",
+        "output": "vincristine"
+    },
+    {
+        "input": "Disease: Stomach Ulcer (Gastric Ulcer). What is the recommended drug?",
+        "output": "pantoprazole"
+    },
+    {
+        "input": "Disease: Endometrial Cancer. What is the recommended drug?",
+        "output": "anastrozole"
+    },
+    {
+        "input": "Disease: Breast Cancer. What is the recommended drug?",
+        "output": "anastrozole"
+    },
+    {
+        "input": "Disease: Drowsiness (Hypersomnia). What is the recommended drug?",
+        "output": "modafinil"
+    },
+    {
+        "input": "Disease: Otitis Externa. What is the recommended drug?",
+        "output": "acetic acid / aluminum acetate"
+    },
+    {
+        "input": "Disease: Occupational Exposure. What is the recommended drug?",
+        "output": "tenofovir"
+    },
+    {
+        "input": "Disease: Eczema. What is the recommended drug?",
+        "output": "desoximetasone"
+    },
+    {
+        "input": "Disease: Chronic Myofascial Pain. What is the recommended drug?",
+        "output": "ibuprofen"
+    },
+    {
+        "input": "Disease: Muscle Pain. What is the recommended drug?",
+        "output": "acetaminophen"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "sulfamethoxazole / trimethoprim"
+    },
+    {
+        "input": "Disease: Hereditary Tyrosinemia Type 1. What is the recommended drug?",
+        "output": "nitisinone"
+    },
+    {
+        "input": "Disease: Echocardiography. What is the recommended drug?",
+        "output": "perflutren"
+    },
+    {
+        "input": "Disease: Diabetic Kidney Disease (Diabetic Nephropathy). What is the recommended drug?",
+        "output": "benazepril"
+    },
+    {
+        "input": "Disease: Back Pain. What is the recommended drug?",
+        "output": "aspirin"
+    },
+    {
+        "input": "Disease: Mania. What is the recommended drug?",
+        "output": "lithium"
+    },
+    {
+        "input": "Disease: Sitosterolemia. What is the recommended drug?",
+        "output": "ezetimibe"
+    },
+    {
+        "input": "Disease: Bursitis. What is the recommended drug?",
+        "output": "sulindac"
+    },
+    {
+        "input": "Disease: Transurethral Prostatectomy. What is the recommended drug?",
+        "output": "fosfomycin"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Heterozygous. What is the recommended drug?",
+        "output": "atorvastatin"
+    },
+    {
+        "input": "Disease: Urinary Tract Infection. What is the recommended drug?",
+        "output": "amoxicillin"
+    },
+    {
+        "input": "Disease: Endometrial Cancer. What is the recommended drug?",
+        "output": "lenvatinib"
+    },
+    {
+        "input": "Disease: Osteoarthritis. What is the recommended drug?",
+        "output": "aspirin"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "fluticasone"
+    },
+    {
+        "input": "Disease: Rabbit Fever (Tularemia). What is the recommended drug?",
+        "output": "minocycline"
+    },
+    {
+        "input": "Disease: Keratosis. What is the recommended drug?",
+        "output": "imiquimod"
+    },
+    {
+        "input": "Disease: Campylobacter Gastroenteritis. What is the recommended drug?",
+        "output": "ofloxacin"
+    },
+    {
+        "input": "Disease: Multiple Myeloma. What is the recommended drug?",
+        "output": "cyclophosphamide"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "mometasone"
+    },
+    {
+        "input": "Disease: High Blood Pressure (Hypertension). What is the recommended drug?",
+        "output": "furosemide"
+    },
+    {
+        "input": "Disease: Clostridioides difficile Infection. What is the recommended drug?",
+        "output": "fidaxomicin"
+    },
+    {
+        "input": "Disease: GERD. What is the recommended drug?",
+        "output": "sucralfate"
+    },
+    {
+        "input": "Disease: Urinary Frequency. What is the recommended drug?",
+        "output": "flavoxate"
+    },
+    {
+        "input": "Disease: Nonketotic Hyperosmolar Syndrome. What is the recommended drug?",
+        "output": "insulin regular"
+    },
+    {
+        "input": "Disease: Traveler's Diarrhea. What is the recommended drug?",
+        "output": "ofloxacin"
+    },
+    {
+        "input": "Disease: Somatoform Pain Disorder. What is the recommended drug?",
+        "output": "imipramine"
+    },
+    {
+        "input": "Disease: Atopic Dermatitis. What is the recommended drug?",
+        "output": "mometasone"
+    },
+    {
+        "input": "Disease: Tenosynovial Giant Cell Tumor. What is the recommended drug?",
+        "output": "pexidartinib"
+    },
+    {
+        "input": "Disease: Mantle Cell Lymphoma. What is the recommended drug?",
+        "output": "cytarabine"
+    },
+    {
+        "input": "Disease: Sinusitis. What is the recommended drug?",
+        "output": "sulfamethoxazole / trimethoprim"
+    },
+    {
+        "input": "Disease: Cardiovascular Risk Reduction. What is the recommended drug?",
+        "output": "telmisartan"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "lorazepam"
+    },
+    {
+        "input": "Disease: Glomerulonephritis. What is the recommended drug?",
+        "output": "azathioprine"
+    },
+    {
+        "input": "Disease: Cold Symptoms. What is the recommended drug?",
+        "output": "pseudoephedrine / triprolidine"
+    },
+    {
+        "input": "Disease: Atrial Fibrillation. What is the recommended drug?",
+        "output": "digoxin"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "olanzapine"
+    },
+    {
+        "input": "Disease: Peritoneal Cancer. What is the recommended drug?",
+        "output": "bevacizumab"
+    },
+    {
+        "input": "Disease: High Cholesterol, Familial Heterozygous. What is the recommended drug?",
+        "output": "fluvastatin"
+    },
+    {
+        "input": "Disease: Hepatocellular Carcinoma. What is the recommended drug?",
+        "output": "ramucirumab"
+    },
+    {
+        "input": "Disease: Aphthous Ulcer. What is the recommended drug?",
+        "output": "triamcinolone"
+    },
+    {
+        "input": "Disease: Schizophrenia. What is the recommended drug?",
+        "output": "paliperidone"
+    },
+    {
+        "input": "Disease: Hyperhidrosis. What is the recommended drug?",
+        "output": "oxybutynin"
+    },
+    {
+        "input": "Disease: Keratosis. What is the recommended drug?",
+        "output": "ingenol"
+    },
+    {
+        "input": "Disease: Temporomandibular Joint Disorder. What is the recommended drug?",
+        "output": "clonazepam"
+    },
+    {
+        "input": "Disease: Borderline Personality Disorder. What is the recommended drug?",
+        "output": "topiramate"
+    },
+    {
+        "input": "Disease: Diarrhea. What is the recommended drug?",
+        "output": "opium"
+    },
+    {
+        "input": "Disease: Diabetes, Type 2. What is the recommended drug?",
+        "output": "pioglitazone"
+    },
+    {
+        "input": "Disease: Opioid-Induced Constipation. What is the recommended drug?",
+        "output": "lubiprostone"
+    },
+    {
+        "input": "Disease: Tonsillitis/Pharyngitis. What is the recommended drug?",
+        "output": "amoxicillin"
+    }
+]

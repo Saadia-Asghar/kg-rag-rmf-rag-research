@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/kg-rag-explainer/"
+title = "KG-RAG Simple Explainer"
+description = "A beginner-friendly presentation explaining the gaps of each KG-RAG method in plain English, then explaining RMF-RAG in both simple and technical terms, with a full step-by-step example query walkthrough."
+version = "1.0.0"
+id = "artifacts/kg-rag-explainer"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kg-rag-explainer/" ]
+localPort = 19060
+
+[services.development]
+run = "pnpm --filter @workspace/kg-rag-explainer run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kg-rag-explainer", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kg-rag-explainer/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19060"
+BASE_PATH = "/kg-rag-explainer/"

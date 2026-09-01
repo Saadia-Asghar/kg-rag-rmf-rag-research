@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/kg-rag-research/"
+title = "KG-RAG Research Presentation"
+description = "A 25-slide academic research presentation covering 10 Knowledge Graph RAG papers (D-RAG, CogGRAG, Goal-Oriented KG, M³KG-RAG, KG-RAG, GraphFlow, SG-RAG, HyKGE, KRAGEN, KG²RAG), each explained across 2 slides covering research question, methodology, testing, and results. Concludes with the proposed RMF-RAG / HyperKG-RAG research direction. Designed for an undergraduate researcher audience."
+version = "1.0.0"
+id = "artifacts/kg-rag-research"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kg-rag-research/" ]
+localPort = 21816
+
+[services.development]
+run = "pnpm --filter @workspace/kg-rag-research run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kg-rag-research", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kg-rag-research/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21816"
+BASE_PATH = "/kg-rag-research/"

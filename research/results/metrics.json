@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "seed": 17,
+    "source_rows": 1000,
+    "unique_pairs": 880,
+    "train_pairs": 698,
+    "held_out_edges": 182,
+    "test_queries": 19,
+    "graph_nodes": 1652,
+    "graph_edges": 3138,
+    "embedding_dimension": 8,
+    "dataset": "Kaggle disease-drug-dataset by erolatik",
+    "dataset_url": "https://www.kaggle.com/datasets/erolatik/disease-drug-dataset",
+    "evaluation": "one held-out drug per disease with at least two observed drugs; recoverable subset only"
+  },
+  "models": [
+    {
+      "model": "lexical_baseline",
+      "test_queries": 19,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.21052631578947367,
+      "recall_at_5": 0.47368421052631576,
+      "recall_at_10": 0.7368421052631579,
+      "mrr": 0.19949333718683562,
+      "top1_graph_grounding_rate": 1.0
+    },
+    {
+      "model": "euclidean",
+      "test_queries": 19,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.0,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.21052631578947367,
+      "mrr": 0.05961009076226811,
+      "top1_graph_grounding_rate": 0.9473684210526315
+    },
+    {
+      "model": "rmf_rag_hyperbolic",
+      "test_queries": 19,
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.10526315789473684,
+      "recall_at_5": 0.21052631578947367,
+      "recall_at_10": 0.47368421052631576,
+      "mrr": 0.13143115470615807,
+      "top1_graph_grounding_rate": 0.9473684210526315
+    }
+  ]
+}

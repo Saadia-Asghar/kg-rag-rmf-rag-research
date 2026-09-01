@@ -1,0 +1,28 @@
+kind = "slides"
+previewPath = "/kg-rag-supervisor-pitch/"
+title = "RMF-RAG Supervisor Pitch"
+description = "Personal research pitch to supervisor — covers gaps found in 10 KG-RAG papers, the Euclidean-to-Riemannian geometry shift, how it changes every query mechanism, a worked TCF7L2→Metformin sample query, the full RMF-RAG proposal, and a 10-week build plan. Every slide includes plain-English speaker notes."
+version = "1.0.0"
+id = "artifacts/kg-rag-supervisor-pitch"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/kg-rag-supervisor-pitch/" ]
+localPort = 18735
+
+[services.development]
+run = "pnpm --filter @workspace/kg-rag-supervisor-pitch run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kg-rag-supervisor-pitch", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kg-rag-supervisor-pitch/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18735"
+BASE_PATH = "/kg-rag-supervisor-pitch/"

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01Title.tsx",
+    "title": "Title — Navigating the KG-RAG Cosmos",
+    "description": "Title slide introducing all 10 papers and the research journey from differentiable retrieval to RMF-RAG.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02DragA.tsx",
+    "title": "D-RAG — Research Question & Methodology",
+    "description": "EMNLP 2025. How Gumbel-Softmax makes fact selection differentiable so the generator can teach the retriever.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03DragB.tsx",
+    "title": "D-RAG — Results & Key Findings",
+    "description": "WebQSP 89.1% Hits@1, MetaQA-3hop 97.7%. End-to-end training yields biggest gains on hardest multi-hop questions.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "d4e5f6a7-b8c9-0123-defa-234567890123",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04CogGRAGA.tsx",
+    "title": "CogGRAG — Research Question & Methodology",
+    "description": "AAAI 2026. Mind-map decomposition + dual-process verification inspired by human cognition System 1/System 2.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "e5f6a7b8-c9d0-1234-efab-345678901234",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05CogGRAGB.tsx",
+    "title": "CogGRAG — Results & Key Findings",
+    "description": "Hallucination reduced from 55.2% to 25.0%. Explicit verification and honest abstention are the most powerful anti-hallucination mechanisms.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "f6a7b8c9-d0e1-2345-fabc-456789012345",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06GoalKGA.tsx",
+    "title": "Goal-Oriented KG — Research Question & Methodology",
+    "description": "Information 2026. SPARQL on procedural goal trees for regulatory accounting knowledge.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a7b8c9d0-e1f2-3456-abcd-567890123456",
+    "position": 7,
+    "filepath": "src/pages/slides/Slide07GoalKGB.tsx",
+    "title": "Goal-Oriented KG — Results & Key Findings",
+    "description": "F1 0.83 vs ChatGPT-4o 0.15. Symbolic SPARQL beats GPT-4o by 5.5x on specialized procedural knowledge.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b8c9d0e1-f2a3-4567-bcde-678901234567",
+    "position": 8,
+    "filepath": "src/pages/slides/Slide08M3KGA.tsx",
+    "title": "M³KG-RAG — Research Question & Methodology",
+    "description": "CVPR 2026. Multi-hop multimodal KG with modality-matched FAISS retrieval and GRASP grounding verification.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "c9d0e1f2-a3b4-5678-cdef-789012345678",
+    "position": 9,
+    "filepath": "src/pages/slides/Slide09M3KGB.tsx",
+    "title": "M³KG-RAG — Results & Key Findings",
+    "description": "VALOR benchmark 44.67 vs prior best 35.44. Grounding verification (GRASP) cuts hallucinated audio/visual claims.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "d0e1f2a3-b4c5-6789-defa-890123456789",
+    "position": 10,
+    "filepath": "src/pages/slides/Slide10KGRagWangA.tsx",
+    "title": "KG-RAG (Wang et al.) — Research Question & Methodology",
+    "description": "Scientific Reports 2025. Dual-channel text+GNN retrieval with BiGRU path attention for medical QA.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "e1f2a3b4-c5d6-7890-efab-901234567890",
+    "position": 11,
+    "filepath": "src/pages/slides/Slide11KGRagWangB.tsx",
+    "title": "KG-RAG (Wang et al.) — Results & Key Findings",
+    "description": "PubMedQA 81.3%, NQ +7.5% EM. Dynamic fusion of text and KG paths at each decoding step.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "f2a3b4c5-d6e7-8901-fabc-012345678901",
+    "position": 12,
+    "filepath": "src/pages/slides/Slide12GraphFlowA.tsx",
+    "title": "GraphFlow — Research Question & Methodology",
+    "description": "NeurIPS 2025. Transition-based Euclidean flow matching with reward factorization for multi-step KG retrieval.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a3b4c5d6-e7f8-9012-abcd-123456789012",
+    "position": 13,
+    "filepath": "src/pages/slides/Slide13GraphFlowB.tsx",
+    "title": "GraphFlow — Results & Key Findings",
+    "description": "STaRK benchmark +10% over GPT-4o. Nearest prior work to RMF-RAG — same insight, Euclidean geometry.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b4c5d6e7-f8a9-0123-bcde-234567890123",
+    "position": 14,
+    "filepath": "src/pages/slides/Slide14SGRAGA.tsx",
+    "title": "SG-RAG — Research Question & Methodology",
+    "description": "ICNLSP 2024. Cypher query generation for Neo4j subgraph retrieval on MetaQA movie knowledge.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "c5d6e7f8-a9b0-1234-cdef-345678901234",
+    "position": 15,
+    "filepath": "src/pages/slides/Slide15SGRAGB.tsx",
+    "title": "SG-RAG — Results & Key Findings",
+    "description": "MetaQA 90/73/58% at 1/2/3-hop vs 42/27/19% for vanilla RAG. The 3-hop drop is what RMF-RAG targets.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "d6e7f8a9-b0c1-2345-defa-456789012345",
+    "position": 16,
+    "filepath": "src/pages/slides/Slide16HyKGEA.tsx",
+    "title": "HyKGE — Research Question & Methodology",
+    "description": "ACL 2025. Hypothesis generation before retrieval bridges vocabulary gap between patient language and clinical KGs. Hy = Hypothesis, NOT hyperbolic.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "e7f8a9b0-c1d2-3456-efab-567890123456",
+    "position": 17,
+    "filepath": "src/pages/slides/Slide17HyKGEB.tsx",
+    "title": "HyKGE — Results & Key Findings",
+    "description": "MMCU-Medical +14.3% EM, hallucination -57%, context relevance +84%. Hypothesis generation is the most effective vocabulary-gap bridge.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "f8a9b0c1-d2e3-4567-fabc-678901234567",
+    "position": 18,
+    "filepath": "src/pages/slides/Slide18KRAGENA.tsx",
+    "title": "KRAGEN — Research Question & Methodology",
+    "description": "Bioinformatics 2024. Graph-of-Thoughts decomposition with vertex-level retrieval for multi-gene biomedical QA.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a9b0c1d2-e3f4-5678-abcd-789012345678",
+    "position": 19,
+    "filepath": "src/pages/slides/Slide19KRAGENB.tsx",
+    "title": "KRAGEN — Results & Key Findings",
+    "description": "Retrieving at each reasoning step beats single-pass retrieval. Graph structure guides what to look up next.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b0c1d2e3-f4a5-6789-bcde-890123456789",
+    "position": 20,
+    "filepath": "src/pages/slides/Slide20KG2RAGA.tsx",
+    "title": "KG²RAG — Research Question & Methodology",
+    "description": "NAACL 2025. BFS KG expansion + Maximum Spanning Tree + DFS narrative chunks for coherent multi-document retrieval.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "c1d2e3f4-a5b6-7890-cdef-901234567890",
+    "position": 21,
+    "filepath": "src/pages/slides/Slide21KG2RAGB.tsx",
+    "title": "KG²RAG — Results & Key Findings",
+    "description": "HotpotQA F1 0.663, uses 19% fewer chunks. KG-connected chunks produce better answers than semantically similar ones.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "d2e3f4a5-b6c7-8901-defa-012345678901",
+    "position": 22,
+    "filepath": "src/pages/slides/Slide22RMFGap.tsx",
+    "title": "What All 10 Papers Share — The Gap",
+    "description": "Every neural embedding-based RAG system encodes KG structure in flat Euclidean space, distorting hierarchical multi-hop structure. This shared gap motivates RMF-RAG.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "e3f4a5b6-c7d8-9012-efab-123456789012",
+    "position": 23,
+    "filepath": "src/pages/slides/Slide23RMFWhat.tsx",
+    "title": "What is RMF-RAG?",
+    "description": "Riemannian Manifold Flow RAG — three core innovations: Poincaré ball entity embedding, geodesic distance retrieval, D-RAG training loop preserved.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "f4a5b6c7-d8e9-0123-fabc-234567890123",
+    "position": 24,
+    "filepath": "src/pages/slides/Slide24RMFHow.tsx",
+    "title": "How RMF-RAG Works — The Mechanism",
+    "description": "Poincaré disk visualization, geodesic distance formula, and 5-step pipeline replacing Euclidean embeddings with Poincaré ball via geoopt.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "a5b6c7d8-e9f0-1234-abcd-345678901234",
+    "position": 25,
+    "filepath": "src/pages/slides/Slide25PathForward.tsx",
+    "title": "The Path Forward — HyperKG-RAG",
+    "description": "10-week undergraduate experiment plan: datasets (WebQSP, CWQ, MetaQA-3hop), baselines (D-RAG ablation, CogGRAG, SG-RAG), tool (geoopt), target venue (ACL/EMNLP Findings).",
+    "speakerNotes": ""
+  }
+]

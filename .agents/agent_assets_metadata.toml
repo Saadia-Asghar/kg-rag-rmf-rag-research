@@ -1,0 +1,80 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "16cn71E7jGbqZqwBVeFua"
+uri = "file://KG_RAG_Comprehensive_Analysis.md"
+type = "text"
+title = "KG-RAG Comprehensive Analysis: Papers, RMF-RAG Novelty & Research Direction"
+description = "Paper-by-paper breakdowns of all 10 papers (D-RAG, CogGRAG, Goal-Oriented KG, M³KG-RAG, KG-RAG, GraphFlow, SG-RAG, HyKGE, KRAGEN, KG²RAG), novelty verification for RMF-RAG, flagged incorrect claims, comparison table, and a concrete minimum viable experiment plan."
+logical_id = "1312681b-52cd-4b93-b9a6-f041bd658e12"
+
+[[outputs]]
+id = "4pY0Dekqq7VGU0YsWwGqb"
+uri = "file://.local/outputs/KG-RAG-Simple-Explainer.pptx"
+type = "slides"
+title = "KG-RAG Simple Explainer.pptx"
+logical_id = "395cd3cb-04b5-4e9f-89d5-408036d9afef"
+
+[[outputs]]
+id = "DwWAaYd88E5P9FNfkmUAK"
+uri = "file://.local/outputs/KG-RAG-Narrative--The-Gap---The-Fix.pdf"
+type = "pdf"
+title = "KG-RAG Narrative: The Gap & The Fix.pdf"
+logical_id = "69e828ca-d5ce-48d4-ad38-cf060bea2a44"
+
+[[outputs]]
+id = "zghQzk9DBMpyZFSqo13OS"
+uri = "file://.local/outputs/KG-RAG-Narrative--The-Gap---The-Fix.pptx"
+type = "slides"
+title = "KG-RAG Narrative: The Gap & The Fix.pptx"
+logical_id = "7b473596-f61e-48be-a698-c11c9b236342"
+
+[[outputs]]
+id = "a0XTHHR2IrnZMPjOQgqxH"
+uri = "file://.local/outputs/RMF-RAG-Supervisor-Pitch.pptx"
+type = "slides"
+title = "RMF-RAG Supervisor Pitch.pptx"
+logical_id = "5f0438d5-2d27-4013-af42-757c62ac4e72"
+
+[[outputs]]
+id = "qV4cMBl056YjSttmj2Hzp"
+uri = "file://research/results/report.html"
+type = "text"
+title = "RMF-RAG Pilot Experiment Report"
+description = "Visual report of the Kaggle disease–drug experiment, including Recall@k, MRR, graph-grounding results, examples, and scientific limitations."
+logical_id = "cecc2718-3a22-4cdf-9b54-df23619da720"
+content_hash = "sha256:37f2d250fe285a799602cb3254173f3d9bd7afce2e7e7df4d591c8e388b2d7cd"
+size = 6359
+mtime_ms = 1788258940869
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:6a36bd5e-7a08-4b74-a166-e58c1de10160/cecc2718-3a22-4cdf-9b54-df23619da720/f8c55b76-2fe3-44e2-ba0e-b76d7d238866"
+storage_version_token = "1788258952381981"
+content_type = "text/html"
+
+[[outputs]]
+id = "-ootMCQ_Z6D9oLWkYIqf6"
+uri = "file://research/PAPER_DRAFT_SECTIONS.md"
+type = "text"
+title = "Paper-Ready Methods and Results"
+description = "Draft dataset, methodology, results, interpretation, limitations, and recommended main-experiment sections using the exact measured values."
+logical_id = "b0474cd8-09aa-4828-884a-9a4dcad6259e"
+content_hash = "sha256:f87a7a344085320b3e4f0b4713e10a1dc1f6f0ff3126dc07643db820e0ccd2a3"
+size = 4318
+mtime_ms = 1788258923126
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:6a36bd5e-7a08-4b74-a166-e58c1de10160/b0474cd8-09aa-4828-884a-9a4dcad6259e/b32b750c-7f71-4ce2-8f5c-b586c38ffb04"
+storage_version_token = "1788258953607891"
+content_type = "text/markdown"
+
+[[outputs]]
+id = "gXxTqaqgcoWPIWmN2c9An"
+uri = "file://research/results/predictions.csv"
+type = "table"
+title = "Raw RMF-RAG Predictions"
+description = "Per-query rankings for the lexical baseline, Euclidean embedding, and hyperbolic RMF-RAG pilot."
+logical_id = "dfc4ed74-dfc0-4831-9f9c-f764bb5395f3"
+content_hash = "sha256:7c3936e4443a8799c68892ebbba814caa7a11679d0338773467c3d921918a6b1"
+size = 9040
+mtime_ms = 1788258940869
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:6a36bd5e-7a08-4b74-a166-e58c1de10160/dfc4ed74-dfc0-4831-9f9c-f764bb5395f3/ef07769b-46ba-4ff3-beb8-1af791d850c1"
+storage_version_token = "1788258954916993"
+content_type = "text/csv"
