@@ -1,9 +1,9 @@
 const phases = [
-  { wk: 'Wk 1–2', title: 'Baseline + Poincaré Embedding', desc: 'Port KG-RAG baseline to PyTorch, set up Poincaré embedding layer', highlighted: false },
-  { wk: 'Wk 3–4', title: 'Geodesic Retrieval Module', desc: 'Implement geodesic retrieval, replace cosine similarity throughout', highlighted: false },
-  { wk: 'Wk 5–6', title: 'Parallel Transport Hop Module', desc: 'Build parallel transport + curvature scheduler — the novel contribution', highlighted: true },
-  { wk: 'Wk 7–8', title: 'Integration + Benchmarking', desc: 'Full RAG pipeline integration, test on MedQA and BioASQ benchmarks', highlighted: false },
-  { wk: 'Wk 9–10', title: 'Ablations + Paper Sections', desc: 'Flat vs. curved per-component ablations, write up results', highlighted: false },
+  { wk: 'Wk 1–2', title: 'Baseline + Poincaré Embedding', desc: 'Matched Euclidean and hyperbolic trainers with reproducible negative sampling', highlighted: false },
+  { wk: 'Wk 3–4', title: 'Geodesic Retrieval Module', desc: 'Poincaré distance, typed candidate ranking, and held-out terminal links', highlighted: false },
+  { wk: 'Wk 5–6', title: 'Parallel Transport Hop Module', desc: 'Hop weighting, radial transport, and switchable component ablations', highlighted: true },
+  { wk: 'Wk 7–8', title: 'Licensed Biomedical Benchmark', desc: 'Hetionet Gene–Disease–Compound tasks with exact 2-hop and 3-hop query sets', highlighted: false },
+  { wk: 'Wk 9–10', title: 'Ablations + Paper Package', desc: 'Five seeds, confidence intervals, raw predictions, attribution, and draft sections', highlighted: false },
 ];
 
 export default function S10Plan() {
@@ -20,7 +20,7 @@ export default function S10Plan() {
           borderRadius: '2vw', padding: '0.3vh 1.2vw',
           fontFamily: "'Sora', sans-serif", fontSize: '1.2vw', fontWeight: 600,
           color: '#059669', letterSpacing: '0.07em', textTransform: 'uppercase',
-        }}>Implementation</span>
+        }}>Build complete</span>
       </div>
       <div className="absolute" style={{ top: '3vh', right: '5vw' }}>
         <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.4vw', color: '#94A3B8' }}>11 / 12</span>
@@ -31,10 +31,10 @@ export default function S10Plan() {
           fontFamily: "'Sora', sans-serif", fontSize: '2.8vw', fontWeight: 800,
           color: '#0D1B2A', lineHeight: 1.1, marginBottom: '0.2vh',
         }}>
-          HyperKG-RAG — 10-Week Build Plan
+          HyperKG-RAG — 10-Week Build Complete
         </h2>
         <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.5vw', color: '#64748B', marginBottom: '0.4vh' }}>
-          Goal: implement and benchmark RMF-RAG — MedQA, BioASQ, WebQSP
+          Goal delivered: a licensed, leakage-controlled biomedical benchmark with reproducible outputs
         </div>
         <div style={{ width: '5vw', height: '0.3vh', background: '#059669', marginBottom: '1.5vh' }} />
       </div>
@@ -70,19 +70,19 @@ export default function S10Plan() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.8vh', justifyContent: 'center' }}>
 
           <div style={{ background: '#0D1B2A', borderRadius: '1vw', padding: '2vh 1.8vw', border: '2px solid rgba(5,150,105,0.4)' }}>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.3vw', fontWeight: 600, color: '#6EE7B7', marginBottom: '1vh', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Target benchmarks</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.8vw', fontWeight: 700, color: 'white', lineHeight: 1.4 }}>MedQA (3-hop)</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.8vw', fontWeight: 700, color: 'white', lineHeight: 1.4 }}>BioASQ (multi-hop)</div>
-            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.8vw', fontWeight: 700, color: 'white', lineHeight: 1.4, marginBottom: '1.2vh' }}>WebQSP</div>
+            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.3vw', fontWeight: 600, color: '#6EE7B7', marginBottom: '1vh', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Delivered benchmark</div>
+            <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.8vw', fontWeight: 700, color: 'white', lineHeight: 1.4 }}>Hetionet v1.0</div>
+            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.5vw', color: '#CBD5E1', lineHeight: 1.35 }}>2-hop + 3-hop typed retrieval</div>
+            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.5vw', color: '#CBD5E1', lineHeight: 1.35, marginBottom: '1.2vh' }}>5 seeds + 95% confidence intervals</div>
             <div style={{ height: '1px', background: 'rgba(110,231,183,0.3)', marginBottom: '1.2vh' }} />
-            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.55vw', color: '#6EE7B7', lineHeight: 1.4 }}>+8–12% on 3-hop accuracy</div>
-            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.55vw', color: '#6EE7B7', lineHeight: 1.4 }}>40% fewer hallucinations</div>
+            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.55vw', color: '#6EE7B7', lineHeight: 1.4 }}>140 seed-level metrics</div>
+            <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.55vw', color: '#6EE7B7', lineHeight: 1.4 }}>47,999 saved predictions</div>
           </div>
 
           <div style={{ background: '#EFF2F7', border: '1.5px solid #CBD5E1', borderRadius: '0.8vw', padding: '1.4vh 1.6vw' }}>
             <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.45vw', fontWeight: 700, color: '#0D1B2A', marginBottom: '0.5vh' }}>Key risk addressed</div>
             <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.4vw', color: '#374151', lineHeight: 1.4 }}>
-              Poincaré embedding training time — we start from pretrained hyperbolic embeddings from existing biomedical KG work.
+              Scientific work still open: add licensed semantic evidence, independent gold-standard labels, and human evaluation before making therapeutic claims.
             </div>
           </div>
         </div>

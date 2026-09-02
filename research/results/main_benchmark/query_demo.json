@@ -1,0 +1,227 @@
+{
+  "dataset": "Hetionet v1.0",
+  "seed": 101,
+  "split": "test",
+  "query": {
+    "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+    "hop": 3,
+    "source_gene": "10000",
+    "disease": "DOID:1826",
+    "intermediate_gene": "2558",
+    "target_compound": "DB01189",
+    "path_template": "Gene-associates-Disease-associates-Gene-binds-Compound"
+  },
+  "typed_path_definition": "Gene -> Disease -> Gene -> Compound",
+  "target_present_in_training_path_support": false,
+  "rankings": {
+    "lexical": [
+      {
+        "rank": 1,
+        "compound": "DB00475",
+        "path_verified_in_train_graph": true
+      },
+      {
+        "rank": 2,
+        "compound": "DB00230",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 3,
+        "compound": "DB00252",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 4,
+        "compound": "DB00313",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 5,
+        "compound": "DB00347",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 6,
+        "compound": "DB00349",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 7,
+        "compound": "DB00564",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 8,
+        "compound": "DB00683",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 9,
+        "compound": "DB00776",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 10,
+        "compound": "DB00818",
+        "path_verified_in_train_graph": false
+      }
+    ],
+    "euclidean": [
+      {
+        "rank": 1,
+        "compound": "DB01202",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 2,
+        "compound": "DB00347",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 3,
+        "compound": "DB00818",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 4,
+        "compound": "DB00829",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 5,
+        "compound": "DB00819",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 6,
+        "compound": "DB00313",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 7,
+        "compound": "DB00683",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 8,
+        "compound": "DB00429",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 9,
+        "compound": "DB01351",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 10,
+        "compound": "DB00230",
+        "path_verified_in_train_graph": false
+      }
+    ],
+    "poincare": [
+      {
+        "rank": 1,
+        "compound": "DB01002",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 2,
+        "compound": "DB00818",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 3,
+        "compound": "DB00347",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 4,
+        "compound": "DB00379",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 5,
+        "compound": "DB00908",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 6,
+        "compound": "DB01351",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 7,
+        "compound": "DB00281",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 8,
+        "compound": "DB08987",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 9,
+        "compound": "DB00473",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 10,
+        "compound": "DB00296",
+        "path_verified_in_train_graph": false
+      }
+    ],
+    "poincare_with_path_verification": [
+      {
+        "rank": 1,
+        "compound": "DB01002",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 2,
+        "compound": "DB00628",
+        "path_verified_in_train_graph": true
+      },
+      {
+        "rank": 3,
+        "compound": "DB06716",
+        "path_verified_in_train_graph": true
+      },
+      {
+        "rank": 4,
+        "compound": "DB00818",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 5,
+        "compound": "DB00347",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 6,
+        "compound": "DB00379",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 7,
+        "compound": "DB00908",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 8,
+        "compound": "DB01351",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 9,
+        "compound": "DB00281",
+        "path_verified_in_train_graph": false
+      },
+      {
+        "rank": 10,
+        "compound": "DB08987",
+        "path_verified_in_train_graph": false
+      }
+    ]
+  },
+  "interpretation": "Candidates marked path_verified_in_train_graph are supported by the typed training graph. This evidence packet is for research retrieval only and is not a clinical recommendation."
+}

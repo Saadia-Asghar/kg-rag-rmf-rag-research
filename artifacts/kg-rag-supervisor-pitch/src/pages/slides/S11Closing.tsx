@@ -65,7 +65,7 @@ export default function S11Closing() {
           <div style={{ borderLeft: '3px solid #6EE7B7', paddingLeft: '1.5vw' }}>
             <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.7vw', fontWeight: 700, color: '#6EE7B7', marginBottom: '0.4vh', textTransform: 'uppercase', letterSpacing: '0.06em' }}>My Contribution</div>
             <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.9vw', color: '#CBD5E1', lineHeight: 1.4 }}>
-              First complete Riemannian-geometry-native KG-RAG pipeline — geometry is the architecture, not an add-on
+              Reproducible hyperbolic KG-RAG benchmark with typed paths, five seeds, ablations, and auditable outputs
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function S11Closing() {
               Request to sir
             </div>
             <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.9vw', color: '#CBD5E1', lineHeight: 1.5 }}>
-              I believe this is publishable and would like to pursue it as my thesis direction — with your guidance on which benchmark to prioritize first.
+              The build is complete as a retrieval benchmark. I would like to pursue the evidence-grounded generation and independent evaluation phase as my thesis direction.
             </div>
           </div>
         </div>
