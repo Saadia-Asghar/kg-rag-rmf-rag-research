@@ -1,0 +1,263 @@
+{
+  "schema_version": "1.0",
+  "gold_standard": "research/data/evidence_gold_standard.json",
+  "demo_packets": [
+    "research/results/main_benchmark/query_demo_2hop.json",
+    "research/results/main_benchmark/query_demo_3hop.json"
+  ],
+  "annotated_candidates": 8,
+  "gold_set_dimensions": {
+    "graph_path_support": {
+      "False": 4,
+      "True": 4
+    },
+    "evidence_support": {
+      "direct_support": 3,
+      "context_only": 4,
+      "no_licensed_record": 1
+    },
+    "therapeutic_plausibility": {
+      "plausible_but_species_or_preclinical_limited": 1,
+      "supported_in_source_scope": 2,
+      "not_supported_as_epilepsy_therapy": 2,
+      "insufficient_evidence": 3
+    }
+  },
+  "method_views": {
+    "lexical": {
+      "annotated_candidates_retrieved": 3,
+      "top_ranked_annotated_queries": 0,
+      "top_ranked_dimensions": {
+        "graph_path_agreement": 0,
+        "graph_path_support": {},
+        "evidence_support": {},
+        "therapeutic_plausibility": {}
+      },
+      "top_ranked_annotations": {},
+      "annotated_candidates_by_rank": [
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00252",
+          "rank": 2,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00313",
+          "rank": 3,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00818",
+          "rank": 9,
+          "graph_path_support_observed": true
+        }
+      ],
+      "dimensions": {
+        "graph_path_support": {
+          "True": 2,
+          "False": 1
+        },
+        "evidence_support": {
+          "direct_support": 2,
+          "context_only": 1
+        },
+        "therapeutic_plausibility": {
+          "supported_in_source_scope": 2,
+          "not_supported_as_epilepsy_therapy": 1
+        }
+      }
+    },
+    "euclidean": {
+      "annotated_candidates_retrieved": 2,
+      "top_ranked_annotated_queries": 0,
+      "top_ranked_dimensions": {
+        "graph_path_agreement": 0,
+        "graph_path_support": {},
+        "evidence_support": {},
+        "therapeutic_plausibility": {}
+      },
+      "top_ranked_annotations": {},
+      "annotated_candidates_by_rank": [
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00818",
+          "rank": 3,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00313",
+          "rank": 5,
+          "graph_path_support_observed": true
+        }
+      ],
+      "dimensions": {
+        "graph_path_support": {
+          "False": 1,
+          "True": 1
+        },
+        "evidence_support": {
+          "context_only": 1,
+          "direct_support": 1
+        },
+        "therapeutic_plausibility": {
+          "not_supported_as_epilepsy_therapy": 1,
+          "supported_in_source_scope": 1
+        }
+      }
+    },
+    "poincare": {
+      "annotated_candidates_retrieved": 2,
+      "top_ranked_annotated_queries": 2,
+      "top_ranked_dimensions": {
+        "graph_path_agreement": 1,
+        "graph_path_support": {
+          "False": 2
+        },
+        "evidence_support": {
+          "context_only": 2
+        },
+        "therapeutic_plausibility": {
+          "not_supported_as_epilepsy_therapy": 1,
+          "insufficient_evidence": 1
+        }
+      },
+      "top_ranked_annotations": {
+        "2hop::test::10000::DOID:1826::DB00909": {
+          "compound": "DB00818",
+          "graph_path_support_observed": true,
+          "graph_path_support_gold": false,
+          "graph_path_agrees": false,
+          "evidence_support": "context_only",
+          "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+        },
+        "3hop::test::10000::DOID:1826::2558::DB01189": {
+          "compound": "DB01002",
+          "graph_path_support_observed": false,
+          "graph_path_support_gold": false,
+          "graph_path_agrees": true,
+          "evidence_support": "context_only",
+          "therapeutic_plausibility": "insufficient_evidence"
+        }
+      },
+      "annotated_candidates_by_rank": [
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00818",
+          "rank": 1,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+          "compound": "DB01002",
+          "rank": 1,
+          "graph_path_support_observed": false
+        }
+      ],
+      "dimensions": {
+        "graph_path_support": {
+          "False": 2
+        },
+        "evidence_support": {
+          "context_only": 2
+        },
+        "therapeutic_plausibility": {
+          "not_supported_as_epilepsy_therapy": 1,
+          "insufficient_evidence": 1
+        }
+      }
+    },
+    "poincare_with_path_verification": {
+      "annotated_candidates_retrieved": 6,
+      "top_ranked_annotated_queries": 2,
+      "top_ranked_dimensions": {
+        "graph_path_agreement": 1,
+        "graph_path_support": {
+          "False": 2
+        },
+        "evidence_support": {
+          "context_only": 2
+        },
+        "therapeutic_plausibility": {
+          "not_supported_as_epilepsy_therapy": 1,
+          "insufficient_evidence": 1
+        }
+      },
+      "top_ranked_annotations": {
+        "2hop::test::10000::DOID:1826::DB00909": {
+          "compound": "DB00818",
+          "graph_path_support_observed": true,
+          "graph_path_support_gold": false,
+          "graph_path_agrees": false,
+          "evidence_support": "context_only",
+          "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+        },
+        "3hop::test::10000::DOID:1826::2558::DB01189": {
+          "compound": "DB01002",
+          "graph_path_support_observed": false,
+          "graph_path_support_gold": false,
+          "graph_path_agrees": true,
+          "evidence_support": "context_only",
+          "therapeutic_plausibility": "insufficient_evidence"
+        }
+      },
+      "annotated_candidates_by_rank": [
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00818",
+          "rank": 1,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00252",
+          "rank": 7,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "2hop::test::10000::DOID:1826::DB00909",
+          "compound": "DB00313",
+          "rank": 9,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+          "compound": "DB01002",
+          "rank": 1,
+          "graph_path_support_observed": false
+        },
+        {
+          "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+          "compound": "DB00628",
+          "rank": 2,
+          "graph_path_support_observed": true
+        },
+        {
+          "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+          "compound": "DB06716",
+          "rank": 3,
+          "graph_path_support_observed": true
+        }
+      ],
+      "dimensions": {
+        "graph_path_support": {
+          "False": 2,
+          "True": 4
+        },
+        "evidence_support": {
+          "context_only": 3,
+          "direct_support": 2,
+          "no_licensed_record": 1
+        },
+        "therapeutic_plausibility": {
+          "not_supported_as_epilepsy_therapy": 1,
+          "supported_in_source_scope": 2,
+          "insufficient_evidence": 3
+        }
+      }
+    }
+  },
+  "interpretation": "These are evidence-grounding labels and coverage views, not Recall/MRR and not clinical validation. Direct or supportive text does not establish safety, efficacy, dosage, or patient suitability."
+}

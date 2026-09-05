@@ -3,15 +3,14 @@
   "seed": 101,
   "split": "test",
   "query": {
-    "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
-    "hop": 3,
+    "query_id": "2hop::test::10000::DOID:1826::DB00909",
+    "hop": 2,
     "source_gene": "10000",
     "disease": "DOID:1826",
-    "intermediate_gene": "2558",
-    "target_compound": "DB01189",
-    "path_template": "Gene-associates-Disease-associates-Gene-binds-Compound"
+    "target_compound": "DB00909",
+    "path_template": "Gene-associates-Disease-treats_or_palliates-Compound"
   },
-  "typed_path_definition": "Gene -> Disease -> Gene -> Compound",
+  "typed_path_definition": "Gene -> Disease -> Compound",
   "target_present_in_training_path_support": false,
   "evidence_source": {
     "manifest": "research/data/biomedical_evidence_manifest.json",
@@ -22,22 +21,8 @@
     "lexical": [
       {
         "rank": 1,
-        "compound": "DB00475",
-        "path_verified_in_train_graph": true,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00475",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 2,
         "compound": "DB00230",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -49,9 +34,31 @@
         }
       },
       {
-        "rank": 3,
+        "rank": 2,
         "compound": "DB00252",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 3,
+        "compound": "DB00313",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "direct_but_preclinical",
           "records": [
@@ -72,30 +79,8 @@
       },
       {
         "rank": 4,
-        "compound": "DB00313",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "direct_but_preclinical",
-          "records": [
-            {
-              "record_id": "PMC11666373",
-              "pmcid": "PMC11666373",
-              "pmid": "39720593",
-              "doi": "10.3389/fphar.2024.1489888",
-              "license": "CC BY",
-              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
-              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
-              "source_url": "https://europepmc.org/articles/PMC11666373",
-              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
-              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
-            }
-          ]
-        }
-      },
-      {
-        "rank": 5,
         "compound": "DB00347",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -107,9 +92,9 @@
         }
       },
       {
-        "rank": 6,
+        "rank": 5,
         "compound": "DB00349",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -121,9 +106,9 @@
         }
       },
       {
-        "rank": 7,
+        "rank": 6,
         "compound": "DB00564",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -135,9 +120,9 @@
         }
       },
       {
-        "rank": 8,
+        "rank": 7,
         "compound": "DB00683",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
@@ -157,9 +142,9 @@
         }
       },
       {
-        "rank": 9,
+        "rank": 8,
         "compound": "DB00776",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -171,9 +156,9 @@
         }
       },
       {
-        "rank": 10,
+        "rank": 9,
         "compound": "DB00818",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
@@ -191,13 +176,27 @@
             }
           ]
         }
+      },
+      {
+        "rank": 10,
+        "compound": "DB00819",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB00819",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
       }
     ],
     "euclidean": [
       {
         "rank": 1,
         "compound": "DB01202",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "direct_but_preclinical",
           "records": [
@@ -219,7 +218,7 @@
       {
         "rank": 2,
         "compound": "DB00347",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -233,7 +232,7 @@
       {
         "rank": 3,
         "compound": "DB00818",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
@@ -254,6 +253,78 @@
       },
       {
         "rank": 4,
+        "compound": "DB00683",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "context_only",
+          "records": [
+            {
+              "record_id": "PMC12905552",
+              "pmcid": "PMC12905552",
+              "pmid": "41694842",
+              "doi": "10.7759/cureus.101572",
+              "license": "CC BY",
+              "authors": "Kurnutala LN, Rugnath R, Arora R, Nazari R.",
+              "title": "Anesthetic Management of a Patient With a Vagal Nerve Stimulator and Poorly Controlled Seizures.",
+              "source_url": "https://europepmc.org/articles/PMC12905552",
+              "scope": "Clinical seizure-management and anesthesia context; midazolam and levetiracetam are named, while desflurane is not.",
+              "snippet": "The episode was treated with intravenous levetiracetam ... and selecting anesthetic agents that minimize pro-convulsant potential."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 5,
+        "compound": "DB00313",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 6,
+        "compound": "DB00819",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB00819",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
+      },
+      {
+        "rank": 7,
+        "compound": "DB00230",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB00230",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
+      },
+      {
+        "rank": 8,
         "compound": "DB00829",
         "path_verified_in_train_graph": false,
         "evidence": {
@@ -267,45 +338,75 @@
         }
       },
       {
-        "rank": 5,
-        "compound": "DB00819",
-        "path_verified_in_train_graph": false,
+        "rank": 9,
+        "compound": "DB00564",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
           "lookup": {
-            "compound_id": "DB00819",
+            "compound_id": "DB00564",
             "source": "Europe PMC Open Access subset",
             "license_filter": "CC BY only"
           }
         }
       },
       {
-        "rank": 6,
-        "compound": "DB00313",
+        "rank": 10,
+        "compound": "DB01173",
         "path_verified_in_train_graph": false,
         "evidence": {
-          "status": "direct_but_preclinical",
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB01173",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
+      }
+    ],
+    "poincare": [
+      {
+        "rank": 1,
+        "compound": "DB00818",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "context_only",
           "records": [
             {
-              "record_id": "PMC11666373",
-              "pmcid": "PMC11666373",
-              "pmid": "39720593",
-              "doi": "10.3389/fphar.2024.1489888",
+              "record_id": "PMC11413253",
+              "pmcid": "PMC11413253",
+              "pmid": "39297916",
+              "doi": "10.1186/s40981-024-00740-1",
               "license": "CC BY",
-              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
-              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
-              "source_url": "https://europepmc.org/articles/PMC11666373",
-              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
-              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+              "authors": "Mukoyama Y, Ichikawa J, Komori M, Kodaka M, Yokosako S, Kubota Y.",
+              "title": "Novel technique of switching TIVA and sevoflurane during epilepsy surgery for combined intraoperative motor evoked potentials monitoring and electrocorticography: an illustrative case report.",
+              "source_url": "https://europepmc.org/articles/PMC11413253",
+              "scope": "Perioperative anesthesia context; propofol is used during epilepsy surgery, not as an epilepsy treatment.",
+              "snippet": "During epilepsy surgery, ... induction of the total intravenous anesthesia (TIVA) with propofol ... [was] followed by switching to sevoflurane for ECoG recording."
             }
           ]
         }
       },
       {
-        "rank": 7,
+        "rank": 2,
+        "compound": "DB00347",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB00347",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
+      },
+      {
+        "rank": 3,
         "compound": "DB00683",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
@@ -325,23 +426,31 @@
         }
       },
       {
-        "rank": 8,
-        "compound": "DB00429",
-        "path_verified_in_train_graph": false,
+        "rank": 4,
+        "compound": "DB01202",
+        "path_verified_in_train_graph": true,
         "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00429",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
         }
       },
       {
-        "rank": 9,
+        "rank": 5,
         "compound": "DB01351",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -353,23 +462,7 @@
         }
       },
       {
-        "rank": 10,
-        "compound": "DB00230",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00230",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      }
-    ],
-    "poincare": [
-      {
-        "rank": 1,
+        "rank": 6,
         "compound": "DB01002",
         "path_verified_in_train_graph": false,
         "evidence": {
@@ -391,43 +484,21 @@
         }
       },
       {
-        "rank": 2,
-        "compound": "DB00818",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "context_only",
-          "records": [
-            {
-              "record_id": "PMC11413253",
-              "pmcid": "PMC11413253",
-              "pmid": "39297916",
-              "doi": "10.1186/s40981-024-00740-1",
-              "license": "CC BY",
-              "authors": "Mukoyama Y, Ichikawa J, Komori M, Kodaka M, Yokosako S, Kubota Y.",
-              "title": "Novel technique of switching TIVA and sevoflurane during epilepsy surgery for combined intraoperative motor evoked potentials monitoring and electrocorticography: an illustrative case report.",
-              "source_url": "https://europepmc.org/articles/PMC11413253",
-              "scope": "Perioperative anesthesia context; propofol is used during epilepsy surgery, not as an epilepsy treatment.",
-              "snippet": "During epilepsy surgery, ... induction of the total intravenous anesthesia (TIVA) with propofol ... [was] followed by switching to sevoflurane for ECoG recording."
-            }
-          ]
-        }
-      },
-      {
-        "rank": 3,
-        "compound": "DB00347",
+        "rank": 7,
+        "compound": "DB00281",
         "path_verified_in_train_graph": false,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
           "lookup": {
-            "compound_id": "DB00347",
+            "compound_id": "DB00281",
             "source": "Europe PMC Open Access subset",
             "license_filter": "CC BY only"
           }
         }
       },
       {
-        "rank": 4,
+        "rank": 8,
         "compound": "DB00379",
         "path_verified_in_train_graph": false,
         "evidence": {
@@ -441,7 +512,7 @@
         }
       },
       {
-        "rank": 5,
+        "rank": 9,
         "compound": "DB00908",
         "path_verified_in_train_graph": false,
         "evidence": {
@@ -463,70 +534,14 @@
         }
       },
       {
-        "rank": 6,
-        "compound": "DB01351",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB01351",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 7,
-        "compound": "DB00281",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00281",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 8,
-        "compound": "DB08987",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB08987",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 9,
-        "compound": "DB00473",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00473",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
         "rank": 10,
-        "compound": "DB00296",
-        "path_verified_in_train_graph": false,
+        "compound": "DB01080",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
           "lookup": {
-            "compound_id": "DB00296",
+            "compound_id": "DB01080",
             "source": "Europe PMC Open Access subset",
             "license_filter": "CC BY only"
           }
@@ -536,66 +551,8 @@
     "poincare_with_path_verification": [
       {
         "rank": 1,
-        "compound": "DB01002",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "context_only",
-          "records": [
-            {
-              "record_id": "PMC11860141",
-              "pmcid": "PMC11860141",
-              "pmid": "40006063",
-              "doi": "10.3390/ph18020250",
-              "license": "CC BY",
-              "authors": "\u010ci\u017em\u00e1rikov\u00e1 R, Habala L, Valentov\u00e1 J.",
-              "title": "General Anesthetics: Aspects of Chirality, Pharmacodynamics, and Pharmacokinetics.",
-              "source_url": "https://europepmc.org/articles/PMC11860141",
-              "scope": "General-anesthetic class context; the excerpt does not establish an epilepsy indication for fospropofol.",
-              "snippet": "Both inhalational and intravenous anesthetics are discussed. Aspects of pharmacodynamics and pharmacokinetics are surveyed as well."
-            }
-          ]
-        }
-      },
-      {
-        "rank": 2,
-        "compound": "DB00628",
-        "path_verified_in_train_graph": true,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00628",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 3,
-        "compound": "DB06716",
-        "path_verified_in_train_graph": true,
-        "evidence": {
-          "status": "context_only",
-          "records": [
-            {
-              "record_id": "PMC11860141",
-              "pmcid": "PMC11860141",
-              "pmid": "40006063",
-              "doi": "10.3390/ph18020250",
-              "license": "CC BY",
-              "authors": "\u010ci\u017em\u00e1rikov\u00e1 R, Habala L, Valentov\u00e1 J.",
-              "title": "General Anesthetics: Aspects of Chirality, Pharmacodynamics, and Pharmacokinetics.",
-              "source_url": "https://europepmc.org/articles/PMC11860141",
-              "scope": "General-anesthetic class context; the excerpt does not establish an epilepsy indication for fospropofol.",
-              "snippet": "Both inhalational and intravenous anesthetics are discussed. Aspects of pharmacodynamics and pharmacokinetics are surveyed as well."
-            }
-          ]
-        }
-      },
-      {
-        "rank": 4,
         "compound": "DB00818",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
@@ -615,9 +572,9 @@
         }
       },
       {
-        "rank": 5,
+        "rank": 2,
         "compound": "DB00347",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -629,45 +586,53 @@
         }
       },
       {
-        "rank": 6,
-        "compound": "DB00379",
-        "path_verified_in_train_graph": false,
-        "evidence": {
-          "status": "no_licensed_record",
-          "records": [],
-          "lookup": {
-            "compound_id": "DB00379",
-            "source": "Europe PMC Open Access subset",
-            "license_filter": "CC BY only"
-          }
-        }
-      },
-      {
-        "rank": 7,
-        "compound": "DB00908",
-        "path_verified_in_train_graph": false,
+        "rank": 3,
+        "compound": "DB00683",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "context_only",
           "records": [
             {
-              "record_id": "PMC11206332",
-              "pmcid": "PMC11206332",
-              "pmid": "38931004",
-              "doi": "10.3390/molecules29122940",
+              "record_id": "PMC12905552",
+              "pmcid": "PMC12905552",
+              "pmid": "41694842",
+              "doi": "10.7759/cureus.101572",
               "license": "CC BY",
-              "authors": "Di Matteo F, Mancuso F, Turcio R, Ciaglia T, Stagno C, Di Chio C, Campiglia P, Bertamino A, Giofr\u00e8 SV, Ostacolo C, Iraci N.",
-              "title": "KCNT1 Channel Blockers: A Medicinal Chemistry Perspective.",
-              "source_url": "https://europepmc.org/articles/PMC11206332",
-              "scope": "Target-class and drug-discovery context; it does not validate a therapeutic recommendation for this query.",
-              "snippet": "Potassium channels have recently emerged as suitable target for the treatment of epileptic diseases ... [and] the chemotypes described so far as KCNT1 blockers."
+              "authors": "Kurnutala LN, Rugnath R, Arora R, Nazari R.",
+              "title": "Anesthetic Management of a Patient With a Vagal Nerve Stimulator and Poorly Controlled Seizures.",
+              "source_url": "https://europepmc.org/articles/PMC12905552",
+              "scope": "Clinical seizure-management and anesthesia context; midazolam and levetiracetam are named, while desflurane is not.",
+              "snippet": "The episode was treated with intravenous levetiracetam ... and selecting anesthetic agents that minimize pro-convulsant potential."
             }
           ]
         }
       },
       {
-        "rank": 8,
+        "rank": 4,
+        "compound": "DB01202",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 5,
         "compound": "DB01351",
-        "path_verified_in_train_graph": false,
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
@@ -679,28 +644,86 @@
         }
       },
       {
-        "rank": 9,
-        "compound": "DB00281",
-        "path_verified_in_train_graph": false,
+        "rank": 6,
+        "compound": "DB01080",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
           "lookup": {
-            "compound_id": "DB00281",
+            "compound_id": "DB01080",
             "source": "Europe PMC Open Access subset",
             "license_filter": "CC BY only"
           }
         }
       },
       {
-        "rank": 10,
-        "compound": "DB08987",
-        "path_verified_in_train_graph": false,
+        "rank": 7,
+        "compound": "DB00252",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 8,
+        "compound": "DB00230",
+        "path_verified_in_train_graph": true,
         "evidence": {
           "status": "no_licensed_record",
           "records": [],
           "lookup": {
-            "compound_id": "DB08987",
+            "compound_id": "DB00230",
+            "source": "Europe PMC Open Access subset",
+            "license_filter": "CC BY only"
+          }
+        }
+      },
+      {
+        "rank": 9,
+        "compound": "DB00313",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "direct_but_preclinical",
+          "records": [
+            {
+              "record_id": "PMC11666373",
+              "pmcid": "PMC11666373",
+              "pmid": "39720593",
+              "doi": "10.3389/fphar.2024.1489888",
+              "license": "CC BY",
+              "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+              "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+              "source_url": "https://europepmc.org/articles/PMC11666373",
+              "scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+              "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 10,
+        "compound": "DB00349",
+        "path_verified_in_train_graph": true,
+        "evidence": {
+          "status": "no_licensed_record",
+          "records": [],
+          "lookup": {
+            "compound_id": "DB00349",
             "source": "Europe PMC Open Access subset",
             "license_filter": "CC BY only"
           }

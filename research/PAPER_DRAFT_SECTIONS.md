@@ -22,6 +22,27 @@ Dataset citation: Himmelstein DS et al. “Systematic integration of biomedical
 knowledge prioritizes drugs for repurposing.” *eLife* 2017;6:e26726.
 <https://doi.org/10.7554/eLife.26726>
 
+### Licensed text evidence layer
+
+Graph connectivity was augmented with a frozen evidence manifest from the
+Europe PMC Open Access subset. Europe PMC is operated by EMBL-EBI; the source
+API, Open Access policy, retrieval date, and attribution policy are recorded in
+`research/data/EVIDENCE_SOURCE.md`. The manifest retains only records whose
+metadata reports a **CC BY** license and stores each record's PMCID, PMID, DOI,
+title, landing-page URL, and a short verbatim abstract excerpt. PMCID is the
+primary reproducible identifier, and each record can be rechecked through the
+Europe PMC REST API. CC BY-NC, CC BY-ND, CC BY-NC-ND, and unlicensed records are
+excluded.
+
+Evidence is deliberately typed rather than treated as a binary clinical
+grounding signal. `direct_but_species_limited` and `direct_but_preclinical`
+records name a candidate and address a seizure phenotype but do not establish
+human clinical utility. `context_only` records describe anesthesia,
+perioperative care, or a drug class without establishing that the candidate
+treats the queried disease. `no_licensed_record` is an absence from the frozen
+manifest, not evidence of inefficacy. These distinctions are emitted for every
+top-ten candidate in the 2-hop and 3-hop query demos.
+
 ## Query construction and leakage control
 
 We constructed two typed drug-retrieval tasks:
@@ -105,6 +126,27 @@ reduced MRR on both tasks, illustrating a precision–coverage tradeoff: graph
 verification can reject unsupported candidates without guaranteeing recovery
 of a deliberately held-out terminal edge.
 
+## Evidence-grounding evaluation
+
+We added a small frozen gold-standard calibration set in
+`research/data/evidence_gold_standard.json`, independent of method ranking and
+defined without using Recall/MRR. It contains eight
+query–candidate annotations spanning the two demo queries. Each annotation
+separates: (1) typed path support in the training graph, (2) support from a
+licensed text record, and (3) therapeutic plausibility within the source's
+scope. The accompanying `research/scripts/evaluate_evidence.py` joins the
+calibration set to saved demo rankings and reports annotated-candidate coverage
+by each dimension without recomputing Recall or MRR.
+
+The calibration set intentionally contains positive, context-only, and
+no-record examples. For example, a CC BY veterinary article directly supports
+zonisamide for epileptic seizures in dogs but is species-limited; a CC BY
+perioperative article places propofol or anesthetic selection in an epilepsy
+surgery context but does not support an epilepsy-treatment claim. This is a
+research calibration set rather than clinical expert consensus. Its role is to
+prevent a retrieved path or a relevant article from being presented as a
+therapeutic recommendation.
+
 ## Interpretation and limitations
 
 This experiment is a reproducible, leakage-controlled benchmark on explicit
@@ -113,13 +155,14 @@ on the Kaggle pilot by using licensed gene, disease, and compound edges,
 explicit 2-hop and 3-hop paths, matched learned-model budgets, five seeds,
 confidence intervals, and fully saved predictions.
 
-The evaluation remains a graph link-retrieval study. It does not use clinical
-text evidence, dosage information, temporal knowledge, adverse-event
-constraints, or human assessment of therapeutic plausibility. The selected
-CC0/CC BY relation subset is smaller than the full Hetionet graph, and the
-3-hop `binds` endpoint measures molecular target connectivity rather than an
-approved treatment recommendation. Candidate rankings must not be interpreted
-as medical advice.
+The evidence extension remains a small, source-scoped calibration layer, not a
+clinical validation study. It does not evaluate dosage, temporal knowledge,
+adverse-event constraints, contraindications, or patient-specific suitability,
+and it does not replace independent clinical review. The selected CC0/CC BY
+relation subset is smaller than the full Hetionet graph, and the 3-hop `binds`
+endpoint measures molecular target connectivity rather than an approved
+treatment recommendation. Candidate rankings and cited snippets must not be
+interpreted as medical advice.
 
 The principal result is therefore a calibrated negative one: hyperbolic
 geometry yields a modest 3-hop MRR gain but no 2-hop gain over a matched
@@ -132,8 +175,11 @@ externally curated drug-repurposing labels before making stronger claims.
 
 The ten-week engineering build is complete as a retrieval benchmark. A fresh
 checkout can rerun `research/scripts/run_main_rmf_rag_benchmark.py`, rebuild the
-self-contained `results/main_benchmark/report.html`, and inspect one exact
-held-out query with `research/scripts/main_query_demo.py`. The query demo emits
-method rankings plus a boolean typed-path-support flag for every candidate.
-These outputs make the benchmark auditable without requiring an external model
-API or treating a retrieved compound as medical advice.
+self-contained `results/main_benchmark/report.html`, inspect exact held-out
+2-hop and 3-hop queries with `research/scripts/main_query_demo.py`, and run
+`research/scripts/evaluate_evidence.py` against the saved demo packets. The
+query demo emits method rankings plus graph-path support and cited licensed-text
+status for every candidate. The evidence evaluator reports those dimensions
+separately from Recall/MRR. These outputs make the benchmark auditable without
+requiring an external model API or treating a retrieved compound as medical
+advice.

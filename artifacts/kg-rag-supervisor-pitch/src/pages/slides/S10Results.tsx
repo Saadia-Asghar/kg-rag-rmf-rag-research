@@ -26,7 +26,7 @@ export default function S10Results() {
           Hetionet Results
         </h2>
         <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.7vw', color: '#64748B', lineHeight: 1.25 }}>
-          Five seeds · licensed biomedical relations · terminal links held out for 2-hop and 3-hop retrieval
+           Five seeds · licensed relations · held-out links · evidence layer kept separate from clinical utility
         </div>
         <div style={{ width: '5vw', height: '0.3vh', background: '#059669', marginTop: '1.4vh' }} />
       </div>
@@ -78,13 +78,15 @@ export default function S10Results() {
       <div className="absolute" style={{ left: '7vw', right: '7vw', bottom: '8.5vh', display: 'grid', gridTemplateColumns: '1.25fr 1fr', gap: '2vw', alignItems: 'stretch' }}>
         <div style={{
           background: '#FFFFFF', border: '1.5px solid #CBD5E1', borderRadius: '0.7vw',
-          padding: '1.5vh 1.4vw',
+          padding: '1.35vh 1.4vw',
         }}>
           <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.5vw', fontWeight: 700, color: '#0D1B2A', marginBottom: '0.5vh' }}>
-            Honest read
+            Three claims, not one
           </div>
-          <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.6vw', color: '#374151', lineHeight: 1.3 }}>
-            Hyperbolic retrieval improves 3-hop MRR over Euclidean (0.015 vs 0.011), but not 2-hop MRR (0.012 vs 0.013). Intervals overlap, so this is a calibrated result—not a victory claim.
+          <div style={{ display: 'grid', gap: '0.45vh', fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.42vw', lineHeight: 1.2 }}>
+            <div><strong style={{ color: '#2563EB' }}>Graph connectivity</strong><span style={{ color: '#475569' }}> — typed path exists in the training graph.</span></div>
+            <div><strong style={{ color: '#059669' }}>Evidence support</strong><span style={{ color: '#475569' }}> — CC BY Europe PMC record, excerpt, and PMCID.</span></div>
+            <div><strong style={{ color: '#D97706' }}>Clinical utility</strong><span style={{ color: '#475569' }}> — not established by either signal.</span></div>
           </div>
         </div>
         <div style={{
@@ -92,10 +94,10 @@ export default function S10Results() {
           padding: '1.5vh 1.4vw',
         }}>
           <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.5vw', fontWeight: 700, color: '#9A3412', marginBottom: '0.5vh' }}>
-            Limitation
+            Evidence guardrail
           </div>
           <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.6vw', color: '#7C2D12', lineHeight: 1.3 }}>
-            Link retrieval is not clinical evidence. The next build adds licensed semantic text and independent therapeutic gold-standard labels.
+            Every 2-hop and 3-hop candidate now carries a cited text status: direct, context-only, or no licensed record. A separate calibration set evaluates therapeutic plausibility without changing Recall/MRR.
           </div>
         </div>
       </div>

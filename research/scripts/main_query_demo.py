@@ -2,8 +2,8 @@
 """Run one auditable query through the saved Hetionet benchmark models.
 
 This is a deterministic retrieval/evidence packet demo. It does not generate
-clinical advice; every returned candidate is labeled with whether the selected
-typed path is supported by the training graph.
+clinical advice; every returned candidate is labeled with typed training-graph
+support and with evidence status from the frozen licensed-text manifest.
 """
 
 from __future__ import annotations
@@ -28,10 +28,12 @@ from run_main_rmf_rag_benchmark import (  # noqa: E402
     split_edges,
     verified_compounds,
 )
+from evaluate_evidence import validate_manifest  # noqa: E402
 
 
 RESULTS = ROOT / "research" / "results" / "main_benchmark"
 QUERY_DIR = ROOT / "research" / "query_sets"
+EVIDENCE_MANIFEST = ROOT / "research" / "data" / "biomedical_evidence_manifest.json"
 
 
 def load_query(path: Path, index: int) -> dict:
@@ -61,6 +63,51 @@ def build_query_graph(seed: int) -> tuple[dict, dict, dict, dict]:
     return graph, docs, idf, nodes
 
 
+def load_evidence_manifest() -> dict[str, dict]:
+    """Index frozen CC BY source records by public compound identifier."""
+    manifest = json.loads(EVIDENCE_MANIFEST.read_text(encoding="utf-8"))
+    errors = validate_manifest(manifest)
+    if errors:
+        details = "\n".join(f"- {error}" for error in errors)
+        raise ValueError(f"Evidence manifest validation failed:\n{details}")
+    return {
+        compound_id: record
+        for record in manifest["records"]
+        for compound_id in record.get("compound_ids", [])
+    }
+
+
+def candidate_evidence(compound: str, evidence_by_compound: dict[str, dict]) -> dict:
+    record = evidence_by_compound.get(compound)
+    if not record:
+        return {
+            "status": "no_licensed_record",
+            "records": [],
+            "lookup": {
+                "compound_id": compound,
+                "source": "Europe PMC Open Access subset",
+                "license_filter": "CC BY only",
+            },
+        }
+    return {
+        "status": record["evidence_label"],
+        "records": [
+            {
+                "record_id": record["record_id"],
+                "pmcid": record["pmcid"],
+                "pmid": record["pmid"],
+                "doi": record["doi"],
+                "license": record["license"],
+                "authors": record["authors"],
+                "title": record["title"],
+                "source_url": record["source_url"],
+                "scope": record["evidence_scope"],
+                "snippet": record["snippet"],
+            }
+        ],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=101, choices=(7, 17, 29, 43, 101))
@@ -85,6 +132,7 @@ def main() -> None:
         query = load_query(query_path, args.query_index)
 
     graph, docs, idf, nodes = build_query_graph(args.seed)
+    evidence_by_compound = load_evidence_manifest()
     embedding_path = RESULTS / f"embeddings_seed{args.seed}.npz"
     with np.load(embedding_path) as saved:
         euclidean = saved["euclidean"]
@@ -105,6 +153,7 @@ def main() -> None:
                 "rank": rank,
                 "compound": compound,
                 "path_verified_in_train_graph": graph["index"][("Compound", compound)] in verified,
+                "evidence": candidate_evidence(compound, evidence_by_compound),
             }
             for rank, compound in enumerate(ranking[:10], start=1)
         ]
@@ -122,11 +171,18 @@ def main() -> None:
         "target_present_in_training_path_support": (
             graph["index"][("Compound", query["target_compound"])] in verified
         ),
+        "evidence_source": {
+            "manifest": "research/data/biomedical_evidence_manifest.json",
+            "policy": "Europe PMC Open Access records filtered to CC BY",
+            "citation_key": "PMCID",
+        },
         "rankings": rankings,
         "interpretation": (
-            "Candidates marked path_verified_in_train_graph are supported by the "
-            "typed training graph. This evidence packet is for research retrieval "
-            "only and is not a clinical recommendation."
+            "path_verified_in_train_graph reports graph connectivity only. "
+            "evidence.status reports frozen licensed-text support separately; "
+            "context_only and no_licensed_record do not support a therapeutic "
+            "claim. This packet is for research retrieval only and is not a "
+            "clinical recommendation."
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

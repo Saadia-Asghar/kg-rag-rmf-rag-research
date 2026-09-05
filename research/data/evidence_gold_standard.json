@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "title": "Blinded evidence-grounding calibration set",
+  "purpose": "Evaluate typed path support, licensed text support, and therapeutic plausibility as separate labels rather than folding them into Recall or MRR.",
+  "annotation_basis": "A small, frozen research calibration set annotated from the typed query semantics and the cited Europe PMC excerpts. It is not clinical expert consensus and must not be used as medical advice.",
+  "review_protocol": {
+    "gold_set_is_independent_of_ranking": true,
+    "ranking_metrics_used_for_labels": false,
+    "labels": {
+      "graph_path_support": "Whether the query's typed path is present in the training graph; held-out target edges are expected to be false.",
+      "evidence_support": "direct_support, context_only, or no_licensed_record.",
+      "therapeutic_plausibility": "supported_in_source_scope, plausible_but_species_or_preclinical_limited, not_supported_as_epilepsy_therapy, or insufficient_evidence."
+    }
+  },
+  "annotations": [
+    {
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "hop": 2,
+      "compound": "DB00909",
+      "graph_path_support": false,
+      "evidence_support": "direct_support",
+      "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited",
+      "evidence_record_ids": ["PMC11168201"],
+      "rationale": "The cited record names zonisamide as a treatment for epileptic seizures in dogs; the species boundary prevents a human clinical-utility claim."
+    },
+    {
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "hop": 2,
+      "compound": "DB00252",
+      "graph_path_support": true,
+      "evidence_support": "direct_support",
+      "therapeutic_plausibility": "supported_in_source_scope",
+      "evidence_record_ids": ["PMC11666373"],
+      "rationale": "The cited preclinical screen names phenytoin and reports reduced seizure probability in one model; this supports an antiseizure research relationship, not a patient-specific recommendation."
+    },
+    {
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "hop": 2,
+      "compound": "DB00313",
+      "graph_path_support": true,
+      "evidence_support": "direct_support",
+      "therapeutic_plausibility": "supported_in_source_scope",
+      "evidence_record_ids": ["PMC11666373"],
+      "rationale": "The cited preclinical screen names valproate and reports reduced seizure probability and duration in one model."
+    },
+    {
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "hop": 2,
+      "compound": "DB00818",
+      "graph_path_support": false,
+      "evidence_support": "context_only",
+      "therapeutic_plausibility": "not_supported_as_epilepsy_therapy",
+      "evidence_record_ids": ["PMC11413253"],
+      "rationale": "The cited record describes propofol during epilepsy surgery anesthesia; perioperative use is not evidence that propofol treats epilepsy."
+    },
+    {
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "hop": 3,
+      "compound": "DB01189",
+      "graph_path_support": false,
+      "evidence_support": "context_only",
+      "therapeutic_plausibility": "not_supported_as_epilepsy_therapy",
+      "evidence_record_ids": ["PMC12905552"],
+      "rationale": "The cited record concerns anesthetic selection and seizure monitoring; desflurane is not named and no therapeutic indication is established."
+    },
+    {
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "hop": 3,
+      "compound": "DB01002",
+      "graph_path_support": false,
+      "evidence_support": "context_only",
+      "therapeutic_plausibility": "insufficient_evidence",
+      "evidence_record_ids": ["PMC11860141"],
+      "rationale": "The cited record discusses general anesthetic pharmacology but does not name levobupivacaine or establish an epilepsy treatment relationship."
+    },
+    {
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "hop": 3,
+      "compound": "DB00628",
+      "graph_path_support": true,
+      "evidence_support": "no_licensed_record",
+      "therapeutic_plausibility": "insufficient_evidence",
+      "evidence_record_ids": [],
+      "rationale": "The graph path is not a licensed text record, and the frozen CC BY manifest contains no candidate-specific record for clorazepate."
+    },
+    {
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "hop": 3,
+      "compound": "DB06716",
+      "graph_path_support": true,
+      "evidence_support": "context_only",
+      "therapeutic_plausibility": "insufficient_evidence",
+      "evidence_record_ids": ["PMC11860141"],
+      "rationale": "The cited record is general-anesthetic class context and does not establish fospropofol as an epilepsy therapy."
+    }
+  ]
+}

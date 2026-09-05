@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "provider": "Europe PMC",
+    "subset": "Open Access",
+    "api": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+    "landing_page_template": "https://europepmc.org/articles/{pmcid}",
+    "license_filter": "CC BY only; exclude CC BY-NC, CC BY-ND, CC BY-NC-ND, and missing licenses",
+    "retrieved_on": "2026-09-02",
+    "primary_identifier": "PMCID",
+    "citation_policy": "Use PMCID as the stable record key; retain PMID and DOI when supplied."
+  },
+  "records": [
+    {
+      "record_id": "PMC11168201",
+      "pmcid": "PMC11168201",
+      "pmid": "38868500",
+      "doi": "10.3389/fvets.2024.1389615",
+      "license": "CC BY",
+      "authors": "Mahon E, Marsh O, Uriarte A, Stabile F.",
+      "title": "The effect of oral zonisamide treatment on serum phenobarbital concentrations in epileptic dogs.",
+      "source_url": "https://europepmc.org/articles/PMC11168201",
+      "evidence_scope": "Direct compound mention; veterinary epilepsy treatment and interaction context.",
+      "evidence_label": "direct_but_species_limited",
+      "snippet": "Zonisamide is used in dogs for the treatment of epileptic seizures.",
+      "compound_ids": ["DB00909"]
+    },
+    {
+      "record_id": "PMC11666373",
+      "pmcid": "PMC11666373",
+      "pmid": "39720593",
+      "doi": "10.3389/fphar.2024.1489888",
+      "license": "CC BY",
+      "authors": "Fischer FP, Karge RA, Koch H, Voigt A, Weber YG, Wolking S.",
+      "title": "The fruit fly Drosophila melanogaster as a screening model for antiseizure medications.",
+      "source_url": "https://europepmc.org/articles/PMC11666373",
+      "evidence_scope": "Preclinical antiseizure medication screen; the excerpt names valproate, levetiracetam, and phenytoin.",
+      "evidence_label": "direct_but_preclinical",
+      "snippet": "Treatment with valproate resulted in both a reduction in seizure probability and in seizure duration. In contrast, levetiracetam, brivaracetam and cenobamate had no effect on the bang-sensitive phenotype of eas 2F flies.",
+      "compound_ids": ["DB00313", "DB01202", "DB00252"]
+    },
+    {
+      "record_id": "PMC11413253",
+      "pmcid": "PMC11413253",
+      "pmid": "39297916",
+      "doi": "10.1186/s40981-024-00740-1",
+      "license": "CC BY",
+      "authors": "Mukoyama Y, Ichikawa J, Komori M, Kodaka M, Yokosako S, Kubota Y.",
+      "title": "Novel technique of switching TIVA and sevoflurane during epilepsy surgery for combined intraoperative motor evoked potentials monitoring and electrocorticography: an illustrative case report.",
+      "source_url": "https://europepmc.org/articles/PMC11413253",
+      "evidence_scope": "Perioperative anesthesia context; propofol is used during epilepsy surgery, not as an epilepsy treatment.",
+      "evidence_label": "context_only",
+      "snippet": "During epilepsy surgery, ... induction of the total intravenous anesthesia (TIVA) with propofol ... [was] followed by switching to sevoflurane for ECoG recording.",
+      "compound_ids": ["DB00818"]
+    },
+    {
+      "record_id": "PMC12905552",
+      "pmcid": "PMC12905552",
+      "pmid": "41694842",
+      "doi": "10.7759/cureus.101572",
+      "license": "CC BY",
+      "authors": "Kurnutala LN, Rugnath R, Arora R, Nazari R.",
+      "title": "Anesthetic Management of a Patient With a Vagal Nerve Stimulator and Poorly Controlled Seizures.",
+      "source_url": "https://europepmc.org/articles/PMC12905552",
+      "evidence_scope": "Clinical seizure-management and anesthesia context; midazolam and levetiracetam are named, while desflurane is not.",
+      "evidence_label": "context_only",
+      "snippet": "The episode was treated with intravenous levetiracetam ... and selecting anesthetic agents that minimize pro-convulsant potential.",
+      "compound_ids": ["DB00683", "DB01189"]
+    },
+    {
+      "record_id": "PMC11860141",
+      "pmcid": "PMC11860141",
+      "pmid": "40006063",
+      "doi": "10.3390/ph18020250",
+      "license": "CC BY",
+      "authors": "Čižmáriková R, Habala L, Valentová J.",
+      "title": "General Anesthetics: Aspects of Chirality, Pharmacodynamics, and Pharmacokinetics.",
+      "source_url": "https://europepmc.org/articles/PMC11860141",
+      "evidence_scope": "General-anesthetic class context; the excerpt does not establish an epilepsy indication for fospropofol.",
+      "evidence_label": "context_only",
+      "snippet": "Both inhalational and intravenous anesthetics are discussed. Aspects of pharmacodynamics and pharmacokinetics are surveyed as well.",
+      "compound_ids": ["DB06716", "DB01002"]
+    },
+    {
+      "record_id": "PMC11206332",
+      "pmcid": "PMC11206332",
+      "pmid": "38931004",
+      "doi": "10.3390/molecules29122940",
+      "license": "CC BY",
+      "authors": "Di Matteo F, Mancuso F, Turcio R, Ciaglia T, Stagno C, Di Chio C, Campiglia P, Bertamino A, Giofrè SV, Ostacolo C, Iraci N.",
+      "title": "KCNT1 Channel Blockers: A Medicinal Chemistry Perspective.",
+      "source_url": "https://europepmc.org/articles/PMC11206332",
+      "evidence_scope": "Target-class and drug-discovery context; it does not validate a therapeutic recommendation for this query.",
+      "evidence_label": "context_only",
+      "snippet": "Potassium channels have recently emerged as suitable target for the treatment of epileptic diseases ... [and] the chemotypes described so far as KCNT1 blockers.",
+      "compound_ids": ["DB00908"]
+    },
+    {
+      "record_id": "PMC10261848",
+      "pmcid": "PMC10261848",
+      "pmid": "37324239",
+      "doi": "10.1093/braincomms/fcad174",
+      "license": "CC BY",
+      "authors": "Checri R, Chipaux M, Ferrand-Sorbets S, Raffo E, Bulteau C, Rosenberg SD, Doladilhe M, Dorfmüller G, Adle-Biassette H, Baldassari S, Baulac S.",
+      "title": "Detection of brain somatic mutations in focal cortical dysplasia during epilepsy presurgical workup.",
+      "source_url": "https://europepmc.org/articles/PMC10261848",
+      "evidence_scope": "Disease-gene context for AKT3 and epilepsy; no compound efficacy claim.",
+      "evidence_label": "gene_disease_context",
+      "snippet": "We identified low-level mosaic somatic mutations in AKT3 ... and support a link between the mutation load and the epileptic activity.",
+      "compound_ids": []
+    }
+  ]
+}
