@@ -1,0 +1,2 @@
+# Tested with CPython 3.12 on Windows; no API key or GPU is needed.
+numpy==2.3.5

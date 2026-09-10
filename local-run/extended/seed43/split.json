@@ -1,0 +1,3963 @@
+{
+  "seed": 43,
+  "train": [
+    [
+      "abdominal radiological procedure",
+      "vasopressin"
+    ],
+    [
+      "abnormal uterine bleeding",
+      "ethinyl estradiol norethindrone"
+    ],
+    [
+      "abnormal uterine bleeding",
+      "ethinyl estradiol norgestimate"
+    ],
+    [
+      "abortion",
+      "oxytocin"
+    ],
+    [
+      "acne",
+      "adapalene"
+    ],
+    [
+      "acne",
+      "clindamycin"
+    ],
+    [
+      "acne",
+      "isotretinoin"
+    ],
+    [
+      "acne",
+      "minocycline"
+    ],
+    [
+      "acne",
+      "tetracycline"
+    ],
+    [
+      "acne",
+      "tretinoin"
+    ],
+    [
+      "actinomycosis",
+      "penicillin g sodium"
+    ],
+    [
+      "acute lymphocytic leukemia",
+      "asparaginase erwinia chrysanthemi"
+    ],
+    [
+      "acute lymphocytic leukemia",
+      "asparaginase escherichia coli"
+    ],
+    [
+      "acute myeloid leukemia",
+      "cytarabine"
+    ],
+    [
+      "acute myeloid leukemia",
+      "cytarabine liposomal daunorubicin liposomal"
+    ],
+    [
+      "acute myeloid leukemia",
+      "gilteritinib"
+    ],
+    [
+      "acute myeloid leukemia",
+      "glasdegib"
+    ],
+    [
+      "acute myeloid leukemia",
+      "idarubicin"
+    ],
+    [
+      "acute myeloid leukemia",
+      "venetoclax"
+    ],
+    [
+      "acute myeloid leukemia",
+      "vincristine"
+    ],
+    [
+      "adams stokes syndrome",
+      "isoproterenol"
+    ],
+    [
+      "adenosine deaminase deficiency",
+      "elapegademase"
+    ],
+    [
+      "adhd attention deficit hyperactivity disorder",
+      "amphetamine dextroamphetamine"
+    ],
+    [
+      "adrenal insufficiency",
+      "cortisone"
+    ],
+    [
+      "adrenogenital syndrome",
+      "dexamethasone"
+    ],
+    [
+      "adult human growth hormone deficiency",
+      "somatropin"
+    ],
+    [
+      "agitated state",
+      "loxapine"
+    ],
+    [
+      "aids related wasting",
+      "megestrol"
+    ],
+    [
+      "alcohol withdrawal",
+      "baclofen"
+    ],
+    [
+      "alcohol withdrawal",
+      "oxazepam"
+    ],
+    [
+      "alkylating agent cystitis",
+      "sodium bicarbonate"
+    ],
+    [
+      "allergic rhinitis",
+      "prednisone"
+    ],
+    [
+      "allergic urticaria",
+      "tetracaine"
+    ],
+    [
+      "allergies",
+      "triprolidine"
+    ],
+    [
+      "alopecia",
+      "minoxidil"
+    ],
+    [
+      "alzheimer s disease",
+      "donepezil"
+    ],
+    [
+      "alzheimer s disease",
+      "donepezil memantine"
+    ],
+    [
+      "amebiasis",
+      "nitazoxanide"
+    ],
+    [
+      "amyotrophic lateral sclerosis",
+      "edaravone"
+    ],
+    [
+      "anal cancer",
+      "cisplatin"
+    ],
+    [
+      "anemia sickle cell",
+      "glutamine"
+    ],
+    [
+      "anesthesia",
+      "propofol"
+    ],
+    [
+      "angina",
+      "amlodipine"
+    ],
+    [
+      "angina",
+      "amlodipine atorvastatin"
+    ],
+    [
+      "angina",
+      "carvedilol"
+    ],
+    [
+      "angina",
+      "enoxaparin"
+    ],
+    [
+      "angina",
+      "metoprolol"
+    ],
+    [
+      "angina",
+      "nitroglycerin"
+    ],
+    [
+      "angina pectoris prophylaxis",
+      "aspirin"
+    ],
+    [
+      "ankylosing spondylitis",
+      "prednisone"
+    ],
+    [
+      "anthrax",
+      "anthrax immune globulin intravenous"
+    ],
+    [
+      "anthrax",
+      "chloramphenicol"
+    ],
+    [
+      "anthrax",
+      "doxycycline"
+    ],
+    [
+      "anticholinesterase poisoning",
+      "atropine"
+    ],
+    [
+      "anticoagulation during pregnancy",
+      "heparin"
+    ],
+    [
+      "antiphospholipid syndrome",
+      "aspirin"
+    ],
+    [
+      "anxiety",
+      "buspirone"
+    ],
+    [
+      "anxiety",
+      "clonidine"
+    ],
+    [
+      "anxiety",
+      "gabapentin"
+    ],
+    [
+      "anxiety",
+      "paroxetine"
+    ],
+    [
+      "anxiety",
+      "trazodone"
+    ],
+    [
+      "anxiety and stress",
+      "citalopram"
+    ],
+    [
+      "aphthous ulcer",
+      "benzocaine"
+    ],
+    [
+      "arrhythmia",
+      "disopyramide"
+    ],
+    [
+      "ascariasis",
+      "albendazole"
+    ],
+    [
+      "aseptic necrosis",
+      "aspirin"
+    ],
+    [
+      "aseptic necrosis",
+      "naproxen"
+    ],
+    [
+      "aspergillosis invasive",
+      "amphotericin b liposomal"
+    ],
+    [
+      "aspiration pneumonia",
+      "clindamycin"
+    ],
+    [
+      "aspiration pneumonia",
+      "metronidazole"
+    ],
+    [
+      "asthma",
+      "levalbuterol"
+    ],
+    [
+      "atopic dermatitis",
+      "betamethasone"
+    ],
+    [
+      "atopic dermatitis",
+      "dexamethasone"
+    ],
+    [
+      "atopic dermatitis",
+      "fluocinonide"
+    ],
+    [
+      "atopic dermatitis",
+      "fluticasone"
+    ],
+    [
+      "atopic dermatitis",
+      "hydrocortisone"
+    ],
+    [
+      "atopic dermatitis",
+      "mometasone"
+    ],
+    [
+      "atrial fibrillation",
+      "diltiazem"
+    ],
+    [
+      "atrial fibrillation",
+      "dronedarone"
+    ],
+    [
+      "atrial fibrillation",
+      "flecainide"
+    ],
+    [
+      "atrial flutter",
+      "propafenone"
+    ],
+    [
+      "autism",
+      "ziprasidone"
+    ],
+    [
+      "back pain",
+      "acetaminophen hydrocodone"
+    ],
+    [
+      "back pain",
+      "nabumetone"
+    ],
+    [
+      "bacteremia",
+      "ceftazidime"
+    ],
+    [
+      "bacterial endocarditis prevention bacterial endocarditis prophylaxis",
+      "gentamicin"
+    ],
+    [
+      "bacterial infection",
+      "vancomycin"
+    ],
+    [
+      "bacterial skin infection",
+      "bacitracin"
+    ],
+    [
+      "bacterial skin infection",
+      "fluocinolone neomycin"
+    ],
+    [
+      "bacterial skin infection",
+      "sulfamethoxazole trimethoprim"
+    ],
+    [
+      "bacterial vaginitis",
+      "clindamycin"
+    ],
+    [
+      "barrett s esophagus",
+      "pantoprazole"
+    ],
+    [
+      "bartonellosis",
+      "erythromycin"
+    ],
+    [
+      "behcet s disease",
+      "azathioprine"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "doxazosin"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "dutasteride"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "dutasteride tamsulosin"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "tadalafil"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "tamsulosin"
+    ],
+    [
+      "berylliosis",
+      "prednisone"
+    ],
+    [
+      "bipolar disorder",
+      "clonazepam"
+    ],
+    [
+      "bipolar disorder",
+      "lamotrigine"
+    ],
+    [
+      "bipolar disorder",
+      "lithium"
+    ],
+    [
+      "bipolar disorder",
+      "olanzapine"
+    ],
+    [
+      "bipolar disorder",
+      "sertraline"
+    ],
+    [
+      "bipolar disorder",
+      "topiramate"
+    ],
+    [
+      "birth control contraception",
+      "levonorgestrel"
+    ],
+    [
+      "bladder cancer",
+      "cisplatin"
+    ],
+    [
+      "bladder infection",
+      "amoxicillin"
+    ],
+    [
+      "bladder infection",
+      "cefpodoxime"
+    ],
+    [
+      "bleeding disorder",
+      "goserelin"
+    ],
+    [
+      "body dysmorphic disorder",
+      "paroxetine"
+    ],
+    [
+      "bone infection osteomyelitis",
+      "clindamycin"
+    ],
+    [
+      "borderline personality disorder",
+      "alprazolam"
+    ],
+    [
+      "borderline personality disorder",
+      "aripiprazole"
+    ],
+    [
+      "borderline personality disorder",
+      "buspirone"
+    ],
+    [
+      "borderline personality disorder",
+      "divalproex sodium"
+    ],
+    [
+      "borderline personality disorder",
+      "haloperidol"
+    ],
+    [
+      "borderline personality disorder",
+      "l methylfolate"
+    ],
+    [
+      "borderline personality disorder",
+      "lithium"
+    ],
+    [
+      "borderline personality disorder",
+      "lorazepam"
+    ],
+    [
+      "borderline personality disorder",
+      "lurasidone"
+    ],
+    [
+      "borderline personality disorder",
+      "olanzapine"
+    ],
+    [
+      "borderline personality disorder",
+      "quetiapine"
+    ],
+    [
+      "borderline personality disorder",
+      "sertraline"
+    ],
+    [
+      "borderline personality disorder",
+      "topiramate"
+    ],
+    [
+      "bradyarrhythmia",
+      "atropine"
+    ],
+    [
+      "breast cancer",
+      "doxorubicin"
+    ],
+    [
+      "breast cancer",
+      "everolimus"
+    ],
+    [
+      "breast cancer",
+      "methotrexate"
+    ],
+    [
+      "breast cancer male",
+      "tamoxifen"
+    ],
+    [
+      "bronchiectasis",
+      "guaifenesin"
+    ],
+    [
+      "bronchitis",
+      "cefdinir"
+    ],
+    [
+      "bronchogenic carcinoma",
+      "cimetidine"
+    ],
+    [
+      "bulimia",
+      "fluoxetine"
+    ],
+    [
+      "bursitis",
+      "betamethasone"
+    ],
+    [
+      "bursitis",
+      "cortisone"
+    ],
+    [
+      "bursitis",
+      "prednisone"
+    ],
+    [
+      "bursitis",
+      "sulindac"
+    ],
+    [
+      "calcium oxalate calculi with hyperuricosuria",
+      "allopurinol"
+    ],
+    [
+      "campylobacter gastroenteritis",
+      "ofloxacin"
+    ],
+    [
+      "cancer",
+      "vinblastine"
+    ],
+    [
+      "candidemia",
+      "amphotericin b lipid complex"
+    ],
+    [
+      "cardiovascular risk reduction",
+      "telmisartan"
+    ],
+    [
+      "cerebral arteriography",
+      "iopromide"
+    ],
+    [
+      "cerebral spasticity",
+      "trihexyphenidyl"
+    ],
+    [
+      "cervical cancer",
+      "methotrexate"
+    ],
+    [
+      "cervicitis",
+      "doxycycline"
+    ],
+    [
+      "chancroid",
+      "doxycycline"
+    ],
+    [
+      "chemotherapy toxicity",
+      "amifostine"
+    ],
+    [
+      "cholecystitis",
+      "cefoxitin"
+    ],
+    [
+      "choriocarcinoma",
+      "vinblastine"
+    ],
+    [
+      "chronic eosinophilic leukemia",
+      "imatinib"
+    ],
+    [
+      "chronic fatigue syndrome",
+      "duloxetine"
+    ],
+    [
+      "chronic idiopathic constipation",
+      "prucalopride"
+    ],
+    [
+      "chronic inflammatory demyelinating polyradiculoneuropathy",
+      "immune globulin intravenous and subcutaneous"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "bendamustine"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "chlorambucil"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "ibrutinib"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "rituximab"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "anagrelide"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "cyclophosphamide"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "imatinib"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "ponatinib"
+    ],
+    [
+      "chronic myofascial pain",
+      "clonazepam"
+    ],
+    [
+      "chronic myofascial pain",
+      "ibuprofen"
+    ],
+    [
+      "chronic pain",
+      "methadone"
+    ],
+    [
+      "clostridioides difficile infection",
+      "penicillin g potassium"
+    ],
+    [
+      "clostridioides difficile infection",
+      "penicillin g sodium"
+    ],
+    [
+      "clostridioides difficile infection",
+      "vancomycin"
+    ],
+    [
+      "cluster tic syndrome",
+      "valproic acid"
+    ],
+    [
+      "cmv prophylaxis",
+      "valganciclovir"
+    ],
+    [
+      "cmv retinitis",
+      "cidofovir"
+    ],
+    [
+      "coccidioidomycosis",
+      "amphotericin b lipid complex"
+    ],
+    [
+      "coccidioidomycosis meningitis",
+      "amphotericin b"
+    ],
+    [
+      "cold sores herpes simplex labialis",
+      "famciclovir"
+    ],
+    [
+      "cold symptoms",
+      "acetaminophen chlorpheniramine phenylephrine"
+    ],
+    [
+      "cold symptoms",
+      "chlorpheniramine"
+    ],
+    [
+      "colorectal cancer",
+      "bevacizumab"
+    ],
+    [
+      "condylomata acuminata",
+      "podofilox"
+    ],
+    [
+      "conjunctivitis allergic",
+      "cromolyn"
+    ],
+    [
+      "conjunctivitis bacterial",
+      "dexamethasone tobramycin"
+    ],
+    [
+      "conjunctivitis bacterial",
+      "erythromycin"
+    ],
+    [
+      "conjunctivitis bacterial",
+      "gentamicin"
+    ],
+    [
+      "constipation",
+      "magnesium citrate"
+    ],
+    [
+      "constipation chronic",
+      "polyethylene glycol 3350 with electrolytes"
+    ],
+    [
+      "copd",
+      "aclidinium"
+    ],
+    [
+      "copd",
+      "levalbuterol"
+    ],
+    [
+      "copd",
+      "montelukast"
+    ],
+    [
+      "copd",
+      "olodaterol"
+    ],
+    [
+      "copd",
+      "olodaterol tiotropium"
+    ],
+    [
+      "copd acute",
+      "epinephrine"
+    ],
+    [
+      "copd maintenance",
+      "fluticasone salmeterol"
+    ],
+    [
+      "corneal ulcer",
+      "prednisone"
+    ],
+    [
+      "coronary artery disease",
+      "rivaroxaban"
+    ],
+    [
+      "cough",
+      "dextromethorphan promethazine"
+    ],
+    [
+      "cough",
+      "guaifenesin"
+    ],
+    [
+      "cough",
+      "homatropine hydrocodone"
+    ],
+    [
+      "crohn s disease",
+      "cyclosporine"
+    ],
+    [
+      "crohn s disease maintenance",
+      "certolizumab"
+    ],
+    [
+      "croup",
+      "dexamethasone"
+    ],
+    [
+      "cushing s syndrome",
+      "mifepristone"
+    ],
+    [
+      "cutaneous bacillus anthracis",
+      "procaine penicillin"
+    ],
+    [
+      "cutaneous candidiasis",
+      "terbinafine"
+    ],
+    [
+      "cutaneous larva migrans",
+      "ivermectin"
+    ],
+    [
+      "cutaneous t cell lymphoma",
+      "romidepsin"
+    ],
+    [
+      "cyclic vomiting syndrome",
+      "amitriptyline"
+    ],
+    [
+      "cyclothymic disorder",
+      "divalproex sodium"
+    ],
+    [
+      "cytokine release syndrome",
+      "tocilizumab"
+    ],
+    [
+      "deep vein thrombosis",
+      "rivaroxaban"
+    ],
+    [
+      "deep vein thrombosis prophylaxis",
+      "dalteparin"
+    ],
+    [
+      "deep vein thrombosis prophylaxis after hip replacement surgery",
+      "dalteparin"
+    ],
+    [
+      "delayed puberty male",
+      "methyltestosterone"
+    ],
+    [
+      "depression",
+      "citalopram"
+    ],
+    [
+      "dermal ulcer",
+      "becaplermin"
+    ],
+    [
+      "dermatological disorders",
+      "triamcinolone"
+    ],
+    [
+      "diabetes mellitus",
+      "insulin degludec"
+    ],
+    [
+      "diabetes type 1",
+      "insulin regular"
+    ],
+    [
+      "diabetes type 2",
+      "pioglitazone"
+    ],
+    [
+      "diabetic ketoacidosis",
+      "insulin glulisine"
+    ],
+    [
+      "diabetic ketoacidosis",
+      "insulin lispro"
+    ],
+    [
+      "diabetic kidney disease diabetic nephropathy",
+      "perindopril"
+    ],
+    [
+      "diabetic kidney disease diabetic nephropathy",
+      "ramipril"
+    ],
+    [
+      "diabetic kidney disease diabetic nephropathy",
+      "trandolapril"
+    ],
+    [
+      "diabetic macular edema",
+      "dexamethasone"
+    ],
+    [
+      "diaper rash",
+      "menthol zinc oxide"
+    ],
+    [
+      "diaper rash",
+      "zinc oxide"
+    ],
+    [
+      "diarrhea",
+      "codeine"
+    ],
+    [
+      "diarrhea",
+      "octreotide"
+    ],
+    [
+      "dientamoeba fragilis",
+      "metronidazole"
+    ],
+    [
+      "dietary fiber supplementation",
+      "psyllium"
+    ],
+    [
+      "dietary supplementation",
+      "ascorbic acid"
+    ],
+    [
+      "diffuse large b cell lymphoma",
+      "doxorubicin"
+    ],
+    [
+      "diffuse large b cell lymphoma",
+      "rituximab"
+    ],
+    [
+      "dissociative identity disorder",
+      "sertraline"
+    ],
+    [
+      "drowsiness hypersomnia",
+      "armodafinil"
+    ],
+    [
+      "drowsiness hypersomnia",
+      "modafinil"
+    ],
+    [
+      "dupuytren s contracture",
+      "collagenase clostridium histolyticum"
+    ],
+    [
+      "dysautonomia",
+      "midodrine"
+    ],
+    [
+      "dyslipidemia",
+      "fluvastatin"
+    ],
+    [
+      "dysuria",
+      "oxybutynin"
+    ],
+    [
+      "echocardiography",
+      "perflutren"
+    ],
+    [
+      "eczema",
+      "halobetasol"
+    ],
+    [
+      "eczema",
+      "ranitidine"
+    ],
+    [
+      "electromechanical dissociation",
+      "epinephrine"
+    ],
+    [
+      "emergency contraception postcoital contraception",
+      "ethinyl estradiol levonorgestrel"
+    ],
+    [
+      "endometrial cancer",
+      "anastrozole"
+    ],
+    [
+      "endometrial cancer",
+      "lenvatinib"
+    ],
+    [
+      "endometrial cancer",
+      "megestrol"
+    ],
+    [
+      "endometriosis",
+      "danazol"
+    ],
+    [
+      "endometritis",
+      "gentamicin"
+    ],
+    [
+      "epiglottitis",
+      "ceftriaxone"
+    ],
+    [
+      "epilepsy",
+      "levetiracetam"
+    ],
+    [
+      "erosive esophagitis",
+      "ranitidine"
+    ],
+    [
+      "erythroblastopenia",
+      "prednisone"
+    ],
+    [
+      "esophageal spasm",
+      "isosorbide mononitrate"
+    ],
+    [
+      "evan s syndrome",
+      "vincristine"
+    ],
+    [
+      "ewing s sarcoma",
+      "cyclophosphamide"
+    ],
+    [
+      "exchange transfusion",
+      "calcium gluconate"
+    ],
+    [
+      "eye redness",
+      "fluorometholone"
+    ],
+    [
+      "facial wrinkles",
+      "abobotulinumtoxina"
+    ],
+    [
+      "facial wrinkles",
+      "azficel t"
+    ],
+    [
+      "factor ix deficiency",
+      "factor ix complex"
+    ],
+    [
+      "failure to thrive",
+      "cyproheptadine"
+    ],
+    [
+      "fallopian tube cancer",
+      "bevacizumab"
+    ],
+    [
+      "familial mediterranean fever",
+      "canakinumab"
+    ],
+    [
+      "fasciolopsis buski intestinal fluke",
+      "praziquantel"
+    ],
+    [
+      "fatigue",
+      "amphetamine dextroamphetamine"
+    ],
+    [
+      "fever",
+      "naproxen"
+    ],
+    [
+      "fish tapeworm infection diphyllobothrium latum",
+      "paromomycin"
+    ],
+    [
+      "folic acid antagonist overdose",
+      "leucovorin"
+    ],
+    [
+      "follicle stimulation",
+      "follicle stimulating hormone"
+    ],
+    [
+      "follicular lymphoma",
+      "rituximab"
+    ],
+    [
+      "forehead lines",
+      "onabotulinumtoxina"
+    ],
+    [
+      "frozen shoulder",
+      "indomethacin"
+    ],
+    [
+      "gas",
+      "aluminum hydroxide magnesium hydroxide simethicone"
+    ],
+    [
+      "gastric cancer",
+      "trastuzumab"
+    ],
+    [
+      "gastrointestinal hemorrhage",
+      "aluminum hydroxide"
+    ],
+    [
+      "gaucher disease",
+      "velaglucerase alfa"
+    ],
+    [
+      "gender dysphoria",
+      "progesterone"
+    ],
+    [
+      "gerd",
+      "famotidine"
+    ],
+    [
+      "gerd",
+      "omeprazole sodium bicarbonate"
+    ],
+    [
+      "gerd",
+      "sucralfate"
+    ],
+    [
+      "gestational diabetes",
+      "insulin isophane insulin regular"
+    ],
+    [
+      "giardiasis",
+      "metronidazole"
+    ],
+    [
+      "glaucoma intraocular hypertension",
+      "brimonidine timolol"
+    ],
+    [
+      "glomerulonephritis",
+      "penicillin g benzathine"
+    ],
+    [
+      "glucagonoma",
+      "octreotide"
+    ],
+    [
+      "gnathostomiasis",
+      "albendazole"
+    ],
+    [
+      "gonococcal infection uncomplicated",
+      "ceftriaxone"
+    ],
+    [
+      "gout",
+      "febuxostat"
+    ],
+    [
+      "granulomatosis with polyangiitis",
+      "etanercept"
+    ],
+    [
+      "gynecological conditions",
+      "misoprostol"
+    ],
+    [
+      "haemophilus influenzae prophylaxis",
+      "diphtheria toxoid haemophilus b conjugate prp t vaccine pertussis acellular poliovirus vaccine inactivated tetanus toxoid"
+    ],
+    [
+      "head and neck cancer",
+      "pembrolizumab"
+    ],
+    [
+      "head lice",
+      "acetic acid"
+    ],
+    [
+      "head lice",
+      "piperonyl butoxide pyrethrins"
+    ],
+    [
+      "headache",
+      "trazodone"
+    ],
+    [
+      "heart attack myocardial infarction",
+      "nitroglycerin"
+    ],
+    [
+      "heart failure congestive heart failure",
+      "amlodipine"
+    ],
+    [
+      "hemangioma",
+      "propranolol"
+    ],
+    [
+      "hemophilia b",
+      "factor ix complex"
+    ],
+    [
+      "hepatic encephalopathy",
+      "lactulose"
+    ],
+    [
+      "hepatitis b prevention hepatitis b prophylaxis",
+      "diphtheria toxoid hepatitis b pediatric vaccine pertussis acellular poliovirus vaccine inactivated tetanus toxoid"
+    ],
+    [
+      "hepatitis c",
+      "sofosbuvir velpatasvir voxilaprevir"
+    ],
+    [
+      "hepatocellular carcinoma",
+      "nivolumab"
+    ],
+    [
+      "hepatocellular carcinoma",
+      "ramucirumab"
+    ],
+    [
+      "hepatocellular carcinoma",
+      "regorafenib"
+    ],
+    [
+      "hereditary angioedema",
+      "conestat alfa"
+    ],
+    [
+      "hereditary angioedema",
+      "lanadelumab"
+    ],
+    [
+      "hereditary tyrosinemia type 1",
+      "nitisinone"
+    ],
+    [
+      "herpes simplex",
+      "acyclovir"
+    ],
+    [
+      "high blood pressure hypertension",
+      "furosemide"
+    ],
+    [
+      "high blood pressure hypertension",
+      "valsartan"
+    ],
+    [
+      "high cholesterol",
+      "pravastatin"
+    ],
+    [
+      "high cholesterol",
+      "rosuvastatin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "fluvastatin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "lovastatin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "rosuvastatin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "simvastatin"
+    ],
+    [
+      "high cholesterol familial homozygous",
+      "atorvastatin"
+    ],
+    [
+      "hiv infection",
+      "abacavir"
+    ],
+    [
+      "hiv infection",
+      "efavirenz emtricitabine tenofovir"
+    ],
+    [
+      "hiv infection",
+      "ritonavir"
+    ],
+    [
+      "hodgkin s lymphoma",
+      "chlorambucil"
+    ],
+    [
+      "hodgkin s lymphoma",
+      "nivolumab"
+    ],
+    [
+      "hookworm infection necator or ancylostoma",
+      "mebendazole"
+    ],
+    [
+      "hot flashes",
+      "venlafaxine"
+    ],
+    [
+      "human papilloma virus",
+      "imiquimod"
+    ],
+    [
+      "human papillomavirus prophylaxis",
+      "human papillomavirus vaccine"
+    ],
+    [
+      "hypercalcemia of malignancy",
+      "dexamethasone"
+    ],
+    [
+      "hyperekplexia",
+      "divalproex sodium"
+    ],
+    [
+      "hyperhidrosis",
+      "clonidine"
+    ],
+    [
+      "hyperhidrosis",
+      "oxybutynin"
+    ],
+    [
+      "hyperhomocysteinemia",
+      "multivitamin"
+    ],
+    [
+      "hyperlipoproteinemia",
+      "niacin"
+    ],
+    [
+      "hyperlipoproteinemia type iia elevated ldl",
+      "rosuvastatin"
+    ],
+    [
+      "hyperlipoproteinemia type iib elevated ldl vldl",
+      "fenofibrate"
+    ],
+    [
+      "hyperlipoproteinemia type iv elevated vldl",
+      "rosuvastatin"
+    ],
+    [
+      "hyperthyroidism",
+      "methimazole"
+    ],
+    [
+      "hypoactive sexual desire disorder",
+      "bremelanotide"
+    ],
+    [
+      "hypocalcemia",
+      "calcitriol"
+    ],
+    [
+      "hypodermoclysis",
+      "hyaluronidase"
+    ],
+    [
+      "hypogonadism male",
+      "follicle stimulating hormone"
+    ],
+    [
+      "hypokalemia",
+      "potassium gluconate"
+    ],
+    [
+      "hypoparathyroidism",
+      "calcium lactate"
+    ],
+    [
+      "hypoprothrombinemia not associated with anticoagulant therapy",
+      "phytonadione"
+    ],
+    [
+      "hypotension",
+      "phenylephrine"
+    ],
+    [
+      "hypothyroidism after thyroid removal hypothyroidism post thyroidectomy",
+      "levothyroxine"
+    ],
+    [
+      "icu agitation",
+      "lorazepam"
+    ],
+    [
+      "idiopathic thrombocytopenic purpura",
+      "cyclosporine"
+    ],
+    [
+      "impetigo",
+      "ammoniated mercury"
+    ],
+    [
+      "indigestion",
+      "famotidine"
+    ],
+    [
+      "induced hypotension",
+      "nitroprusside"
+    ],
+    [
+      "inflammatory bowel disease",
+      "azathioprine"
+    ],
+    [
+      "inflammatory conditions",
+      "meloxicam"
+    ],
+    [
+      "influenza",
+      "oseltamivir"
+    ],
+    [
+      "influenza prophylaxis",
+      "rimantadine"
+    ],
+    [
+      "insomnia",
+      "gabapentin"
+    ],
+    [
+      "insomnia",
+      "temazepam"
+    ],
+    [
+      "insomnia",
+      "trazodone"
+    ],
+    [
+      "insomnia",
+      "zolpidem"
+    ],
+    [
+      "interstitial cystitis",
+      "phenazopyridine"
+    ],
+    [
+      "intertrigo",
+      "clotrimazole"
+    ],
+    [
+      "intravenous urography",
+      "ioversol"
+    ],
+    [
+      "iridocyclitis",
+      "dexamethasone"
+    ],
+    [
+      "iron deficiency anemia",
+      "iron sucrose"
+    ],
+    [
+      "irritable bowel syndrome",
+      "atropine hyoscyamine phenobarbital scopolamine"
+    ],
+    [
+      "irritable bowel syndrome",
+      "cholestyramine"
+    ],
+    [
+      "iv catheter clot",
+      "alteplase"
+    ],
+    [
+      "joint infection",
+      "amikacin"
+    ],
+    [
+      "juvenile rheumatoid arthritis",
+      "etanercept"
+    ],
+    [
+      "kaposi s sarcoma",
+      "vinblastine"
+    ],
+    [
+      "keratitis",
+      "prednisolone"
+    ],
+    [
+      "keratoconjunctivitis",
+      "hydrocortisone neomycin polymyxin b"
+    ],
+    [
+      "keratosis",
+      "ingenol"
+    ],
+    [
+      "kidney infections pyelonephritis",
+      "cefotaxime"
+    ],
+    [
+      "lambert eaton myasthenic syndrome",
+      "amifampridine"
+    ],
+    [
+      "laryngopharyngeal reflux",
+      "famotidine"
+    ],
+    [
+      "left ventricular dysfunction",
+      "quinapril"
+    ],
+    [
+      "leishmaniasis",
+      "amphotericin b lipid complex"
+    ],
+    [
+      "lemierre s syndrome",
+      "chloramphenicol"
+    ],
+    [
+      "leprosy dapsone sensitive",
+      "clofazimine"
+    ],
+    [
+      "leprosy tuberculoid",
+      "rifampin"
+    ],
+    [
+      "leukemia",
+      "fludarabine"
+    ],
+    [
+      "lewy body dementia",
+      "donepezil"
+    ],
+    [
+      "lice",
+      "piperonyl butoxide pyrethrins"
+    ],
+    [
+      "lichen planus",
+      "triamcinolone"
+    ],
+    [
+      "linear iga disease",
+      "colchicine"
+    ],
+    [
+      "liver fluke clornorchis sinensis",
+      "albendazole"
+    ],
+    [
+      "lyme disease neurologic",
+      "tetracycline"
+    ],
+    [
+      "lymphoma",
+      "pralatrexate"
+    ],
+    [
+      "major depressive disorder",
+      "bupropion"
+    ],
+    [
+      "malaria prevention malaria prophylaxis",
+      "primaquine"
+    ],
+    [
+      "mania",
+      "lithium"
+    ],
+    [
+      "manscaping pain",
+      "lidocaine"
+    ],
+    [
+      "mantle cell lymphoma",
+      "cytarabine"
+    ],
+    [
+      "mccune albright syndrome",
+      "tamoxifen"
+    ],
+    [
+      "melanoma",
+      "dacarbazine"
+    ],
+    [
+      "melanoma",
+      "interferon alfa 2b"
+    ],
+    [
+      "melanoma",
+      "pembrolizumab"
+    ],
+    [
+      "melanoma",
+      "talimogene laherparepvec"
+    ],
+    [
+      "melanoma metastatic",
+      "cobimetinib"
+    ],
+    [
+      "melioidosis",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "meningitis",
+      "ampicillin"
+    ],
+    [
+      "meningitis meningococcal",
+      "meningococcal group b vaccine"
+    ],
+    [
+      "merkel cell carcinoma",
+      "pembrolizumab"
+    ],
+    [
+      "migraine",
+      "almotriptan"
+    ],
+    [
+      "migraine",
+      "aspirin butalbital caffeine"
+    ],
+    [
+      "migraine",
+      "diclofenac"
+    ],
+    [
+      "migraine",
+      "gabapentin"
+    ],
+    [
+      "migraine",
+      "naratriptan"
+    ],
+    [
+      "migraine prevention migraine prophylaxis",
+      "amitriptyline"
+    ],
+    [
+      "minor burns",
+      "vitamin a d"
+    ],
+    [
+      "mitral valve prolapse",
+      "bisoprolol"
+    ],
+    [
+      "mitral valve prolapse",
+      "nebivolol"
+    ],
+    [
+      "monkeypox prophylaxis",
+      "smallpox and monkeypox vaccine"
+    ],
+    [
+      "motion sickness",
+      "scopolamine"
+    ],
+    [
+      "muckle wells syndrome",
+      "rilonacept"
+    ],
+    [
+      "mucopolysaccharidosis type vii",
+      "vestronidase alfa"
+    ],
+    [
+      "multicentric castleman s disease",
+      "siltuximab"
+    ],
+    [
+      "multiple endocrine adenomas",
+      "omeprazole"
+    ],
+    [
+      "multiple myeloma",
+      "bortezomib"
+    ],
+    [
+      "multiple myeloma",
+      "dexamethasone"
+    ],
+    [
+      "multiple myeloma",
+      "pomalidomide"
+    ],
+    [
+      "multiple sclerosis",
+      "dalfampridine"
+    ],
+    [
+      "multiple sclerosis",
+      "dexamethasone"
+    ],
+    [
+      "multiple sclerosis",
+      "glatiramer"
+    ],
+    [
+      "multiple sclerosis",
+      "interferon beta 1a"
+    ],
+    [
+      "muscle pain",
+      "acetaminophen"
+    ],
+    [
+      "muscle pain",
+      "ibuprofen"
+    ],
+    [
+      "muscle pain",
+      "naproxen"
+    ],
+    [
+      "muscle spasm involuntary hypertonicity",
+      "methocarbamol"
+    ],
+    [
+      "muscle spasm involuntary hypertonicity",
+      "tizanidine"
+    ],
+    [
+      "myasthenia gravis",
+      "neostigmine"
+    ],
+    [
+      "mycobacterium avium intracellulare treatment",
+      "streptomycin"
+    ],
+    [
+      "mycobacterium kansasii",
+      "isoniazid"
+    ],
+    [
+      "mycoplasma pneumonia",
+      "erythromycin"
+    ],
+    [
+      "myelodysplastic diseases",
+      "lenalidomide"
+    ],
+    [
+      "myelofibrosis",
+      "ruxolitinib"
+    ],
+    [
+      "myxedema coma",
+      "levothyroxine"
+    ],
+    [
+      "narcolepsy",
+      "methylphenidate"
+    ],
+    [
+      "nasal polyps",
+      "beclomethasone"
+    ],
+    [
+      "nasal polyps prevention",
+      "beclomethasone"
+    ],
+    [
+      "nausea vomiting",
+      "promethazine"
+    ],
+    [
+      "nausea vomiting chemotherapy induced",
+      "dronabinol"
+    ],
+    [
+      "nausea vomiting chemotherapy induced",
+      "palonosetron"
+    ],
+    [
+      "nephrolithiasis",
+      "potassium citrate"
+    ],
+    [
+      "nephrotic syndrome",
+      "mycophenolate mofetil"
+    ],
+    [
+      "nerve agent poisoning",
+      "pralidoxime"
+    ],
+    [
+      "neuroblastoma",
+      "vincristine"
+    ],
+    [
+      "neuroleptic malignant syndrome",
+      "carbidopa levodopa"
+    ],
+    [
+      "neuropathic pain",
+      "lidocaine"
+    ],
+    [
+      "neurosis",
+      "nortriptyline"
+    ],
+    [
+      "neurotrophic keratitis",
+      "cenegermin"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "bendamustine"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "cyclophosphamide"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "cytarabine"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "ibrutinib"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "idelalisib"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "methotrexate"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "vincristine"
+    ],
+    [
+      "non small cell lung cancer",
+      "crizotinib"
+    ],
+    [
+      "non small cell lung cancer",
+      "gefitinib"
+    ],
+    [
+      "nonalcoholic fatty liver disease",
+      "ursodiol"
+    ],
+    [
+      "noninfectious colitis",
+      "dicyclomine"
+    ],
+    [
+      "nonketotic hyperosmolar syndrome",
+      "insulin lispro"
+    ],
+    [
+      "nonketotic hyperosmolar syndrome",
+      "insulin regular"
+    ],
+    [
+      "nsaid induced gastric ulcer",
+      "lansoprazole"
+    ],
+    [
+      "obesity",
+      "bupropion naltrexone"
+    ],
+    [
+      "obsessive compulsive disorder",
+      "aripiprazole"
+    ],
+    [
+      "obsessive compulsive disorder",
+      "paroxetine"
+    ],
+    [
+      "obsessive compulsive disorder",
+      "sertraline"
+    ],
+    [
+      "occupational exposure",
+      "tenofovir"
+    ],
+    [
+      "ocular rosacea",
+      "erythromycin"
+    ],
+    [
+      "ophthalmic surgery",
+      "proparacaine"
+    ],
+    [
+      "opiate dependence",
+      "naltrexone"
+    ],
+    [
+      "opiate dependence induction",
+      "buprenorphine"
+    ],
+    [
+      "opioid induced constipation",
+      "lubiprostone"
+    ],
+    [
+      "oral thrush",
+      "clotrimazole"
+    ],
+    [
+      "oral thrush",
+      "gentian violet"
+    ],
+    [
+      "oral thrush",
+      "ketoconazole"
+    ],
+    [
+      "organ transplant rejection prophylaxis",
+      "mycophenolate mofetil"
+    ],
+    [
+      "organophosphate poisoning",
+      "atropine pralidoxime"
+    ],
+    [
+      "osteoarthritis",
+      "diclofenac"
+    ],
+    [
+      "osteoarthritis",
+      "meloxicam"
+    ],
+    [
+      "osteoarthritis",
+      "nabumetone"
+    ],
+    [
+      "osteoarthritis",
+      "naproxen"
+    ],
+    [
+      "osteogenesis imperfecta",
+      "calcitonin"
+    ],
+    [
+      "osteolytic bone lesions of multiple myeloma",
+      "pamidronate"
+    ],
+    [
+      "osteoporosis",
+      "hydrochlorothiazide"
+    ],
+    [
+      "osteosarcoma",
+      "methotrexate"
+    ],
+    [
+      "otitis externa",
+      "acetic acid aluminum acetate"
+    ],
+    [
+      "otitis media",
+      "clarithromycin"
+    ],
+    [
+      "otitis media",
+      "erythromycin"
+    ],
+    [
+      "ovarian cancer",
+      "carboplatin"
+    ],
+    [
+      "ovarian cancer",
+      "olaparib"
+    ],
+    [
+      "ovulation induction",
+      "follicle stimulating hormone"
+    ],
+    [
+      "pain",
+      "oxycodone"
+    ],
+    [
+      "pancreatic cancer",
+      "cetuximab"
+    ],
+    [
+      "pancreatic cancer",
+      "fluorouracil"
+    ],
+    [
+      "pancreatic cancer",
+      "sunitinib"
+    ],
+    [
+      "pancreatitis",
+      "albumin human"
+    ],
+    [
+      "panic disorder",
+      "alprazolam"
+    ],
+    [
+      "panic disorder",
+      "buspirone"
+    ],
+    [
+      "paranoid disorder",
+      "quetiapine"
+    ],
+    [
+      "paranoid disorder",
+      "ziprasidone"
+    ],
+    [
+      "parkinson s disease",
+      "benztropine"
+    ],
+    [
+      "parkinsonism",
+      "levodopa"
+    ],
+    [
+      "paronychia",
+      "gentamicin"
+    ],
+    [
+      "pathological hypersecretory conditions",
+      "esomeprazole"
+    ],
+    [
+      "pellagra",
+      "niacin"
+    ],
+    [
+      "pelvic inflammatory disease",
+      "doxycycline"
+    ],
+    [
+      "peptic ulcer",
+      "glycopyrrolate"
+    ],
+    [
+      "periodic limb movement disorder",
+      "ropinirole"
+    ],
+    [
+      "perioral dermatitis",
+      "clindamycin"
+    ],
+    [
+      "peritoneal cancer",
+      "bevacizumab"
+    ],
+    [
+      "persistent depressive disorder",
+      "fluoxetine"
+    ],
+    [
+      "persistent depressive disorder",
+      "sertraline"
+    ],
+    [
+      "pharyngitis",
+      "ampicillin"
+    ],
+    [
+      "pheochromocytoma",
+      "propranolol"
+    ],
+    [
+      "pheochromocytoma diagnosis",
+      "phentolamine"
+    ],
+    [
+      "photoaging of the skin dermatoheliosis",
+      "tretinoin"
+    ],
+    [
+      "pityriasis rubra pilaris",
+      "methotrexate"
+    ],
+    [
+      "plague",
+      "chloramphenicol"
+    ],
+    [
+      "plaque psoriasis",
+      "dexamethasone"
+    ],
+    [
+      "pneumonia",
+      "azithromycin"
+    ],
+    [
+      "pneumonia",
+      "ceftriaxone"
+    ],
+    [
+      "pneumonia",
+      "moxifloxacin"
+    ],
+    [
+      "poliomyelitis prophylaxis",
+      "diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid"
+    ],
+    [
+      "polycystic kidney disease",
+      "enalapril"
+    ],
+    [
+      "post traumatic stress disorder",
+      "aripiprazole"
+    ],
+    [
+      "post traumatic stress disorder",
+      "venlafaxine"
+    ],
+    [
+      "postmenopausal symptoms",
+      "gabapentin"
+    ],
+    [
+      "postpartum depression",
+      "citalopram"
+    ],
+    [
+      "postpartum depression",
+      "venlafaxine"
+    ],
+    [
+      "premenstrual dysphoric disorder",
+      "sertraline"
+    ],
+    [
+      "premenstrual syndrome",
+      "pamabrom"
+    ],
+    [
+      "prevention of bladder infection cystitis prophylaxis",
+      "sulfamethoxazole trimethoprim"
+    ],
+    [
+      "prevention of cardiovascular disease",
+      "simvastatin"
+    ],
+    [
+      "prevention of clostridioides difficile infection recurrence",
+      "bezlotoxumab"
+    ],
+    [
+      "prevention of dental caries",
+      "fluoride"
+    ],
+    [
+      "prevention of hypokalemia",
+      "potassium gluconate"
+    ],
+    [
+      "primary biliary cholangitis",
+      "colchicine"
+    ],
+    [
+      "primary hyperaldosteronism diagnosis",
+      "spironolactone"
+    ],
+    [
+      "production of miosis",
+      "carbachol"
+    ],
+    [
+      "prostate cancer",
+      "triptorelin"
+    ],
+    [
+      "prostatitis",
+      "cephalexin"
+    ],
+    [
+      "prostatitis",
+      "doxycycline"
+    ],
+    [
+      "prosthetic heart valves thrombosis prophylaxis",
+      "warfarin"
+    ],
+    [
+      "pruritus",
+      "cyproheptadine"
+    ],
+    [
+      "pruritus",
+      "diphenhydramine"
+    ],
+    [
+      "psittacosis",
+      "tetracycline"
+    ],
+    [
+      "psoriasis",
+      "clobetasol"
+    ],
+    [
+      "psoriasis",
+      "mometasone"
+    ],
+    [
+      "psoriasis",
+      "prednisone"
+    ],
+    [
+      "psoriasis",
+      "triamcinolone"
+    ],
+    [
+      "pulmonary fibrosis",
+      "mycophenolate mofetil"
+    ],
+    [
+      "pulmonary hypertension",
+      "macitentan"
+    ],
+    [
+      "q fever",
+      "minocycline"
+    ],
+    [
+      "rabbit fever tularemia",
+      "minocycline"
+    ],
+    [
+      "rabbit fever tularemia",
+      "streptomycin"
+    ],
+    [
+      "radiculopathy",
+      "ibuprofen"
+    ],
+    [
+      "raynaud s syndrome",
+      "amlodipine"
+    ],
+    [
+      "raynaud s syndrome",
+      "isoxsuprine"
+    ],
+    [
+      "reflex sympathetic dystrophy syndrome",
+      "carbamazepine"
+    ],
+    [
+      "reflex sympathetic dystrophy syndrome",
+      "milnacipran"
+    ],
+    [
+      "renal cell carcinoma",
+      "cabozantinib"
+    ],
+    [
+      "renal cell carcinoma",
+      "capecitabine"
+    ],
+    [
+      "renal cell carcinoma",
+      "sorafenib"
+    ],
+    [
+      "renal cell carcinoma",
+      "temsirolimus"
+    ],
+    [
+      "renal failure",
+      "torsemide"
+    ],
+    [
+      "respiratory depression",
+      "doxapram"
+    ],
+    [
+      "respiratory syncytial virus",
+      "ribavirin"
+    ],
+    [
+      "restless legs syndrome",
+      "ropinirole"
+    ],
+    [
+      "reversal of nondepolarizing muscle relaxants",
+      "atropine edrophonium"
+    ],
+    [
+      "reversal of sedation",
+      "flumazenil"
+    ],
+    [
+      "rhabdomyosarcoma",
+      "vincristine"
+    ],
+    [
+      "rheumatoid arthritis",
+      "diclofenac"
+    ],
+    [
+      "rheumatoid arthritis",
+      "sulfasalazine"
+    ],
+    [
+      "rhinorrhea",
+      "acetaminophen chlorpheniramine"
+    ],
+    [
+      "rhinorrhea",
+      "triprolidine"
+    ],
+    [
+      "sapho syndrome",
+      "infliximab"
+    ],
+    [
+      "schizophrenia",
+      "olanzapine"
+    ],
+    [
+      "schizophrenia",
+      "paliperidone"
+    ],
+    [
+      "schizophrenia",
+      "quetiapine"
+    ],
+    [
+      "schizophrenia",
+      "risperidone"
+    ],
+    [
+      "scleroderma",
+      "prednisone"
+    ],
+    [
+      "seborrheic dermatitis",
+      "pyrithione zinc"
+    ],
+    [
+      "seizures convulsions",
+      "diazepam"
+    ],
+    [
+      "seizures convulsions",
+      "phenytoin"
+    ],
+    [
+      "seizures convulsions",
+      "zonisamide"
+    ],
+    [
+      "septicemia",
+      "penicillin g potassium"
+    ],
+    [
+      "sexual dysfunction ssri induced",
+      "cyproheptadine"
+    ],
+    [
+      "short stature for age",
+      "somatropin"
+    ],
+    [
+      "sinus symptoms",
+      "acetaminophen dextromethorphan phenylephrine"
+    ],
+    [
+      "sinusitis",
+      "cefdinir"
+    ],
+    [
+      "sinusitis",
+      "cefuroxime"
+    ],
+    [
+      "sinusitis",
+      "moxifloxacin"
+    ],
+    [
+      "sinusitis",
+      "prednisone"
+    ],
+    [
+      "sitosterolemia",
+      "ezetimibe"
+    ],
+    [
+      "skin and structure infection",
+      "minocycline"
+    ],
+    [
+      "skin and structure infection",
+      "mupirocin"
+    ],
+    [
+      "skin or soft tissue infection",
+      "amoxicillin"
+    ],
+    [
+      "skin or soft tissue infection",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "skin or soft tissue infection",
+      "azithromycin"
+    ],
+    [
+      "skin or soft tissue infection",
+      "cefdinir"
+    ],
+    [
+      "skin or soft tissue infection",
+      "dicloxacillin"
+    ],
+    [
+      "skin or soft tissue infection",
+      "levofloxacin"
+    ],
+    [
+      "small bowel bacterial overgrowth",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "soft tissue sarcoma",
+      "trabectedin"
+    ],
+    [
+      "somatoform pain disorder",
+      "desvenlafaxine"
+    ],
+    [
+      "somatoform pain disorder",
+      "imipramine"
+    ],
+    [
+      "somatoform pain disorder",
+      "venlafaxine"
+    ],
+    [
+      "spinal muscular atrophy",
+      "nusinersen"
+    ],
+    [
+      "spondylolisthesis",
+      "ibuprofen"
+    ],
+    [
+      "squamous cell carcinoma",
+      "cetuximab"
+    ],
+    [
+      "std prophylaxis",
+      "doxycycline"
+    ],
+    [
+      "still s disease",
+      "anakinra"
+    ],
+    [
+      "stomach cancer",
+      "doxorubicin"
+    ],
+    [
+      "stomach ulcer gastric ulcer",
+      "pantoprazole"
+    ],
+    [
+      "strep throat streptococcal pharyngitis",
+      "clarithromycin"
+    ],
+    [
+      "streptococcal infection",
+      "penicillin v potassium"
+    ],
+    [
+      "supraventricular tachycardia",
+      "amiodarone"
+    ],
+    [
+      "supraventricular tachycardia",
+      "atenolol"
+    ],
+    [
+      "supraventricular tachycardia",
+      "bisoprolol"
+    ],
+    [
+      "supraventricular tachycardia",
+      "verapamil"
+    ],
+    [
+      "surgical prophylaxis",
+      "cefotaxime"
+    ],
+    [
+      "swine flu",
+      "peramivir"
+    ],
+    [
+      "systemic lupus erythematosus",
+      "mycophenolate mofetil"
+    ],
+    [
+      "systemic lupus erythematosus",
+      "prednisone"
+    ],
+    [
+      "systemic lupus erythematosus",
+      "triamcinolone"
+    ],
+    [
+      "systemic mastocytosis",
+      "cromolyn"
+    ],
+    [
+      "systemic sclerosis",
+      "cyclophosphamide"
+    ],
+    [
+      "tardive dyskinesia",
+      "tetrabenazine"
+    ],
+    [
+      "temporomandibular joint disorder",
+      "clonazepam"
+    ],
+    [
+      "tendonitis",
+      "meloxicam"
+    ],
+    [
+      "tenosynovial giant cell tumor",
+      "pexidartinib"
+    ],
+    [
+      "testicular cancer",
+      "vinblastine"
+    ],
+    [
+      "tetanus",
+      "diazepam"
+    ],
+    [
+      "tetanus prophylaxis",
+      "diphtheria toxoid hepatitis b pediatric vaccine pertussis acellular poliovirus vaccine inactivated tetanus toxoid"
+    ],
+    [
+      "thalassemia",
+      "deferiprone"
+    ],
+    [
+      "thrombotic thromboembolic disorder",
+      "argatroban"
+    ],
+    [
+      "thyroid cancer",
+      "lenvatinib"
+    ],
+    [
+      "tinea corporis",
+      "ciclopirox"
+    ],
+    [
+      "tinea corporis",
+      "clotrimazole"
+    ],
+    [
+      "tinea corporis",
+      "ketoconazole"
+    ],
+    [
+      "tinea cruris",
+      "econazole"
+    ],
+    [
+      "tinea pedis",
+      "betamethasone clotrimazole"
+    ],
+    [
+      "tinea pedis",
+      "clotrimazole"
+    ],
+    [
+      "tinea pedis",
+      "econazole"
+    ],
+    [
+      "tinea pedis",
+      "ketoconazole"
+    ],
+    [
+      "tinea pedis",
+      "miconazole"
+    ],
+    [
+      "tinea versicolor",
+      "selenium sulfide"
+    ],
+    [
+      "tonsillitis pharyngitis",
+      "amoxicillin"
+    ],
+    [
+      "toothache",
+      "ibuprofen"
+    ],
+    [
+      "total parenteral nutrition",
+      "chromic chloride hexahydrate"
+    ],
+    [
+      "transurethral prostatectomy",
+      "fosfomycin"
+    ],
+    [
+      "traveler s diarrhea",
+      "ofloxacin"
+    ],
+    [
+      "trigeminal neuralgia",
+      "oxcarbazepine"
+    ],
+    [
+      "trophoblastic disease",
+      "dinoprostone"
+    ],
+    [
+      "tuberculosis active",
+      "pyrazinamide"
+    ],
+    [
+      "tuberculosis extrapulmonary",
+      "cycloserine"
+    ],
+    [
+      "ulcerative colitis",
+      "clonidine"
+    ],
+    [
+      "ulcerative colitis active",
+      "methylprednisolone"
+    ],
+    [
+      "underactive thyroid hypothyroidism",
+      "liothyronine"
+    ],
+    [
+      "upper gi hemorrhage",
+      "famotidine"
+    ],
+    [
+      "upper respiratory tract infection",
+      "cefixime"
+    ],
+    [
+      "urinary frequency",
+      "flavoxate"
+    ],
+    [
+      "urinary frequency",
+      "mirabegron"
+    ],
+    [
+      "urinary incontinence",
+      "fesoterodine"
+    ],
+    [
+      "urinary tract infection",
+      "amoxicillin"
+    ],
+    [
+      "urinary tract infection",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "urinary tract infection",
+      "ciprofloxacin"
+    ],
+    [
+      "urinary tract infection",
+      "levofloxacin"
+    ],
+    [
+      "urinary tract stones",
+      "tamsulosin"
+    ],
+    [
+      "urticaria",
+      "famotidine"
+    ],
+    [
+      "uterine fibroids",
+      "leuprolide"
+    ],
+    [
+      "uveitis",
+      "dexamethasone neomycin polymyxin b"
+    ],
+    [
+      "vaginal yeast infection",
+      "fluconazole"
+    ],
+    [
+      "vaginal yeast infection",
+      "ketoconazole"
+    ],
+    [
+      "varicella zoster",
+      "foscarnet"
+    ],
+    [
+      "vascular magnetic resonance imaging",
+      "gadodiamide"
+    ],
+    [
+      "venomous scorpion bite",
+      "antivenom centruroides scorpion"
+    ],
+    [
+      "venous thromboembolism",
+      "dextran low molecular weight"
+    ],
+    [
+      "ventricular tachycardia",
+      "acebutolol"
+    ],
+    [
+      "ventricular tachycardia",
+      "lidocaine"
+    ],
+    [
+      "ventricular tachycardia",
+      "mexiletine"
+    ],
+    [
+      "vitamin d insufficiency",
+      "cholecalciferol"
+    ],
+    [
+      "vitamin mineral supplementation and deficiency",
+      "multivitamin with iron"
+    ],
+    [
+      "vitamin mineral supplementation during pregnancy lactation",
+      "ferrous sulfate"
+    ],
+    [
+      "vulvodynia",
+      "paroxetine"
+    ],
+    [
+      "waldenstr m macroglobulinemia",
+      "ibrutinib"
+    ],
+    [
+      "warts",
+      "fluorouracil"
+    ],
+    [
+      "weight loss",
+      "phentermine"
+    ],
+    [
+      "whipworm infection",
+      "mebendazole"
+    ],
+    [
+      "wilms tumor nephroblastoma",
+      "cyclophosphamide"
+    ],
+    [
+      "zollinger ellison syndrome",
+      "lansoprazole"
+    ]
+  ],
+  "held_out": [
+    [
+      "abnormal uterine bleeding",
+      "desogestrel ethinyl estradiol"
+    ],
+    [
+      "acne",
+      "doxycycline"
+    ],
+    [
+      "acute lymphocytic leukemia",
+      "methotrexate"
+    ],
+    [
+      "acute myeloid leukemia",
+      "enasidenib"
+    ],
+    [
+      "adenosine deaminase deficiency",
+      "pegademase bovine"
+    ],
+    [
+      "adhd attention deficit hyperactivity disorder",
+      "guanfacine"
+    ],
+    [
+      "agitated state",
+      "aripiprazole"
+    ],
+    [
+      "alcohol withdrawal",
+      "clorazepate"
+    ],
+    [
+      "alzheimer s disease",
+      "ergoloid mesylates"
+    ],
+    [
+      "amebiasis",
+      "tinidazole"
+    ],
+    [
+      "angina",
+      "isosorbide mononitrate"
+    ],
+    [
+      "ankylosing spondylitis",
+      "infliximab"
+    ],
+    [
+      "anthrax",
+      "penicillin g potassium"
+    ],
+    [
+      "anxiety",
+      "propranolol"
+    ],
+    [
+      "anxiety and stress",
+      "fluvoxamine"
+    ],
+    [
+      "aphthous ulcer",
+      "triamcinolone"
+    ],
+    [
+      "arrhythmia",
+      "propranolol"
+    ],
+    [
+      "aseptic necrosis",
+      "alendronate"
+    ],
+    [
+      "aspiration pneumonia",
+      "cilastatin imipenem"
+    ],
+    [
+      "asthma",
+      "flunisolide"
+    ],
+    [
+      "atopic dermatitis",
+      "tacrolimus"
+    ],
+    [
+      "atrial fibrillation",
+      "digoxin"
+    ],
+    [
+      "back pain",
+      "aspirin"
+    ],
+    [
+      "bacterial endocarditis prevention bacterial endocarditis prophylaxis",
+      "ceftriaxone"
+    ],
+    [
+      "bacterial infection",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "bacterial skin infection",
+      "benzalkonium chloride lidocaine"
+    ],
+    [
+      "bacterial vaginitis",
+      "metronidazole"
+    ],
+    [
+      "bartonellosis",
+      "azithromycin"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "prazosin"
+    ],
+    [
+      "bipolar disorder",
+      "quetiapine"
+    ],
+    [
+      "bladder cancer",
+      "doxorubicin"
+    ],
+    [
+      "bladder infection",
+      "cephalexin"
+    ],
+    [
+      "bleeding disorder",
+      "dextran high molecular weight"
+    ],
+    [
+      "borderline personality disorder",
+      "lamotrigine"
+    ],
+    [
+      "breast cancer",
+      "anastrozole"
+    ],
+    [
+      "bronchiectasis",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "bursitis",
+      "trolamine salicylate"
+    ],
+    [
+      "cancer",
+      "fluorouracil"
+    ],
+    [
+      "cervical cancer",
+      "cisplatin"
+    ],
+    [
+      "chronic idiopathic constipation",
+      "plecanatide"
+    ],
+    [
+      "chronic inflammatory demyelinating polyradiculoneuropathy",
+      "azathioprine"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "fludarabine"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "cytarabine"
+    ],
+    [
+      "chronic myofascial pain",
+      "amitriptyline"
+    ],
+    [
+      "clostridioides difficile infection",
+      "fidaxomicin"
+    ],
+    [
+      "cmv prophylaxis",
+      "ganciclovir"
+    ],
+    [
+      "cold sores herpes simplex labialis",
+      "benzyl alcohol"
+    ],
+    [
+      "cold symptoms",
+      "pseudoephedrine triprolidine"
+    ],
+    [
+      "colorectal cancer",
+      "cetuximab"
+    ],
+    [
+      "condylomata acuminata",
+      "sinecatechins"
+    ],
+    [
+      "conjunctivitis allergic",
+      "nedocromil"
+    ],
+    [
+      "conjunctivitis bacterial",
+      "ofloxacin"
+    ],
+    [
+      "constipation",
+      "docusate"
+    ],
+    [
+      "copd",
+      "fluticasone vilanterol"
+    ],
+    [
+      "cough",
+      "dextromethorphan guaifenesin"
+    ],
+    [
+      "crohn s disease",
+      "sulfasalazine"
+    ],
+    [
+      "cushing s syndrome",
+      "cyproheptadine"
+    ],
+    [
+      "deep vein thrombosis prophylaxis",
+      "enoxaparin"
+    ],
+    [
+      "dermal ulcer",
+      "cadexomer iodine"
+    ],
+    [
+      "diabetes type 1",
+      "insulin lispro"
+    ],
+    [
+      "diabetes type 2",
+      "metformin sitagliptin"
+    ],
+    [
+      "diabetic ketoacidosis",
+      "insulin regular"
+    ],
+    [
+      "diabetic kidney disease diabetic nephropathy",
+      "benazepril"
+    ],
+    [
+      "diabetic macular edema",
+      "ranibizumab"
+    ],
+    [
+      "diaper rash",
+      "miconazole zinc oxide"
+    ],
+    [
+      "diarrhea",
+      "opium"
+    ],
+    [
+      "dietary supplementation",
+      "chondroitin glucosamine"
+    ],
+    [
+      "diffuse large b cell lymphoma",
+      "tisagenlecleucel"
+    ],
+    [
+      "drowsiness hypersomnia",
+      "dextroamphetamine"
+    ],
+    [
+      "eczema",
+      "desoximetasone"
+    ],
+    [
+      "emergency contraception postcoital contraception",
+      "levonorgestrel"
+    ],
+    [
+      "endometrial cancer",
+      "pembrolizumab"
+    ],
+    [
+      "endometritis",
+      "cefoxitin"
+    ],
+    [
+      "epilepsy",
+      "phenytoin"
+    ],
+    [
+      "esophageal spasm",
+      "isosorbide dinitrate"
+    ],
+    [
+      "facial wrinkles",
+      "tazarotene"
+    ],
+    [
+      "fever",
+      "acetaminophen"
+    ],
+    [
+      "gender dysphoria",
+      "conjugated estrogens"
+    ],
+    [
+      "gerd",
+      "ranitidine"
+    ],
+    [
+      "glomerulonephritis",
+      "azathioprine"
+    ],
+    [
+      "gonococcal infection uncomplicated",
+      "ciprofloxacin"
+    ],
+    [
+      "head lice",
+      "malathion"
+    ],
+    [
+      "headache",
+      "ibuprofen"
+    ],
+    [
+      "hepatitis c",
+      "dasabuvir ombitasvir paritaprevir ritonavir"
+    ],
+    [
+      "hepatocellular carcinoma",
+      "lenvatinib"
+    ],
+    [
+      "hereditary angioedema",
+      "c1 esterase inhibitor human"
+    ],
+    [
+      "high blood pressure hypertension",
+      "atenolol"
+    ],
+    [
+      "high cholesterol",
+      "niacin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "atorvastatin"
+    ],
+    [
+      "hiv infection",
+      "emtricitabine tenofovir"
+    ],
+    [
+      "hodgkin s lymphoma",
+      "bleomycin"
+    ],
+    [
+      "human papilloma virus",
+      "resorcinol"
+    ],
+    [
+      "hyperhidrosis",
+      "glycopyrronium"
+    ],
+    [
+      "hypogonadism male",
+      "methyltestosterone"
+    ],
+    [
+      "impetigo",
+      "mupirocin"
+    ],
+    [
+      "inflammatory bowel disease",
+      "prednisone"
+    ],
+    [
+      "influenza",
+      "baloxavir marboxil"
+    ],
+    [
+      "insomnia",
+      "flurazepam"
+    ],
+    [
+      "interstitial cystitis",
+      "pentosan polysulfate sodium"
+    ],
+    [
+      "irritable bowel syndrome",
+      "dicyclomine"
+    ],
+    [
+      "keratosis",
+      "imiquimod"
+    ],
+    [
+      "laryngopharyngeal reflux",
+      "ranitidine"
+    ],
+    [
+      "leishmaniasis",
+      "allopurinol"
+    ],
+    [
+      "lice",
+      "spinosad"
+    ],
+    [
+      "melanoma",
+      "ipilimumab"
+    ],
+    [
+      "melanoma metastatic",
+      "talimogene laherparepvec"
+    ],
+    [
+      "migraine",
+      "cyclobenzaprine"
+    ],
+    [
+      "migraine prevention migraine prophylaxis",
+      "olmesartan"
+    ],
+    [
+      "mitral valve prolapse",
+      "labetalol"
+    ],
+    [
+      "motion sickness",
+      "promethazine"
+    ],
+    [
+      "multiple myeloma",
+      "cyclophosphamide"
+    ],
+    [
+      "multiple sclerosis",
+      "prednisone"
+    ],
+    [
+      "muscle pain",
+      "diclofenac"
+    ],
+    [
+      "muscle spasm involuntary hypertonicity",
+      "carisoprodol"
+    ],
+    [
+      "narcolepsy",
+      "dextroamphetamine"
+    ],
+    [
+      "nausea vomiting",
+      "meclizine"
+    ],
+    [
+      "nausea vomiting chemotherapy induced",
+      "lorazepam"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "ibritumomab"
+    ],
+    [
+      "non small cell lung cancer",
+      "erlotinib"
+    ],
+    [
+      "nonalcoholic fatty liver disease",
+      "orlistat"
+    ],
+    [
+      "nonketotic hyperosmolar syndrome",
+      "insulin glulisine"
+    ],
+    [
+      "obesity",
+      "topiramate"
+    ],
+    [
+      "obsessive compulsive disorder",
+      "tramadol"
+    ],
+    [
+      "occupational exposure",
+      "emtricitabine"
+    ],
+    [
+      "ophthalmic surgery",
+      "ketorolac phenylephrine"
+    ],
+    [
+      "oral thrush",
+      "miconazole"
+    ],
+    [
+      "organophosphate poisoning",
+      "atropine"
+    ],
+    [
+      "osteoarthritis",
+      "aspirin"
+    ],
+    [
+      "osteosarcoma",
+      "doxorubicin"
+    ],
+    [
+      "otitis media",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "ovarian cancer",
+      "paclitaxel"
+    ],
+    [
+      "pancreatic cancer",
+      "capecitabine"
+    ],
+    [
+      "panic disorder",
+      "paroxetine"
+    ],
+    [
+      "paranoid disorder",
+      "risperidone"
+    ],
+    [
+      "parkinson s disease",
+      "carbidopa levodopa"
+    ],
+    [
+      "persistent depressive disorder",
+      "duloxetine"
+    ],
+    [
+      "pneumonia",
+      "cefdinir"
+    ],
+    [
+      "post traumatic stress disorder",
+      "mirtazapine"
+    ],
+    [
+      "postpartum depression",
+      "sertraline"
+    ],
+    [
+      "premenstrual syndrome",
+      "acetaminophen pamabrom"
+    ],
+    [
+      "prevention of bladder infection cystitis prophylaxis",
+      "methenamine"
+    ],
+    [
+      "primary biliary cholangitis",
+      "azathioprine"
+    ],
+    [
+      "prostate cancer",
+      "estradiol"
+    ],
+    [
+      "prostatitis",
+      "oxybutynin"
+    ],
+    [
+      "pruritus",
+      "ammonium lactate"
+    ],
+    [
+      "psoriasis",
+      "acitretin"
+    ],
+    [
+      "pulmonary hypertension",
+      "tadalafil"
+    ],
+    [
+      "rabbit fever tularemia",
+      "doxycycline"
+    ],
+    [
+      "raynaud s syndrome",
+      "doxazosin"
+    ],
+    [
+      "reflex sympathetic dystrophy syndrome",
+      "doxepin"
+    ],
+    [
+      "renal cell carcinoma",
+      "aldesleukin"
+    ],
+    [
+      "renal failure",
+      "furosemide"
+    ],
+    [
+      "rheumatoid arthritis",
+      "celecoxib"
+    ],
+    [
+      "rhinorrhea",
+      "acetaminophen dextromethorphan doxylamine phenylephrine"
+    ],
+    [
+      "schizophrenia",
+      "clozapine"
+    ],
+    [
+      "seizures convulsions",
+      "valproic acid"
+    ],
+    [
+      "sexual dysfunction ssri induced",
+      "dextroamphetamine"
+    ],
+    [
+      "sinus symptoms",
+      "acetaminophen phenylephrine"
+    ],
+    [
+      "sinusitis",
+      "sulfamethoxazole trimethoprim"
+    ],
+    [
+      "skin and structure infection",
+      "linezolid"
+    ],
+    [
+      "skin or soft tissue infection",
+      "clarithromycin"
+    ],
+    [
+      "soft tissue sarcoma",
+      "pazopanib"
+    ],
+    [
+      "somatoform pain disorder",
+      "duloxetine"
+    ],
+    [
+      "squamous cell carcinoma",
+      "cemiplimab"
+    ],
+    [
+      "strep throat streptococcal pharyngitis",
+      "cefdinir"
+    ],
+    [
+      "supraventricular tachycardia",
+      "adenosine"
+    ],
+    [
+      "systemic lupus erythematosus",
+      "hydroxychloroquine"
+    ],
+    [
+      "tinea corporis",
+      "fluconazole"
+    ],
+    [
+      "tinea cruris",
+      "ketoconazole"
+    ],
+    [
+      "tinea pedis",
+      "tolnaftate"
+    ],
+    [
+      "traveler s diarrhea",
+      "sulfamethoxazole trimethoprim"
+    ],
+    [
+      "ulcerative colitis",
+      "budesonide"
+    ],
+    [
+      "upper respiratory tract infection",
+      "erythromycin"
+    ],
+    [
+      "urinary frequency",
+      "oxybutynin"
+    ],
+    [
+      "urinary tract infection",
+      "cefuroxime"
+    ],
+    [
+      "urinary tract stones",
+      "magnesium oxide"
+    ],
+    [
+      "urticaria",
+      "levocetirizine"
+    ],
+    [
+      "uveitis",
+      "cyclopentolate"
+    ],
+    [
+      "vaginal yeast infection",
+      "boric acid"
+    ],
+    [
+      "ventricular tachycardia",
+      "amiodarone"
+    ],
+    [
+      "vitamin mineral supplementation and deficiency",
+      "selenium"
+    ],
+    [
+      "whipworm infection",
+      "albendazole"
+    ]
+  ],
+  "recoverable": [
+    [
+      "bacterial infection",
+      "amoxicillin clavulanate"
+    ],
+    [
+      "bladder cancer",
+      "doxorubicin"
+    ],
+    [
+      "breast cancer",
+      "anastrozole"
+    ],
+    [
+      "cancer",
+      "fluorouracil"
+    ],
+    [
+      "cervical cancer",
+      "cisplatin"
+    ],
+    [
+      "chronic inflammatory demyelinating polyradiculoneuropathy",
+      "azathioprine"
+    ],
+    [
+      "chronic lymphocytic leukemia",
+      "fludarabine"
+    ],
+    [
+      "chronic myelogenous leukemia",
+      "cytarabine"
+    ],
+    [
+      "colorectal cancer",
+      "cetuximab"
+    ],
+    [
+      "emergency contraception postcoital contraception",
+      "levonorgestrel"
+    ],
+    [
+      "endometrial cancer",
+      "pembrolizumab"
+    ],
+    [
+      "gonococcal infection uncomplicated",
+      "ciprofloxacin"
+    ],
+    [
+      "high cholesterol familial heterozygous",
+      "atorvastatin"
+    ],
+    [
+      "hypogonadism male",
+      "methyltestosterone"
+    ],
+    [
+      "melanoma metastatic",
+      "talimogene laherparepvec"
+    ],
+    [
+      "organophosphate poisoning",
+      "atropine"
+    ],
+    [
+      "tinea cruris",
+      "ketoconazole"
+    ],
+    [
+      "ventricular tachycardia",
+      "amiodarone"
+    ]
+  ],
+  "missing_vocabulary": [
+    [
+      "abnormal uterine bleeding",
+      "desogestrel ethinyl estradiol"
+    ],
+    [
+      "acute myeloid leukemia",
+      "enasidenib"
+    ],
+    [
+      "adenosine deaminase deficiency",
+      "pegademase bovine"
+    ],
+    [
+      "adhd attention deficit hyperactivity disorder",
+      "guanfacine"
+    ],
+    [
+      "alcohol withdrawal",
+      "clorazepate"
+    ],
+    [
+      "alzheimer s disease",
+      "ergoloid mesylates"
+    ],
+    [
+      "amebiasis",
+      "tinidazole"
+    ],
+    [
+      "anxiety and stress",
+      "fluvoxamine"
+    ],
+    [
+      "aseptic necrosis",
+      "alendronate"
+    ],
+    [
+      "aspiration pneumonia",
+      "cilastatin imipenem"
+    ],
+    [
+      "asthma",
+      "flunisolide"
+    ],
+    [
+      "atopic dermatitis",
+      "tacrolimus"
+    ],
+    [
+      "atrial fibrillation",
+      "digoxin"
+    ],
+    [
+      "bacterial skin infection",
+      "benzalkonium chloride lidocaine"
+    ],
+    [
+      "benign prostatic hyperplasia",
+      "prazosin"
+    ],
+    [
+      "bleeding disorder",
+      "dextran high molecular weight"
+    ],
+    [
+      "bursitis",
+      "trolamine salicylate"
+    ],
+    [
+      "chronic idiopathic constipation",
+      "plecanatide"
+    ],
+    [
+      "clostridioides difficile infection",
+      "fidaxomicin"
+    ],
+    [
+      "cmv prophylaxis",
+      "ganciclovir"
+    ],
+    [
+      "cold sores herpes simplex labialis",
+      "benzyl alcohol"
+    ],
+    [
+      "cold symptoms",
+      "pseudoephedrine triprolidine"
+    ],
+    [
+      "condylomata acuminata",
+      "sinecatechins"
+    ],
+    [
+      "conjunctivitis allergic",
+      "nedocromil"
+    ],
+    [
+      "constipation",
+      "docusate"
+    ],
+    [
+      "copd",
+      "fluticasone vilanterol"
+    ],
+    [
+      "cough",
+      "dextromethorphan guaifenesin"
+    ],
+    [
+      "dermal ulcer",
+      "cadexomer iodine"
+    ],
+    [
+      "diabetes type 2",
+      "metformin sitagliptin"
+    ],
+    [
+      "diabetic kidney disease diabetic nephropathy",
+      "benazepril"
+    ],
+    [
+      "diabetic macular edema",
+      "ranibizumab"
+    ],
+    [
+      "diaper rash",
+      "miconazole zinc oxide"
+    ],
+    [
+      "diarrhea",
+      "opium"
+    ],
+    [
+      "dietary supplementation",
+      "chondroitin glucosamine"
+    ],
+    [
+      "diffuse large b cell lymphoma",
+      "tisagenlecleucel"
+    ],
+    [
+      "drowsiness hypersomnia",
+      "dextroamphetamine"
+    ],
+    [
+      "eczema",
+      "desoximetasone"
+    ],
+    [
+      "esophageal spasm",
+      "isosorbide dinitrate"
+    ],
+    [
+      "facial wrinkles",
+      "tazarotene"
+    ],
+    [
+      "gender dysphoria",
+      "conjugated estrogens"
+    ],
+    [
+      "head lice",
+      "malathion"
+    ],
+    [
+      "hepatitis c",
+      "dasabuvir ombitasvir paritaprevir ritonavir"
+    ],
+    [
+      "hereditary angioedema",
+      "c1 esterase inhibitor human"
+    ],
+    [
+      "hiv infection",
+      "emtricitabine tenofovir"
+    ],
+    [
+      "hodgkin s lymphoma",
+      "bleomycin"
+    ],
+    [
+      "human papilloma virus",
+      "resorcinol"
+    ],
+    [
+      "hyperhidrosis",
+      "glycopyrronium"
+    ],
+    [
+      "influenza",
+      "baloxavir marboxil"
+    ],
+    [
+      "insomnia",
+      "flurazepam"
+    ],
+    [
+      "interstitial cystitis",
+      "pentosan polysulfate sodium"
+    ],
+    [
+      "lice",
+      "spinosad"
+    ],
+    [
+      "melanoma",
+      "ipilimumab"
+    ],
+    [
+      "migraine",
+      "cyclobenzaprine"
+    ],
+    [
+      "migraine prevention migraine prophylaxis",
+      "olmesartan"
+    ],
+    [
+      "mitral valve prolapse",
+      "labetalol"
+    ],
+    [
+      "muscle spasm involuntary hypertonicity",
+      "carisoprodol"
+    ],
+    [
+      "narcolepsy",
+      "dextroamphetamine"
+    ],
+    [
+      "nausea vomiting",
+      "meclizine"
+    ],
+    [
+      "non hodgkin s lymphoma",
+      "ibritumomab"
+    ],
+    [
+      "non small cell lung cancer",
+      "erlotinib"
+    ],
+    [
+      "nonalcoholic fatty liver disease",
+      "orlistat"
+    ],
+    [
+      "obsessive compulsive disorder",
+      "tramadol"
+    ],
+    [
+      "occupational exposure",
+      "emtricitabine"
+    ],
+    [
+      "ophthalmic surgery",
+      "ketorolac phenylephrine"
+    ],
+    [
+      "ovarian cancer",
+      "paclitaxel"
+    ],
+    [
+      "post traumatic stress disorder",
+      "mirtazapine"
+    ],
+    [
+      "premenstrual syndrome",
+      "acetaminophen pamabrom"
+    ],
+    [
+      "prevention of bladder infection cystitis prophylaxis",
+      "methenamine"
+    ],
+    [
+      "prostate cancer",
+      "estradiol"
+    ],
+    [
+      "pruritus",
+      "ammonium lactate"
+    ],
+    [
+      "psoriasis",
+      "acitretin"
+    ],
+    [
+      "reflex sympathetic dystrophy syndrome",
+      "doxepin"
+    ],
+    [
+      "renal cell carcinoma",
+      "aldesleukin"
+    ],
+    [
+      "rheumatoid arthritis",
+      "celecoxib"
+    ],
+    [
+      "rhinorrhea",
+      "acetaminophen dextromethorphan doxylamine phenylephrine"
+    ],
+    [
+      "schizophrenia",
+      "clozapine"
+    ],
+    [
+      "sexual dysfunction ssri induced",
+      "dextroamphetamine"
+    ],
+    [
+      "sinus symptoms",
+      "acetaminophen phenylephrine"
+    ],
+    [
+      "skin and structure infection",
+      "linezolid"
+    ],
+    [
+      "soft tissue sarcoma",
+      "pazopanib"
+    ],
+    [
+      "squamous cell carcinoma",
+      "cemiplimab"
+    ],
+    [
+      "supraventricular tachycardia",
+      "adenosine"
+    ],
+    [
+      "systemic lupus erythematosus",
+      "hydroxychloroquine"
+    ],
+    [
+      "tinea pedis",
+      "tolnaftate"
+    ],
+    [
+      "ulcerative colitis",
+      "budesonide"
+    ],
+    [
+      "urinary tract stones",
+      "magnesium oxide"
+    ],
+    [
+      "urticaria",
+      "levocetirizine"
+    ],
+    [
+      "uveitis",
+      "cyclopentolate"
+    ],
+    [
+      "vaginal yeast infection",
+      "boric acid"
+    ],
+    [
+      "vitamin mineral supplementation and deficiency",
+      "selenium"
+    ]
+  ]
+}

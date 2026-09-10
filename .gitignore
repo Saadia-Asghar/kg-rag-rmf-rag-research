@@ -47,3 +47,12 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Local runtime state; keep the reproducible audit and draft documents.
+__pycache__/
+*.pyc
+.venv/
+local-run/frontend-runtime/
+local-run/*.pid
+local-run/*.log
+local-run/LOCAL_RUN_AND_ACCURACY.md
