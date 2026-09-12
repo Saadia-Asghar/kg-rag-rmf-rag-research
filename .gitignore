@@ -56,3 +56,4 @@ local-run/frontend-runtime/
 local-run/*.pid
 local-run/*.log
 local-run/LOCAL_RUN_AND_ACCURACY.md
+research_data/hetionet/*.bz2

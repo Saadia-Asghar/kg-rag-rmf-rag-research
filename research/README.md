@@ -1,5 +1,15 @@
 # RMF-RAG research benchmarks
 
+> Verification correction (2026-09-12): the "Main Hetionet benchmark" section
+> below is a historical description, not an executable reproduction recipe.
+> `run_main_rmf_rag_benchmark.py` and its complete training artifacts are absent.
+> Do not use the historical tables as newly reproduced results. The verified
+> five-seed experiment is the original disease-pair pilot in `local-run/extended`.
+> A new live graph explorer is available via
+> `python research/scripts/live_graph_qa.py` on localhost:8767. It traverses the
+> pinned source graph for each question; it does not train embeddings or measure
+> generated-answer hallucination. See `LIVE_GRAPH_TESTING.md`.
+
 This folder contains the original Kaggle pilot and the main benchmark on the
 licensed portion of Hetionet v1.0. The pilot is retained for comparison but is
 not a gene–disease–drug evaluation.
