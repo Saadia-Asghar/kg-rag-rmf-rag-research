@@ -95,9 +95,37 @@ On the full denominator, the hyperbolic mean Recall@5 exceeds the Euclidean mean
 
 Coverage strongly affects interpretation. Around half of the held-out target drugs are absent from the candidate vocabulary. Even among available targets, the original token-recoverable subset favors cases connected through the lexical structure used to build the graph. Reporting only that subset would hide the poor full-pipeline coverage.
 
-### 6.3 Auditable query example
+### 6.3 Variability across random seeds
 
-For the seed-17 query `cancer`, the hidden dataset label is vinblastine. Its ranks are 17 for lexical retrieval, 9 for Euclidean retrieval, and 2 for hyperbolic retrieval. This example demonstrates the interactive interface and a favorable hyperbolic case. It does not override the aggregate result, in which lexical Recall@5 is higher.
+| Method on all 182 held-out links | Mean Recall@5 | Seed SD in percentage points | Exploratory 95% seed interval |
+|---|---:|---:|---:|
+| Lexical | 4.62% | 0.74 | 3.70% to 5.53% |
+| Euclidean | 2.20% | 1.29 | 0.60% to 3.80% |
+| Hyperbolic | 2.64% | 0.81 | 1.63% to 3.65% |
+
+These intervals use the mean plus or minus 2.776 times the sample standard deviation divided by the square root of five. They are descriptive intervals over the five seed-level scores. The data and test diseases overlap across seeds, and we do not interpret the intervals as independent-population confidence bounds or use their overlap as a hypothesis test. No statistically established superiority claim is made.
+
+### 6.4 Live comparison of retrieved outputs
+
+The local query application computes rankings at request time using the saved seed-17 embeddings. Training is completed beforehand. The exact request is sent to each of the three ranking methods with the same graph and drug candidates. The hidden target is used for display and scoring, not to select or reorder candidates. The application returns ranked drug names; it does not generate explanatory answers with an LLM.
+
+We inspected the three example queries already offered by the application: cancer, bladder cancer, and colorectal cancer. They are illustrative, non-random cases and are not an additional test set. The complete response packets are preserved in `local-run/live-demo-packets.json`.
+
+| Query | Hidden dataset target | Method | First retrieved drug | Target rank | Target in top five |
+|---|---|---|---|---:|---|
+| Cancer | Vinblastine | Lexical | Fluorouracil | 17 | No |
+| Cancer | Vinblastine | Euclidean | Cisplatin | 9 | No |
+| Cancer | Vinblastine | Hyperbolic | Anastrozole | 2 | Yes |
+| Bladder cancer | Doxorubicin | Lexical | Cisplatin | 10 | No |
+| Bladder cancer | Doxorubicin | Euclidean | Cisplatin | 21 | No |
+| Bladder cancer | Doxorubicin | Hyperbolic | Cisplatin | 185 | No |
+| Colorectal cancer | Bevacizumab | Lexical | Cetuximab | 4 | Yes |
+| Colorectal cancer | Bevacizumab | Euclidean | Sunitinib | 8 | No |
+| Colorectal cancer | Bevacizumab | Hyperbolic | Carboplatin | 13 | No |
+
+For cancer, the hyperbolic top five are anastrozole, vinblastine, methylprednisolone, famciclovir, and erlotinib. The Euclidean top five are cisplatin, fluorouracil, meloxicam, ofloxacin, and paroxetine. Relative to the single withheld label, hyperbolic retrieval succeeds at k=5 while Euclidean retrieval fails. Both fail at k=1. The appropriate claim is an improvement in the target's rank on this query, not that the hyperbolic model provides the correct first answer.
+
+The other cases show the limits of this example. For colorectal cancer, the lexical method places bevacizumab fourth, while Euclidean and hyperbolic methods place it eighth and thirteenth. For bladder cancer, all methods miss the hidden label in their top five, and the hyperbolic rank is substantially worse. The fact that all three retrieve cisplatin first does not establish that cisplatin is medically wrong: the metric tests recovery of a particular withheld dataset link, not the clinical validity of every other candidate. These contrasting cases prevent a favorable example from being mistaken for general superiority.
 
 ## 7 Limitations and missing artifacts
 
@@ -114,6 +142,29 @@ For a biomedical claim, the next implementation needs a curated typed graph, doc
 ## 9 Conclusion
 
 The executable pilot can be reproduced and tested interactively. Across five seeds, its hyperbolic variant has higher mean Recall@5 than its Euclidean variant, while a simple lexical baseline performs better than both. Extending evaluation to all held-out links reveals low candidate coverage and much lower scores. The present evidence supports a preliminary evaluation study and further controlled experiments; it does not establish a novel superior RAG method.
+
+## Appendix A What the implementation executes
+
+1. Load the included disease–drug records, normalize their names, and remove duplicate pairs.
+2. Hide one recorded drug link per eligible disease using the chosen seed.
+3. Build the training graph from retained pairs and shared disease-name tokens.
+4. Train Euclidean and Poincaré-distance embeddings using the original program's settings.
+5. Rank each training-vocabulary drug with lexical overlap or the corresponding embedding distance.
+6. Locate the hidden target in the ranking and calculate Recall@k and reciprocal rank. In full-set scoring, retain absent-vocabulary targets as misses.
+7. Save model vectors, exact splits, per-query ranks, and aggregate results. The query interface loads these vectors and recomputes rankings for each entered disease.
+
+The original training implementation is `research/scripts/run_rmf_rag_experiment.py`. The additional audit is `research/scripts/run_local_audit.py`, and the interactive interface is `research/scripts/local_query_app.py`. The latter two expose and evaluate the existing methods; they do not add a new trained retrieval algorithm.
+
+## Appendix B Demonstration and reproducibility protocol
+
+1. Install `requirements-pilot.txt` in a Python environment and run `python -X utf8 research/scripts/local_query_app.py` from the repository root.
+2. Open `http://localhost:8766/`, enter `cancer`, and select Compare retrieval. Record the first candidate separately from the hidden target's rank.
+3. Repeat with `colorectal cancer` and `bladder cancer`. Show both success and failure cases before interpreting the results.
+4. Open the five-seed audit and use its full evaluation table for general performance statements. Do not replace that table with the demonstration cases.
+5. To reproduce training and evaluation, run `python -X utf8 -u research/scripts/run_local_audit.py`. Inspect the saved splits and per-query JSONL files in `local-run/extended`.
+6. Run `python -X utf8 -m unittest discover -s research/scripts -p test_local_research.py -v`. The six checks cover query agreement with original predictions, missing-target scoring, invalid inputs, HTML escaping, and HTTP behavior. Passing software checks is distinct from demonstrating model accuracy.
+
+The term baseline in this demonstration means the lexical and Euclidean implementations included in this repository. It does not mean that D-RAG, SG-RAG, KG2RAG, or another published system was executed. A future comparison to those systems requires their implementations or a justified reproduction on a compatible shared benchmark.
 
 ## References
 

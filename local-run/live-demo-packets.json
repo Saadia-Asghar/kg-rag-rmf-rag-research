@@ -1,0 +1,521 @@
+[
+  {
+    "disease": "cancer",
+    "target": "vinblastine",
+    "target_in_candidates": true,
+    "in_original_evaluation": true,
+    "rankings": {
+      "lexical": {
+        "target_rank": 17,
+        "top10": [
+          {
+            "drug": "fluorouracil",
+            "score": 1.0,
+            "is_target": false
+          },
+          {
+            "drug": "anastrozole",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "bevacizumab",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "capecitabine",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "carboplatin",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "cetuximab",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "cisplatin",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "doxorubicin",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "estradiol",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "everolimus",
+            "score": 0.5,
+            "is_target": false
+          }
+        ]
+      },
+      "euclidean": {
+        "target_rank": 9,
+        "top10": [
+          {
+            "drug": "cisplatin",
+            "score": -0.0834100081560828,
+            "is_target": false
+          },
+          {
+            "drug": "fluorouracil",
+            "score": -0.11210014628980587,
+            "is_target": false
+          },
+          {
+            "drug": "meloxicam",
+            "score": -0.19531059619654073,
+            "is_target": false
+          },
+          {
+            "drug": "ofloxacin",
+            "score": -0.21791793047038088,
+            "is_target": false
+          },
+          {
+            "drug": "paroxetine",
+            "score": -0.26045293172467604,
+            "is_target": false
+          },
+          {
+            "drug": "lenvatinib",
+            "score": -0.2846378774119122,
+            "is_target": false
+          },
+          {
+            "drug": "sunitinib",
+            "score": -0.2933523477080447,
+            "is_target": false
+          },
+          {
+            "drug": "doxorubicin",
+            "score": -0.294898603183267,
+            "is_target": false
+          },
+          {
+            "drug": "vinblastine",
+            "score": -0.30794420781614656,
+            "is_target": true
+          },
+          {
+            "drug": "paclitaxel",
+            "score": -0.3334874360585263,
+            "is_target": false
+          }
+        ]
+      },
+      "hyperbolic": {
+        "target_rank": 2,
+        "top10": [
+          {
+            "drug": "anastrozole",
+            "score": -0.17940255871343064,
+            "is_target": false
+          },
+          {
+            "drug": "vinblastine",
+            "score": -0.3337332395883946,
+            "is_target": true
+          },
+          {
+            "drug": "methylprednisolone",
+            "score": -0.36975076050104605,
+            "is_target": false
+          },
+          {
+            "drug": "famciclovir",
+            "score": -0.3743522308830657,
+            "is_target": false
+          },
+          {
+            "drug": "erlotinib",
+            "score": -0.38136482132269633,
+            "is_target": false
+          },
+          {
+            "drug": "cisplatin",
+            "score": -0.41137826717564097,
+            "is_target": false
+          },
+          {
+            "drug": "fluorouracil",
+            "score": -0.4255120629471325,
+            "is_target": false
+          },
+          {
+            "drug": "sunitinib",
+            "score": -0.4298291593180619,
+            "is_target": false
+          },
+          {
+            "drug": "everolimus",
+            "score": -0.45080547616478395,
+            "is_target": false
+          },
+          {
+            "drug": "carboplatin",
+            "score": -0.4759055027787327,
+            "is_target": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "disease": "bladder cancer",
+    "target": "doxorubicin",
+    "target_in_candidates": true,
+    "in_original_evaluation": true,
+    "rankings": {
+      "lexical": {
+        "target_rank": 10,
+        "top10": [
+          {
+            "drug": "cisplatin",
+            "score": 1.0,
+            "is_target": false
+          },
+          {
+            "drug": "fluorouracil",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "amoxicillin",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "anastrozole",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "bevacizumab",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "capecitabine",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "carboplatin",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "cefpodoxime",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "cetuximab",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "doxorubicin",
+            "score": 0.3333333333333333,
+            "is_target": true
+          }
+        ]
+      },
+      "euclidean": {
+        "target_rank": 21,
+        "top10": [
+          {
+            "drug": "cisplatin",
+            "score": -0.09121683880089215,
+            "is_target": false
+          },
+          {
+            "drug": "tamoxifen",
+            "score": -0.19873980459147378,
+            "is_target": false
+          },
+          {
+            "drug": "dexamethasone",
+            "score": -0.20498127590600185,
+            "is_target": false
+          },
+          {
+            "drug": "amoxicillin clavulanate",
+            "score": -0.23300742407520242,
+            "is_target": false
+          },
+          {
+            "drug": "atropine hyoscyamine phenobarbital scopolamine",
+            "score": -0.2556852117569728,
+            "is_target": false
+          },
+          {
+            "drug": "prednisone",
+            "score": -0.2867368487620247,
+            "is_target": false
+          },
+          {
+            "drug": "lansoprazole",
+            "score": -0.2872916719211383,
+            "is_target": false
+          },
+          {
+            "drug": "ofloxacin",
+            "score": -0.288860875894908,
+            "is_target": false
+          },
+          {
+            "drug": "dicyclomine",
+            "score": -0.28914463394442297,
+            "is_target": false
+          },
+          {
+            "drug": "duloxetine",
+            "score": -0.3107483312590006,
+            "is_target": false
+          }
+        ]
+      },
+      "hyperbolic": {
+        "target_rank": 185,
+        "top10": [
+          {
+            "drug": "cisplatin",
+            "score": -0.34189452609679455,
+            "is_target": false
+          },
+          {
+            "drug": "dicyclomine",
+            "score": -0.42895365976790745,
+            "is_target": false
+          },
+          {
+            "drug": "fluorouracil",
+            "score": -0.4570177721517936,
+            "is_target": false
+          },
+          {
+            "drug": "pseudoephedrine triprolidine",
+            "score": -0.4703042941494961,
+            "is_target": false
+          },
+          {
+            "drug": "isosorbide mononitrate",
+            "score": -0.4752272736795483,
+            "is_target": false
+          },
+          {
+            "drug": "erlotinib",
+            "score": -0.49206121995183205,
+            "is_target": false
+          },
+          {
+            "drug": "vinblastine",
+            "score": -0.5050743894587344,
+            "is_target": false
+          },
+          {
+            "drug": "lenvatinib",
+            "score": -0.5803734824086514,
+            "is_target": false
+          },
+          {
+            "drug": "cetuximab",
+            "score": -0.6132796013425755,
+            "is_target": false
+          },
+          {
+            "drug": "cenegermin",
+            "score": -0.6185631806010754,
+            "is_target": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "disease": "colorectal cancer",
+    "target": "bevacizumab",
+    "target_in_candidates": true,
+    "in_original_evaluation": true,
+    "rankings": {
+      "lexical": {
+        "target_rank": 4,
+        "top10": [
+          {
+            "drug": "cetuximab",
+            "score": 1.0,
+            "is_target": false
+          },
+          {
+            "drug": "fluorouracil",
+            "score": 0.5,
+            "is_target": false
+          },
+          {
+            "drug": "anastrozole",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "bevacizumab",
+            "score": 0.3333333333333333,
+            "is_target": true
+          },
+          {
+            "drug": "capecitabine",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "carboplatin",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "cisplatin",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "doxorubicin",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "estradiol",
+            "score": 0.3333333333333333,
+            "is_target": false
+          },
+          {
+            "drug": "everolimus",
+            "score": 0.3333333333333333,
+            "is_target": false
+          }
+        ]
+      },
+      "euclidean": {
+        "target_rank": 8,
+        "top10": [
+          {
+            "drug": "sunitinib",
+            "score": -0.09403873501572563,
+            "is_target": false
+          },
+          {
+            "drug": "cetuximab",
+            "score": -0.11357833398761003,
+            "is_target": false
+          },
+          {
+            "drug": "capecitabine",
+            "score": -0.1830921307611675,
+            "is_target": false
+          },
+          {
+            "drug": "ketoconazole",
+            "score": -0.28226843142526553,
+            "is_target": false
+          },
+          {
+            "drug": "octreotide",
+            "score": -0.29624463116108796,
+            "is_target": false
+          },
+          {
+            "drug": "vinblastine",
+            "score": -0.31122976480406694,
+            "is_target": false
+          },
+          {
+            "drug": "lenalidomide",
+            "score": -0.3238591361970115,
+            "is_target": false
+          },
+          {
+            "drug": "bevacizumab",
+            "score": -0.32551409134866016,
+            "is_target": true
+          },
+          {
+            "drug": "pembrolizumab",
+            "score": -0.33254295818377844,
+            "is_target": false
+          },
+          {
+            "drug": "paromomycin",
+            "score": -0.3524291814059567,
+            "is_target": false
+          }
+        ]
+      },
+      "hyperbolic": {
+        "target_rank": 13,
+        "top10": [
+          {
+            "drug": "carboplatin",
+            "score": -0.22346178763518035,
+            "is_target": false
+          },
+          {
+            "drug": "trastuzumab",
+            "score": -0.3383860940469746,
+            "is_target": false
+          },
+          {
+            "drug": "sunitinib",
+            "score": -0.36360960149709115,
+            "is_target": false
+          },
+          {
+            "drug": "famciclovir",
+            "score": -0.36570805196269696,
+            "is_target": false
+          },
+          {
+            "drug": "cisplatin",
+            "score": -0.3720605969766815,
+            "is_target": false
+          },
+          {
+            "drug": "methylprednisolone",
+            "score": -0.3745112772596874,
+            "is_target": false
+          },
+          {
+            "drug": "erlotinib",
+            "score": -0.37544717990187854,
+            "is_target": false
+          },
+          {
+            "drug": "paclitaxel",
+            "score": -0.38175263674220145,
+            "is_target": false
+          },
+          {
+            "drug": "anastrozole",
+            "score": -0.39572587631030426,
+            "is_target": false
+          },
+          {
+            "drug": "estradiol",
+            "score": -0.40614182355565975,
+            "is_target": false
+          }
+        ]
+      }
+    }
+  }
+]
