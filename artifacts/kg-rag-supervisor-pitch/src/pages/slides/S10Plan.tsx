@@ -82,7 +82,7 @@ export default function S10Plan() {
           <div style={{ background: '#EFF2F7', border: '1.5px solid #CBD5E1', borderRadius: '0.8vw', padding: '1.4vh 1.6vw' }}>
             <div style={{ fontFamily: "'Sora', sans-serif", fontSize: '1.45vw', fontWeight: 700, color: '#0D1B2A', marginBottom: '0.5vh' }}>Key risk addressed</div>
             <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.4vw', color: '#374151', lineHeight: 1.4 }}>
-              Scientific work still open: add licensed semantic evidence, independent gold-standard labels, and human evaluation before making therapeutic claims.
+              Independent review now gates the calibration labels. Larger clinical review and human evaluation remain open before making therapeutic claims.
             </div>
           </div>
         </div>

@@ -28,12 +28,23 @@ from run_main_rmf_rag_benchmark import (  # noqa: E402
     split_edges,
     verified_compounds,
 )
-from evaluate_evidence import validate_manifest  # noqa: E402
+from evaluate_evidence import build_coverage_summary, validate_manifest  # noqa: E402
 
 
 RESULTS = ROOT / "research" / "results" / "main_benchmark"
 QUERY_DIR = ROOT / "research" / "query_sets"
 EVIDENCE_MANIFEST = ROOT / "research" / "data" / "biomedical_evidence_manifest.json"
+FULL_EVIDENCE_OUTPUT = RESULTS / "full_test_evidence.json"
+
+METHODS = (
+    "lexical",
+    "euclidean",
+    "poincare",
+    "poincare_no_geodesic",
+    "poincare_no_hop_weighting",
+    "poincare_no_parallel_transport",
+    "poincare_with_path_verification",
+)
 
 
 def load_query(path: Path, index: int) -> dict:
@@ -108,6 +119,135 @@ def candidate_evidence(compound: str, evidence_by_compound: dict[str, dict]) -> 
     }
 
 
+def candidate_evidence_lookup(compound: str, evidence_by_compound: dict[str, dict]) -> dict:
+    """Return a compact manifest-backed lookup without copying article text."""
+    record = evidence_by_compound.get(compound)
+    if not record:
+        return {
+            "status": "no_licensed_record",
+            "record_ids": [],
+        }
+    return {
+        "status": record["evidence_label"],
+        "record_ids": [record["record_id"]],
+    }
+
+
+def methods_for_seed(seed: int) -> dict[str, np.ndarray | None]:
+    embedding_path = RESULTS / f"embeddings_seed{seed}.npz"
+    with np.load(embedding_path) as saved:
+        euclidean = saved["euclidean"].copy()
+        poincare = saved["poincare"].copy()
+    return {
+        "lexical": None,
+        "euclidean": euclidean,
+        "poincare": poincare,
+        "poincare_no_geodesic": poincare,
+        "poincare_no_hop_weighting": poincare,
+        "poincare_no_parallel_transport": poincare,
+        "poincare_with_path_verification": poincare,
+    }
+
+
+def ranked_candidates(
+    query: dict,
+    method: str,
+    graph: dict,
+    docs: dict,
+    idf: dict,
+    nodes: dict,
+    vectors: np.ndarray | None,
+    top_k: int,
+) -> list[str]:
+    ranking = rank_query(
+        method=method,
+        query=query,
+        graph=graph,
+        vectors=vectors,
+        docs=docs,
+        idf=idf,
+        nodes=nodes,
+    )
+    return ranking[:top_k]
+
+
+def build_full_test_evidence(
+    *,
+    top_k: int = 10,
+    seeds: tuple[int, ...] = (7, 17, 29, 43, 101),
+) -> dict:
+    """Create manifest-backed evidence lookups for every saved test ranking."""
+    if top_k < 1:
+        raise ValueError("--top-k must be at least 1")
+
+    evidence_by_compound = load_evidence_manifest()
+    lookup_rows: list[dict] = []
+    for seed in seeds:
+        graph, docs, idf, nodes = build_query_graph(seed)
+        vectors_by_method = methods_for_seed(seed)
+        for hop in (2, 3):
+            query_path = QUERY_DIR / f"{hop}hop_test_seed{seed}.jsonl"
+            queries = [
+                json.loads(line)
+                for line in query_path.read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+            for query in queries:
+                for method in METHODS:
+                    ranking = ranked_candidates(
+                        query,
+                        method,
+                        graph,
+                        docs,
+                        idf,
+                        nodes,
+                        vectors_by_method[method],
+                        top_k,
+                    )
+                    for rank, compound in enumerate(ranking, start=1):
+                        lookup_rows.append(
+                            {
+                                "query_id": query["query_id"],
+                                "seed": seed,
+                                "hop": hop,
+                                "method": method,
+                                "rank": rank,
+                                "compound": compound,
+                                "evidence": candidate_evidence_lookup(
+                                    compound, evidence_by_compound
+                                ),
+                            }
+                        )
+
+    output = {
+        "schema_version": "1.0",
+        "dataset": "Hetionet v1.0",
+        "split": "test",
+        "ranking_cutoff": top_k,
+        "methods": list(METHODS),
+        "seeds": list(seeds),
+        "evidence_source": {
+            "manifest": "research/data/biomedical_evidence_manifest.json",
+            "policy": "Europe PMC Open Access records filtered to CC BY",
+            "citation_key": "PMCID",
+            "text_policy": (
+                "This index stores statuses and stable manifest record IDs only; "
+                "it does not redistribute article text."
+            ),
+        },
+        "candidate_lookups": lookup_rows,
+        "coverage": build_coverage_summary(lookup_rows),
+        "interpretation": (
+            "Coverage is calculated over the top-ranked candidates retained at the "
+            "ranking cutoff for each saved test query and method. It is evidence "
+            "lookup coverage, not Recall/MRR, graph-path validation, or clinical "
+            "validation. Direct text support remains bounded by the cited source "
+            "scope."
+        ),
+    }
+    return output
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=101, choices=(7, 17, 29, 43, 101))
@@ -116,7 +256,31 @@ def main() -> None:
     parser.add_argument("--query-index", type=int, default=0)
     parser.add_argument("--query-id", help="Exact query_id from a saved JSONL query set")
     parser.add_argument("--output", type=Path, default=RESULTS / "query_demo.json")
+    parser.add_argument(
+        "--all-test",
+        action="store_true",
+        help="Build the full manifest-backed evidence index for every saved test query.",
+    )
+    parser.add_argument(
+        "--top-k",
+        type=int,
+        default=10,
+        help="Number of ranked candidates retained per query and method (default: 10).",
+    )
     args = parser.parse_args()
+
+    if args.all_test:
+        output = build_full_test_evidence(top_k=args.top_k)
+        output_path = args.output
+        if output_path == RESULTS / "query_demo.json":
+            output_path = FULL_EVIDENCE_OUTPUT
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
+        print(
+            f"Wrote {output_path} with "
+            f"{len(output['candidate_lookups'])} candidate lookups."
+        )
+        return
 
     query_path = QUERY_DIR / f"{args.hop}hop_{args.split}_seed{args.seed}.jsonl"
     if args.query_id:
@@ -143,6 +307,9 @@ def main() -> None:
         "lexical": None,
         "euclidean": euclidean,
         "poincare": poincare,
+        "poincare_no_geodesic": poincare,
+        "poincare_no_hop_weighting": poincare,
+        "poincare_no_parallel_transport": poincare,
         "poincare_with_path_verification": poincare,
     }
     rankings: dict[str, list[dict]] = {}

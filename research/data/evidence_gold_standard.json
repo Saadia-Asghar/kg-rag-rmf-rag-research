@@ -2,14 +2,28 @@
   "schema_version": "1.0",
   "title": "Blinded evidence-grounding calibration set",
   "purpose": "Evaluate typed path support, licensed text support, and therapeutic plausibility as separate labels rather than folding them into Recall or MRR.",
-  "annotation_basis": "A small, frozen research calibration set annotated from the typed query semantics and the cited Europe PMC excerpts. It is not clinical expert consensus and must not be used as medical advice.",
+  "annotation_basis": "A small, frozen research calibration set initially annotated from the typed query semantics and cited Europe PMC excerpts, then independently reviewed and conservatively adjudicated within the cited source scope. It is not clinical expert consensus and must not be used as medical advice.",
+  "independent_review_artifact": "research/data/biomedical_review.json",
   "review_protocol": {
     "gold_set_is_independent_of_ranking": true,
     "ranking_metrics_used_for_labels": false,
+    "independent_biomedical_review": {
+      "status": "completed",
+      "reviewer_id": "IBR-01",
+      "ranking_involvement": false,
+      "reviewed_candidates": 8,
+      "disagreements": 2,
+      "adjudication_record": "research/data/biomedical_review.json"
+    },
+    "label_provenance": {
+      "graph_path_support": "Source-scoped programmatic label from the frozen training graph; not biomedical-review adjudicated.",
+      "evidence_support": "Independent reviewer adjudicated against the frozen CC BY Europe PMC manifest and excerpt scope.",
+      "therapeutic_plausibility": "Independent reviewer adjudicated conservatively within the cited source scope; this is not clinical consensus."
+    },
     "labels": {
       "graph_path_support": "Whether the query's typed path is present in the training graph; held-out target edges are expected to be false.",
       "evidence_support": "direct_support, context_only, or no_licensed_record.",
-      "therapeutic_plausibility": "supported_in_source_scope, plausible_but_species_or_preclinical_limited, not_supported_as_epilepsy_therapy, or insufficient_evidence."
+      "therapeutic_plausibility": "Reviewer-adjudicated as supported_in_source_scope, plausible_but_species_or_preclinical_limited, not_supported_as_epilepsy_therapy, or insufficient_evidence, always bounded by the cited source."
     }
   },
   "annotations": [
@@ -29,9 +43,9 @@
       "compound": "DB00252",
       "graph_path_support": true,
       "evidence_support": "direct_support",
-      "therapeutic_plausibility": "supported_in_source_scope",
+      "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited",
       "evidence_record_ids": ["PMC11666373"],
-      "rationale": "The cited preclinical screen names phenytoin and reports reduced seizure probability in one model; this supports an antiseizure research relationship, not a patient-specific recommendation."
+      "rationale": "The cited preclinical screen names phenytoin and reports reduced seizure probability in one model; independent review retained direct support but adjudicated the therapeutic label as preclinical-limited, not a patient-specific recommendation."
     },
     {
       "query_id": "2hop::test::10000::DOID:1826::DB00909",
@@ -39,9 +53,9 @@
       "compound": "DB00313",
       "graph_path_support": true,
       "evidence_support": "direct_support",
-      "therapeutic_plausibility": "supported_in_source_scope",
+      "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited",
       "evidence_record_ids": ["PMC11666373"],
-      "rationale": "The cited preclinical screen names valproate and reports reduced seizure probability and duration in one model."
+      "rationale": "The cited preclinical screen names valproate and reports reduced seizure probability and duration in one model; independent review adjudicated the therapeutic label as preclinical-limited."
     },
     {
       "query_id": "2hop::test::10000::DOID:1826::DB00909",

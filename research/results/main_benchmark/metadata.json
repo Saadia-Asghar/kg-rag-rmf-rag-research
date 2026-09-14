@@ -1,0 +1,81 @@
+{
+  "dataset": "Hetionet v1.0",
+  "snapshot_path": "research_data/hetionet/hetionet-v1.0.json.bz2",
+  "snapshot_url": "https://media.githubusercontent.com/media/hetio/hetionet/main/hetnet/json/hetionet-v1.0.json.bz2",
+  "snapshot_sha256": "a342ab57e9073e6c02bb5e109d1f16917e6f933be4e5c77ebbaebfa26b984c19",
+  "dataset_citation": "Himmelstein et al. Systematic integration of biomedical knowledge prioritizes drugs for repurposing. eLife 2017;6:e26726. https://doi.org/10.7554/eLife.26726",
+  "snapshot_license": "Repository original content CC0 1.0; per-node/edge licenses retained.",
+  "selected_relation_licenses": {
+    "Gene-Disease associates": "CC BY 4.0",
+    "Disease-Compound treats/palliates": "CC0 1.0",
+    "Gene-Compound binds": "CC BY 4.0"
+  },
+  "selected_relation_sources": {
+    "Gene-Disease associates": "DISEASES",
+    "Disease-Compound treats/palliates": "PharmacotherapyDB",
+    "Gene-Compound binds": "DrugCentral source variants"
+  },
+  "selected_edges": {
+    "gene_disease": 3200,
+    "disease_compound": 1145,
+    "gene_compound": 823
+  },
+  "seeds": [
+    7,
+    17,
+    29,
+    43,
+    101
+  ],
+  "embedding_dimension": 16,
+  "epochs": 24,
+  "negative_samples_per_edge": 1,
+  "training_budget": "same edges, epochs, negative sampling, dimension, and learning rate for Euclidean/Poincare",
+  "query_sets": {
+    "7": {
+      "2hop_train": 500,
+      "3hop_train": 500,
+      "2hop_validation": 500,
+      "3hop_validation": 176,
+      "2hop_test": 500,
+      "3hop_test": 198
+    },
+    "17": {
+      "2hop_train": 500,
+      "3hop_train": 500,
+      "2hop_validation": 500,
+      "3hop_validation": 177,
+      "2hop_test": 500,
+      "3hop_test": 215
+    },
+    "29": {
+      "2hop_train": 500,
+      "3hop_train": 500,
+      "2hop_validation": 500,
+      "3hop_validation": 163,
+      "2hop_test": 500,
+      "3hop_test": 204
+    },
+    "43": {
+      "2hop_train": 500,
+      "3hop_train": 500,
+      "2hop_validation": 500,
+      "3hop_validation": 153,
+      "2hop_test": 500,
+      "3hop_test": 166
+    },
+    "101": {
+      "2hop_train": 500,
+      "3hop_train": 500,
+      "2hop_validation": 500,
+      "3hop_validation": 153,
+      "2hop_test": 500,
+      "3hop_test": 252
+    }
+  },
+  "query_definitions": {
+    "2hop": "Gene -> Disease -> Compound, terminal treats/palliates edge held out by split.",
+    "3hop": "Gene -> Disease -> Gene -> Compound, terminal binds edge held out by split."
+  },
+  "confidence_intervals": "two-sided 95% t interval across five random seeds (df=4)"
+}

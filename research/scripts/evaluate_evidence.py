@@ -23,11 +23,15 @@ DEFAULT_DEMOS = (
     ROOT / "research" / "results" / "main_benchmark" / "query_demo_2hop.json",
     ROOT / "research" / "results" / "main_benchmark" / "query_demo_3hop.json",
 )
+DEFAULT_FULL_BENCHMARK = (
+    ROOT / "research" / "results" / "main_benchmark" / "full_test_evidence.json"
+)
 
 _PMCID_PATTERN = re.compile(r"^PMC[0-9]+$")
 _PMID_PATTERN = re.compile(r"^[0-9]+$")
 _DOI_PATTERN = re.compile(r"^10\.[0-9]{4,9}/\S+$")
 _NO_LICENSED_RECORD = "no_licensed_record"
+_DIRECT_LABEL_PREFIX = "direct_"
 _PACKET_RECORD_FIELDS = {
     "record_id": "record_id",
     "pmcid": "pmcid",
@@ -115,6 +119,237 @@ def _manifest_indexes(manifest: dict) -> tuple[dict[str, dict], dict[str, list[d
             if isinstance(compound_id, str):
                 records_by_compound[compound_id].append(record)
     return records_by_id, records_by_compound
+
+
+def _evidence_support_label(status: str) -> str:
+    if status == _NO_LICENSED_RECORD:
+        return _NO_LICENSED_RECORD
+    if status.startswith(_DIRECT_LABEL_PREFIX):
+        return "direct_support"
+    return "context_only"
+
+
+def _coverage_group(rows: list[dict]) -> dict:
+    statuses = Counter(row["evidence"]["status"] for row in rows)
+    support = Counter(_evidence_support_label(row["evidence"]["status"]) for row in rows)
+    total = len(rows)
+    return {
+        "candidate_lookups": total,
+        "queries": len({(row["seed"], row["query_id"]) for row in rows}),
+        "unique_queries": len({row["query_id"] for row in rows}),
+        "evidence_status_counts": dict(sorted(statuses.items())),
+        "evidence_support_counts": dict(
+            sorted(
+                support.items(),
+                key=lambda item: (
+                    {"direct_support": 0, "context_only": 1, _NO_LICENSED_RECORD: 2}.get(
+                        item[0], 3
+                    ),
+                    item[0],
+                ),
+            )
+        ),
+        "coverage_rates": {
+            "licensed_record": (
+                (total - support[_NO_LICENSED_RECORD]) / total if total else 0.0
+            ),
+            "direct_support": support["direct_support"] / total if total else 0.0,
+            "any_text_context": (
+                (support["direct_support"] + support["context_only"]) / total
+                if total
+                else 0.0
+            ),
+        },
+    }
+
+
+def build_coverage_summary(rows: list[dict]) -> dict:
+    """Summarize lookup coverage without mixing it into Recall/MRR metrics."""
+    by_hop: dict[str, list[dict]] = defaultdict(list)
+    by_method: dict[str, list[dict]] = defaultdict(list)
+    by_hop_method: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        hop = str(row["hop"])
+        method = row["method"]
+        by_hop[hop].append(row)
+        by_method[method].append(row)
+        by_hop_method[f"{hop}hop::{method}"].append(row)
+    return {
+        "basis": "top-ranked candidates retained per saved test query and method",
+        "overall": _coverage_group(rows),
+        "by_hop": {
+            key: _coverage_group(by_hop[key]) for key in sorted(by_hop, key=int)
+        },
+        "by_method": {
+            key: _coverage_group(by_method[key]) for key in sorted(by_method)
+        },
+        "by_hop_and_method": {
+            key: _coverage_group(by_hop_method[key])
+            for key in sorted(by_hop_method)
+        },
+    }
+
+
+def validate_full_benchmark(
+    benchmark: dict, manifest: dict, *, path: Path | None = None
+) -> list[str]:
+    """Validate every compact lookup and its independently recomputed coverage."""
+    location = str(path) if path else "full_benchmark"
+    errors: list[str] = []
+    if not isinstance(benchmark, dict):
+        return [f"{location} must be an object"]
+    if benchmark.get("schema_version") != "1.0":
+        errors.append(f"{location}.schema_version must be '1.0'")
+    if benchmark.get("split") != "test":
+        errors.append(f"{location}.split must be 'test'")
+    methods = benchmark.get("methods")
+    if not isinstance(methods, list) or not methods or any(
+        not isinstance(method, str) or not method for method in methods
+    ):
+        errors.append(f"{location}.methods must be a non-empty list of names")
+        methods = []
+    elif len(set(methods)) != len(methods):
+        errors.append(f"{location}.methods must not contain duplicates")
+    seeds = benchmark.get("seeds")
+    if not isinstance(seeds, list) or not seeds or any(
+        not isinstance(seed, int) for seed in seeds
+    ):
+        errors.append(f"{location}.seeds must be a non-empty list of integers")
+        seeds = []
+    cutoff = benchmark.get("ranking_cutoff")
+    if not isinstance(cutoff, int) or cutoff < 1:
+        errors.append(f"{location}.ranking_cutoff must be a positive integer")
+        cutoff = 0
+
+    records_by_id, records_by_compound = _manifest_indexes(manifest)
+    rows = benchmark.get("candidate_lookups")
+    if not isinstance(rows, list):
+        return errors + [f"{location}.candidate_lookups must be a list"]
+
+    seen: set[tuple[int, str, str, int]] = set()
+    for index, row in enumerate(rows):
+        row_location = f"{location}.candidate_lookups[{index}]"
+        if not isinstance(row, dict):
+            errors.append(f"{row_location} must be an object")
+            continue
+        query_id = row.get("query_id")
+        seed = row.get("seed")
+        hop = row.get("hop")
+        method = row.get("method")
+        rank = row.get("rank")
+        compound = row.get("compound")
+        key = (seed, query_id, method, rank)
+        if not isinstance(query_id, str) or not query_id:
+            errors.append(f"{row_location}.query_id must be non-empty")
+        if not isinstance(seed, int) or seed not in seeds:
+            errors.append(f"{row_location}.seed must be listed in {location}.seeds")
+        if hop not in (2, 3):
+            errors.append(f"{row_location}.hop must be 2 or 3")
+        if method not in methods:
+            errors.append(f"{row_location}.method must be listed in {location}.methods")
+        if not isinstance(rank, int) or rank < 1 or rank > cutoff:
+            errors.append(f"{row_location}.rank must be between 1 and ranking_cutoff")
+        if not isinstance(compound, str) or not compound:
+            errors.append(f"{row_location}.compound must be non-empty")
+        if all(
+            isinstance(value, (int, str))
+            for value in (seed, query_id, method, rank)
+        ):
+            if key in seen:
+                errors.append(f"{row_location} duplicates lookup key {key!r}")
+            seen.add(key)
+
+        evidence = row.get("evidence")
+        if not isinstance(evidence, dict):
+            errors.append(f"{row_location}.evidence must be an object")
+            continue
+        status = evidence.get("status")
+        record_ids = evidence.get("record_ids")
+        if not isinstance(status, str) or not status:
+            errors.append(f"{row_location}.evidence.status must be explicit")
+            continue
+        if not isinstance(record_ids, list) or any(
+            not isinstance(record_id, str) for record_id in record_ids
+        ):
+            errors.append(f"{row_location}.evidence.record_ids must be a list of strings")
+            continue
+        if status == _NO_LICENSED_RECORD:
+            if record_ids:
+                errors.append(f"{row_location} no_licensed_record cannot cite records")
+            if compound in records_by_compound:
+                errors.append(
+                    f"{row_location} marks {compound} as no_licensed_record but the "
+                    "manifest has licensed evidence"
+                )
+        elif not record_ids:
+            errors.append(f"{row_location} {status!r} must cite at least one record")
+        for record_id in record_ids:
+            record = records_by_id.get(record_id)
+            if record is None:
+                errors.append(
+                    f"{row_location}.evidence.record_ids contains unknown {record_id!r}"
+                )
+                continue
+            if record not in records_by_compound.get(compound, []):
+                errors.append(
+                    f"{row_location}.evidence record {record_id!r} is not licensed "
+                    f"evidence for candidate {compound}"
+                )
+            if record.get("evidence_label") != status:
+                errors.append(
+                    f"{row_location}.evidence.status {status!r} does not match "
+                    f"manifest record {record_id!r}"
+                )
+        if status == _NO_LICENSED_RECORD and evidence.get("lookup") is not None:
+            errors.append(
+                f"{row_location}.evidence.lookup is not permitted for compact "
+                "full-test rows"
+            )
+
+    expected: set[tuple[int, str, str, int]] = set()
+    missing_query_sets: list[str] = []
+    for seed in seeds:
+        for hop in (2, 3):
+            query_path = ROOT / "research" / "query_sets" / f"{hop}hop_test_seed{seed}.jsonl"
+            if not query_path.exists():
+                missing_query_sets.append(str(query_path))
+                continue
+            query_ids = [
+                json.loads(line)["query_id"]
+                for line in query_path.read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+            expected.update(
+                (seed, query_id, method, rank)
+                for query_id in query_ids
+                for method in methods
+                for rank in range(1, cutoff + 1)
+            )
+    if missing_query_sets:
+        errors.append(
+            f"{location} cannot verify completeness; missing query sets: "
+            + ", ".join(missing_query_sets)
+        )
+    if expected:
+        missing = expected - seen
+        extra = seen - expected
+        if missing:
+            errors.append(
+                f"{location} is missing {len(missing)} expected candidate lookups"
+            )
+        if extra:
+            errors.append(
+                f"{location} contains {len(extra)} candidate lookups not present "
+                "in the saved test query sets"
+            )
+    coverage = benchmark.get("coverage")
+    if not isinstance(coverage, dict):
+        errors.append(f"{location}.coverage must be an object")
+    elif not errors:
+        expected = build_coverage_summary(rows)
+        if coverage != expected:
+            errors.append(f"{location}.coverage does not match candidate_lookups")
+    return errors
 
 
 def _validate_packet_record(
@@ -243,7 +478,11 @@ def validate_demo(demo: dict, manifest: dict, *, path: Path | None = None) -> li
     return errors
 
 
-def validate_evidence(manifest_path: Path, demo_paths: list[Path]) -> dict[str, int]:
+def validate_evidence(
+    manifest_path: Path,
+    demo_paths: list[Path],
+    full_benchmark_path: Path | None = None,
+) -> dict[str, int]:
     """Validate a manifest and all saved packets, raising on any drift."""
     manifest = load_json(manifest_path)
     errors = validate_manifest(manifest)
@@ -258,11 +497,29 @@ def validate_evidence(manifest_path: Path, demo_paths: list[Path]) -> dict[str, 
                 for ranking in rankings.values()
                 if isinstance(ranking, list)
             )
+    full_candidates = 0
+    if full_benchmark_path is not None:
+        if not full_benchmark_path.exists():
+            errors.append(f"{full_benchmark_path} does not exist")
+        else:
+            full_benchmark = load_json(full_benchmark_path)
+            errors.extend(
+                validate_full_benchmark(
+                    full_benchmark, manifest, path=full_benchmark_path
+                )
+            )
+            rows = full_benchmark.get("candidate_lookups", [])
+            if isinstance(rows, list):
+                full_candidates = len(rows)
 
     if errors:
         details = "\n".join(f"- {error}" for error in errors)
         raise ValueError(f"Evidence validation failed with {len(errors)} error(s):\n{details}")
-    return {"manifest_records": len(manifest["records"]), "demo_candidates": checked_candidates}
+    return {
+        "manifest_records": len(manifest["records"]),
+        "demo_candidates": checked_candidates,
+        "full_test_candidates": full_candidates,
+    }
 
 
 def main() -> None:
@@ -275,6 +532,12 @@ def main() -> None:
         "Defaults to the saved 2-hop and 3-hop packets in validation-only mode.",
     )
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument(
+        "--full-benchmark",
+        type=Path,
+        default=DEFAULT_FULL_BENCHMARK,
+        help="Full-test compact evidence index. Defaults to the saved benchmark index.",
+    )
     parser.add_argument(
         "--validate-only",
         action="store_true",
@@ -291,12 +554,14 @@ def main() -> None:
             parser.error("--demo is required unless --validate-only is used")
         demo_paths = [path.resolve() for path in args.demo]
     manifest_path = args.manifest.resolve()
-    summary = validate_evidence(manifest_path, demo_paths)
+    full_benchmark_path = args.full_benchmark.resolve()
+    summary = validate_evidence(manifest_path, demo_paths, full_benchmark_path)
     if args.validate_only:
         print(
             "Evidence validation passed: "
             f"{summary['manifest_records']} manifest records and "
-            f"{summary['demo_candidates']} demo candidates checked."
+            f"{summary['demo_candidates']} demo candidates plus "
+            f"{summary['full_test_candidates']} full-test candidate lookups checked."
         )
         return
 
@@ -409,6 +674,7 @@ def main() -> None:
         "schema_version": "1.0",
         "gold_standard": str(gold_path.relative_to(ROOT)),
         "demo_packets": [str(path.relative_to(ROOT)) for path in demo_paths],
+        "full_benchmark": str(full_benchmark_path.relative_to(ROOT)),
         "annotated_candidates": len(annotations),
         "gold_set_dimensions": {name: dict(counts) for name, counts in dimension_counts.items()},
         "method_views": method_summary,

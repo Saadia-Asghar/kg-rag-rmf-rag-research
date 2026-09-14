@@ -1,15 +1,5 @@
 # RMF-RAG research benchmarks
 
-> Verification correction (2026-09-12): the "Main Hetionet benchmark" section
-> below is a historical description, not an executable reproduction recipe.
-> `run_main_rmf_rag_benchmark.py` and its complete training artifacts are absent.
-> Do not use the historical tables as newly reproduced results. The verified
-> five-seed experiment is the original disease-pair pilot in `local-run/extended`.
-> A new live graph explorer is available via
-> `python research/scripts/live_graph_qa.py` on localhost:8767. It traverses the
-> pinned source graph for each question; it does not train embeddings or measure
-> generated-answer hallucination. See `LIVE_GRAPH_TESTING.md`.
-
 This folder contains the original Kaggle pilot and the main benchmark on the
 licensed portion of Hetionet v1.0. The pilot is retained for comparison but is
 not a gene–disease–drug evaluation.
@@ -34,6 +24,7 @@ seeds, and writes:
 - `results/main_benchmark/query_demo_2hop.json` — saved 2-hop evidence packet
 - `results/main_benchmark/query_demo_3hop.json` — saved 3-hop evidence packet
 - `results/main_benchmark/evidence_review.json` — calibration-set coverage by graph, text, and plausibility dimensions
+- `results/main_benchmark/full_test_evidence.json` — manifest-backed lookup status for every top-10 test candidate, with per-hop and per-method coverage
 - `query_sets/*` — exact JSONL query sets used by each seed/split
 - `data/HETIONET_SOURCE.md` — citation, hash, and relation-level license record
 - `data/HETIONET_ATTRIBUTION.md` — source creators, license URIs, and modification notices
@@ -72,10 +63,22 @@ python research/scripts/main_query_demo.py --hop 3 --split test --seed 101
 
 This loads the saved seed-101 embeddings and the exact held-out query set,
 returns the top ten candidates for lexical, Euclidean, Poincaré, and
-path-verification retrieval, and marks whether each candidate is supported by
-the typed training graph plus its frozen Europe PMC evidence status and cited
-record. It is an evidence packet for research inspection, not a clinical
-recommendation.
+the ablation and path-verification methods, and marks whether each candidate is
+supported by the typed training graph plus its frozen Europe PMC evidence status
+and cited record. It is an evidence packet for research inspection, not a
+clinical recommendation.
+
+Generate the full test-set evidence index (all five seeds, both hop tasks, all
+seven methods, and the top ten candidates retained for each query) with:
+
+```bash
+python research/scripts/main_query_demo.py --all-test \
+  --output research/results/main_benchmark/full_test_evidence.json
+```
+
+The full index stores only candidate IDs, statuses, and stable manifest record
+IDs. It does not copy article text. Its coverage is reported separately from
+Recall/MRR and is checked against the candidate rows by the evidence validator.
 
 Generate both saved demo packets and the separate calibration view with:
 
@@ -98,7 +101,8 @@ python research/scripts/evaluate_evidence.py --validate-only
 
 The validation fails on missing or malformed PMCID/PMID/DOI identifiers,
 non-CC-BY records, blank excerpts, duplicate record IDs, missing candidate
-statuses, unknown cited records, or packet fields that drift from the manifest.
+statuses, unknown cited records, packet fields that drift from the manifest, or
+full-test coverage summaries that do not match their lookup rows.
 
 Rebuild the report independently with:
 

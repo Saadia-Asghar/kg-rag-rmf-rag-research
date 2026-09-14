@@ -143,9 +143,16 @@ no-record examples. For example, a CC BY veterinary article directly supports
 zonisamide for epileptic seizures in dogs but is species-limited; a CC BY
 perioperative article places propofol or anesthetic selection in an epilepsy
 surgery context but does not support an epilepsy-treatment claim. This is a
-research calibration set rather than clinical expert consensus. Its role is to
-prevent a retrieved path or a relevant article from being presented as a
-therapeutic recommendation.
+research calibration set rather than clinical expert consensus. An independent
+biomedical reviewer who did not participate in model ranking reviewed all eight
+candidate annotations; the review and adjudication record is saved in
+`research/data/biomedical_review.json`. The reviewer agreed with six candidates
+and conservatively downgraded phenytoin and valproate from
+`supported_in_source_scope` to `plausible_but_species_or_preclinical_limited`
+because their cited evidence is from one Drosophila model. The final labels
+therefore distinguish reviewer-adjudicated evidence support and therapeutic
+plausibility from the source-scoped, programmatic graph-path label. All
+therapeutic labels remain research triage, not treatment advice.
 
 ## Interpretation and limitations
 
@@ -155,10 +162,11 @@ on the Kaggle pilot by using licensed gene, disease, and compound edges,
 explicit 2-hop and 3-hop paths, matched learned-model budgets, five seeds,
 confidence intervals, and fully saved predictions.
 
-The evidence extension remains a small, source-scoped calibration layer, not a
-clinical validation study. It does not evaluate dosage, temporal knowledge,
-adverse-event constraints, contraindications, or patient-specific suitability,
-and it does not replace independent clinical review. The selected CC0/CC BY
+The evidence extension remains a small, source-scoped calibration layer with
+one independent biomedical review pass, not a clinical validation study or
+expert consensus. It does not evaluate dosage, temporal knowledge, adverse-event
+constraints, contraindications, or patient-specific suitability, and it does
+not replace a larger independent clinical review. The selected CC0/CC BY
 relation subset is smaller than the full Hetionet graph, and the 3-hop `binds`
 endpoint measures molecular target connectivity rather than an approved
 treatment recommendation. Candidate rankings and cited snippets must not be

@@ -57,6 +57,31 @@ def table(rows: list[dict[str, str]], title: str) -> str:
     )
 
 
+def evidence_table(full_evidence: dict) -> str:
+    coverage = full_evidence["coverage"]["by_hop_and_method"]
+    body = "".join(
+        "<tr>"
+        f"<td>{html.escape(key.split('hop::', 1)[0] + '-hop')}</td>"
+        f"<td>{html.escape(METHOD_LABELS.get(key.split('::', 1)[1], key))}</td>"
+        f"<td>{group['candidate_lookups']:,}</td>"
+        f"<td>{group['coverage_rates']['licensed_record']:.1%}</td>"
+        f"<td>{group['coverage_rates']['direct_support']:.1%}</td>"
+        f"<td>{group['coverage_rates']['any_text_context']:.1%}</td>"
+        f"<td>{group['evidence_support_counts'].get('no_licensed_record', 0):,}</td>"
+        "</tr>"
+        for key, group in sorted(coverage.items())
+    )
+    return (
+        "<h2>Licensed evidence lookup coverage</h2>"
+        "<p class='table-note'>Separate from Recall/MRR: top-10 candidate lookups "
+        "matched to the frozen CC BY-only Europe PMC manifest.</p>"
+        "<table><thead><tr><th>Hop task</th><th>Method</th><th>Lookups</th>"
+        "<th>Licensed record</th><th>Direct support</th><th>Any text context</th>"
+        "<th>No licensed record</th></tr></thead>"
+        f"<tbody>{body}</tbody></table>"
+    )
+
+
 def main() -> None:
     metadata = json.loads((RESULTS / "metadata.json").read_text(encoding="utf-8"))
     rows = read_rows()
@@ -98,6 +123,7 @@ def main() -> None:
     th, td {{ padding: 12px 14px; border-bottom: 1px solid #e5ebf0; text-align: left; }}
     th {{ background: #e9f5f0; color: #075a43; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }}
     tr:last-child td {{ border-bottom: 0; }}
+     .table-note {{ color: #526276; margin: -4px 0 12px; }}
     .callout {{ margin-top: 28px; padding: 20px 22px; border-left: 4px solid #059669; background: #ecfdf5; line-height: 1.55; }}
     .warning {{ border-left-color: #d97706; background: #fff7ed; }}
     code {{ padding: 2px 5px; border-radius: 4px; background: #e8eef3; }}
@@ -113,6 +139,7 @@ def main() -> None:
   <div class="stats">{stat_cards}</div>
   {table(test_rows, "Main test results")}
   {table(ablation_rows, "Test-set ablations")}
+   {evidence_table(json.loads((RESULTS / "full_test_evidence.json").read_text(encoding="utf-8")))}
   <div class="callout"><strong>Calibrated finding.</strong> Poincaré retrieval improves 3-hop MRR over the matched Euclidean model (0.015 vs 0.011), but not 2-hop MRR (0.012 vs 0.013). The intervals overlap, so neither difference is statistically conclusive.</div>
   <div class="callout warning"><strong>Scope boundary.</strong> This is graph link retrieval, not clinical evidence or a treatment recommendation. The next scientific phase requires licensed semantic evidence, independent therapeutic labels, and human evaluation.</div>
   <footer>

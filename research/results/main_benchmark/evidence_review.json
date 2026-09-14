@@ -5,6 +5,7 @@
     "research/results/main_benchmark/query_demo_2hop.json",
     "research/results/main_benchmark/query_demo_3hop.json"
   ],
+  "full_benchmark": "research/results/main_benchmark/full_test_evidence.json",
   "annotated_candidates": 8,
   "gold_set_dimensions": {
     "graph_path_support": {
@@ -17,8 +18,7 @@
       "no_licensed_record": 1
     },
     "therapeutic_plausibility": {
-      "plausible_but_species_or_preclinical_limited": 1,
-      "supported_in_source_scope": 2,
+      "plausible_but_species_or_preclinical_limited": 3,
       "not_supported_as_epilepsy_therapy": 2,
       "insufficient_evidence": 3
     }
@@ -64,7 +64,7 @@
           "context_only": 1
         },
         "therapeutic_plausibility": {
-          "supported_in_source_scope": 2,
+          "plausible_but_species_or_preclinical_limited": 2,
           "not_supported_as_epilepsy_therapy": 1
         }
       }
@@ -104,7 +104,7 @@
         },
         "therapeutic_plausibility": {
           "not_supported_as_epilepsy_therapy": 1,
-          "supported_in_source_scope": 1
+          "plausible_but_species_or_preclinical_limited": 1
         }
       }
     },
@@ -253,7 +253,7 @@
         },
         "therapeutic_plausibility": {
           "not_supported_as_epilepsy_therapy": 1,
-          "supported_in_source_scope": 2,
+          "plausible_but_species_or_preclinical_limited": 2,
           "insufficient_evidence": 3
         }
       }

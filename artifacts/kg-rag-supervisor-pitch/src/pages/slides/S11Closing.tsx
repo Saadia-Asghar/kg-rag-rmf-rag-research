@@ -93,7 +93,7 @@ export default function S11Closing() {
               Request to sir
             </div>
             <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.9vw', color: '#CBD5E1', lineHeight: 1.5 }}>
-              The build is complete as a retrieval benchmark. I would like to pursue the evidence-grounded generation and independent evaluation phase as my thesis direction.
+              The build is complete as a retrieval benchmark with a reviewed evidence guardrail. I would like to pursue larger human evaluation and evidence-grounded generation as my thesis direction.
             </div>
           </div>
         </div>

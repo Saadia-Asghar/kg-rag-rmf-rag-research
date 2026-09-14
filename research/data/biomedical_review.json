@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "title": "Independent biomedical review and adjudication record",
+  "review_status": "completed",
+  "reviewer": {
+    "reviewer_id": "IBR-01",
+    "role": "Independent biomedical reviewer",
+    "reviewer_type": "Separate biomedical review pass",
+    "ranking_involvement": false,
+    "independence_statement": "This reviewer did not participate in model design, training, ranking, or Recall/MRR computation.",
+    "reviewed_on": "2026-09-03",
+    "review_basis": [
+      "research/data/EVIDENCE_SOURCE.md",
+      "research/data/biomedical_evidence_manifest.json"
+    ]
+  },
+  "protocol": {
+    "blind_review": true,
+    "reviewed_candidates": 8,
+    "evidence_support": "Adjudicated against the frozen CC BY Europe PMC manifest and its source-scoped excerpts.",
+    "therapeutic_plausibility": "Adjudicated conservatively within the cited source scope; veterinary and preclinical findings are not human clinical efficacy.",
+    "graph_path_support": "Source-scoped programmatic label from the frozen training graph; outside biomedical review and not independently guessed by the reviewer.",
+    "final_label_rule": "Where the independent reviewer disagreed with the source-scoped annotation, the more conservative source-bounded label was adopted and the disagreement was retained below.",
+    "metric_isolation": "This record changes neither ranking outputs nor Recall/MRR. It only documents calibration-label review."
+  },
+  "reviews": [
+    {
+      "review_id": "IBR-01-01",
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "compound": "DB00909",
+      "source_scoped_labels": {
+        "graph_path_support": false,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "independent_labels": {
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": false,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "disagreement": false,
+      "adjudication_note": "The cited record directly names zonisamide for epileptic seizures in dogs; the veterinary species boundary prevents a human clinical-utility claim.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-02",
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "compound": "DB00252",
+      "source_scoped_labels": {
+        "graph_path_support": true,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "supported_in_source_scope"
+      },
+      "independent_labels": {
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": true,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "disagreement": true,
+      "adjudication_note": "The reviewer retained direct support because phenytoin is named and shows a seizure signal, but downgraded the therapeutic label to preclinical-limited because the evidence is from one Drosophila model. The conservative reviewer label was adopted.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-03",
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "compound": "DB00313",
+      "source_scoped_labels": {
+        "graph_path_support": true,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "supported_in_source_scope"
+      },
+      "independent_labels": {
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": true,
+        "evidence_support": "direct_support",
+        "therapeutic_plausibility": "plausible_but_species_or_preclinical_limited"
+      },
+      "disagreement": true,
+      "adjudication_note": "The reviewer retained direct support because valproate is named and reduced seizure probability and duration, but downgraded the therapeutic label to preclinical-limited because the evidence is from one Drosophila model. The conservative reviewer label was adopted.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-04",
+      "query_id": "2hop::test::10000::DOID:1826::DB00909",
+      "compound": "DB00818",
+      "source_scoped_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "independent_labels": {
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "disagreement": false,
+      "adjudication_note": "Propofol is described as induction anesthesia during epilepsy surgery; perioperative use is not evidence that propofol treats epilepsy.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-05",
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "compound": "DB01189",
+      "source_scoped_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "independent_labels": {
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "not_supported_as_epilepsy_therapy"
+      },
+      "disagreement": false,
+      "adjudication_note": "The cited anesthesia/seizure-management source names other agents and does not name desflurane as an epilepsy treatment.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-06",
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "compound": "DB01002",
+      "source_scoped_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "independent_labels": {
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": false,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "disagreement": false,
+      "adjudication_note": "The cited record provides general-anesthetic context but does not name levobupivacaine or establish an epilepsy-treatment relationship.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-07",
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "compound": "DB00628",
+      "source_scoped_labels": {
+        "graph_path_support": true,
+        "evidence_support": "no_licensed_record",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "independent_labels": {
+        "evidence_support": "no_licensed_record",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": true,
+        "evidence_support": "no_licensed_record",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "disagreement": false,
+      "adjudication_note": "The frozen CC BY manifest has no candidate-specific record for clorazepate; absence from this manifest is not evidence of inefficacy.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    },
+    {
+      "review_id": "IBR-01-08",
+      "query_id": "3hop::test::10000::DOID:1826::2558::DB01189",
+      "compound": "DB06716",
+      "source_scoped_labels": {
+        "graph_path_support": true,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "independent_labels": {
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "final_adjudicated_labels": {
+        "graph_path_support": true,
+        "evidence_support": "context_only",
+        "therapeutic_plausibility": "insufficient_evidence"
+      },
+      "disagreement": false,
+      "adjudication_note": "The cited record discusses general anesthetic classes and does not establish fospropofol as an epilepsy indication or treatment.",
+      "safe_use_boundary": "Research triage only; not treatment advice."
+    }
+  ],
+  "summary": {
+    "candidates_reviewed": 8,
+    "evidence_support_disagreements": 0,
+    "therapeutic_plausibility_disagreements": 2,
+    "graph_path_support_adjudicated": 0,
+    "final_disagreements_resolved_conservatively": [
+      "DB00252",
+      "DB00313"
+    ],
+    "clinical_consensus": false,
+    "treatment_advice_supported": false
+  }
+}

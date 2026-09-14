@@ -97,7 +97,7 @@ export default function S10Results() {
             Evidence guardrail
           </div>
           <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: '1.6vw', color: '#7C2D12', lineHeight: 1.3 }}>
-            Every 2-hop and 3-hop candidate now carries a cited text status: direct, context-only, or no licensed record. A separate calibration set evaluates therapeutic plausibility without changing Recall/MRR.
+            Every candidate carries a cited text status, and an independent biomedical reviewer adjudicated all 8 evidence/therapeutic labels. Two preclinical labels were conservatively downgraded; graph-path support remains source-scoped and Recall/MRR are unchanged.
           </div>
         </div>
       </div>
