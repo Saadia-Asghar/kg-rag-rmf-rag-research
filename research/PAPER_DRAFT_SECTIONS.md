@@ -1,185 +1,69 @@
-# Paper-ready draft sections
+# Paper draft, verified-claim version
 
-## Dataset and licensing
+## Working title
 
-We evaluated RMF-RAG on Hetionet v1.0, an integrative biomedical knowledge
-graph containing 47,031 nodes and 2,250,197 relationships. We used the archived
-JSON snapshot with SHA-256
-`a342ab57e9073e6c02bb5e109d1f16917e6f933be4e5c77ebbaebfa26b984c19`.
-Hetionet original content is released under CC0 1.0, while integrated records
-retain source-specific licenses.
+**When Does Hyperbolic Geometry Help Biomedical Knowledge-Graph Retrieval? A Controlled RMF-RAG Evaluation**
 
-To make the evaluation legally reusable, we selected only relations carrying
-an explicit CC0 1.0 or CC BY 4.0 license from attributable sources. The
-benchmark subgraph contains 3,200 DISEASES CC BY 4.0 Gene–Disease
-`associates` edges, 1,145 PharmacotherapyDB CC0 1.0 Disease–Compound
-`treats`/`palliates` edges, and 823 DrugCentral CC BY 4.0 Gene–Compound
-`binds` edges. Edges with noncommercial, share-alike, ODbL, missing-license,
-or ambiguous provenance metadata were excluded. Full creator attribution,
-license URIs, and modification notices accompany the benchmark.
+## Abstract
 
-Dataset citation: Himmelstein DS et al. “Systematic integration of biomedical
-knowledge prioritizes drugs for repurposing.” *eLife* 2017;6:e26726.
-<https://doi.org/10.7554/eLife.26726>
+Knowledge graphs encode relational structures that can be difficult to represent in flat embedding spaces, motivating the use of hyperbolic geometry for hierarchical and multi-hop retrieval. This work develops RMF-RAG, a controlled biomedical knowledge-graph retrieval framework for comparing Euclidean and Poincare representations under matched training conditions. A reproducible disease-drug pilot establishes the evaluation workflow but does not show hyperbolic superiority: across five historical seeds, all-held-out Recall@5 is 4.62% for a lexical baseline, 2.20% for the Euclidean prototype, and 2.64% for the original hyperbolic prototype. Because those learned models used unequal training budgets, we implement a new PyTorch comparison with matched negatives, dimensionality, epochs, candidate pools, and seeds, and replace finite-difference Poincare optimization with autograd-based Riemannian updates. We further restore a leakage-controlled Hetionet v1.0 benchmark for typed Gene-Disease-Compound 2-hop and 3-hop retrieval, including five-seed evaluation, confidence intervals, per-query predictions, typed-path verification, and component ablations. The benchmark implementation is test-validated, while final real-data results must be regenerated before any historical Hetionet values are used as headline evidence. The study is designed to support either a positive or negative conclusion about hyperbolic retrieval rather than presupposing an advantage.
 
-### Licensed text evidence layer
+## 1. Introduction
 
-Graph connectivity was augmented with a frozen evidence manifest from the
-Europe PMC Open Access subset. Europe PMC is operated by EMBL-EBI; the source
-API, Open Access policy, retrieval date, and attribution policy are recorded in
-`research/data/EVIDENCE_SOURCE.md`. The manifest retains only records whose
-metadata reports a **CC BY** license and stores each record's PMCID, PMID, DOI,
-title, landing-page URL, and a short verbatim abstract excerpt. PMCID is the
-primary reproducible identifier, and each record can be rechecked through the
-Europe PMC REST API. CC BY-NC, CC BY-ND, CC BY-NC-ND, and unlicensed records are
-excluded.
+Retrieval-augmented generation and knowledge-graph retrieval systems increasingly rely on dense representations to identify relevant entities and paths. Biomedical graphs pose a demanding setting because they contain heterogeneous entity types, multi-hop relations, high-degree hubs, and potentially hierarchical structure. Euclidean embedding spaces are simple and effective, but they can require increasing dimensionality to represent tree-like growth with low distortion. Hyperbolic spaces, particularly the Poincare ball, provide exponentially expanding volume and are therefore a natural candidate for representing hierarchical graph neighborhoods.
 
-Evidence is deliberately typed rather than treated as a binary clinical
-grounding signal. `direct_but_species_limited` and `direct_but_preclinical`
-records name a candidate and address a seizure phenotype but do not establish
-human clinical utility. `context_only` records describe anesthesia,
-perioperative care, or a drug class without establishing that the candidate
-treats the queried disease. `no_licensed_record` is an absence from the frozen
-manifest, not evidence of inefficacy. These distinctions are emitted for every
-top-ten candidate in the 2-hop and 3-hop query demos.
+This work asks a narrower empirical question than a general claim that curved geometry is better: **under matched experimental conditions, when does Poincare geometry improve biomedical multi-hop retrieval relative to Euclidean geometry?** This framing matters because geometry changes can be confounded by different optimizers, training budgets, negative samples, candidate pools, or leakage from held-out answer edges.
 
-## Query construction and leakage control
+The project contributes a controlled Euclidean/Poincare implementation, explicit leakage controls, a reproducible five-seed evaluation design, typed multi-hop benchmark construction, and ablations that separate geometry from path constraints and other retrieval components. The framework also keeps graph connectivity separate from literature evidence and clinical utility.
 
-We constructed two typed drug-retrieval tasks:
+## 2. Verified pilot evidence
 
-1. **2-hop:** Gene → Disease → Compound, using `associates` followed by
-   `treats` or `palliates`.
-2. **3-hop:** Gene → Disease → Gene → Compound, using two `associates`
-   relations followed by `binds`.
+The currently reproduced pilot is built from disease-drug question-answer records. Its graph is constructed from disease nodes, shared disease-name token nodes, and drug nodes. One drug association is held out for eligible diseases and retrieval models rank candidate drugs.
 
-For each random seed, terminal Disease–Compound and Gene–Compound answer edges
-were assigned to train, validation, or test partitions. Validation and test
-terminal edges were removed before model training. Disease–Compound edges were
-split within disease so diseases with at least three drugs retained at least
-one training edge. Exact JSONL query sets are saved for every seed, hop count,
-and split.
+The historical five-seed audit uses seeds 7, 17, 29, 43, and 101. On all held-out links, the lexical baseline achieves mean Recall@5 of 4.62% and MRR of 0.02412. The original Euclidean prototype achieves Recall@5 of 2.20% and MRR of 0.01962. The original hyperbolic prototype achieves Recall@5 of 2.64% and MRR of 0.02064. On the recoverable subset, Recall@5 is 43.37% lexical, 12.71% Euclidean, and 19.08% hyperbolic.
 
-The evaluation used seeds 7, 17, 29, 43, and 101. Each seed contained 500
-2-hop validation and 500 2-hop test queries. Depending on the held-out bind
-edges that admitted a licensed three-edge path, the 3-hop sets contained
-153–177 validation and 166–252 test queries. Query generation was capped at
-500 examples per hop/split/seed after deterministic sampling.
+These results are preliminary. The historical Euclidean and hyperbolic trainers use unequal budgets, and the pilot topology is based on lexical tokens rather than curated biological relations. The results therefore motivate a controlled experiment but do not establish that hyperbolic geometry is superior.
 
-## Models and matched training budget
+## 3. Controlled geometry implementation
 
-We compared a lexical baseline, a Euclidean graph embedding, and a
-Poincaré-ball graph embedding. The lexical method used IDF-weighted token
-overlap between the gene/disease query context and candidate compound text.
-Both learned models used the same training graph, 16 dimensions, 24 epochs,
-one type-matched negative per positive edge, margin 0.45, and learning rate
-0.035. Euclidean training used squared L2 distance. Poincaré training used
-geodesic distance with Riemannian-scaled gradients and projection inside the
-unit ball.
+The controlled implementation uses PyTorch for both learned retrievers. Each node receives a trainable embedding of the same dimension. For Euclidean retrieval, distance is the L2 norm. For the Poincare model with curvature parameter c, embeddings are constrained to the open ball and candidates are ranked by geodesic distance.
 
-The reusable lexical baseline used IDF-weighted overlap between query
-identifiers and identifiers in each candidate compound's licensed train-graph
-neighborhood. This avoids restricted compound labels while retaining a
-non-degenerate symbolic retrieval comparison.
+Both models use the same positive edges, deterministic type-matched negative samples, margin objective, embedding dimension, epoch count, learning rate schedule, candidate pool, and random seeds. The Poincare implementation uses automatic differentiation, converts Euclidean gradients to Riemannian gradients using the conformal factor of the ball, and projects updated embeddings into the valid manifold. This removes the finite-difference approximation used by the earlier prototype and makes the geometry comparison substantially better controlled.
 
-The full RMF-RAG retrieval configuration used Poincaré geodesic ranking,
-inverse-hop context weights, radial parallel transport through the origin, and
-reported exact typed-path verification. Ablations independently replaced
-geodesic ranking with chord distance, removed hop weighting, removed parallel
-transport, or added typed-path-support reranking.
+## 4. Full biomedical benchmark design
 
-We report Recall@1, Recall@5, Recall@10, mean reciprocal rank (MRR), and the
-fraction of top-ranked predictions supported by a training-graph path within
-the query hop budget. Confidence intervals are two-sided 95% t intervals over
-five random seeds (four degrees of freedom).
+The restored benchmark runner targets Hetionet v1.0. It retains relations with explicit reusable provenance corresponding to the research design: DISEASES Gene-Disease `associates` edges under CC BY 4.0, PharmacotherapyDB Disease-Compound `treats`/`palliates` edges under CC0 1.0, and DrugCentral Gene-Compound `binds` edges under CC BY 4.0. The runner checks the frozen expected counts of 3,200, 1,145, and 823 edges respectively and stops on unexpected drift by default.
 
-## Main test results
+Two typed tasks are created. The 2-hop task is Gene -> Disease -> Compound. The 3-hop task is Gene -> Disease -> Gene -> Compound. Terminal Disease-Compound and Gene-Compound answer edges are split before training. Validation and test answer edges are removed from the graph used to train the embeddings and from typed-path verification, preventing direct terminal-edge leakage.
 
-| Task | Method | Recall@1 | Recall@5 | MRR | Top-1 path verified |
-|---|---|---:|---:|---:|---:|
-| 2-hop | Lexical | 0.000 [0.000, 0.000] | 0.006 [0.003, 0.010] | 0.009 [0.008, 0.011] | 0.958 [0.945, 0.971] |
-| 2-hop | Euclidean | 0.000 [0.000, 0.002] | 0.011 [0.006, 0.016] | 0.013 [0.011, 0.015] | 0.854 [0.811, 0.897] |
-| 2-hop | Poincaré / RMF-RAG | 0.000 [0.000, 0.002] | 0.007 [0.000, 0.015] | 0.012 [0.011, 0.014] | 0.866 [0.821, 0.911] |
-| 3-hop | Lexical | 0.006 [0.000, 0.023] | 0.022 [0.000, 0.055] | 0.022 [0.000, 0.045] | 0.462 [0.295, 0.629] |
-| 3-hop | Euclidean | 0.002 [0.000, 0.008] | 0.011 [0.000, 0.028] | 0.011 [0.002, 0.020] | 0.044 [0.000, 0.092] |
-| 3-hop | Poincaré / RMF-RAG | 0.005 [0.000, 0.015] | 0.007 [0.000, 0.015] | 0.015 [0.006, 0.024] | 0.053 [0.006, 0.099] |
+For every seed, the runner writes the exact query sets to JSONL. It trains matched Euclidean and Poincare embeddings and evaluates lexical, Euclidean, Poincare, and typed-path-constrained variants. It saves per-query predictions and reports Recall@1, Recall@5, Recall@10, mean reciprocal rank, and top-1 typed-path verification rate. Aggregate results use two-sided 95% t intervals across five seeds.
 
-Poincaré retrieval did not improve mean MRR over the Euclidean model on the
-2-hop task (0.012 versus 0.013), while it increased 3-hop MRR from 0.011 to
-0.015. The confidence intervals overlap, so neither difference should be
-described as statistically conclusive. Recall remained low for every method,
-showing that holding out terminal biomedical edges is substantially harder
-than the earlier lexical-token pilot.
+## 5. Ablations
 
-## Ablation findings
+The benchmark includes ablations for geodesic versus chord-style ranking, hop weighting, tangent-space composition used for multi-hop context, and explicit typed-path verification/reranking. Additional components should not be claimed as part of RMF-RAG unless they have executable code and a corresponding ablation. Hyperparameters must be selected using training/validation data rather than test results.
 
-The ablations did not support a simple claim that every geometric component
-improves retrieval. On 3-hop test queries, replacing geodesic ranking with
-Poincaré chord distance produced MRR 0.016 versus 0.015 for the full
-configuration. Removing hop weighting produced MRR 0.018, and removing
-parallel transport produced MRR 0.020. These estimates have wide and
-overlapping confidence intervals, but their direction indicates that the
-current weighting and transport approximations require further calibration.
+## 6. Reproducibility status
 
-Exact typed-path reranking increased top-1 path verification from 0.866 to
-0.949 on 2-hop test queries and from 0.053 to 0.686 on 3-hop test queries. It
-reduced MRR on both tasks, illustrating a precision–coverage tradeoff: graph
-verification can reject unsupported candidates without guaranteeing recovery
-of a deliberately held-out terminal edge.
+The controlled geometry code and full benchmark runner are present and test-validated. The test suite verifies Poincare-distance behavior, optimization, ball projection, candidate ranking, relation filtering, train/validation/test split disjointness, held-out terminal-edge removal, typed query construction, benchmark ranking modes, and matched-training smoke behavior.
 
-## Evidence-grounding evaluation
+The full Hetionet v1.0 real-data rerun was not executed in the completion environment because the archived snapshot was not locally available. Consequently, previously saved Hetionet numerical results in the repository remain historical artifacts until the restored runner regenerates them from a clean checkout. They must not be presented as freshly reproduced results.
 
-We added a small frozen gold-standard calibration set in
-`research/data/evidence_gold_standard.json`, independent of method ranking and
-defined without using Recall/MRR. It contains eight
-query–candidate annotations spanning the two demo queries. Each annotation
-separates: (1) typed path support in the training graph, (2) support from a
-licensed text record, and (3) therapeutic plausibility within the source's
-scope. The accompanying `research/scripts/evaluate_evidence.py` joins the
-calibration set to saved demo rankings and reports annotated-candidate coverage
-by each dimension without recomputing Recall or MRR.
+## 7. Evidence and RAG scope
 
-The calibration set intentionally contains positive, context-only, and
-no-record examples. For example, a CC BY veterinary article directly supports
-zonisamide for epileptic seizures in dogs but is species-limited; a CC BY
-perioperative article places propofol or anesthetic selection in an epilepsy
-surgery context but does not support an epilepsy-treatment claim. This is a
-research calibration set rather than clinical expert consensus. Its role is to
-prevent a retrieved path or a relevant article from being presented as a
-therapeutic recommendation.
+Graph retrieval is not equivalent to evidence-grounded generation or clinical validation. The existing evidence layer associates selected candidate compounds with frozen literature records and explicitly distinguishes direct, context-only, species-limited/preclinical, and no-record cases. A graph path or a relevant article must not be converted into an unsupported treatment recommendation.
 
-## Interpretation and limitations
+If an LLM generation stage is evaluated, its model version, prompt, temperature, and evidence formatting should be frozen. Retrieval accuracy, path validity, citation correctness, and answer groundedness should be evaluated separately.
 
-This experiment is a reproducible, leakage-controlled benchmark on explicit
-biomedical relations, not evidence of clinical utility. It improves materially
-on the Kaggle pilot by using licensed gene, disease, and compound edges,
-explicit 2-hop and 3-hop paths, matched learned-model budgets, five seeds,
-confidence intervals, and fully saved predictions.
+## 8. Limitations
 
-The evidence extension remains a small, source-scoped calibration layer, not a
-clinical validation study. It does not evaluate dosage, temporal knowledge,
-adverse-event constraints, contraindications, or patient-specific suitability,
-and it does not replace independent clinical review. The selected CC0/CC BY
-relation subset is smaller than the full Hetionet graph, and the 3-hop `binds`
-endpoint measures molecular target connectivity rather than an approved
-treatment recommendation. Candidate rankings and cited snippets must not be
-interpreted as medical advice.
+The pilot uses lexical token structure rather than a curated biomedical KG. Five seeds on one dataset quantify seed sensitivity but not external validity across independent biomedical graphs. The restored benchmark uses a deliberately restricted relation subset to preserve explicit provenance and licensing, which reduces coverage compared with the entire Hetionet network. The 3-hop `binds` endpoint measures molecular connectivity and must not be interpreted as a treatment recommendation. The final benchmark has not yet been rerun on the real snapshot in this environment, so historical Hetionet numbers are not treated as current evidence.
 
-The principal result is therefore a calibrated negative one: hyperbolic
-geometry yields a modest 3-hop MRR gain but no 2-hop gain over a matched
-Euclidean embedding, while the individual RMF-RAG components do not yet show
-consistent retrieval gains. Future work should tune these components only on
-validation splits, incorporate licensed semantic biomedical text, and evaluate
-externally curated drug-repurposing labels before making stronger claims.
+## 9. Conclusion
 
-## Reproducibility package
+The research is structured to produce a calibrated result rather than a predetermined victory claim. The verified pilot shows only a small difference between the original Euclidean and hyperbolic prototypes and is confounded by unequal budgets. The revised implementation removes that confound and restores a complete leakage-controlled multi-hop benchmark protocol. The next empirical step is a clean five-seed Hetionet v1.0 rerun. Only those regenerated outputs should determine whether Poincare geometry improves 2-hop or 3-hop retrieval and which RMF-RAG components survive ablation.
 
-The ten-week engineering build is complete as a retrieval benchmark. A fresh
-checkout can rerun `research/scripts/run_main_rmf_rag_benchmark.py`, rebuild the
-self-contained `results/main_benchmark/report.html`, inspect exact held-out
-2-hop and 3-hop queries with `research/scripts/main_query_demo.py`, and run
-`research/scripts/evaluate_evidence.py` against the saved demo packets. The
-query demo emits method rankings plus graph-path support and cited licensed-text
-status for every candidate. The evidence evaluator reports those dimensions
-separately from Recall/MRR. These outputs make the benchmark auditable without
-requiring an external model API or treating a retrieved compound as medical
-advice.
+## References to verify for the final venue
+
+- Nickel, M. and Kiela, D. *Poincare Embeddings for Learning Hierarchical Representations*. NeurIPS, 2017.
+- Himmelstein, D. S. et al. *Systematic integration of biomedical knowledge prioritizes drugs for repurposing*. eLife, 2017.
+- Add the exact KG-RAG, GraphRAG, D-RAG, biomedical KGQA, and RAG-evaluation papers used by the final method only after checking the original publications and matching each manuscript claim to a source.

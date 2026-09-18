@@ -1,0 +1,4 @@
+# Versions used to validate the controlled geometry implementation on 2026-09-12.
+numpy==2.3.5
+torch==2.10.0
+pytest==9.0.2

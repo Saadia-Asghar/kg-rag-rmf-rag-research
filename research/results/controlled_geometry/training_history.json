@@ -1,0 +1,1402 @@
+[
+  {
+    "seed": 7,
+    "epoch": 1,
+    "euclidean_loss": 0.4495217800140381,
+    "poincare_loss": 0.45085519552230835,
+    "poincare_max_norm": 0.06709327548742294
+  },
+  {
+    "seed": 7,
+    "epoch": 2,
+    "euclidean_loss": 0.4286247193813324,
+    "poincare_loss": 0.4507587254047394,
+    "poincare_max_norm": 0.0671062171459198
+  },
+  {
+    "seed": 7,
+    "epoch": 3,
+    "euclidean_loss": 0.37877950072288513,
+    "poincare_loss": 0.4510159492492676,
+    "poincare_max_norm": 0.06710658222436905
+  },
+  {
+    "seed": 7,
+    "epoch": 4,
+    "euclidean_loss": 0.313870906829834,
+    "poincare_loss": 0.45076969265937805,
+    "poincare_max_norm": 0.06711649149656296
+  },
+  {
+    "seed": 7,
+    "epoch": 5,
+    "euclidean_loss": 0.24694427847862244,
+    "poincare_loss": 0.45123040676116943,
+    "poincare_max_norm": 0.06712961941957474
+  },
+  {
+    "seed": 7,
+    "epoch": 6,
+    "euclidean_loss": 0.18524926900863647,
+    "poincare_loss": 0.45059770345687866,
+    "poincare_max_norm": 0.06712013483047485
+  },
+  {
+    "seed": 7,
+    "epoch": 7,
+    "euclidean_loss": 0.13180790841579437,
+    "poincare_loss": 0.4504004716873169,
+    "poincare_max_norm": 0.06710956245660782
+  },
+  {
+    "seed": 7,
+    "epoch": 8,
+    "euclidean_loss": 0.09676537662744522,
+    "poincare_loss": 0.45050618052482605,
+    "poincare_max_norm": 0.06709925085306168
+  },
+  {
+    "seed": 7,
+    "epoch": 9,
+    "euclidean_loss": 0.07272761315107346,
+    "poincare_loss": 0.4506057798862457,
+    "poincare_max_norm": 0.06712476909160614
+  },
+  {
+    "seed": 7,
+    "epoch": 10,
+    "euclidean_loss": 0.05580487474799156,
+    "poincare_loss": 0.4498128890991211,
+    "poincare_max_norm": 0.06717407703399658
+  },
+  {
+    "seed": 7,
+    "epoch": 11,
+    "euclidean_loss": 0.044295769184827805,
+    "poincare_loss": 0.45027273893356323,
+    "poincare_max_norm": 0.06718554347753525
+  },
+  {
+    "seed": 7,
+    "epoch": 12,
+    "euclidean_loss": 0.03373437374830246,
+    "poincare_loss": 0.45005106925964355,
+    "poincare_max_norm": 0.06719661504030228
+  },
+  {
+    "seed": 7,
+    "epoch": 13,
+    "euclidean_loss": 0.029990270733833313,
+    "poincare_loss": 0.4505731463432312,
+    "poincare_max_norm": 0.06719856709241867
+  },
+  {
+    "seed": 7,
+    "epoch": 14,
+    "euclidean_loss": 0.025983862578868866,
+    "poincare_loss": 0.4500558376312256,
+    "poincare_max_norm": 0.06718692183494568
+  },
+  {
+    "seed": 7,
+    "epoch": 15,
+    "euclidean_loss": 0.020859209820628166,
+    "poincare_loss": 0.4499920904636383,
+    "poincare_max_norm": 0.06719815731048584
+  },
+  {
+    "seed": 7,
+    "epoch": 16,
+    "euclidean_loss": 0.018046675249934196,
+    "poincare_loss": 0.45021626353263855,
+    "poincare_max_norm": 0.06721095740795135
+  },
+  {
+    "seed": 7,
+    "epoch": 17,
+    "euclidean_loss": 0.015284370630979538,
+    "poincare_loss": 0.4494363069534302,
+    "poincare_max_norm": 0.0672447681427002
+  },
+  {
+    "seed": 7,
+    "epoch": 18,
+    "euclidean_loss": 0.014281232841312885,
+    "poincare_loss": 0.4497281610965729,
+    "poincare_max_norm": 0.0672542154788971
+  },
+  {
+    "seed": 7,
+    "epoch": 19,
+    "euclidean_loss": 0.011866576038300991,
+    "poincare_loss": 0.450143039226532,
+    "poincare_max_norm": 0.06726730614900589
+  },
+  {
+    "seed": 7,
+    "epoch": 20,
+    "euclidean_loss": 0.01155648659914732,
+    "poincare_loss": 0.4493078589439392,
+    "poincare_max_norm": 0.0672655999660492
+  },
+  {
+    "seed": 7,
+    "epoch": 21,
+    "euclidean_loss": 0.009360301308333874,
+    "poincare_loss": 0.44934824109077454,
+    "poincare_max_norm": 0.0672546923160553
+  },
+  {
+    "seed": 7,
+    "epoch": 22,
+    "euclidean_loss": 0.007909109815955162,
+    "poincare_loss": 0.44942086935043335,
+    "poincare_max_norm": 0.06724336743354797
+  },
+  {
+    "seed": 7,
+    "epoch": 23,
+    "euclidean_loss": 0.007922010496258736,
+    "poincare_loss": 0.44953101873397827,
+    "poincare_max_norm": 0.0672326534986496
+  },
+  {
+    "seed": 7,
+    "epoch": 24,
+    "euclidean_loss": 0.00728904502466321,
+    "poincare_loss": 0.4495891034603119,
+    "poincare_max_norm": 0.0672229751944542
+  },
+  {
+    "seed": 7,
+    "epoch": 25,
+    "euclidean_loss": 0.0067544132471084595,
+    "poincare_loss": 0.44961968064308167,
+    "poincare_max_norm": 0.0672227144241333
+  },
+  {
+    "seed": 7,
+    "epoch": 26,
+    "euclidean_loss": 0.006536722183227539,
+    "poincare_loss": 0.449654757976532,
+    "poincare_max_norm": 0.0672202780842781
+  },
+  {
+    "seed": 7,
+    "epoch": 27,
+    "euclidean_loss": 0.005419764202088118,
+    "poincare_loss": 0.44929975271224976,
+    "poincare_max_norm": 0.06726536154747009
+  },
+  {
+    "seed": 7,
+    "epoch": 28,
+    "euclidean_loss": 0.0055237202905118465,
+    "poincare_loss": 0.44940733909606934,
+    "poincare_max_norm": 0.067265085875988
+  },
+  {
+    "seed": 7,
+    "epoch": 29,
+    "euclidean_loss": 0.004383261781185865,
+    "poincare_loss": 0.4493980407714844,
+    "poincare_max_norm": 0.06726586818695068
+  },
+  {
+    "seed": 7,
+    "epoch": 30,
+    "euclidean_loss": 0.004932308569550514,
+    "poincare_loss": 0.44952744245529175,
+    "poincare_max_norm": 0.06726779788732529
+  },
+  {
+    "seed": 7,
+    "epoch": 31,
+    "euclidean_loss": 0.005244976840913296,
+    "poincare_loss": 0.44926655292510986,
+    "poincare_max_norm": 0.06725865602493286
+  },
+  {
+    "seed": 7,
+    "epoch": 32,
+    "euclidean_loss": 0.004212517756968737,
+    "poincare_loss": 0.4491112232208252,
+    "poincare_max_norm": 0.06729226559400558
+  },
+  {
+    "seed": 7,
+    "epoch": 33,
+    "euclidean_loss": 0.004447404760867357,
+    "poincare_loss": 0.448696494102478,
+    "poincare_max_norm": 0.06728243827819824
+  },
+  {
+    "seed": 7,
+    "epoch": 34,
+    "euclidean_loss": 0.003929714672267437,
+    "poincare_loss": 0.44907355308532715,
+    "poincare_max_norm": 0.06728394329547882
+  },
+  {
+    "seed": 7,
+    "epoch": 35,
+    "euclidean_loss": 0.003941593691706657,
+    "poincare_loss": 0.4492643177509308,
+    "poincare_max_norm": 0.06730607151985168
+  },
+  {
+    "seed": 7,
+    "epoch": 36,
+    "euclidean_loss": 0.0035941770765930414,
+    "poincare_loss": 0.4489672780036926,
+    "poincare_max_norm": 0.06729457527399063
+  },
+  {
+    "seed": 7,
+    "epoch": 37,
+    "euclidean_loss": 0.0030038664117455482,
+    "poincare_loss": 0.4487191438674927,
+    "poincare_max_norm": 0.06730489432811737
+  },
+  {
+    "seed": 7,
+    "epoch": 38,
+    "euclidean_loss": 0.0035055680200457573,
+    "poincare_loss": 0.4493430256843567,
+    "poincare_max_norm": 0.06733809411525726
+  },
+  {
+    "seed": 7,
+    "epoch": 39,
+    "euclidean_loss": 0.0032170703634619713,
+    "poincare_loss": 0.4487856924533844,
+    "poincare_max_norm": 0.06732803583145142
+  },
+  {
+    "seed": 7,
+    "epoch": 40,
+    "euclidean_loss": 0.0033684151712805033,
+    "poincare_loss": 0.44902127981185913,
+    "poincare_max_norm": 0.06733973324298859
+  },
+  {
+    "seed": 17,
+    "epoch": 1,
+    "euclidean_loss": 0.4501069188117981,
+    "poincare_loss": 0.45027175545692444,
+    "poincare_max_norm": 0.06418422609567642
+  },
+  {
+    "seed": 17,
+    "epoch": 2,
+    "euclidean_loss": 0.42929500341415405,
+    "poincare_loss": 0.4502366781234741,
+    "poincare_max_norm": 0.06418358534574509
+  },
+  {
+    "seed": 17,
+    "epoch": 3,
+    "euclidean_loss": 0.37977108359336853,
+    "poincare_loss": 0.45004162192344666,
+    "poincare_max_norm": 0.06418312340974808
+  },
+  {
+    "seed": 17,
+    "epoch": 4,
+    "euclidean_loss": 0.3175809383392334,
+    "poincare_loss": 0.45015034079551697,
+    "poincare_max_norm": 0.06418350338935852
+  },
+  {
+    "seed": 17,
+    "epoch": 5,
+    "euclidean_loss": 0.24863620102405548,
+    "poincare_loss": 0.4503380060195923,
+    "poincare_max_norm": 0.06418202072381973
+  },
+  {
+    "seed": 17,
+    "epoch": 6,
+    "euclidean_loss": 0.1841813623905182,
+    "poincare_loss": 0.45033571124076843,
+    "poincare_max_norm": 0.06418216973543167
+  },
+  {
+    "seed": 17,
+    "epoch": 7,
+    "euclidean_loss": 0.13526341319084167,
+    "poincare_loss": 0.4498891532421112,
+    "poincare_max_norm": 0.06417974084615707
+  },
+  {
+    "seed": 17,
+    "epoch": 8,
+    "euclidean_loss": 0.09693068265914917,
+    "poincare_loss": 0.449611097574234,
+    "poincare_max_norm": 0.0641799345612526
+  },
+  {
+    "seed": 17,
+    "epoch": 9,
+    "euclidean_loss": 0.0717865601181984,
+    "poincare_loss": 0.44945839047431946,
+    "poincare_max_norm": 0.06418009847402573
+  },
+  {
+    "seed": 17,
+    "epoch": 10,
+    "euclidean_loss": 0.05467260256409645,
+    "poincare_loss": 0.4502774178981781,
+    "poincare_max_norm": 0.06418029218912125
+  },
+  {
+    "seed": 17,
+    "epoch": 11,
+    "euclidean_loss": 0.040981464087963104,
+    "poincare_loss": 0.44979366660118103,
+    "poincare_max_norm": 0.064179427921772
+  },
+  {
+    "seed": 17,
+    "epoch": 12,
+    "euclidean_loss": 0.034441329538822174,
+    "poincare_loss": 0.4493427276611328,
+    "poincare_max_norm": 0.06417947262525558
+  },
+  {
+    "seed": 17,
+    "epoch": 13,
+    "euclidean_loss": 0.030725538730621338,
+    "poincare_loss": 0.4503690302371979,
+    "poincare_max_norm": 0.06417790055274963
+  },
+  {
+    "seed": 17,
+    "epoch": 14,
+    "euclidean_loss": 0.026762286201119423,
+    "poincare_loss": 0.4492444097995758,
+    "poincare_max_norm": 0.06417705863714218
+  },
+  {
+    "seed": 17,
+    "epoch": 15,
+    "euclidean_loss": 0.02018003724515438,
+    "poincare_loss": 0.44986602663993835,
+    "poincare_max_norm": 0.06417660415172577
+  },
+  {
+    "seed": 17,
+    "epoch": 16,
+    "euclidean_loss": 0.01581062749028206,
+    "poincare_loss": 0.4499175548553467,
+    "poincare_max_norm": 0.06417597085237503
+  },
+  {
+    "seed": 17,
+    "epoch": 17,
+    "euclidean_loss": 0.014197367243468761,
+    "poincare_loss": 0.4490756094455719,
+    "poincare_max_norm": 0.06417356431484222
+  },
+  {
+    "seed": 17,
+    "epoch": 18,
+    "euclidean_loss": 0.011416430585086346,
+    "poincare_loss": 0.4492661654949188,
+    "poincare_max_norm": 0.06417310982942581
+  },
+  {
+    "seed": 17,
+    "epoch": 19,
+    "euclidean_loss": 0.00983701553195715,
+    "poincare_loss": 0.44961532950401306,
+    "poincare_max_norm": 0.06417190283536911
+  },
+  {
+    "seed": 17,
+    "epoch": 20,
+    "euclidean_loss": 0.00945845153182745,
+    "poincare_loss": 0.44914308190345764,
+    "poincare_max_norm": 0.06417080760002136
+  },
+  {
+    "seed": 17,
+    "epoch": 21,
+    "euclidean_loss": 0.007728401105850935,
+    "poincare_loss": 0.4488831162452698,
+    "poincare_max_norm": 0.06417029350996017
+  },
+  {
+    "seed": 17,
+    "epoch": 22,
+    "euclidean_loss": 0.008036707527935505,
+    "poincare_loss": 0.4493440091609955,
+    "poincare_max_norm": 0.06416879594326019
+  },
+  {
+    "seed": 17,
+    "epoch": 23,
+    "euclidean_loss": 0.006616952829062939,
+    "poincare_loss": 0.44900229573249817,
+    "poincare_max_norm": 0.0641670823097229
+  },
+  {
+    "seed": 17,
+    "epoch": 24,
+    "euclidean_loss": 0.005160502623766661,
+    "poincare_loss": 0.4493970572948456,
+    "poincare_max_norm": 0.0641663670539856
+  },
+  {
+    "seed": 17,
+    "epoch": 25,
+    "euclidean_loss": 0.00597749138250947,
+    "poincare_loss": 0.44904083013534546,
+    "poincare_max_norm": 0.06416576355695724
+  },
+  {
+    "seed": 17,
+    "epoch": 26,
+    "euclidean_loss": 0.005411151330918074,
+    "poincare_loss": 0.4493599534034729,
+    "poincare_max_norm": 0.06416310369968414
+  },
+  {
+    "seed": 17,
+    "epoch": 27,
+    "euclidean_loss": 0.004217241890728474,
+    "poincare_loss": 0.44867143034935,
+    "poincare_max_norm": 0.06416124105453491
+  },
+  {
+    "seed": 17,
+    "epoch": 28,
+    "euclidean_loss": 0.005562453530728817,
+    "poincare_loss": 0.4484694004058838,
+    "poincare_max_norm": 0.06415867060422897
+  },
+  {
+    "seed": 17,
+    "epoch": 29,
+    "euclidean_loss": 0.004192813765257597,
+    "poincare_loss": 0.4484596848487854,
+    "poincare_max_norm": 0.06415781378746033
+  },
+  {
+    "seed": 17,
+    "epoch": 30,
+    "euclidean_loss": 0.0028797220438718796,
+    "poincare_loss": 0.4489259123802185,
+    "poincare_max_norm": 0.06415819376707077
+  },
+  {
+    "seed": 17,
+    "epoch": 31,
+    "euclidean_loss": 0.0032944369595497847,
+    "poincare_loss": 0.4481118619441986,
+    "poincare_max_norm": 0.0641574040055275
+  },
+  {
+    "seed": 17,
+    "epoch": 32,
+    "euclidean_loss": 0.0032693834509700537,
+    "poincare_loss": 0.4487293064594269,
+    "poincare_max_norm": 0.06415627151727676
+  },
+  {
+    "seed": 17,
+    "epoch": 33,
+    "euclidean_loss": 0.003385167568922043,
+    "poincare_loss": 0.4483766257762909,
+    "poincare_max_norm": 0.06415539234876633
+  },
+  {
+    "seed": 17,
+    "epoch": 34,
+    "euclidean_loss": 0.003119043540209532,
+    "poincare_loss": 0.44866693019866943,
+    "poincare_max_norm": 0.06415664404630661
+  },
+  {
+    "seed": 17,
+    "epoch": 35,
+    "euclidean_loss": 0.0024765252601355314,
+    "poincare_loss": 0.44831815361976624,
+    "poincare_max_norm": 0.06415575742721558
+  },
+  {
+    "seed": 17,
+    "epoch": 36,
+    "euclidean_loss": 0.0025425448548048735,
+    "poincare_loss": 0.4487965703010559,
+    "poincare_max_norm": 0.06415554136037827
+  },
+  {
+    "seed": 17,
+    "epoch": 37,
+    "euclidean_loss": 0.003033497603610158,
+    "poincare_loss": 0.4483722448348999,
+    "poincare_max_norm": 0.06415553390979767
+  },
+  {
+    "seed": 17,
+    "epoch": 38,
+    "euclidean_loss": 0.003983488772064447,
+    "poincare_loss": 0.4485635757446289,
+    "poincare_max_norm": 0.06415673345327377
+  },
+  {
+    "seed": 17,
+    "epoch": 39,
+    "euclidean_loss": 0.0031735750380903482,
+    "poincare_loss": 0.44835996627807617,
+    "poincare_max_norm": 0.06415475159883499
+  },
+  {
+    "seed": 17,
+    "epoch": 40,
+    "euclidean_loss": 0.002549361903220415,
+    "poincare_loss": 0.44892507791519165,
+    "poincare_max_norm": 0.06415285915136337
+  },
+  {
+    "seed": 29,
+    "epoch": 1,
+    "euclidean_loss": 0.45009177923202515,
+    "poincare_loss": 0.4504235088825226,
+    "poincare_max_norm": 0.06548155099153519
+  },
+  {
+    "seed": 29,
+    "epoch": 2,
+    "euclidean_loss": 0.42986220121383667,
+    "poincare_loss": 0.45071765780448914,
+    "poincare_max_norm": 0.06547974795103073
+  },
+  {
+    "seed": 29,
+    "epoch": 3,
+    "euclidean_loss": 0.37891852855682373,
+    "poincare_loss": 0.45045360922813416,
+    "poincare_max_norm": 0.06548986583948135
+  },
+  {
+    "seed": 29,
+    "epoch": 4,
+    "euclidean_loss": 0.31653255224227905,
+    "poincare_loss": 0.4503754675388336,
+    "poincare_max_norm": 0.06547936052083969
+  },
+  {
+    "seed": 29,
+    "epoch": 5,
+    "euclidean_loss": 0.251227468252182,
+    "poincare_loss": 0.45012161135673523,
+    "poincare_max_norm": 0.06549029797315598
+  },
+  {
+    "seed": 29,
+    "epoch": 6,
+    "euclidean_loss": 0.18576233088970184,
+    "poincare_loss": 0.4502905607223511,
+    "poincare_max_norm": 0.0654982253909111
+  },
+  {
+    "seed": 29,
+    "epoch": 7,
+    "euclidean_loss": 0.13392262160778046,
+    "poincare_loss": 0.4503726661205292,
+    "poincare_max_norm": 0.06550838053226471
+  },
+  {
+    "seed": 29,
+    "epoch": 8,
+    "euclidean_loss": 0.10137680917978287,
+    "poincare_loss": 0.449762225151062,
+    "poincare_max_norm": 0.06554273515939713
+  },
+  {
+    "seed": 29,
+    "epoch": 9,
+    "euclidean_loss": 0.07369862496852875,
+    "poincare_loss": 0.44964444637298584,
+    "poincare_max_norm": 0.06556184589862823
+  },
+  {
+    "seed": 29,
+    "epoch": 10,
+    "euclidean_loss": 0.05735728144645691,
+    "poincare_loss": 0.45002278685569763,
+    "poincare_max_norm": 0.06556190550327301
+  },
+  {
+    "seed": 29,
+    "epoch": 11,
+    "euclidean_loss": 0.04453341290354729,
+    "poincare_loss": 0.4496597945690155,
+    "poincare_max_norm": 0.06555955857038498
+  },
+  {
+    "seed": 29,
+    "epoch": 12,
+    "euclidean_loss": 0.03748849406838417,
+    "poincare_loss": 0.4501292109489441,
+    "poincare_max_norm": 0.0655481293797493
+  },
+  {
+    "seed": 29,
+    "epoch": 13,
+    "euclidean_loss": 0.030650118365883827,
+    "poincare_loss": 0.4494898319244385,
+    "poincare_max_norm": 0.06558210402727127
+  },
+  {
+    "seed": 29,
+    "epoch": 14,
+    "euclidean_loss": 0.023631297051906586,
+    "poincare_loss": 0.4500024914741516,
+    "poincare_max_norm": 0.06558109819889069
+  },
+  {
+    "seed": 29,
+    "epoch": 15,
+    "euclidean_loss": 0.020883170887827873,
+    "poincare_loss": 0.4498865604400635,
+    "poincare_max_norm": 0.06558144837617874
+  },
+  {
+    "seed": 29,
+    "epoch": 16,
+    "euclidean_loss": 0.017140820622444153,
+    "poincare_loss": 0.45003700256347656,
+    "poincare_max_norm": 0.06558021157979965
+  },
+  {
+    "seed": 29,
+    "epoch": 17,
+    "euclidean_loss": 0.015531722456216812,
+    "poincare_loss": 0.4495653212070465,
+    "poincare_max_norm": 0.06556723266839981
+  },
+  {
+    "seed": 29,
+    "epoch": 18,
+    "euclidean_loss": 0.01116229873150587,
+    "poincare_loss": 0.4489906132221222,
+    "poincare_max_norm": 0.0655977800488472
+  },
+  {
+    "seed": 29,
+    "epoch": 19,
+    "euclidean_loss": 0.011759812943637371,
+    "poincare_loss": 0.44942429661750793,
+    "poincare_max_norm": 0.06559775024652481
+  },
+  {
+    "seed": 29,
+    "epoch": 20,
+    "euclidean_loss": 0.010100097395479679,
+    "poincare_loss": 0.4492776393890381,
+    "poincare_max_norm": 0.06562787294387817
+  },
+  {
+    "seed": 29,
+    "epoch": 21,
+    "euclidean_loss": 0.009352682158350945,
+    "poincare_loss": 0.44927188754081726,
+    "poincare_max_norm": 0.06563769280910492
+  },
+  {
+    "seed": 29,
+    "epoch": 22,
+    "euclidean_loss": 0.008817272260785103,
+    "poincare_loss": 0.4486728012561798,
+    "poincare_max_norm": 0.06563688814640045
+  },
+  {
+    "seed": 29,
+    "epoch": 23,
+    "euclidean_loss": 0.005926373414695263,
+    "poincare_loss": 0.44883647561073303,
+    "poincare_max_norm": 0.06562510132789612
+  },
+  {
+    "seed": 29,
+    "epoch": 24,
+    "euclidean_loss": 0.0069257477298378944,
+    "poincare_loss": 0.44909805059432983,
+    "poincare_max_norm": 0.06561256945133209
+  },
+  {
+    "seed": 29,
+    "epoch": 25,
+    "euclidean_loss": 0.005933131091296673,
+    "poincare_loss": 0.4487634003162384,
+    "poincare_max_norm": 0.06562181562185287
+  },
+  {
+    "seed": 29,
+    "epoch": 26,
+    "euclidean_loss": 0.004735135938972235,
+    "poincare_loss": 0.44896095991134644,
+    "poincare_max_norm": 0.06562158465385437
+  },
+  {
+    "seed": 29,
+    "epoch": 27,
+    "euclidean_loss": 0.005587290041148663,
+    "poincare_loss": 0.4492506980895996,
+    "poincare_max_norm": 0.06560923904180527
+  },
+  {
+    "seed": 29,
+    "epoch": 28,
+    "euclidean_loss": 0.0048753647133708,
+    "poincare_loss": 0.44877323508262634,
+    "poincare_max_norm": 0.06559566408395767
+  },
+  {
+    "seed": 29,
+    "epoch": 29,
+    "euclidean_loss": 0.0043764738366007805,
+    "poincare_loss": 0.4488106369972229,
+    "poincare_max_norm": 0.06559588015079498
+  },
+  {
+    "seed": 29,
+    "epoch": 30,
+    "euclidean_loss": 0.0056358217261731625,
+    "poincare_loss": 0.44904035329818726,
+    "poincare_max_norm": 0.06559576839208603
+  },
+  {
+    "seed": 29,
+    "epoch": 31,
+    "euclidean_loss": 0.003593083703890443,
+    "poincare_loss": 0.4489169120788574,
+    "poincare_max_norm": 0.06560540199279785
+  },
+  {
+    "seed": 29,
+    "epoch": 32,
+    "euclidean_loss": 0.002866091439500451,
+    "poincare_loss": 0.4488697648048401,
+    "poincare_max_norm": 0.06562790274620056
+  },
+  {
+    "seed": 29,
+    "epoch": 33,
+    "euclidean_loss": 0.003802885999903083,
+    "poincare_loss": 0.449123740196228,
+    "poincare_max_norm": 0.06562741845846176
+  },
+  {
+    "seed": 29,
+    "epoch": 34,
+    "euclidean_loss": 0.0033983855973929167,
+    "poincare_loss": 0.4484242796897888,
+    "poincare_max_norm": 0.06562792509794235
+  },
+  {
+    "seed": 29,
+    "epoch": 35,
+    "euclidean_loss": 0.003037633141502738,
+    "poincare_loss": 0.4484845697879791,
+    "poincare_max_norm": 0.06562797725200653
+  },
+  {
+    "seed": 29,
+    "epoch": 36,
+    "euclidean_loss": 0.002781990449875593,
+    "poincare_loss": 0.4486751854419708,
+    "poincare_max_norm": 0.06562752276659012
+  },
+  {
+    "seed": 29,
+    "epoch": 37,
+    "euclidean_loss": 0.0032923941034823656,
+    "poincare_loss": 0.4481376111507416,
+    "poincare_max_norm": 0.0656265839934349
+  },
+  {
+    "seed": 29,
+    "epoch": 38,
+    "euclidean_loss": 0.002571768593043089,
+    "poincare_loss": 0.44860222935676575,
+    "poincare_max_norm": 0.0656379982829094
+  },
+  {
+    "seed": 29,
+    "epoch": 39,
+    "euclidean_loss": 0.002754855901002884,
+    "poincare_loss": 0.44806867837905884,
+    "poincare_max_norm": 0.06564812362194061
+  },
+  {
+    "seed": 29,
+    "epoch": 40,
+    "euclidean_loss": 0.001787305809557438,
+    "poincare_loss": 0.44810476899147034,
+    "poincare_max_norm": 0.06564702093601227
+  },
+  {
+    "seed": 43,
+    "epoch": 1,
+    "euclidean_loss": 0.4499753713607788,
+    "poincare_loss": 0.4499851167201996,
+    "poincare_max_norm": 0.06542228162288666
+  },
+  {
+    "seed": 43,
+    "epoch": 2,
+    "euclidean_loss": 0.42789122462272644,
+    "poincare_loss": 0.44945529103279114,
+    "poincare_max_norm": 0.065421923995018
+  },
+  {
+    "seed": 43,
+    "epoch": 3,
+    "euclidean_loss": 0.37848997116088867,
+    "poincare_loss": 0.4498652219772339,
+    "poincare_max_norm": 0.06542262434959412
+  },
+  {
+    "seed": 43,
+    "epoch": 4,
+    "euclidean_loss": 0.3157375752925873,
+    "poincare_loss": 0.4497204124927521,
+    "poincare_max_norm": 0.06541066616773605
+  },
+  {
+    "seed": 43,
+    "epoch": 5,
+    "euclidean_loss": 0.24587856233119965,
+    "poincare_loss": 0.44919353723526,
+    "poincare_max_norm": 0.06541034579277039
+  },
+  {
+    "seed": 43,
+    "epoch": 6,
+    "euclidean_loss": 0.1812683790922165,
+    "poincare_loss": 0.4495851993560791,
+    "poincare_max_norm": 0.06542030721902847
+  },
+  {
+    "seed": 43,
+    "epoch": 7,
+    "euclidean_loss": 0.12993931770324707,
+    "poincare_loss": 0.45007064938545227,
+    "poincare_max_norm": 0.06540850549936295
+  },
+  {
+    "seed": 43,
+    "epoch": 8,
+    "euclidean_loss": 0.09120762348175049,
+    "poincare_loss": 0.4496273398399353,
+    "poincare_max_norm": 0.06541986763477325
+  },
+  {
+    "seed": 43,
+    "epoch": 9,
+    "euclidean_loss": 0.06953486800193787,
+    "poincare_loss": 0.44928330183029175,
+    "poincare_max_norm": 0.06541766226291656
+  },
+  {
+    "seed": 43,
+    "epoch": 10,
+    "euclidean_loss": 0.05174631252884865,
+    "poincare_loss": 0.44862842559814453,
+    "poincare_max_norm": 0.06542804092168808
+  },
+  {
+    "seed": 43,
+    "epoch": 11,
+    "euclidean_loss": 0.041353579610586166,
+    "poincare_loss": 0.44918757677078247,
+    "poincare_max_norm": 0.06544766575098038
+  },
+  {
+    "seed": 43,
+    "epoch": 12,
+    "euclidean_loss": 0.03119737096130848,
+    "poincare_loss": 0.4493456780910492,
+    "poincare_max_norm": 0.06545798480510712
+  },
+  {
+    "seed": 43,
+    "epoch": 13,
+    "euclidean_loss": 0.027291957288980484,
+    "poincare_loss": 0.4493855834007263,
+    "poincare_max_norm": 0.06547874957323074
+  },
+  {
+    "seed": 43,
+    "epoch": 14,
+    "euclidean_loss": 0.022060725837945938,
+    "poincare_loss": 0.4489348828792572,
+    "poincare_max_norm": 0.06547872722148895
+  },
+  {
+    "seed": 43,
+    "epoch": 15,
+    "euclidean_loss": 0.01972115971148014,
+    "poincare_loss": 0.4491254687309265,
+    "poincare_max_norm": 0.06546526402235031
+  },
+  {
+    "seed": 43,
+    "epoch": 16,
+    "euclidean_loss": 0.016449302434921265,
+    "poincare_loss": 0.44868576526641846,
+    "poincare_max_norm": 0.06547330319881439
+  },
+  {
+    "seed": 43,
+    "epoch": 17,
+    "euclidean_loss": 0.014197253622114658,
+    "poincare_loss": 0.44879859685897827,
+    "poincare_max_norm": 0.06547209620475769
+  },
+  {
+    "seed": 43,
+    "epoch": 18,
+    "euclidean_loss": 0.011701432056725025,
+    "poincare_loss": 0.4490209221839905,
+    "poincare_max_norm": 0.06546960026025772
+  },
+  {
+    "seed": 43,
+    "epoch": 19,
+    "euclidean_loss": 0.010004088282585144,
+    "poincare_loss": 0.4484716057777405,
+    "poincare_max_norm": 0.06546789407730103
+  },
+  {
+    "seed": 43,
+    "epoch": 20,
+    "euclidean_loss": 0.00873552169650793,
+    "poincare_loss": 0.4491821229457855,
+    "poincare_max_norm": 0.06548044085502625
+  },
+  {
+    "seed": 43,
+    "epoch": 21,
+    "euclidean_loss": 0.00897415541112423,
+    "poincare_loss": 0.4487015902996063,
+    "poincare_max_norm": 0.06548980623483658
+  },
+  {
+    "seed": 43,
+    "epoch": 22,
+    "euclidean_loss": 0.007187985815107822,
+    "poincare_loss": 0.4491380453109741,
+    "poincare_max_norm": 0.06550874561071396
+  },
+  {
+    "seed": 43,
+    "epoch": 23,
+    "euclidean_loss": 0.006061853840947151,
+    "poincare_loss": 0.44886231422424316,
+    "poincare_max_norm": 0.06550773978233337
+  },
+  {
+    "seed": 43,
+    "epoch": 24,
+    "euclidean_loss": 0.006083989050239325,
+    "poincare_loss": 0.4490876793861389,
+    "poincare_max_norm": 0.06553875654935837
+  },
+  {
+    "seed": 43,
+    "epoch": 25,
+    "euclidean_loss": 0.005585520528256893,
+    "poincare_loss": 0.4489288330078125,
+    "poincare_max_norm": 0.06554978340864182
+  },
+  {
+    "seed": 43,
+    "epoch": 26,
+    "euclidean_loss": 0.005467496812343597,
+    "poincare_loss": 0.44905680418014526,
+    "poincare_max_norm": 0.06553865224123001
+  },
+  {
+    "seed": 43,
+    "epoch": 27,
+    "euclidean_loss": 0.004032975062727928,
+    "poincare_loss": 0.4481896460056305,
+    "poincare_max_norm": 0.0655609667301178
+  },
+  {
+    "seed": 43,
+    "epoch": 28,
+    "euclidean_loss": 0.0043779038824141026,
+    "poincare_loss": 0.44844508171081543,
+    "poincare_max_norm": 0.0655711367726326
+  },
+  {
+    "seed": 43,
+    "epoch": 29,
+    "euclidean_loss": 0.003592692082747817,
+    "poincare_loss": 0.44829046726226807,
+    "poincare_max_norm": 0.06558012962341309
+  },
+  {
+    "seed": 43,
+    "epoch": 30,
+    "euclidean_loss": 0.0034794665407389402,
+    "poincare_loss": 0.44828295707702637,
+    "poincare_max_norm": 0.06559049338102341
+  },
+  {
+    "seed": 43,
+    "epoch": 31,
+    "euclidean_loss": 0.003263644641265273,
+    "poincare_loss": 0.44805267453193665,
+    "poincare_max_norm": 0.06559983640909195
+  },
+  {
+    "seed": 43,
+    "epoch": 32,
+    "euclidean_loss": 0.0031832384411245584,
+    "poincare_loss": 0.4481034576892853,
+    "poincare_max_norm": 0.06558838486671448
+  },
+  {
+    "seed": 43,
+    "epoch": 33,
+    "euclidean_loss": 0.0028813069220632315,
+    "poincare_loss": 0.4480759799480438,
+    "poincare_max_norm": 0.06558835506439209
+  },
+  {
+    "seed": 43,
+    "epoch": 34,
+    "euclidean_loss": 0.0028131839353591204,
+    "poincare_loss": 0.4485078454017639,
+    "poincare_max_norm": 0.06557747721672058
+  },
+  {
+    "seed": 43,
+    "epoch": 35,
+    "euclidean_loss": 0.003141265595331788,
+    "poincare_loss": 0.44835761189460754,
+    "poincare_max_norm": 0.06558775156736374
+  },
+  {
+    "seed": 43,
+    "epoch": 36,
+    "euclidean_loss": 0.0022760708816349506,
+    "poincare_loss": 0.44855812191963196,
+    "poincare_max_norm": 0.0655982494354248
+  },
+  {
+    "seed": 43,
+    "epoch": 37,
+    "euclidean_loss": 0.0026117712259292603,
+    "poincare_loss": 0.4479057490825653,
+    "poincare_max_norm": 0.0656079575419426
+  },
+  {
+    "seed": 43,
+    "epoch": 38,
+    "euclidean_loss": 0.002159320516511798,
+    "poincare_loss": 0.4479514956474304,
+    "poincare_max_norm": 0.06560739129781723
+  },
+  {
+    "seed": 43,
+    "epoch": 39,
+    "euclidean_loss": 0.0019002397311851382,
+    "poincare_loss": 0.4479008913040161,
+    "poincare_max_norm": 0.06560588628053665
+  },
+  {
+    "seed": 43,
+    "epoch": 40,
+    "euclidean_loss": 0.0021093180403113365,
+    "poincare_loss": 0.4478183388710022,
+    "poincare_max_norm": 0.06559430062770844
+  },
+  {
+    "seed": 101,
+    "epoch": 1,
+    "euclidean_loss": 0.4503518044948578,
+    "poincare_loss": 0.4502641260623932,
+    "poincare_max_norm": 0.06362596899271011
+  },
+  {
+    "seed": 101,
+    "epoch": 2,
+    "euclidean_loss": 0.42943403124809265,
+    "poincare_loss": 0.4502212703227997,
+    "poincare_max_norm": 0.0636269748210907
+  },
+  {
+    "seed": 101,
+    "epoch": 3,
+    "euclidean_loss": 0.3800564110279083,
+    "poincare_loss": 0.44944971799850464,
+    "poincare_max_norm": 0.06361790001392365
+  },
+  {
+    "seed": 101,
+    "epoch": 4,
+    "euclidean_loss": 0.31538233160972595,
+    "poincare_loss": 0.449999064207077,
+    "poincare_max_norm": 0.06360883265733719
+  },
+  {
+    "seed": 101,
+    "epoch": 5,
+    "euclidean_loss": 0.24497255682945251,
+    "poincare_loss": 0.4499887526035309,
+    "poincare_max_norm": 0.06361013650894165
+  },
+  {
+    "seed": 101,
+    "epoch": 6,
+    "euclidean_loss": 0.18164166808128357,
+    "poincare_loss": 0.4491702914237976,
+    "poincare_max_norm": 0.06362099945545197
+  },
+  {
+    "seed": 101,
+    "epoch": 7,
+    "euclidean_loss": 0.12856316566467285,
+    "poincare_loss": 0.4502560496330261,
+    "poincare_max_norm": 0.06363391876220703
+  },
+  {
+    "seed": 101,
+    "epoch": 8,
+    "euclidean_loss": 0.09299831837415695,
+    "poincare_loss": 0.4498431384563446,
+    "poincare_max_norm": 0.0636349692940712
+  },
+  {
+    "seed": 101,
+    "epoch": 9,
+    "euclidean_loss": 0.06981569528579712,
+    "poincare_loss": 0.4496639668941498,
+    "poincare_max_norm": 0.06362557411193848
+  },
+  {
+    "seed": 101,
+    "epoch": 10,
+    "euclidean_loss": 0.05321244150400162,
+    "poincare_loss": 0.44951748847961426,
+    "poincare_max_norm": 0.06362803280353546
+  },
+  {
+    "seed": 101,
+    "epoch": 11,
+    "euclidean_loss": 0.04161381721496582,
+    "poincare_loss": 0.44967183470726013,
+    "poincare_max_norm": 0.06362941861152649
+  },
+  {
+    "seed": 101,
+    "epoch": 12,
+    "euclidean_loss": 0.034030113369226456,
+    "poincare_loss": 0.4488081634044647,
+    "poincare_max_norm": 0.0636528879404068
+  },
+  {
+    "seed": 101,
+    "epoch": 13,
+    "euclidean_loss": 0.02864588238298893,
+    "poincare_loss": 0.4495037794113159,
+    "poincare_max_norm": 0.06366702169179916
+  },
+  {
+    "seed": 101,
+    "epoch": 14,
+    "euclidean_loss": 0.023410411551594734,
+    "poincare_loss": 0.44903674721717834,
+    "poincare_max_norm": 0.06367002427577972
+  },
+  {
+    "seed": 101,
+    "epoch": 15,
+    "euclidean_loss": 0.017566874623298645,
+    "poincare_loss": 0.44997209310531616,
+    "poincare_max_norm": 0.06367115676403046
+  },
+  {
+    "seed": 101,
+    "epoch": 16,
+    "euclidean_loss": 0.0169531237334013,
+    "poincare_loss": 0.44947171211242676,
+    "poincare_max_norm": 0.06369262933731079
+  },
+  {
+    "seed": 101,
+    "epoch": 17,
+    "euclidean_loss": 0.014825619757175446,
+    "poincare_loss": 0.4489300847053528,
+    "poincare_max_norm": 0.0636933445930481
+  },
+  {
+    "seed": 101,
+    "epoch": 18,
+    "euclidean_loss": 0.012970001436769962,
+    "poincare_loss": 0.4493618309497833,
+    "poincare_max_norm": 0.06369628012180328
+  },
+  {
+    "seed": 101,
+    "epoch": 19,
+    "euclidean_loss": 0.010990063659846783,
+    "poincare_loss": 0.44874143600463867,
+    "poincare_max_norm": 0.06368765234947205
+  },
+  {
+    "seed": 101,
+    "epoch": 20,
+    "euclidean_loss": 0.00986288208514452,
+    "poincare_loss": 0.4487544000148773,
+    "poincare_max_norm": 0.06371995061635971
+  },
+  {
+    "seed": 101,
+    "epoch": 21,
+    "euclidean_loss": 0.009371251799166203,
+    "poincare_loss": 0.4490099847316742,
+    "poincare_max_norm": 0.06372054666280746
+  },
+  {
+    "seed": 101,
+    "epoch": 22,
+    "euclidean_loss": 0.006985856685787439,
+    "poincare_loss": 0.44867539405822754,
+    "poincare_max_norm": 0.06373262405395508
+  },
+  {
+    "seed": 101,
+    "epoch": 23,
+    "euclidean_loss": 0.0072525679133832455,
+    "poincare_loss": 0.4487272799015045,
+    "poincare_max_norm": 0.0637567788362503
+  },
+  {
+    "seed": 101,
+    "epoch": 24,
+    "euclidean_loss": 0.005970205646008253,
+    "poincare_loss": 0.4490213096141815,
+    "poincare_max_norm": 0.0637582391500473
+  },
+  {
+    "seed": 101,
+    "epoch": 25,
+    "euclidean_loss": 0.005501440726220608,
+    "poincare_loss": 0.4488685131072998,
+    "poincare_max_norm": 0.06377062201499939
+  },
+  {
+    "seed": 101,
+    "epoch": 26,
+    "euclidean_loss": 0.005799539852887392,
+    "poincare_loss": 0.44846659898757935,
+    "poincare_max_norm": 0.06376146525144577
+  },
+  {
+    "seed": 101,
+    "epoch": 27,
+    "euclidean_loss": 0.005080397706478834,
+    "poincare_loss": 0.44897475838661194,
+    "poincare_max_norm": 0.06377238780260086
+  },
+  {
+    "seed": 101,
+    "epoch": 28,
+    "euclidean_loss": 0.005181357264518738,
+    "poincare_loss": 0.44837456941604614,
+    "poincare_max_norm": 0.06376339495182037
+  },
+  {
+    "seed": 101,
+    "epoch": 29,
+    "euclidean_loss": 0.0038575059734284878,
+    "poincare_loss": 0.44912803173065186,
+    "poincare_max_norm": 0.0638095960021019
+  },
+  {
+    "seed": 101,
+    "epoch": 30,
+    "euclidean_loss": 0.0042274221777915955,
+    "poincare_loss": 0.44811198115348816,
+    "poincare_max_norm": 0.06381217390298843
+  },
+  {
+    "seed": 101,
+    "epoch": 31,
+    "euclidean_loss": 0.004694553557783365,
+    "poincare_loss": 0.44868844747543335,
+    "poincare_max_norm": 0.0638335570693016
+  },
+  {
+    "seed": 101,
+    "epoch": 32,
+    "euclidean_loss": 0.0034691428299993277,
+    "poincare_loss": 0.44839540123939514,
+    "poincare_max_norm": 0.06383412331342697
+  },
+  {
+    "seed": 101,
+    "epoch": 33,
+    "euclidean_loss": 0.0029887051787227392,
+    "poincare_loss": 0.4487912952899933,
+    "poincare_max_norm": 0.06383459270000458
+  },
+  {
+    "seed": 101,
+    "epoch": 34,
+    "euclidean_loss": 0.0030051819048821926,
+    "poincare_loss": 0.4486040771007538,
+    "poincare_max_norm": 0.06382579356431961
+  },
+  {
+    "seed": 101,
+    "epoch": 35,
+    "euclidean_loss": 0.0025116472970694304,
+    "poincare_loss": 0.4486342668533325,
+    "poincare_max_norm": 0.06384821981191635
+  },
+  {
+    "seed": 101,
+    "epoch": 36,
+    "euclidean_loss": 0.003187695052474737,
+    "poincare_loss": 0.44832926988601685,
+    "poincare_max_norm": 0.06386139243841171
+  },
+  {
+    "seed": 101,
+    "epoch": 37,
+    "euclidean_loss": 0.0029872097074985504,
+    "poincare_loss": 0.4481394290924072,
+    "poincare_max_norm": 0.06387307494878769
+  },
+  {
+    "seed": 101,
+    "epoch": 38,
+    "euclidean_loss": 0.0016731491778045893,
+    "poincare_loss": 0.4481704831123352,
+    "poincare_max_norm": 0.0638636127114296
+  },
+  {
+    "seed": 101,
+    "epoch": 39,
+    "euclidean_loss": 0.0027928445488214493,
+    "poincare_loss": 0.4479890763759613,
+    "poincare_max_norm": 0.06388698518276215
+  },
+  {
+    "seed": 101,
+    "epoch": 40,
+    "euclidean_loss": 0.0033277622424066067,
+    "poincare_loss": 0.44813957810401917,
+    "poincare_max_norm": 0.06390068680047989
+  }
+]

@@ -1,0 +1,114 @@
+{
+  "dataset": "Hetionet v1.0",
+  "dataset_citation": "Himmelstein DS et al. Systematic integration of biomedical knowledge prioritizes drugs for repurposing. eLife 2017;6:e26726. https://doi.org/10.7554/eLife.26726",
+  "snapshot_path": "C:\\Users\\LEO\\Downloads\\kg_rag_rmf_rag_final_sync_v2\\kg_rag_rmf_rag_final_sync\\hetionet-archive\\dhimmel-hetionet-4933ca1\\hetnet\\json\\hetionet-v1.0.json.bz2",
+  "snapshot_sha256": "a342ab57e9073e6c02bb5e109d1f16917e6f933be4e5c77ebbaebfa26b984c19",
+  "seeds": [
+    7,
+    17,
+    29,
+    43,
+    101
+  ],
+  "selected_edges": {
+    "gene_disease": 3200,
+    "disease_compound": 1145,
+    "gene_compound": 823
+  },
+  "relation_provenance": {
+    "sources": [
+      {
+        "relation": "associates",
+        "source": "DISEASES",
+        "license": "CC BY 4.0",
+        "edges": 3200
+      },
+      {
+        "relation": "binds",
+        "source": "DrugCentral (ChEMBL)",
+        "license": "CC BY 4.0",
+        "edges": 704
+      },
+      {
+        "relation": "binds",
+        "source": "DrugCentral (IUPHAR)",
+        "license": "CC BY 4.0",
+        "edges": 4
+      },
+      {
+        "relation": "binds",
+        "source": "DrugCentral (KEGG DRUG)",
+        "license": "CC BY 4.0",
+        "edges": 2
+      },
+      {
+        "relation": "binds",
+        "source": "DrugCentral (label)",
+        "license": "CC BY 4.0",
+        "edges": 17
+      },
+      {
+        "relation": "binds",
+        "source": "DrugCentral (literature)",
+        "license": "CC BY 4.0",
+        "edges": 96
+      },
+      {
+        "relation": "palliates",
+        "source": "PharmacotherapyDB",
+        "license": "CC0 1.0",
+        "edges": 390
+      },
+      {
+        "relation": "treats",
+        "source": "PharmacotherapyDB",
+        "license": "CC0 1.0",
+        "edges": 755
+      }
+    ]
+  },
+  "training": {
+    "dimension": 16,
+    "epochs": 24,
+    "margin": 0.45,
+    "learning_rate": 0.035,
+    "curvature": 1.0,
+    "negative_sampling": "one deterministic type-matched negative per directed positive edge per epoch, shared across geometries",
+    "optimizer": "Euclidean SGD and Poincare Riemannian SGD; same learning rate and epoch budget"
+  },
+  "query_cap_per_hop_split_seed": 500,
+  "query_counts": {
+    "7": {
+      "2hop_validation": 500,
+      "3hop_validation": 500,
+      "2hop_test": 500,
+      "3hop_test": 500
+    },
+    "17": {
+      "2hop_validation": 500,
+      "3hop_validation": 500,
+      "2hop_test": 500,
+      "3hop_test": 500
+    },
+    "29": {
+      "2hop_validation": 500,
+      "3hop_validation": 500,
+      "2hop_test": 500,
+      "3hop_test": 500
+    },
+    "43": {
+      "2hop_validation": 500,
+      "3hop_validation": 500,
+      "2hop_test": 500,
+      "3hop_test": 500
+    },
+    "101": {
+      "2hop_validation": 500,
+      "3hop_validation": 500,
+      "2hop_test": 500,
+      "3hop_test": 500
+    }
+  },
+  "leakage_control": "validation/test Disease-Compound and Gene-Compound terminal edges are removed from the training graph before embedding training and typed-path verification",
+  "scope": "research link retrieval; not clinical utility or medical advice"
+}

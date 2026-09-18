@@ -1,22 +1,46 @@
 # KG-RAG / RMF-RAG Research
 
-## Run the query lab locally
+This repository studies when hyperbolic geometry helps biomedical knowledge-graph retrieval. It contains a reproducible disease-drug pilot, a controlled Euclidean-vs-Poincare implementation, and a restored multi-hop Hetionet benchmark runner.
 
-The runnable application compares lexical, Euclidean, and hyperbolic disease–drug retrieval. It is a retrieval pilot, with no LLM answer generation or API key requirement.
+## 1. Reproduce the existing pilot
 
 ```bash
 python -m pip install -r requirements-pilot.txt
-python -X utf8 research/scripts/local_query_app.py
+python research/scripts/run_rmf_rag_experiment.py
+python research/scripts/run_local_audit.py
 ```
 
-Open http://localhost:8766 and enter a disease such as `cancer`. See [local testing instructions](research/LOCAL_TESTING.md) for retraining, tests, and the five-seed audit.
+The verified historical five-seed audit uses seeds 7, 17, 29, 43, and 101. On all held-out links, mean Recall@5 is 4.62% lexical, 2.20% Euclidean, and 2.64% for the original hyperbolic prototype. These are preliminary pilot results. The historical learned models used unequal training budgets, so these values do not establish hyperbolic superiority.
 
-**Measured result:** across five seeds on all 182 held-out links, mean Recall@5 is 4.62% lexical, 2.20% Euclidean, and 2.64% hyperbolic. The pilot does not establish superiority to the cited papers. [Audit results](local-run/extended/summary.md) · [Sample research paper](local-run/SAMPLE_RESEARCH_PAPER.md).
+## 2. Run the controlled geometry experiment
 
-**Reproducibility limitation:** `research/scripts/run_main_rmf_rag_benchmark.py` and the Hetionet query sets/model files referenced by the older instructions are absent from the source revision. The saved Hetionet report is not a locally reproduced experiment. The five-seed audit concerns the disease–drug pilot only.
+```bash
+python -m pip install -r requirements-research.txt
+python -m pytest -q research/tests/test_controlled_retrievers.py
+python research/scripts/run_controlled_geometry_experiment.py
+```
 
-Reproducible research project for comparing lexical, Euclidean, and hyperbolic retrieval on biomedical knowledge-graph pilots.
+The controlled experiment matches the Euclidean and Poincare models on graph, split, dimension, margin, epochs, negative samples, candidate pool, and seeds. The Poincare model uses PyTorch autograd, Riemannian gradient scaling, and projection inside the ball instead of the finite-difference optimizer used by the original pilot.
 
-See `research/README.md` for commands and `research/PAPER_DRAFT_SECTIONS.md` for paper-ready methods, results, and limitations.
+## 3. Run the full Hetionet multi-hop benchmark
 
-This repository contains preliminary pilot evidence only; the full gene-to-disease-to-drug benchmark requires a curated biomedical graph such as PrimeKG or Hetionet.
+The restored runner is:
+
+```bash
+python research/scripts/run_main_rmf_rag_benchmark.py
+```
+
+It uses the licensed relation subset of Hetionet v1.0 and builds two leakage-controlled tasks:
+
+- 2-hop: Gene -> Disease -> Compound
+- 3-hop: Gene -> Disease -> Gene -> Compound
+
+Validation/test terminal answer edges are removed before embedding training. The runner creates frozen query sets, trains matched Euclidean and Poincare models across five seeds, evaluates lexical and typed-path baselines, runs geometry/path ablations, saves per-query predictions, computes confidence intervals, and writes paper-ready tables.
+
+If automatic snapshot retrieval is unavailable, download the Hetionet v1.0 archived release from Zenodo record `268568`, extract `hetnet/json/hetionet-v1.0.json.bz2`, and place it at `research_data/hetionet/hetionet-v1.0.json.bz2`, or set `HETIONET_JSON_BZ2` to the snapshot path.
+
+## Research status
+
+The controlled model code and restored multi-hop runner were freshly reproduced on the official Hetionet v1.0 snapshot (SHA-256 `a342ab57e9073e6c02bb5e109d1f16917e6f933be4e5c77ebbaebfa26b984c19`) using seeds 7, 17, 29, 43, and 101. The exact query sets, predictions, embeddings, confidence intervals, tables, SVG figure, and HTML report are in `research/results/main_benchmark/`. On test MRR, Poincare is 0.009 versus Euclidean 0.009 for 2-hop retrieval, and 0.011 versus 0.009 for 3-hop retrieval; the five-seed confidence intervals overlap, so this run does not establish a conclusive geometry advantage.
+
+See `research/REPRODUCIBILITY_STATUS.md`, `research/SUPERVISOR_UPDATE.md`, `research/PAPER_DRAFT_VERIFIED.md`, and `research/EXPERIMENT_COMPLETION_PLAN.md`.

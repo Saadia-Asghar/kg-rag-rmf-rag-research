@@ -1,0 +1,37 @@
+name: research-ci
+
+on:
+  push:
+    paths:
+      - 'research/models/**'
+      - 'research/scripts/**'
+      - 'research/tests/**'
+      - 'requirements-research.txt'
+      - '.github/workflows/research-ci.yml'
+  pull_request:
+    paths:
+      - 'research/models/**'
+      - 'research/scripts/**'
+      - 'research/tests/**'
+      - 'requirements-research.txt'
+      - '.github/workflows/research-ci.yml'
+
+jobs:
+  research-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install research dependencies
+        run: python -m pip install -r requirements-research.txt
+      - name: Compile research modules
+        run: |
+          python -m py_compile research/models/controlled_retrievers.py
+          python -m py_compile research/scripts/run_controlled_geometry_experiment.py
+          python -m py_compile research/scripts/run_main_rmf_rag_benchmark.py
+          python -m py_compile research/scripts/build_main_benchmark_report.py
+      - name: Run research tests
+        run: python -m pytest -q research/tests/test_controlled_retrievers.py research/tests/test_main_benchmark_runner.py

@@ -1,130 +1,68 @@
-# RMF-RAG research benchmarks
+# RMF-RAG research experiments
 
-> Verification correction (2026-09-12): the "Main Hetionet benchmark" section
-> below is a historical description, not an executable reproduction recipe.
-> `run_main_rmf_rag_benchmark.py` and its complete training artifacts are absent.
-> Do not use the historical tables as newly reproduced results. The verified
-> five-seed experiment is the original disease-pair pilot in `local-run/extended`.
-> A new live graph explorer is available via
-> `python research/scripts/live_graph_qa.py` on localhost:8767. It traverses the
-> pinned source graph for each question; it does not train embeddings or measure
-> generated-answer hallucination. See `LIVE_GRAPH_TESTING.md`.
+## Verified pilot
 
-This folder contains the original Kaggle pilot and the main benchmark on the
-licensed portion of Hetionet v1.0. The pilot is retained for comparison but is
-not a gene–disease–drug evaluation.
+The repository contains a reproducible disease-drug retrieval pilot and a five-seed audit. Run it with:
 
-## Main Hetionet benchmark
+```bash
+python research/scripts/run_rmf_rag_experiment.py
+python research/scripts/run_local_audit.py
+```
+
+The original audit is useful for validating the older prototype. It retained unequal training budgets and therefore is not the final Euclidean-vs-hyperbolic comparison.
+
+## Controlled Euclidean vs Poincare experiment
+
+```bash
+python -m pip install -r requirements-research.txt
+python -m pytest -q research/tests/test_controlled_retrievers.py
+python research/scripts/run_controlled_geometry_experiment.py
+```
+
+The controlled runner uses identical splits, dimensionality, margin, epochs, candidate sets, negative samples, and seed schedule for both learned models. The Poincare model uses autograd, Riemannian gradient scaling, and ball projection.
+
+Outputs are written to `research/results/controlled_geometry/` and should be used instead of the unequal-budget pilot when discussing geometry.
+
+## Full Hetionet benchmark
+
+The missing multi-hop runner has been restored as:
 
 ```bash
 python research/scripts/run_main_rmf_rag_benchmark.py
 ```
 
-The runner verifies/downloads `research_data/hetionet/hetionet-v1.0.json.bz2`,
-creates reproducible train/validation/test query sets for 2-hop and 3-hop typed
-paths, trains Euclidean and Poincaré models under matched budgets across five
-seeds, and writes:
+The runner uses the reusable licensed subset of Hetionet v1.0 and implements:
 
-- `results/main_benchmark/predictions.jsonl` — raw per-query predictions
-- `results/main_benchmark/metrics_by_seed.csv` — seed-level metrics
-- `results/main_benchmark/aggregate_metrics.csv` — means and 95% confidence intervals
-- `results/main_benchmark/paper_table.md` and `ablation_table.md` — paper-ready tables
-- `results/main_benchmark/report.html` — self-contained visual benchmark report
-- `results/main_benchmark/query_demo.json` — auditable sample query/evidence packet
-- `results/main_benchmark/query_demo_2hop.json` — saved 2-hop evidence packet
-- `results/main_benchmark/query_demo_3hop.json` — saved 3-hop evidence packet
-- `results/main_benchmark/evidence_review.json` — calibration-set coverage by graph, text, and plausibility dimensions
-- `query_sets/*` — exact JSONL query sets used by each seed/split
-- `data/HETIONET_SOURCE.md` — citation, hash, and relation-level license record
-- `data/HETIONET_ATTRIBUTION.md` — source creators, license URIs, and modification notices
-- `data/EVIDENCE_SOURCE.md` — Europe PMC attribution, CC BY filter, and reproducible lookup policy
-- `data/biomedical_evidence_manifest.json` — frozen PMCID/PMID/DOI records and short evidence excerpts
-- `data/evidence_gold_standard.json` — ranking-independent path/text/plausibility calibration labels
+- Gene -> Disease -> Compound 2-hop retrieval
+- Gene -> Disease -> Gene -> Compound 3-hop retrieval
+- terminal-edge leakage control before model training
+- deterministic train/validation/test query generation
+- lexical, Euclidean, Poincare, and typed-path retrieval
+- five seeds and 95% t intervals
+- per-query predictions and saved embeddings
+- geodesic, hop-weighting, tangent-composition, and path-verification ablations
+- provenance/checksum records and paper-ready tables
 
-The tasks are Gene → Disease → Compound for 2-hop retrieval and Gene → Disease
-→ Gene → Compound for 3-hop retrieval. Terminal answer edges are held out from
-the training graph. Ablations cover geodesic ranking, hop weighting, parallel
-transport, and exact typed-path verification. To avoid redistributing
-noncommercial compound labels, the reusable lexical baseline compares query
-identifiers with identifiers in each compound's licensed train-graph
-neighborhood.
+The expected relation counts are 3,200 DISEASES Gene-Disease `associates` edges, 1,145 PharmacotherapyDB Disease-Compound `treats`/`palliates` edges, and 823 DrugCentral Gene-Compound `binds` edges. The runner stops on count drift unless exploratory override is explicitly enabled.
 
-## Original pilot
+The benchmark snapshot belongs at `research_data/hetionet/hetionet-v1.0.json.bz2`. You can instead set `HETIONET_JSON_BZ2` to an existing Hetionet v1.0 snapshot.
 
-```bash
-python research/scripts/run_rmf_rag_experiment.py
-```
+### Main outputs
 
-## Run one practical query
+- `results/main_benchmark/metadata.json`
+- `results/main_benchmark/metrics_by_seed.csv`
+- `results/main_benchmark/aggregate_metrics.csv`
+- `results/main_benchmark/predictions.jsonl`
+- `results/main_benchmark/embeddings_seed*.npz`
+- `results/main_benchmark/paper_table.md`
+- `results/main_benchmark/ablation_table.md`
+- `results/main_benchmark/report.html`
+- `query_sets/*`
+- `data/HETIONET_SOURCE.md`
+- `data/HETIONET_ATTRIBUTION.md`
 
-```bash
-python research/scripts/query_demo.py "cancer"
-```
+After the benchmark finishes, use `main_query_demo.py` and `evaluate_evidence.py` to inspect saved retrieval/evidence packets.
 
-The query command loads the saved hyperbolic embeddings and ranks the five
-nearest drug nodes by Poincaré geodesic distance.
+## Scientific status
 
-## Run one main-benchmark query
-
-```bash
-python research/scripts/main_query_demo.py --hop 3 --split test --seed 101
-```
-
-This loads the saved seed-101 embeddings and the exact held-out query set,
-returns the top ten candidates for lexical, Euclidean, Poincaré, and
-path-verification retrieval, and marks whether each candidate is supported by
-the typed training graph plus its frozen Europe PMC evidence status and cited
-record. It is an evidence packet for research inspection, not a clinical
-recommendation.
-
-Generate both saved demo packets and the separate calibration view with:
-
-```bash
-python research/scripts/main_query_demo.py --hop 2 --split test --seed 101 \
-  --output research/results/main_benchmark/query_demo_2hop.json
-python research/scripts/main_query_demo.py --hop 3 --split test --seed 101 \
-  --output research/results/main_benchmark/query_demo_3hop.json
-python research/scripts/evaluate_evidence.py \
-  --demo research/results/main_benchmark/query_demo_2hop.json \
-  --demo research/results/main_benchmark/query_demo_3hop.json
-```
-
-Before shipping or reviewing saved results, validate the frozen CC BY manifest
-and both demo packets with one command:
-
-```bash
-python research/scripts/evaluate_evidence.py --validate-only
-```
-
-The validation fails on missing or malformed PMCID/PMID/DOI identifiers,
-non-CC-BY records, blank excerpts, duplicate record IDs, missing candidate
-statuses, unknown cited records, or packet fields that drift from the manifest.
-
-Rebuild the report independently with:
-
-```bash
-python research/scripts/build_main_benchmark_report.py
-```
-
-## Outputs
-
-- `results/metrics.json` — exact metrics and experiment metadata
-- `results/predictions.csv` — per-query rankings for all three methods
-- `results/trained_embeddings.npz` — trained Euclidean and hyperbolic vectors
-- `results/model_index.json` — node-to-vector index
-- `results/report.html` — readable experiment report
-- `PAPER_DRAFT_SECTIONS.md` — methods/results text for a research draft
-
-## Scientific scope
-
-This is a **pilot link-retrieval experiment**, not a validation of the complete
-gene→disease→drug RMF-RAG proposal. The Kaggle dataset contains disease–drug
-answers but no genes, evidence passages, or curated multi-hop paths. Use the
-result as preliminary evidence and motivation for a larger benchmark.
-
-The main Hetionet build now supplies the licensed gene/disease/compound
-benchmark, typed 2-hop and 3-hop queries, five-seed confidence intervals,
-component ablations, reproducible graph-plus-text evidence packets, and a
-self-contained report. Graph connectivity, licensed-text support, and clinical
-utility are separate claims; the build still does not claim clinical utility or
-replace independent therapeutic validation.
+The restored benchmark implementation and leakage controls are test-validated on a synthetic Hetionet-shaped graph. A full real-data rerun has not been performed in this completion environment because the archived snapshot was not locally available. The saved historical Hetionet numbers therefore remain historical until the restored runner regenerates them. Do not describe the historical numbers as a fresh reproduction.

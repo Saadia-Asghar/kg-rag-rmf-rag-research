@@ -1,0 +1,195 @@
+seed,model,disease,target_drug,target_rank,top1_prediction,top5_predictions,top1_distance
+7,euclidean,acute myeloid leukemia,cytarabine,16,enasidenib,enasidenib | cytarabine liposomal daunorubicin liposomal | idarubicin | venetoclax | gilteritinib,0.5164724588394165
+7,euclidean,bacterial infection,vancomycin,19,amoxicillin clavulanate,amoxicillin clavulanate | cefotaxime | ritonavir | bezlotoxumab | metronidazole,0.7087898254394531
+7,euclidean,bladder cancer,cisplatin,14,doxorubicin,doxorubicin | tamoxifen | aspirin | everolimus | erlotinib,0.34922128915786743
+7,euclidean,breast cancer,anastrozole,39,methotrexate,methotrexate | tamoxifen | everolimus | doxorubicin | carboplatin,0.49796566367149353
+7,euclidean,cancer,fluorouracil,33,vinblastine,vinblastine | prednisone | triptorelin | aspirin | doxorubicin,0.5374494791030884
+7,euclidean,cervical cancer,cisplatin,20,methotrexate,methotrexate | tamoxifen | carboplatin | everolimus | doxorubicin,0.4486348628997803
+7,euclidean,chronic myofascial pain,ibuprofen,79,amitriptyline,amitriptyline | clonazepam | duloxetine | methadone | oxycodone,0.5527665615081787
+7,euclidean,deep vein thrombosis prophylaxis,dalteparin,2,enoxaparin,enoxaparin | dalteparin | primaquine | olmesartan | gentamicin,0.4382079243659973
+7,euclidean,emergency contraception postcoital contraception,levonorgestrel,13,ethinyl estradiol levonorgestrel,ethinyl estradiol levonorgestrel | tetracycline | tamoxifen | doxorubicin | doxycycline,0.30081769824028015
+7,euclidean,endometrial cancer,lenvatinib,6,anastrozole,anastrozole | megestrol | pembrolizumab | sunitinib | paroxetine,0.5172241926193237
+7,euclidean,gonococcal infection uncomplicated,ciprofloxacin,13,ceftriaxone,ceftriaxone | cephalexin | amoxicillin | amoxicillin clavulanate | cefotaxime,0.3914285898208618
+7,euclidean,high cholesterol,rosuvastatin,5,niacin,niacin | lovastatin | fluvastatin | pravastatin | rosuvastatin,0.5801733136177063
+7,euclidean,high cholesterol familial heterozygous,atorvastatin,3,lovastatin,lovastatin | fluvastatin | atorvastatin | simvastatin | rosuvastatin,0.4794771075248718
+7,euclidean,hypogonadism male,methyltestosterone,7,follicle stimulating hormone,follicle stimulating hormone | ketoconazole | human papillomavirus vaccine | anthrax immune globulin intravenous | doxycycline,0.602907657623291
+7,euclidean,melanoma metastatic,talimogene laherparepvec,6,cobimetinib,cobimetinib | dacarbazine | ipilimumab | pembrolizumab | fenofibrate,0.46309739351272583
+7,euclidean,organophosphate poisoning,atropine,3,atropine pralidoxime,atropine pralidoxime | meloxicam | atropine | amoxicillin | clindamycin,0.6223359107971191
+7,euclidean,postpartum depression,citalopram,13,venlafaxine,venlafaxine | sertraline | erythromycin | azathioprine | oxycodone,0.6247745752334595
+7,euclidean,prevention of bladder infection cystitis prophylaxis,sulfamethoxazole trimethoprim,64,methenamine,methenamine | bezlotoxumab | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid | warfarin | ritonavir,0.4340006709098816
+7,euclidean,rabbit fever tularemia,minocycline,6,streptomycin,streptomycin | doxycycline | dexamethasone | etanercept | penicillin g potassium,0.5077868700027466
+7,euclidean,skin or soft tissue infection,amoxicillin clavulanate,14,amoxicillin,amoxicillin | dicloxacillin | azithromycin | levofloxacin | cefdinir,0.3146457374095917
+7,euclidean,tinea cruris,econazole,5,clotrimazole,clotrimazole | ketoconazole | tolnaftate | fluconazole | econazole,0.5810605883598328
+7,euclidean,urinary tract infection,amoxicillin,8,cefuroxime,cefuroxime | ciprofloxacin | levofloxacin | amoxicillin clavulanate | fesoterodine,0.3691827356815338
+7,euclidean,whipworm infection,mebendazole,5,albendazole,albendazole | penicillin v potassium | human papillomavirus vaccine | methenamine | mebendazole,0.5577220916748047
+7,poincare,acute myeloid leukemia,cytarabine,87,isotretinoin,isotretinoin | doxazosin | buspirone | amphetamine dextroamphetamine | atropine edrophonium,0.056838858872652054
+7,poincare,bacterial infection,vancomycin,155,halobetasol,halobetasol | orlistat | divalproex sodium | aluminum hydroxide magnesium hydroxide simethicone | diclofenac,0.0442875511944294
+7,poincare,bladder cancer,cisplatin,81,human papillomavirus vaccine,human papillomavirus vaccine | multivitamin | tamsulosin | cyclopentolate | aluminum hydroxide magnesium hydroxide simethicone,0.0758400484919548
+7,poincare,breast cancer,anastrozole,8,cilastatin imipenem,cilastatin imipenem | calcitonin | acetaminophen chlorpheniramine phenylephrine | nitroglycerin | emtricitabine tenofovir,0.06619999557733536
+7,poincare,cancer,fluorouracil,171,ribavirin,ribavirin | dextran high molecular weight | certolizumab | ceftriaxone | interferon beta 1a,0.08626098930835724
+7,poincare,cervical cancer,cisplatin,50,podofilox,podofilox | pegademase bovine | olodaterol | cidofovir | aclidinium,0.060708604753017426
+7,poincare,chronic myofascial pain,ibuprofen,164,prednisolone,prednisolone | argatroban | c1 esterase inhibitor human | mirtazapine | methyltestosterone,0.06107252463698387
+7,poincare,deep vein thrombosis prophylaxis,dalteparin,168,levalbuterol,levalbuterol | penicillin v potassium | pexidartinib | cidofovir | beclomethasone,0.050949156284332275
+7,poincare,emergency contraception postcoital contraception,levonorgestrel,273,clonidine,clonidine | amoxicillin | isotretinoin | fluvoxamine | albendazole,0.0447692833840847
+7,poincare,endometrial cancer,lenvatinib,247,azficel t,azficel t | oxytocin | ivermectin | ammoniated mercury | emtricitabine tenofovir,0.05644550547003746
+7,poincare,gonococcal infection uncomplicated,ciprofloxacin,95,tamsulosin,tamsulosin | cimetidine | gentamicin | potassium citrate | propafenone,0.07861274480819702
+7,poincare,high cholesterol,rosuvastatin,116,clotrimazole,clotrimazole | meclizine | donepezil memantine | levocetirizine | pentosan polysulfate sodium,0.07772762328386307
+7,poincare,high cholesterol familial heterozygous,atorvastatin,195,adenosine,adenosine | nivolumab | misoprostol | glasdegib | halobetasol,0.048976797610521317
+7,poincare,hypogonadism male,methyltestosterone,246,atenolol,atenolol | minocycline | levodopa | edaravone | buspirone,0.0644567608833313
+7,poincare,melanoma metastatic,talimogene laherparepvec,233,cephalexin,cephalexin | mexiletine | beclomethasone | smallpox and monkeypox vaccine | canakinumab,0.04655693843960762
+7,poincare,organophosphate poisoning,atropine,327,aluminum hydroxide,aluminum hydroxide | mirabegron | bupropion | deferiprone | trazodone,0.06966143846511841
+7,poincare,postpartum depression,citalopram,202,venlafaxine,venlafaxine | oxybutynin | gentamicin | levofloxacin | trihexyphenidyl,0.06676441431045532
+7,poincare,prevention of bladder infection cystitis prophylaxis,sulfamethoxazole trimethoprim,28,enoxaparin,enoxaparin | ammonium lactate | lovastatin | doxazosin | sunitinib,0.058709289878606796
+7,poincare,rabbit fever tularemia,minocycline,465,ribavirin,ribavirin | fluorometholone | rosuvastatin | multivitamin with iron | somatropin,0.059411294758319855
+7,poincare,skin or soft tissue infection,amoxicillin clavulanate,63,almotriptan,almotriptan | bisoprolol | lithium | chondroitin glucosamine | calcitonin,0.054155196994543076
+7,poincare,tinea cruris,econazole,195,erythromycin,erythromycin | penicillin v potassium | lubiprostone | anastrozole | paliperidone,0.056200116872787476
+7,poincare,urinary tract infection,amoxicillin,42,levofloxacin,levofloxacin | dextran low molecular weight | erythromycin | paliperidone | cefoxitin,0.08723817020654678
+7,poincare,whipworm infection,mebendazole,431,ribavirin,ribavirin | pembrolizumab | dextran high molecular weight | cyclophosphamide | pexidartinib,0.054961059242486954
+17,euclidean,bacterial infection,vancomycin,30,abacavir,abacavir | amoxicillin clavulanate | emtricitabine tenofovir | fluocinolone neomycin | levofloxacin,0.5533857345581055
+17,euclidean,bladder cancer,doxorubicin,20,cisplatin,cisplatin | estradiol | sunitinib | metronidazole | megestrol,0.5860978960990906
+17,euclidean,cancer,vinblastine,15,fluorouracil,fluorouracil | cisplatin | tamoxifen | estradiol | anastrozole,0.40901872515678406
+17,euclidean,chronic myelogenous leukemia,imatinib,4,anagrelide,anagrelide | ponatinib | cytarabine | imatinib | fludarabine,0.4435098171234131
+17,euclidean,colorectal cancer,bevacizumab,22,cetuximab,cetuximab | sunitinib | capecitabine | megestrol | trastuzumab,0.5421933531761169
+17,euclidean,diffuse large b cell lymphoma,rituximab,33,tisagenlecleucel,tisagenlecleucel | doxorubicin | romidepsin | cytarabine | ibrutinib,0.5013061761856079
+17,euclidean,emergency contraception postcoital contraception,levonorgestrel,6,ethinyl estradiol levonorgestrel,ethinyl estradiol levonorgestrel | esomeprazole | erythromycin | doxycycline | meloxicam,0.4909934401512146
+17,euclidean,endometrial cancer,anastrozole,32,megestrol,megestrol | pembrolizumab | lenvatinib | cetuximab | capecitabine,0.5289547443389893
+17,euclidean,head lice,piperonyl butoxide pyrethrins,5,acetic acid,acetic acid | malathion | carvedilol | isosorbide mononitrate | piperonyl butoxide pyrethrins,0.3001280426979065
+17,euclidean,high cholesterol,rosuvastatin,5,pravastatin,pravastatin | lovastatin | atorvastatin | niacin | rosuvastatin,0.3792990446090698
+17,euclidean,inflammatory bowel disease,azathioprine,22,amoxicillin clavulanate,amoxicillin clavulanate | prednisone | dexamethasone | dicyclomine | erythromycin,0.6334949135780334
+17,euclidean,melanoma metastatic,talimogene laherparepvec,4,cobimetinib,cobimetinib | c1 esterase inhibitor human | pembrolizumab | talimogene laherparepvec | interferon alfa 2b,0.21299248933792114
+17,euclidean,organophosphate poisoning,atropine,99,atropine pralidoxime,atropine pralidoxime | fluoride | methyltestosterone | bezlotoxumab | ciprofloxacin,0.27647534012794495
+17,euclidean,pancreatic cancer,fluorouracil,30,sunitinib,sunitinib | cetuximab | capecitabine | everolimus | megestrol,0.3457489311695099
+17,euclidean,rabbit fever tularemia,minocycline,5,streptomycin,streptomycin | doxycycline | pralidoxime | erythromycin | minocycline,0.47418850660324097
+17,euclidean,skin or soft tissue infection,amoxicillin clavulanate,11,clarithromycin,clarithromycin | dicloxacillin | levofloxacin | azithromycin | amoxicillin,0.3331264853477478
+17,euclidean,tinea cruris,ketoconazole,10,econazole,econazole | tolnaftate | miconazole | lansoprazole | fluconazole,0.5365171432495117
+17,euclidean,tinea pedis,econazole,7,miconazole,miconazole | tolnaftate | clotrimazole | ketoconazole | betamethasone clotrimazole,0.48056355118751526
+17,euclidean,urinary tract infection,amoxicillin,17,cefuroxime,cefuroxime | levofloxacin | ciprofloxacin | amoxicillin clavulanate | sulfamethoxazole trimethoprim,0.39974379539489746
+17,poincare,bacterial infection,vancomycin,2,macitentan,macitentan | vancomycin | azithromycin | febuxostat | rosuvastatin,0.05413539335131645
+17,poincare,bladder cancer,doxorubicin,153,atropine pralidoxime,atropine pralidoxime | carbidopa levodopa | azithromycin | flecainide | methocarbamol,0.07310210913419724
+17,poincare,cancer,vinblastine,360,tetracaine,tetracaine | methadone | cholecalciferol | acebutolol | dicloxacillin,0.060229841619729996
+17,poincare,chronic myelogenous leukemia,imatinib,25,clorazepate,clorazepate | dalteparin | albendazole | dexamethasone | pravastatin,0.06923093646764755
+17,poincare,colorectal cancer,bevacizumab,3,dicloxacillin,dicloxacillin | ketorolac phenylephrine | bevacizumab | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid | tretinoin,0.05365787073969841
+17,poincare,diffuse large b cell lymphoma,rituximab,388,macitentan,macitentan | sucralfate | gentamicin | dronedarone | penicillin g potassium,0.05999597907066345
+17,poincare,emergency contraception postcoital contraception,levonorgestrel,193,dinoprostone,dinoprostone | epinephrine | bupropion | trolamine salicylate | ofloxacin,0.07266578823328018
+17,poincare,endometrial cancer,anastrozole,203,methotrexate,methotrexate | cytarabine | alprazolam | pomalidomide | albumin human,0.05735427141189575
+17,poincare,head lice,piperonyl butoxide pyrethrins,381,dextran low molecular weight,dextran low molecular weight | triamcinolone | isoxsuprine | neostigmine | amphotericin b lipid complex,0.06394090503454208
+17,poincare,high cholesterol,rosuvastatin,63,halobetasol,halobetasol | macitentan | fluorometholone | bupropion naltrexone | gentamicin,0.06040957570075989
+17,poincare,inflammatory bowel disease,azathioprine,30,adapalene,adapalene | canakinumab | pyrithione zinc | perflutren | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid,0.07146088778972626
+17,poincare,melanoma metastatic,talimogene laherparepvec,440,ropinirole,ropinirole | ciprofloxacin | ioversol | propranolol | cycloserine,0.04675361141562462
+17,poincare,organophosphate poisoning,atropine,331,methadone,methadone | cimetidine | azathioprine | perflutren | cefuroxime,0.06067131087183952
+17,poincare,pancreatic cancer,fluorouracil,225,doxepin,doxepin | calcitriol | rifampin | erythromycin | leucovorin,0.07049261033535004
+17,poincare,rabbit fever tularemia,minocycline,163,methadone,methadone | lovastatin | dicloxacillin | olanzapine | warfarin,0.046060290187597275
+17,poincare,skin or soft tissue infection,amoxicillin clavulanate,192,nabumetone,nabumetone | gilteritinib | lurasidone | moxifloxacin | alprazolam,0.07225155830383301
+17,poincare,tinea cruris,ketoconazole,266,capecitabine,capecitabine | cyclophosphamide | atorvastatin | erlotinib | anthrax immune globulin intravenous,0.055635467171669006
+17,poincare,tinea pedis,econazole,26,ascorbic acid,ascorbic acid | homatropine hydrocodone | propranolol | rosuvastatin | primaquine,0.08233576267957687
+17,poincare,urinary tract infection,amoxicillin,291,tenofovir,tenofovir | trazodone | clorazepate | interferon beta 1a | idelalisib,0.05844692140817642
+29,euclidean,bacterial infection,amoxicillin clavulanate,12,vancomycin,vancomycin | fidaxomicin | penicillin g potassium | bezlotoxumab | bacitracin,0.3674878478050232
+29,euclidean,bacterial skin infection,sulfamethoxazole trimethoprim,46,bacitracin,bacitracin | benzalkonium chloride lidocaine | fluocinolone neomycin | dicloxacillin | amoxicillin clavulanate,0.29214003682136536
+29,euclidean,bladder cancer,doxorubicin,71,cisplatin,cisplatin | clarithromycin | amoxicillin | lenvatinib | tamoxifen,0.4194618761539459
+29,euclidean,breast cancer,doxorubicin,34,anastrozole,anastrozole | everolimus | pembrolizumab | tamoxifen | lenvatinib,0.5200068950653076
+29,euclidean,cervical cancer,methotrexate,51,cisplatin,cisplatin | tamoxifen | anastrozole | sunitinib | lenvatinib,0.5651750564575195
+29,euclidean,colorectal cancer,cetuximab,17,bevacizumab,bevacizumab | triptorelin | sunitinib | olaparib | megestrol,0.7411835193634033
+29,euclidean,deep vein thrombosis prophylaxis,dalteparin,1,dalteparin,dalteparin | enoxaparin | rivaroxaban | diphtheria toxoid haemophilus b conjugate prp t vaccine pertussis acellular poliovirus vaccine inactivated tetanus toxoid | cyproheptadine,0.4271114468574524
+29,euclidean,diffuse large b cell lymphoma,rituximab,40,tisagenlecleucel,tisagenlecleucel | doxorubicin | romidepsin | aclidinium | cytarabine,0.3598199188709259
+29,euclidean,endometrial cancer,anastrozole,4,pembrolizumab,pembrolizumab | lenvatinib | megestrol | anastrozole | cisplatin,0.5649168491363525
+29,euclidean,high cholesterol,rosuvastatin,5,pravastatin,pravastatin | niacin | atorvastatin | lovastatin | rosuvastatin,0.36990806460380554
+29,euclidean,inflammatory bowel disease,azathioprine,26,prednisone,prednisone | cholestyramine | ropinirole | dicyclomine | doxycycline,0.4875323176383972
+29,euclidean,muscle pain,ibuprofen,43,acetaminophen,acetaminophen | naproxen | diclofenac | duloxetine | venlafaxine,0.626057505607605
+29,euclidean,postpartum depression,citalopram,26,venlafaxine,venlafaxine | erythromycin | sertraline | minocycline | clindamycin,0.6644213199615479
+29,euclidean,supraventricular tachycardia,amiodarone,26,verapamil,verapamil | adenosine | atenolol | bisoprolol | esomeprazole,0.3855982720851898
+29,euclidean,tinea corporis,clotrimazole,5,ciclopirox,ciclopirox | ketoconazole | fluconazole | betamethasone clotrimazole | clotrimazole,0.4813285171985626
+29,euclidean,whipworm infection,mebendazole,16,albendazole,albendazole | doxycycline | dexamethasone | dicloxacillin | amoxicillin clavulanate,0.48467034101486206
+29,poincare,bacterial infection,amoxicillin clavulanate,123,betamethasone clotrimazole,betamethasone clotrimazole | sulfamethoxazole trimethoprim | vincristine | docusate | oxycodone,0.05926673859357834
+29,poincare,bacterial skin infection,sulfamethoxazole trimethoprim,20,iopromide,iopromide | dinoprostone | triamcinolone | docusate | dextromethorphan promethazine,0.0820474699139595
+29,poincare,bladder cancer,doxorubicin,199,ofloxacin,ofloxacin | penicillin v potassium | triamcinolone | valsartan | naltrexone,0.06212271749973297
+29,poincare,breast cancer,doxorubicin,300,triptorelin,triptorelin | ketoconazole | propranolol | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid | aripiprazole,0.07891061156988144
+29,poincare,cervical cancer,methotrexate,189,becaplermin,becaplermin | propafenone | cromolyn | pegademase bovine | regorafenib,0.06575404107570648
+29,poincare,colorectal cancer,cetuximab,349,amphotericin b lipid complex,amphotericin b lipid complex | insulin regular | diphtheria toxoid pertussis acellular poliovirus vaccine inactivated tetanus toxoid | dextran high molecular weight | doxycycline,0.05787745118141174
+29,poincare,deep vein thrombosis prophylaxis,dalteparin,267,follicle stimulating hormone,follicle stimulating hormone | progesterone | aclidinium | valsartan | paroxetine,0.05593235418200493
+29,poincare,diffuse large b cell lymphoma,rituximab,230,acetaminophen dextromethorphan phenylephrine,acetaminophen dextromethorphan phenylephrine | nitroglycerin | aripiprazole | nortriptyline | lansoprazole,0.08084861189126968
+29,poincare,endometrial cancer,anastrozole,327,paclitaxel,paclitaxel | aclidinium | oxybutynin | fludarabine | cilastatin imipenem,0.04896463453769684
+29,poincare,high cholesterol,rosuvastatin,83,alprazolam,alprazolam | cromolyn | cholestyramine | lorazepam | regorafenib,0.07413909584283829
+29,poincare,inflammatory bowel disease,azathioprine,208,isosorbide mononitrate,isosorbide mononitrate | anthrax immune globulin intravenous | chondroitin glucosamine | glycopyrronium | indomethacin,0.06961183249950409
+29,poincare,muscle pain,ibuprofen,17,erlotinib,erlotinib | methyltestosterone | alendronate | brimonidine timolol | lubiprostone,0.07511897385120392
+29,poincare,postpartum depression,citalopram,155,bleomycin,bleomycin | ibuprofen | erlotinib | aldesleukin | regorafenib,0.05928080901503563
+29,poincare,supraventricular tachycardia,amiodarone,280,digoxin,digoxin | prednisolone | furosemide | sulfamethoxazole trimethoprim | cefoxitin,0.05541229620575905
+29,poincare,tinea corporis,clotrimazole,345,prednisone,prednisone | collagenase clostridium histolyticum | dextran high molecular weight | gabapentin | brimonidine timolol,0.05679691955447197
+29,poincare,whipworm infection,mebendazole,33,cromolyn,cromolyn | enalapril | duloxetine | trazodone | zonisamide,0.05635043606162071
+43,euclidean,bacterial infection,amoxicillin clavulanate,11,vancomycin,vancomycin | bezlotoxumab | penicillin g sodium | bacitracin | cefpodoxime,0.37637093663215637
+43,euclidean,bladder cancer,doxorubicin,30,cisplatin,cisplatin | venlafaxine | sulfamethoxazole trimethoprim | aripiprazole | crizotinib,0.27074843645095825
+43,euclidean,breast cancer,anastrozole,22,methotrexate,methotrexate | everolimus | doxorubicin | sunitinib | tamoxifen,0.43206700682640076
+43,euclidean,cancer,fluorouracil,9,vinblastine,vinblastine | sunitinib | everolimus | crizotinib | triptorelin,0.5541510581970215
+43,euclidean,cervical cancer,cisplatin,43,methotrexate,methotrexate | everolimus | fluorouracil | carboplatin | tamoxifen,0.5698193311691284
+43,euclidean,chronic inflammatory demyelinating polyradiculoneuropathy,azathioprine,10,immune globulin intravenous and subcutaneous,immune globulin intravenous and subcutaneous | imatinib | methadone | meloxicam | duloxetine,0.4450063705444336
+43,euclidean,chronic lymphocytic leukemia,fludarabine,14,bendamustine,bendamustine | ibrutinib | chlorambucil | cytarabine | rituximab,0.3511905074119568
+43,euclidean,chronic myelogenous leukemia,cytarabine,18,imatinib,imatinib | anagrelide | ponatinib | bendamustine | chlorambucil,0.41712823510169983
+43,euclidean,colorectal cancer,cetuximab,20,bevacizumab,bevacizumab | vinblastine | aspirin | sunitinib | cefdinir,0.4109325706958771
+43,euclidean,emergency contraception postcoital contraception,levonorgestrel,20,ethinyl estradiol levonorgestrel,ethinyl estradiol levonorgestrel | cyclophosphamide | dexamethasone | amoxicillin | chlorambucil,0.4406004548072815
+43,euclidean,endometrial cancer,pembrolizumab,17,anastrozole,anastrozole | megestrol | lenvatinib | carboplatin | olaparib,0.4212805926799774
+43,euclidean,gonococcal infection uncomplicated,ciprofloxacin,39,ceftriaxone,ceftriaxone | azithromycin | penicillin v potassium | mupirocin | dicloxacillin,0.4540659189224243
+43,euclidean,high cholesterol familial heterozygous,atorvastatin,4,lovastatin,lovastatin | fluvastatin | simvastatin | atorvastatin | rosuvastatin,0.47458621859550476
+43,euclidean,hypogonadism male,methyltestosterone,20,follicle stimulating hormone,follicle stimulating hormone | tamoxifen | palonosetron | dronabinol | amlodipine,0.5838162899017334
+43,euclidean,melanoma metastatic,talimogene laherparepvec,34,cobimetinib,cobimetinib | abacavir | insulin degludec | minocycline | ritonavir,0.2573196291923523
+43,euclidean,organophosphate poisoning,atropine,21,atropine pralidoxime,atropine pralidoxime | amphotericin b | amphotericin b lipid complex | dexamethasone | flumazenil,0.41565293073654175
+43,euclidean,tinea cruris,ketoconazole,7,econazole,econazole | betamethasone clotrimazole | miconazole | pamidronate | clotrimazole,0.2597231864929199
+43,euclidean,ventricular tachycardia,amiodarone,6,mexiletine,mexiletine | acebutolol | lidocaine | verapamil | risperidone,0.373795747756958
+43,poincare,bacterial infection,amoxicillin clavulanate,87,menthol zinc oxide,menthol zinc oxide | sulfasalazine | cytarabine | gentamicin | smallpox and monkeypox vaccine,0.0660342425107956
+43,poincare,bladder cancer,doxorubicin,127,vinblastine,vinblastine | immune globulin intravenous and subcutaneous | diphenhydramine | doxapram | cobimetinib,0.0551450215280056
+43,poincare,breast cancer,anastrozole,89,fludarabine,fludarabine | octreotide | ranitidine | cefdinir | quetiapine,0.060405630618333817
+43,poincare,cancer,fluorouracil,303,macitentan,macitentan | siltuximab | hyaluronidase | colchicine | cholecalciferol,0.07097924500703812
+43,poincare,cervical cancer,cisplatin,21,sulfasalazine,sulfasalazine | cytarabine | tetrabenazine | acyclovir | famciclovir,0.0476798415184021
+43,poincare,chronic inflammatory demyelinating polyradiculoneuropathy,azathioprine,61,atropine pralidoxime,atropine pralidoxime | fenofibrate | argatroban | phentermine | ritonavir,0.06408977508544922
+43,poincare,chronic lymphocytic leukemia,fludarabine,177,ioversol,ioversol | temazepam | isoniazid | lanadelumab | venlafaxine,0.07025565207004547
+43,poincare,chronic myelogenous leukemia,cytarabine,177,cholecalciferol,cholecalciferol | vestronidase alfa | dutasteride tamsulosin | sorafenib | diphenhydramine,0.0554036945104599
+43,poincare,colorectal cancer,cetuximab,364,valproic acid,valproic acid | levetiracetam | levodopa | minoxidil | asparaginase erwinia chrysanthemi,0.06474075466394424
+43,poincare,emergency contraception postcoital contraception,levonorgestrel,107,sulfamethoxazole trimethoprim,sulfamethoxazole trimethoprim | bupropion naltrexone | tamoxifen | imatinib | famciclovir,0.05609401315450668
+43,poincare,endometrial cancer,pembrolizumab,101,isosorbide mononitrate,isosorbide mononitrate | dutasteride tamsulosin | antivenom centruroides scorpion | amphotericin b liposomal | ursodiol,0.05500223487615585
+43,poincare,gonococcal infection uncomplicated,ciprofloxacin,325,lamotrigine,lamotrigine | argatroban | isoniazid | rituximab | penicillin g sodium,0.0796675756573677
+43,poincare,high cholesterol familial heterozygous,atorvastatin,300,peramivir,peramivir | palonosetron | lurasidone | doxapram | progesterone,0.04209115356206894
+43,poincare,hypogonadism male,methyltestosterone,336,aspirin,aspirin | temazepam | cetuximab | fosfomycin | minocycline,0.06993618607521057
+43,poincare,melanoma metastatic,talimogene laherparepvec,157,amikacin,amikacin | octreotide | ranitidine | isosorbide mononitrate | rosuvastatin,0.05474819988012314
+43,poincare,organophosphate poisoning,atropine,225,iopromide,iopromide | ketoconazole | gefitinib | cyproheptadine | econazole,0.06903795897960663
+43,poincare,tinea cruris,ketoconazole,67,ursodiol,ursodiol | pralidoxime | carbidopa levodopa | acyclovir | heparin,0.06322330981492996
+43,poincare,ventricular tachycardia,amiodarone,253,quetiapine,quetiapine | isosorbide mononitrate | penicillin g benzathine | cefuroxime | nabumetone,0.06990723311901093
+101,euclidean,bladder cancer,doxorubicin,52,cisplatin,cisplatin | lansoprazole | cetuximab | pembrolizumab | dicyclomine,0.30245256423950195
+101,euclidean,breast cancer,anastrozole,29,doxorubicin,doxorubicin | everolimus | methotrexate | trastuzumab | triptorelin,0.5895713567733765
+101,euclidean,cancer,vinblastine,4,fluorouracil,fluorouracil | capecitabine | cetuximab | vinblastine | anastrozole,0.537473738193512
+101,euclidean,cervical cancer,methotrexate,40,cisplatin,cisplatin | trastuzumab | lansoprazole | nitroprusside | dicyclomine,0.46364277601242065
+101,euclidean,chronic myelogenous leukemia,imatinib,24,anagrelide,anagrelide | ponatinib | vincristine | chlorambucil | cytarabine,0.39313292503356934
+101,euclidean,chronic myofascial pain,ibuprofen,25,clonazepam,clonazepam | methadone | rituximab | amitriptyline | methotrexate,0.5099329948425293
+101,euclidean,colorectal cancer,bevacizumab,67,cetuximab,cetuximab | cisplatin | capecitabine | megestrol | elapegademase,0.5578720569610596
+101,euclidean,emergency contraception postcoital contraception,levonorgestrel,20,ethinyl estradiol levonorgestrel,ethinyl estradiol levonorgestrel | methylprednisolone | minocycline | chromic chloride hexahydrate | sertraline,0.4172933101654053
+101,euclidean,endometrial cancer,lenvatinib,12,anastrozole,anastrozole | megestrol | pembrolizumab | crizotinib | fluorouracil,0.4994348883628845
+101,euclidean,head lice,piperonyl butoxide pyrethrins,6,malathion,malathion | acetic acid | romidepsin | desvenlafaxine | selenium,0.40298184752464294
+101,euclidean,hypogonadism male,methyltestosterone,15,follicle stimulating hormone,follicle stimulating hormone | cemiplimab | cimetidine | amitriptyline | sorafenib,0.3573155403137207
+101,euclidean,inflammatory bowel disease,azathioprine,6,prednisone,prednisone | dicyclomine | doxycycline | amitriptyline | methotrexate,0.5995667576789856
+101,euclidean,melanoma metastatic,talimogene laherparepvec,4,cobimetinib,cobimetinib | dacarbazine | crizotinib | talimogene laherparepvec | aspirin,0.4955667555332184
+101,euclidean,organophosphate poisoning,atropine,19,atropine pralidoxime,atropine pralidoxime | ropinirole | penicillin v potassium | erythromycin | duloxetine,0.3543517589569092
+101,euclidean,postpartum depression,citalopram,13,sertraline,sertraline | venlafaxine | doxapram | aripiprazole | topiramate,0.4583309590816498
+101,euclidean,rabbit fever tularemia,minocycline,9,streptomycin,streptomycin | doxycycline | canakinumab | lorazepam | prednisone,0.3092956840991974
+101,euclidean,supraventricular tachycardia,amiodarone,33,atenolol,atenolol | adenosine | bisoprolol | verapamil | clindamycin,0.31817230582237244
+101,euclidean,tinea cruris,ketoconazole,24,econazole,econazole | tolnaftate | betamethasone clotrimazole | dexamethasone tobramycin | ofloxacin,0.39039966464042664
+101,euclidean,tinea pedis,ketoconazole,10,tolnaftate,tolnaftate | betamethasone clotrimazole | clotrimazole | miconazole | econazole,0.4424804151058197
+101,euclidean,urinary tract infection,ciprofloxacin,31,amoxicillin,amoxicillin | levofloxacin | erythromycin | amoxicillin clavulanate | cefuroxime,0.5320303440093994
+101,euclidean,whipworm infection,mebendazole,14,albendazole,albendazole | levofloxacin | amoxicillin | bacitracin | fluocinolone neomycin,0.5780943036079407
+101,poincare,bladder cancer,doxorubicin,16,dalfampridine,dalfampridine | insulin glulisine | chlorambucil | trastuzumab | pamabrom,0.060158587992191315
+101,poincare,breast cancer,anastrozole,155,leuprolide,leuprolide | pyrithione zinc | hyaluronidase | zolpidem | glatiramer,0.05316261202096939
+101,poincare,cancer,vinblastine,331,simvastatin,simvastatin | amoxicillin | benzocaine | ketoconazole | naltrexone,0.06985268741846085
+101,poincare,cervical cancer,methotrexate,119,naltrexone,naltrexone | sodium bicarbonate | liothyronine | benazepril | acetic acid aluminum acetate,0.06315920501947403
+101,poincare,chronic myelogenous leukemia,imatinib,436,mexiletine,mexiletine | aluminum hydroxide magnesium hydroxide simethicone | temsirolimus | dalteparin | dextromethorphan guaifenesin,0.05510179325938225
+101,poincare,chronic myofascial pain,ibuprofen,64,tamsulosin,tamsulosin | cytarabine liposomal daunorubicin liposomal | praziquantel | scopolamine | valproic acid,0.07001789659261703
+101,poincare,colorectal cancer,bevacizumab,220,cholecalciferol,cholecalciferol | rivaroxaban | insulin degludec | temsirolimus | ampicillin,0.05389716103672981
+101,poincare,emergency contraception postcoital contraception,levonorgestrel,339,clonidine,clonidine | rilonacept | cholecalciferol | clobetasol | boric acid,0.0649428442120552
+101,poincare,endometrial cancer,lenvatinib,146,fenofibrate,fenofibrate | tetrabenazine | ritonavir | ketoconazole | flunisolide,0.05778268352150917
+101,poincare,head lice,piperonyl butoxide pyrethrins,435,benzocaine,benzocaine | fluvastatin | praziquantel | bezlotoxumab | dalteparin,0.06716465204954147
+101,poincare,hypogonadism male,methyltestosterone,400,aspirin butalbital caffeine,aspirin butalbital caffeine | tazarotene | rosuvastatin | smallpox and monkeypox vaccine | leucovorin,0.08143709599971771
+101,poincare,inflammatory bowel disease,azathioprine,93,glycopyrronium,glycopyrronium | atropine pralidoxime | clofazimine | bupropion naltrexone | leuprolide,0.04667197912931442
+101,poincare,melanoma metastatic,talimogene laherparepvec,325,triprolidine,triprolidine | bacitracin | cholestyramine | selenium sulfide | smallpox and monkeypox vaccine,0.057435233145952225
+101,poincare,organophosphate poisoning,atropine,264,miconazole,miconazole | methotrexate | acetic acid aluminum acetate | amphotericin b | gadodiamide,0.045206353068351746
+101,poincare,postpartum depression,citalopram,462,sucralfate,sucralfate | atropine pralidoxime | clofazimine | iron sucrose | niacin,0.0665302723646164
+101,poincare,rabbit fever tularemia,minocycline,189,idelalisib,idelalisib | lactulose | potassium gluconate | trazodone | famotidine,0.07149089127779007
+101,poincare,supraventricular tachycardia,amiodarone,108,phentolamine,phentolamine | lenalidomide | leuprolide | zolpidem | potassium citrate,0.05392589047551155
+101,poincare,tinea cruris,ketoconazole,136,imatinib,imatinib | amphotericin b | cabozantinib | naltrexone | atropine pralidoxime,0.08360298722982407
+101,poincare,tinea pedis,ketoconazole,36,miconazole,miconazole | propafenone | follicle stimulating hormone | cytarabine liposomal daunorubicin liposomal | amitriptyline,0.056647785007953644
+101,poincare,urinary tract infection,ciprofloxacin,291,iron sucrose,iron sucrose | smallpox and monkeypox vaccine | ampicillin | imiquimod | dacarbazine,0.05632505938410759
+101,poincare,whipworm infection,mebendazole,235,emtricitabine,emtricitabine | benzyl alcohol | clonazepam | zonisamide | fluoxetine,0.05706062167882919
