@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: model
+    description: Deterministic RMF-RAG retrieval operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,75 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /model/query:
+    get:
+      operationId: runModelQuery
+      tags: [model]
+      summary: Run a saved RMF-RAG retrieval query
+      description: Runs one deterministic 2-hop or 3-hop query against the saved Hetionet embeddings and returns ranked candidates with graph-path and licensed-evidence status.
+      parameters:
+        - name: hop
+          in: query
+          required: false
+          schema:
+            type: number
+            enum: [2, 3]
+            default: 3
+        - name: split
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [validation, test]
+            default: test
+        - name: seed
+          in: query
+          required: false
+          schema:
+            type: number
+            enum: [7, 17, 29, 43, 101]
+            default: 101
+        - name: queryIndex
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 0
+            default: 0
+        - name: method
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [lexical, euclidean, poincare, poincare_with_path_verification]
+            default: poincare
+        - name: topK
+          in: query
+          required: false
+          schema:
+            type: number
+            minimum: 1
+            maximum: 10
+            default: 10
+      responses:
+        "200":
+          description: Ranked retrieval candidates
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ModelQueryResponse"
+        "400":
+          description: Invalid query parameters
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Model query failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +104,67 @@ components:
           type: string
       required:
         - status
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    ModelQuery:
+      type: object
+      properties:
+        queryId:
+          type: string
+        hop:
+          type: number
+        split:
+          type: string
+        seed:
+          type: number
+        sourceGene:
+          type: string
+        disease:
+          type: string
+        intermediateGene:
+          type: ["string", "null"]
+      required: [queryId, hop, split, seed, sourceGene, disease, intermediateGene]
+    EvidenceSummary:
+      type: object
+      properties:
+        status:
+          type: string
+        title:
+          type: ["string", "null"]
+        sourceUrl:
+          type: ["string", "null"]
+        snippet:
+          type: ["string", "null"]
+      required: [status, title, sourceUrl, snippet]
+    ModelCandidate:
+      type: object
+      properties:
+        rank:
+          type: number
+        compound:
+          type: string
+        pathVerifiedInTrainGraph:
+          type: boolean
+        evidence:
+          $ref: "#/components/schemas/EvidenceSummary"
+      required: [rank, compound, pathVerifiedInTrainGraph, evidence]
+    ModelQueryResponse:
+      type: object
+      properties:
+        query:
+          $ref: "#/components/schemas/ModelQuery"
+        method:
+          type: string
+        candidates:
+          type: array
+          items:
+            $ref: "#/components/schemas/ModelCandidate"
+        interpretation:
+          type: string
+      required: [query, method, candidates, interpretation]
 

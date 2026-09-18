@@ -2,97 +2,73 @@
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000001",
     "position": 1,
-    "filepath": "src/pages/slides/S01Title.tsx",
-    "title": "From Flat Maps to Curved Space",
-    "description": "Title slide — personal framing for supervisor pitch. Cobalt rule, hero headline, 3 stat pills (10 papers / 1 blind spot / 1 solution), SVG Poincare ball with geodesic arc.",
-    "speakerNotes": "Start by saying — 'Sir, I spent time reading 10 recent papers on Knowledge Graph RAG systems. What I found surprised me. They all share the same hidden flaw. Today I want to walk you through what I discovered and what I think we should build instead.'\n\n- Keep this brief — 30 seconds max\n- Make eye contact; this is a conversation, not a lecture\n- The three stat pills tell the whole story: 10 papers, 1 flaw, 1 fix"
+    "filepath": "src/pages/slides/S01Completion.tsx",
+    "title": "RMF-RAG: How to start it and understand the test",
+    "description": "Simple step-by-step guide to the scripts, benchmark, live tester, and results.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000002",
     "position": 2,
-    "filepath": "src/pages/slides/S02Papers.tsx",
-    "title": "10 KG-RAG Papers — One Common Thread",
-    "description": "Two-column grid listing all 10 papers with one-line descriptions. Left column (5 papers) uses solid cobalt border; right column uses muted cobalt border.",
-    "speakerNotes": "Sir, these are the 10 papers I reviewed. Each one is clever in its own way.\n\n- D-RAG trains retrieval and reasoning together\n- CogGRAG adds self-checking to the reasoning loop\n- Goal-KG lets you write structured queries\n- M3KG-RAG handles text, images, and tables together\n- KG-RAG (Wang) uses two retrieval channels in parallel\n- GraphFlow models how information flows across edges\n- SG-RAG retrieves whole subgraphs, not just single nodes\n- HyKGE generates a hypothesis first, then searches — Hy stands for Hypothesis, not hyperbolic\n- KRAGEN uses an LLM to plan each hop step by step\n- KG2RAG verifies answers against the actual graph path\n\nBut I noticed something they all have in common. I'll show you on the next slide."
+    "filepath": "src/pages/slides/S02Question.tsx",
+    "title": "The whole project in five steps",
+    "description": "Beginner-friendly overview of the data, model, test, and evidence flow.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000003",
     "position": 3,
-    "filepath": "src/pages/slides/S03Gaps.tsx",
-    "title": "The Gaps I Found — Across All 10 Papers",
-    "description": "3x2 card grid showing 6 recurring gaps: flat geometry, hop degradation, exact string matching, equal hop weighting, context reset, sparse path failure.",
-    "speakerNotes": "These are the six gaps I found after reading all 10 papers carefully.\n\n- Flat geometry: every single paper embeds nodes in flat Euclidean space\n- Hop degradation: SG-RAG drops from 90% to 58% accuracy when you go from 2 hops to 3 hops\n- Exact string match: if the entity name is slightly different — a synonym, an abbreviation — the system breaks\n- Equal hop weighting: the first hop and the third hop are scored the same, which makes no sense semantically\n- Context reset: KRAGEN forgets where it came from at each step\n- Sparse path failure: KG2RAG cannot handle missing edges and hallucinates instead\n\nSir, these are not six different problems. They are all symptoms of the same root cause — which I will explain next."
+    "filepath": "src/pages/slides/S03Built.tsx",
+    "title": "Run the project from the workspace root",
+    "description": "Exact commands for the benchmark, one query, evidence check, report, API, and tester.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000004",
     "position": 4,
-    "filepath": "src/pages/slides/S04RootCause.tsx",
-    "title": "They All Assume the World Is Flat",
-    "description": "Two-column split: left lists the Euclidean assumptions + medical knowledge chain. Right: SVG tree overflowing a flat bounding box — hierarchy cannot be contained.",
-    "speakerNotes": "Think of it like this, sir.\n\n- If I ask you to draw a family tree on a flat piece of paper, it works for small families\n- But a big family tree gets messy — the relationships become misleading because flat space distorts them\n- Knowledge graphs are like enormous family trees\n- The chain Gene → Disease → Drug → Interaction → Side Effect is a hierarchy, not a flat grid\n- Hierarchies expand exponentially. A gene connects to hundreds of diseases. Each disease connects to thousands of drugs.\n- Flat Euclidean space cannot hold this without squeezing and distorting the relationships\n\nMy question was: what if we stop flattening the map and use a space that is already curved?"
+    "filepath": "src/pages/slides/S04Architecture.tsx",
+    "title": "The scripts build; the app lets you inspect",
+    "description": "Simple connection between the offline research pipeline and the live Model Tester.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000005",
     "position": 5,
-    "filepath": "src/pages/slides/S05Geometry.tsx",
-    "title": "Euclidean vs. Riemannian — What Changes",
-    "description": "Side-by-side comparison with SVG diagrams. Left: flat grid with equidistant nodes and straight-line distances. Right: Poincare disk with nodes in hierarchical layers connected by curved geodesics.",
-    "speakerNotes": "Sir, let me explain the two sides.\n\nOn the left — Euclidean, what all 10 papers use:\n- Distances are straight lines: the Pythagorean formula most people know from school\n- Every direction is treated equally\n- A gene node and a drug node 3 hops away look the same distance as two adjacent nodes\n\nOn the right — Riemannian, specifically the Poincare ball:\n- The distance formula uses arctanh and Mobius addition\n- It grows exponentially as you move toward the boundary of the disk\n- Nodes near the centre are broad, high-level concepts. Nodes near the boundary are specific, low-level concepts.\n- This matches exactly how medical knowledge is structured\n\nGeodesic is a word I use often. It simply means the shortest curved path on a curved surface — like the flight path between two cities on a globe. On a flat map it looks curved; on the globe it is the true shortest path. In the Poincare ball, the geodesic between two medical concepts is the true semantic path."
+    "filepath": "src/pages/slides/S05Model.tsx",
+    "title": "How the model makes a ranking",
+    "description": "Plain-language explanation of hidden answers, model scoring, rank, graph paths, and evidence.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000006",
     "position": 6,
-    "filepath": "src/pages/slides/S06Mechanisms.tsx",
-    "title": "How It Changes Every Query Mechanism",
-    "description": "Before/after table with 6 rows: embedding, retrieval, hop traversal, hop weighting, context memory, answer grounding. Dark header; alternating row backgrounds.",
-    "speakerNotes": "Sir, I know this table looks complex, so let me put it simply.\n\nBefore, with Euclidean geometry:\n- Embedding uses flat dot products\n- Retrieval ranks by cosine similarity — which treats all directions equally\n- Each hop is a fixed step in flat space\n- Every hop is weighted the same\n- Context is thrown away and rebuilt from scratch at each hop\n- The final answer is scored by Euclidean path distance\n\nAfter, with Riemannian geometry:\n- Embedding uses Mobius transformation on the curved Poincare ball\n- Retrieval ranks by geodesic distance — so depth matters\n- Each hop follows the actual curve of the knowledge surface\n- Distance decays naturally as you go deeper — no manual weighting needed\n- Parallel transport carries context across every hop — the system always knows where it started\n- The final answer is verified against the faithfulness of the full curved path\n\nThink of it like a GPS that understands the real shape of the terrain — not just measuring equal distances on a flat road."
+    "filepath": "src/pages/slides/S06Benchmark.tsx",
+    "title": "How the fair test works",
+    "description": "Step-by-step train/test split, hidden targets, repeated seeds, and Recall@K.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000007",
     "position": 7,
-    "filepath": "src/pages/slides/S07Query.tsx",
-    "title": "Sample Query: TCF7L2 → Type 2 Diabetes → Metformin",
-    "description": "Split layout: left shows old (Euclidean, fails at hop 3) vs new (RMF-RAG, succeeds with parallel transport). Right: Poincare disk SVG with three nodes connected by geodesic arcs.",
-    "speakerNotes": "Sir, this is a real biomedical question: how does the gene TCF7L2 connect to the drug Metformin?\n\nWith the old approach:\n- Hop 1: the system finds 247 nearby nodes using cosine similarity and picks the top result\n- Hop 2: it resets — forgets the gene — and starts searching again from flat space\n- Hop 3: it cannot find Metformin because the path goes through a sparse edge that the flat embeddings cannot bridge\n- Result: the system fails or, worse, hallucinates a connection\n\nWith RMF-RAG:\n- Hop 1: TCF7L2 is embedded on the Poincare ball — the geodesic path leads naturally toward the Disease cluster\n- Hop 2: parallel transport carries the gene context forward — the system arrives at Type 2 Diabetes with full memory of where it started\n- Hop 3: the curvature of the space narrows the search toward Insulin Resistance and then Metformin, found via geodesic\n- Result: a faithful 3-hop answer with the full path shown\n\nThe curved path in the diagram on the right is the geodesic — the actual shortest path through the semantic space. Parallel transport means the direction of travel is carried with us at every step."
+    "filepath": "src/pages/slides/S07Results.tsx",
+    "title": "What the benchmark numbers mean",
+    "description": "Simple interpretation of the 2-hop and 3-hop test results.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000008",
     "position": 8,
-    "filepath": "src/pages/slides/S08Pipeline.tsx",
-    "title": "RMF-RAG — The 5-Step Pipeline",
-    "description": "5 numbered steps on the left (circular number badges, step 4 highlighted as novel). Right: dark card with key formula, emerald why-different box, parallel transport explanation.",
-    "speakerNotes": "Sir, these five steps replace the five corresponding Euclidean operations in any existing KG-RAG system.\n\n- Step 1: Hyperbolic Embedding — we encode all the knowledge graph nodes on the Poincare ball. This is where the hierarchy is preserved naturally without any extra effort.\n- Step 2: Geodesic Retrieval — instead of cosine similarity, we rank candidates by their geodesic distance from the query. Deeper nodes get further-away scores automatically.\n- Step 3: Curvature-Aware Hop — each hop follows the exponential map on the manifold surface, not a straight line in flat space.\n- Step 4: Parallel Transport — this is the most novel part. I borrowed this idea from physics and differential geometry. It means we carry the direction of travel with us as we move through the graph. The system always knows where it came from.\n- Step 5: Geodesic Verification — we score the final answer by how faithful the full curved path is, not just whether the endpoint matches.\n\nThe key point: we do not redesign the whole pipeline. We change the geometry underneath it."
+    "filepath": "src/pages/slides/S08Tester.tsx",
+    "title": "How to use the live Model Tester",
+    "description": "What to select, what the API does, and how to read one deterministic result.",
+    "speakerNotes": ""
   },
   {
     "id": "sp00-aaaa-bbbb-cccc-dddd00000009",
     "position": 9,
-    "filepath": "src/pages/slides/S09GapClosure.tsx",
-    "title": "How RMF-RAG Closes Every Gap",
-    "description": "Two-column table mapping all 10 papers to their RMF-RAG fix. Dark header; alternating rows. Footer: 'One root cause, one solution.'",
-    "speakerNotes": "Sir, I want to draw your attention to something important on this slide.\n\nEvery row maps one paper's specific gap to one RMF-RAG fix. But look at the pattern:\n- All the fixes come from the same source — changing the geometry\n- Geodesic distance, parallel transport, and the Poincare ball appear in every fix\n- We do not need a separate solution for each paper's problem\n\nThis is the sign of a strong foundational insight. When one change addresses ten different problems, it means we have found the actual root cause — not just a symptom.\n\nOne root cause. One solution."
-  },
-  {
-    "id": "sp00-aaaa-bbbb-cccc-dddd00000012",
-    "position": 10,
-    "filepath": "src/pages/slides/S10Results.tsx",
-    "title": "Hetionet Results",
-    "description": "Five-seed licensed Hetionet benchmark with 2-hop and 3-hop held-out terminal links. Reports Recall@5 and MRR for lexical, Euclidean, and RMF-RAG hyperbolic retrieval, with an honest calibrated interpretation.",
-    "speakerNotes": "Sir, this is the completed benchmark rather than the earlier Kaggle pilot.\n\n- The experiment uses the reusable licensed subset of Hetionet: 3,200 Gene–Disease edges, 1,145 Disease–Compound edges, and 823 Gene–Compound edges.\n- It evaluates typed 2-hop Gene → Disease → Compound and 3-hop Gene → Disease → Gene → Compound retrieval with terminal answer edges held out.\n- Across five seeds, the full hyperbolic model reaches 0.012 MRR on 2-hop test queries versus 0.013 for Euclidean, and 0.015 versus 0.011 on 3-hop test queries.\n- The confidence intervals overlap, so the correct conclusion is a modest 3-hop signal, not a statistically conclusive win.\n- The benchmark also includes geodesic, hop-weighting, parallel-transport, and typed-path verification ablations.\n\nAn independent biomedical reviewer, separate from model ranking, reviewed all eight calibration candidates. Evidence support and therapeutic plausibility are reviewer-adjudicated within the cited source scope; graph-path support remains a programmatic training-graph label. Two preclinical labels were conservatively downgraded, and Recall/MRR were not changed. This remains research triage, not clinical evidence or a therapeutic recommendation."
-  },
-  {
-    "id": "sp00-aaaa-bbbb-cccc-dddd00000010",
-    "position": 11,
-    "filepath": "src/pages/slides/S10Plan.tsx",
-    "title": "HyperKG-RAG — 10-Week Build Complete",
-    "description": "Completed timeline: matched Euclidean/Poincare trainers, geodesic retrieval, hop context, licensed Hetionet 2-hop/3-hop benchmark, five seeds, ablations, confidence intervals, attribution, and paper draft.",
-    "speakerNotes": "Sir, the ten-week build is now complete.\n\n- Weeks 1–2 delivered matched Euclidean and Poincare trainers with reproducible negative sampling.\n- Weeks 3–4 delivered geodesic retrieval and typed held-out link evaluation.\n- Weeks 5–6 delivered hop weighting, radial parallel transport, and switchable ablations.\n- Weeks 7–8 delivered the licensed Hetionet biomedical benchmark with exact 2-hop and 3-hop query sets.\n- Weeks 9–10 delivered five-seed aggregation, confidence intervals, raw predictions, attribution records, and paper-ready sections.\n- The eight-candidate calibration set now has an independent biomedical review pass, with evidence/therapeutic labels reviewer-adjudicated and graph-path support retained as a source-scoped programmatic label.\n\nThe completed claim is a reproducible retrieval benchmark with a reviewed evidence guardrail. Larger human evaluation and evidence-grounded generation remain future work; I am not presenting those as completed clinical results."
-  },
-  {
-    "id": "sp00-aaaa-bbbb-cccc-dddd00000011",
-    "position": 12,
-    "filepath": "src/pages/slides/S11Closing.tsx",
-    "title": "Why This Matters — And Why Now",
-    "description": "Dark navy closing slide with emerald glow. Left: 4 bordered points (gap, opportunity, application, contribution). Right: pull quote 'Every existing system draws on a flat map. I am proposing we use a globe.' + request to sir.",
-    "speakerNotes": "Sir, I want to end with the calibrated version of the contribution.\n\n- The build is no longer only a proposal: it is a reproducible, licensed five-seed Hetionet retrieval benchmark with typed 2-hop and 3-hop tasks.\n- The main finding is intentionally modest: hyperbolic retrieval improves 3-hop MRR over the matched Euclidean model, but does not improve 2-hop MRR, and the confidence intervals overlap.\n- The ablations show that path verification improves support for top-ranked paths but can reduce recovery of deliberately held-out answers. That is a useful precision–coverage tradeoff, not a universal win.\n- The calibration set has now been independently reviewed: evidence support and therapeutic plausibility are reviewer-adjudicated within source scope, while graph-path support remains a programmatic label.\n- The application remains promising for biomedical discovery, but the current artifact is not clinical decision support and must not be framed as medical advice.\n\nThe ten-week engineering build is complete. The next thesis phase is larger human evaluation and evidence-grounded generation. That is where a stronger claim can be tested."
+    "filepath": "src/pages/slides/S09Paper.tsx",
+    "title": "The simple story to tell",
+    "description": "Plain-language contribution, result, and boundary statements for a supervisor or paper.",
+    "speakerNotes": ""
   }
 ]

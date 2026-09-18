@@ -1,0 +1,52 @@
+{
+  "evidence_source": {
+    "manifest": "research/data/biomedical_evidence_manifest.json",
+    "citation_key": "PMCID"
+  },
+  "rankings": {
+    "lexical": [
+      {
+        "rank": 1,
+        "compound": "DB00001",
+        "evidence": {
+          "status": "direct_support",
+          "records": [
+            {
+              "record_id": "PMC123",
+              "pmcid": "PMC123",
+              "pmid": "1234567",
+              "doi": "10.1234/example.direct",
+              "license": "CC BY",
+              "authors": "Example A.",
+              "title": "Direct evidence example",
+              "source_url": "https://europepmc.org/articles/PMC123",
+              "scope": "Direct compound evidence.",
+              "snippet": "The compound was evaluated for the target indication."
+            }
+          ]
+        }
+      },
+      {
+        "rank": 2,
+        "compound": "DB00002",
+        "evidence": {
+          "status": "context_only",
+          "records": [
+            {
+              "record_id": "PMC456",
+              "pmcid": "PMC456",
+              "pmid": "7654321",
+              "doi": "10.1234/example.context",
+              "license": "CC BY",
+              "authors": "Example B.",
+              "title": "Context evidence example",
+              "source_url": "https://europepmc.org/articles/PMC456",
+              "scope": "Context-only compound evidence.",
+              "snippet": "The compound is discussed in a related clinical context."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

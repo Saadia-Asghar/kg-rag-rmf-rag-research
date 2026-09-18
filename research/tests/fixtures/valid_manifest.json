@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "provider": "Europe PMC",
+    "subset": "Open Access",
+    "primary_identifier": "PMCID"
+  },
+  "records": [
+    {
+      "record_id": "PMC123",
+      "pmcid": "PMC123",
+      "pmid": "1234567",
+      "doi": "10.1234/example.direct",
+      "license": "CC BY",
+      "authors": "Example A.",
+      "title": "Direct evidence example",
+      "source_url": "https://europepmc.org/articles/PMC123",
+      "evidence_scope": "Direct compound evidence.",
+      "evidence_label": "direct_support",
+      "snippet": "The compound was evaluated for the target indication.",
+      "compound_ids": [
+        "DB00001"
+      ]
+    },
+    {
+      "record_id": "PMC456",
+      "pmcid": "PMC456",
+      "pmid": "7654321",
+      "doi": "10.1234/example.context",
+      "license": "CC BY",
+      "authors": "Example B.",
+      "title": "Context evidence example",
+      "source_url": "https://europepmc.org/articles/PMC456",
+      "evidence_scope": "Context-only compound evidence.",
+      "evidence_label": "context_only",
+      "snippet": "The compound is discussed in a related clinical context.",
+      "compound_ids": [
+        "DB00002"
+      ]
+    }
+  ]
+}

@@ -26,7 +26,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python research/scripts/evaluate_evidence.py --validate-only"
+args = "python -m unittest discover -s research/tests && python research/scripts/evaluate_evidence.py --validate-only"
 
 [workflows.workflow.metadata]
 isValidation = true

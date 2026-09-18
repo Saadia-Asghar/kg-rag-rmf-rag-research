@@ -96,7 +96,8 @@ Before shipping or reviewing saved results, validate the frozen CC BY manifest
 and both demo packets with one command:
 
 ```bash
-python research/scripts/evaluate_evidence.py --validate-only
+python -m unittest discover -s research/tests && \
+  python research/scripts/evaluate_evidence.py --validate-only
 ```
 
 The validation fails on missing or malformed PMCID/PMID/DOI identifiers,

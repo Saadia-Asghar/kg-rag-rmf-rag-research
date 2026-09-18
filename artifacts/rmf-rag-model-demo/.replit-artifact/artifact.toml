@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/rmf-rag-model-demo/"
+title = "RMF-RAG Model Tester"
+description = "An interactive research console for running deterministic 2-hop and 3-hop biomedical retrieval queries against the saved RMF-RAG embeddings, with graph-path verification and licensed evidence status."
+version = "1.0.0"
+id = "artifacts/rmf-rag-model-demo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/rmf-rag-model-demo/" ]
+localPort = 18368
+
+[services.development]
+run = "pnpm --filter @workspace/rmf-rag-model-demo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/rmf-rag-model-demo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/rmf-rag-model-demo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18368"
+BASE_PATH = "/rmf-rag-model-demo/"
