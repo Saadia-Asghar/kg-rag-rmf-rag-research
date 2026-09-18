@@ -65,4 +65,15 @@ After the benchmark finishes, use `main_query_demo.py` and `evaluate_evidence.py
 
 ## Scientific status
 
-The restored benchmark implementation and leakage controls are test-validated on a synthetic Hetionet-shaped graph. A full real-data rerun has not been performed in this completion environment because the archived snapshot was not locally available. The saved historical Hetionet numbers therefore remain historical until the restored runner regenerates them. Do not describe the historical numbers as a fresh reproduction.
+The official Hetionet v1.0 archive was checksum-verified and the full real-data five-seed run completed in this environment. The saved artifacts in `results/main_benchmark/` are fresh outputs from that run. The held-out 3-hop MRR is 0.009 for Euclidean and 0.011 for Poincare, but the five-seed confidence intervals overlap; the work therefore makes no conclusive geometry-superiority claim. The separate typed-path-verification configuration achieved 3-hop Recall@5 of 0.110.
+
+## Start the local result tester
+
+The tester replays saved benchmark predictions. It does not retrain a model when you click a control.
+
+```powershell
+cd <repository-root>
+python research/scripts/live_benchmark_app.py --port 8770
+```
+
+Then open `http://127.0.0.1:8770/`. Choose a hop, seed, method, query index, and Top K, then select **Run retrieval**. See `SUPERVISOR_DEMO_SCRIPT.md` for a plain-language explanation and presentation script.
