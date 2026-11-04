@@ -1,0 +1,51 @@
+{
+  "title": "Does Poincare geometry reduce multi-hop hallucination in biomedical KG retrieval?",
+  "motivation": "Exploratory observation from the 16-d, curvature-1, 60-epoch run (seeds 7-101): Poincare top-1 answers on 3-hop test queries were path-supported more often than Euclidean answers in 5/5 seeds (mean +0.133, 95% CI [-0.043, 0.309]); on 2-hop they were less often supported (-0.090). This sweep tests whether the 3-hop effect is real and whether it grows in the regime where hyperbolic geometry is expected to help (low dimension, higher curvature, longer training).",
+  "definition_hop_hallucination": "HHR@1 = fraction of queries whose top-1 compound has no exact typed path from the query in the training graph. Unsupported@10 = mean fraction of the top-10 compounds without such a path.",
+  "primary_hypothesis": "H1: on 3-hop test queries, Poincare retrieval has a different (expected: lower) HHR@1 than Euclidean retrieval of the same dimension.",
+  "primary_test": "For each of the 8 Poincare configurations (dims 2,4,8,16 x curvature 1,10) versus the Euclidean model of the same dimension: two-sided paired t-test over the 10 seeds on per-seed 3-hop test HHR@1; Holm-Bonferroni correction across the 8 comparisons at alpha 0.05. Exact two-sided sign test reported alongside.",
+  "secondary_outcomes": [
+    "3-hop test Unsupported@10 (same test and correction)",
+    "3-hop test MRR (accuracy must be reported next to hallucination; a lower HHR with lower MRR is not an improvement)",
+    "2-hop test HHR@1, Unsupported@10 and MRR",
+    "Effect of typed-path verification reranking on HHR@1 and MRR for both geometries",
+    "Sensitivity analysis: primary test restricted to the 5 seeds never inspected before (211, 307, 401, 503, 601)"
+  ],
+  "fixed_settings": {
+    "dims": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "poincare_curvatures": [
+      1.0,
+      10.0
+    ],
+    "lr_grid": [
+      0.1,
+      0.3,
+      1.0
+    ],
+    "epochs": 150,
+    "batch_size": 256,
+    "margin": 0.45,
+    "seeds": [
+      7,
+      17,
+      29,
+      43,
+      101,
+      211,
+      307,
+      401,
+      503,
+      601
+    ],
+    "tuning_seed": 7,
+    "lr_selection": "per configuration, highest mean of 2-hop and 3-hop validation MRR on the tuning seed",
+    "query_cap": 500
+  },
+  "curvature_implementation": "Models are trained on the ball of radius 1/sqrt(c). For evaluation, vectors are multiplied by sqrt(c); geodesic distances then scale by 1/sqrt(c) and origin log/exp maps commute with the scaling, so rankings equal those of the curvature-c model.",
+  "written_at": "2026-11-04T12:25:48"
+}

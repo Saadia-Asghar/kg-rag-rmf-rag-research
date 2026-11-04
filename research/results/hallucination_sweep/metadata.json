@@ -1,0 +1,21 @@
+{
+  "dataset": "Hetionet v1.0",
+  "snapshot_sha256": "a342ab57e9073e6c02bb5e109d1f16917e6f933be4e5c77ebbaebfa26b984c19",
+  "selected_learning_rates": {
+    "euclidean_d16": 0.1,
+    "euclidean_d2": 0.1,
+    "euclidean_d4": 0.1,
+    "euclidean_d8": 0.3,
+    "poincare_d16_c1": 0.1,
+    "poincare_d16_c10": 0.1,
+    "poincare_d2_c1": 1.0,
+    "poincare_d2_c10": 0.3,
+    "poincare_d4_c1": 1.0,
+    "poincare_d4_c10": 1.0,
+    "poincare_d8_c1": 1.0,
+    "poincare_d8_c10": 0.3
+  },
+  "completed_at": "2026-11-04T12:40:48",
+  "torch_version": "2.10.0+cpu",
+  "numpy_version": "2.3.5"
+}

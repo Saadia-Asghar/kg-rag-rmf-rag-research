@@ -135,7 +135,60 @@ def table_pilot() -> tuple[list[str], list[list[str]]]:
     return header, body
 
 
+SWEEP = ROOT / "research" / "results" / "hallucination_sweep"
+
+
+def _sweep_configs() -> list[str]:
+    dims = (2, 4, 8, 16)
+    return [f"euclidean_d{d}" for d in dims] + [f"poincare_d{d}_c{c}" for d in dims for c in (1, 10)]
+
+
+def _sweep_label(name: str) -> str:
+    if name.startswith("euclidean"):
+        return f"Euclidean, d = {name.split('_d')[1]}"
+    d, c = name.split("_d")[1].split("_c")
+    return f"Poincaré, d = {d}, c = {c}"
+
+
+def table_sweep(split: str) -> tuple[list[str], list[list[str]]]:
+    with (SWEEP / "summary.csv").open(encoding="utf-8") as handle:
+        rows = {(r["config"], r["split"]): r for r in csv.DictReader(handle)}
+    lrs = json.loads((SWEEP / "metadata.json").read_text(encoding="utf-8"))["selected_learning_rates"]
+    header = ["Configuration", "LR", "MRR", "Recall@10", "HHR@1", "Unsupported@10", "HHR@1 after path verif."]
+    order = sorted(_sweep_configs(), key=lambda n: (int(n.split("_d")[1].split("_")[0]), n))
+    body = []
+    for name in order:
+        r = rows[(name, split)]
+        body.append([_sweep_label(name), f"{lrs[name]:g}", fmt(r, "mrr"), fmt(r, "recall_at_10"),
+                     fmt(r, "hhr_at_1"), fmt(r, "unsupported_at_10"), f"{float(r['pv_hhr_at_1_mean']):.3f}"])
+    return header, body
+
+
+def table_sweep_paired(split: str) -> tuple[list[str], list[list[str]]]:
+    with (SWEEP / "comparisons.csv").open(encoding="utf-8") as handle:
+        rows = [r for r in csv.DictReader(handle) if r["split"] == split and r["seed_set"] == "all_10_seeds"]
+    by = {(r["poincare"], r["metric"]): r for r in rows}
+    header = ["Poincaré vs Euclidean (same d)", "ΔHHR@1 [95% CI]", "p (Holm)", "Seeds lower",
+              "ΔUnsupported@10 [95% CI]", "p (Holm)", "ΔMRR [95% CI]", "p (Holm)"]
+    body = []
+    for name in [n for n in _sweep_configs() if n.startswith("poincare")]:
+        cells = [_sweep_label(name)]
+        for metric in ("hhr_at_1", "unsupported_at_10", "mrr"):
+            r = by[(name, metric)]
+            cells.append(f"{float(r['mean_diff']):+.3f} [{float(r['ci95_low']):+.3f}, {float(r['ci95_high']):+.3f}]")
+            p = float(r["p_holm"])
+            cells.append("<0.001" if p < 0.001 else f"{p:.3f}")
+            if metric == "hhr_at_1":
+                cells.append(f"{r['negative']}/{r['n']}")
+        body.append(cells)
+    return header, body
+
+
 TABLES = {
+    "sweep_3hop": lambda: table_sweep("3hop_test"),
+    "sweep_2hop": lambda: table_sweep("2hop_test"),
+    "sweep_paired_3hop": lambda: table_sweep_paired("3hop_test"),
+    "sweep_paired_2hop": lambda: table_sweep_paired("2hop_test"),
     "main_test": lambda: table_main("test"),
     "main_validation": lambda: table_main("validation"),
     "ablation": table_ablation,

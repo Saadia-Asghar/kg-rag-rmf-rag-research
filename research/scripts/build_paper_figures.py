@@ -92,10 +92,52 @@ def figure_loss() -> None:
     plt.close(fig)
 
 
+def figure_sweep() -> None:
+    """Hop-hallucination rate and MRR versus dimension (pre-registered sweep)."""
+    path = ROOT / "research" / "results" / "hallucination_sweep" / "summary.csv"
+    if not path.exists():
+        return
+    with path.open(encoding="utf-8") as handle:
+        rows = {(r["config"], r["split"]): r for r in csv.DictReader(handle)}
+    dims = sorted({int(c.split("_d")[1].split("_")[0]) for c, _ in rows})
+    series = [
+        ("Euclidean", lambda d: f"euclidean_d{d}", COLORS["euclidean"], "o", "-"),
+        ("Poincaré, c = 1", lambda d: f"poincare_d{d}_c1", COLORS["poincare"], "s", "-"),
+        ("Poincaré, c = 10", lambda d: f"poincare_d{d}_c10", "#805ad5", "^", "--"),
+    ]
+    panels = [("hhr_at_1", "3hop_test", "3-hop: hallucinated top-1 (HHR@1)"),
+              ("hhr_at_1", "2hop_test", "2-hop: hallucinated top-1 (HHR@1)"),
+              ("mrr", "3hop_test", "3-hop: accuracy (MRR)"),
+              ("mrr", "2hop_test", "2-hop: accuracy (MRR)")]
+    fig, axes = plt.subplots(2, 2, figsize=(9, 6.2))
+    for ax, (metric, split, title) in zip(axes.flat, panels):
+        for label, name, color, marker, style in series:
+            mean = [float(rows[(name(d), split)][f"{metric}_mean"]) for d in dims]
+            low = [m - float(rows[(name(d), split)][f"{metric}_ci95_low"]) for m, d in zip(mean, dims)]
+            high = [float(rows[(name(d), split)][f"{metric}_ci95_high"]) - m for m, d in zip(mean, dims)]
+            ax.errorbar(dims, mean, yerr=[low, high], label=label, color=color, marker=marker,
+                        linestyle=style, capsize=3, linewidth=1.2, markersize=4)
+        if metric == "mrr":
+            ax.axhline(chance_mrr(), color="black", linestyle=":", linewidth=1, label="random ranking")
+        ax.set_xscale("log", base=2)
+        ax.set_xticks(dims)
+        ax.set_xticklabels([str(d) for d in dims])
+        ax.set_xlabel("Embedding dimension", fontsize=8)
+        ax.set_title(title, fontsize=9)
+        ax.tick_params(labelsize=8)
+        ax.spines[["top", "right"]].set_visible(False)
+    axes[0, 0].legend(fontsize=7, frameon=False)
+    axes[1, 0].legend(fontsize=7, frameon=False)
+    fig.tight_layout()
+    fig.savefig(OUT / "fig_hallucination_sweep.png", dpi=300)
+    plt.close(fig)
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     figure_mrr()
     figure_loss()
+    figure_sweep()
     print(f"Wrote figures to {OUT}")
 
 
