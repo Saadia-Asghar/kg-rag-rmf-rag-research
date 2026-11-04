@@ -68,9 +68,15 @@ DATASET_CITATION = (
 
 SEEDS = (7, 17, 29, 43, 101)
 DIM = 16
-EPOCHS = 24
+EPOCHS = 60
 MARGIN = 0.45
-LEARNING_RATE = 0.035
+BATCH_SIZE = 256
+# Learning rates are selected separately for each geometry on the validation
+# split of the tuning seed only (see tune_learning_rates); test data is never used.
+LEARNING_RATE_GRID = (0.03, 0.1, 0.3, 1.0, 3.0)
+TUNING_SEED = 7
+EUCLIDEAN_LEARNING_RATE = 0.1
+POINCARE_LEARNING_RATE = 0.3
 CURVATURE = 1.0
 QUERY_CAP = 500
 EXPECTED_SELECTED_COUNTS = {
@@ -642,8 +648,21 @@ def _epoch_triplets(graph: dict, seed: int, epoch: int) -> tuple[torch.Tensor, t
     )
 
 
-def train_embeddings(graph: dict, seed: int) -> tuple[np.ndarray, np.ndarray, list[dict]]:
-    """Train matched Euclidean and Poincare link-retrieval embeddings."""
+def train_embeddings(
+    graph: dict,
+    seed: int,
+    *,
+    euclidean_lr: float | None = None,
+    poincare_lr: float | None = None,
+) -> tuple[np.ndarray, np.ndarray, list[dict]]:
+    """Train matched Euclidean and Poincare link-retrieval embeddings.
+
+    Both geometries see exactly the same triplets in the same mini-batch order
+    for the same number of epochs. Only the learning rate may differ, and it is
+    selected per geometry on validation data.
+    """
+    euclidean_lr = EUCLIDEAN_LEARNING_RATE if euclidean_lr is None else euclidean_lr
+    poincare_lr = POINCARE_LEARNING_RATE if poincare_lr is None else poincare_lr
     config = RetrieverConfig(
         num_nodes=len(graph["nodes"]),
         dim=DIM,
@@ -654,8 +673,8 @@ def train_embeddings(graph: dict, seed: int) -> tuple[np.ndarray, np.ndarray, li
     euclidean = EuclideanRetriever(config)
     set_seed(seed)
     poincare = PoincareRetriever(config)
-    euclidean_optimizer = torch.optim.SGD(euclidean.parameters(), lr=LEARNING_RATE)
-    poincare_optimizer = PoincareRSGD(poincare, lr=LEARNING_RATE)
+    euclidean_optimizer = torch.optim.SGD(euclidean.parameters(), lr=euclidean_lr)
+    poincare_optimizer = PoincareRSGD(poincare, lr=poincare_lr)
 
     history: list[dict] = []
     for epoch in range(EPOCHS):
@@ -663,22 +682,34 @@ def train_embeddings(graph: dict, seed: int) -> tuple[np.ndarray, np.ndarray, li
         if anchor.numel() == 0:
             raise RuntimeError("No training triplets could be generated")
 
-        euclidean_optimizer.zero_grad()
-        euclidean_loss = euclidean.triplet_loss(anchor, positive, negative)
-        euclidean_loss.backward()
-        euclidean_optimizer.step()
+        e_total = 0.0
+        p_total = 0.0
+        batches = 0
+        for start in range(0, anchor.numel(), BATCH_SIZE):
+            a = anchor[start : start + BATCH_SIZE]
+            pos = positive[start : start + BATCH_SIZE]
+            neg = negative[start : start + BATCH_SIZE]
 
-        poincare_optimizer.zero_grad()
-        poincare_loss = poincare.triplet_loss(anchor, positive, negative)
-        poincare_loss.backward()
-        poincare_optimizer.step()
+            euclidean_optimizer.zero_grad()
+            euclidean_loss = euclidean.triplet_loss(a, pos, neg)
+            euclidean_loss.backward()
+            euclidean_optimizer.step()
+
+            poincare_optimizer.zero_grad()
+            poincare_loss = poincare.triplet_loss(a, pos, neg)
+            poincare_loss.backward()
+            poincare_optimizer.step()
+
+            e_total += float(euclidean_loss.detach())
+            p_total += float(poincare_loss.detach())
+            batches += 1
 
         history.append(
             {
                 "seed": seed,
                 "epoch": epoch + 1,
-                "euclidean_loss": float(euclidean_loss.detach()),
-                "poincare_loss": float(poincare_loss.detach()),
+                "euclidean_loss": e_total / batches,
+                "poincare_loss": p_total / batches,
                 "poincare_max_norm": poincare.max_norm(),
             }
         )
@@ -688,6 +719,74 @@ def train_embeddings(graph: dict, seed: int) -> tuple[np.ndarray, np.ndarray, li
         poincare.embedding.detach().cpu().numpy().astype(np.float32),
         history,
     )
+
+
+def _prepare_seed(nodes: dict, gd: set, dc: set, cg: set, seed: int) -> tuple[dict, dict, dict, dict]:
+    dc_splits = split_edges(dc, seed, minimum_train_per_group=True)
+    cg_splits = split_edges(cg, seed + 1000)
+    graph = build_graph(
+        nodes,
+        gd,
+        dc,
+        cg,
+        removed_dc=dc - dc_splits["train"],
+        removed_cg=cg - cg_splits["train"],
+    )
+    query_sets = make_queries(gd, dc_splits, cg_splits, seed)
+    return dc_splits, cg_splits, graph, query_sets
+
+
+def tune_learning_rates(nodes: dict, gd: set, dc: set, cg: set) -> dict:
+    """Select one learning rate per geometry using validation MRR only.
+
+    The criterion is the mean of 2-hop and 3-hop validation MRR on the tuning
+    seed. Test queries are never evaluated during selection.
+    """
+    _, _, graph, query_sets = _prepare_seed(nodes, gd, dc, cg, TUNING_SEED)
+    grid_rows: list[dict] = []
+    best = {"euclidean": (-1.0, None), "poincare": (-1.0, None)}
+    for lr in LEARNING_RATE_GRID:
+        euclidean, poincare, history = train_embeddings(
+            graph, TUNING_SEED, euclidean_lr=lr, poincare_lr=lr
+        )
+        for method in ("euclidean", "poincare"):
+            scores = []
+            for split_name in ("2hop_validation", "3hop_validation"):
+                metrics, _ = evaluate_method(
+                    seed=TUNING_SEED,
+                    split_name=split_name,
+                    queries=query_sets[split_name],
+                    method=method,
+                    graph=graph,
+                    euclidean=euclidean,
+                    poincare=poincare,
+                    docs={},
+                    idf={},
+                    nodes=nodes,
+                )
+                scores.append(metrics["mrr"])
+            score = float(np.mean(scores))
+            final_loss = history[-1][f"{method}_loss"]
+            grid_rows.append(
+                {
+                    "geometry": method,
+                    "learning_rate": lr,
+                    "validation_mrr_2hop": scores[0],
+                    "validation_mrr_3hop": scores[1],
+                    "validation_mrr_mean": score,
+                    "final_train_loss": final_loss,
+                }
+            )
+            print(f"tune {method:9s} lr={lr:<5} val MRR={score:.4f} loss={final_loss:.4f}", flush=True)
+            if score > best[method][0]:
+                best[method] = (score, lr)
+    return {
+        "tuning_seed": TUNING_SEED,
+        "criterion": "mean of 2-hop and 3-hop validation MRR",
+        "grid": grid_rows,
+        "euclidean_learning_rate": best["euclidean"][1],
+        "poincare_learning_rate": best["poincare"][1],
+    }
 
 
 def _sample_queries(rows: list[dict], seed: int, label: str) -> list[dict]:
@@ -987,6 +1086,11 @@ def main() -> None:
     validate_relation_counts(gd, dc, cg)
     write_source_docs(snapshot_hash, provenance)
 
+    tuning = tune_learning_rates(nodes, gd, dc, cg)
+    euclidean_lr = tuning["euclidean_learning_rate"]
+    poincare_lr = tuning["poincare_learning_rate"]
+    print(f"Selected learning rates: Euclidean={euclidean_lr}, Poincare={poincare_lr}", flush=True)
+
     all_metrics: list[dict] = []
     all_predictions: list[dict] = []
     all_history: list[dict] = []
@@ -994,22 +1098,14 @@ def main() -> None:
 
     for seed in SEEDS:
         print(f"\n=== Seed {seed} ===")
-        dc_splits = split_edges(dc, seed, minimum_train_per_group=True)
-        cg_splits = split_edges(cg, seed + 1000)
-        graph = build_graph(
-            nodes,
-            gd,
-            dc,
-            cg,
-            removed_dc=dc - dc_splits["train"],
-            removed_cg=cg - cg_splits["train"],
-        )
-        query_sets = make_queries(gd, dc_splits, cg_splits, seed)
+        dc_splits, cg_splits, graph, query_sets = _prepare_seed(nodes, gd, dc, cg, seed)
         write_query_sets(query_sets, seed)
         per_seed_query_counts[str(seed)] = {name: len(rows) for name, rows in query_sets.items()}
 
         docs, idf = build_documents(nodes, graph)
-        euclidean, poincare, history = train_embeddings(graph, seed)
+        euclidean, poincare, history = train_embeddings(
+            graph, seed, euclidean_lr=euclidean_lr, poincare_lr=poincare_lr
+        )
         all_history.extend(history)
         np.savez_compressed(
             RESULTS / f"embeddings_seed{seed}.npz",
@@ -1065,11 +1161,18 @@ def main() -> None:
             "dimension": DIM,
             "epochs": EPOCHS,
             "margin": MARGIN,
-            "learning_rate": LEARNING_RATE,
+            "batch_size": BATCH_SIZE,
+            "euclidean_learning_rate": euclidean_lr,
+            "poincare_learning_rate": poincare_lr,
             "curvature": CURVATURE,
             "negative_sampling": "one deterministic type-matched negative per directed positive edge per epoch, shared across geometries",
-            "optimizer": "Euclidean SGD and Poincare Riemannian SGD; same learning rate and epoch budget",
+            "optimizer": (
+                "mini-batch Euclidean SGD and Poincare Riemannian SGD; identical triplets, "
+                "batch order, batch size and epoch budget; learning rate selected per geometry "
+                "from the same grid on validation MRR of the tuning seed"
+            ),
         },
+        "learning_rate_selection": tuning,
         "query_cap_per_hop_split_seed": QUERY_CAP,
         "query_counts": per_seed_query_counts,
         "leakage_control": (

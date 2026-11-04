@@ -49,3 +49,7 @@ Therefore, today it is accurate to say:
 ## Final completion gate
 
 The retrieval study can be called empirically complete once a clean checkout downloads/loads the frozen Hetionet snapshot, passes the relation-count and leakage checks, completes all five seeds, regenerates query sets and result artifacts, and produces the headline tables directly from those outputs. The paper is complete only after those fresh results replace historical values and the evidence/groundedness claims are checked separately.
+
+## Training correction (November 2026)
+
+The first Hetionet run (one full-batch step per epoch, 24 epochs) was under-trained: loss moved only from 0.4495 to 0.4486 and all learned methods ranked at chance level (random-ranking MRR over 666 compounds is 0.0106). The runner now trains both geometries with identical mini-batches (batch size 256, 60 epochs) and selects each geometry's learning rate from {0.03, 0.1, 0.3, 1, 3} on seed-7 validation MRR only; both selected 0.1. The controlled pilot previously used Adam for Euclidean and full-batch RSGD for Poincare; it now uses matched mini-batch SGD/RSGD with the same settings. All results in `research/results/` and the manuscript in `research/paper/` come from these corrected runs. Headline test MRR (3-hop): Euclidean 0.095, Poincare 0.091; paired differences include zero on every task and metric.

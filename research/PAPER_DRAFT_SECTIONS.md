@@ -1,3 +1,5 @@
+> **Superseded (November 2026).** The current manuscript is `research/paper/manuscript.md` (built to `research/paper/RMF-RAG_manuscript.docx` / `.pdf` by `research/paper/build_manuscript.py`). Results below this note predate the corrected mini-batch training and are kept only for history.
+
 # Paper draft, verified-claim version
 
 ## Working title

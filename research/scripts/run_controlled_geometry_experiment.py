@@ -38,10 +38,15 @@ DATA_PATH = ROOT / "research" / "data" / "disease_drug_kaggle.json"
 OUT_DIR = ROOT / "research" / "results" / "controlled_geometry"
 SEEDS = [7, 17, 29, 43, 101]
 DIM = 16
-EPOCHS = 40
+# The pilot has no validation split, so its optimisation settings are fixed in
+# advance and transferred from the Hetionet benchmark, where they were selected
+# on validation MRR only (both geometries selected lr = 0.1). The pilot test
+# set is never used for tuning.
+EPOCHS = 60
+BATCH_SIZE = 256
 MARGIN = 0.45
-EUCLIDEAN_LR = 0.03
-POINCARE_LR = 0.08
+EUCLIDEAN_LR = 0.1
+POINCARE_LR = 0.1
 CURVATURE = 1.0
 
 STOPWORDS = {
@@ -191,29 +196,42 @@ def train_models(graph: dict, seed: int):
     euclidean = EuclideanRetriever(config)
     set_seed(seed)
     poincare = PoincareRetriever(config)
-    e_opt = torch.optim.Adam(euclidean.parameters(), lr=EUCLIDEAN_LR)
+    # Matched optimisers: plain SGD in Euclidean space and Riemannian SGD on the
+    # Poincare ball, identical mini-batches, batch order and epoch budget.
+    e_opt = torch.optim.SGD(euclidean.parameters(), lr=EUCLIDEAN_LR)
     p_opt = PoincareRSGD(poincare, lr=POINCARE_LR)
 
     history = []
     for epoch in range(EPOCHS):
-        a, p, n = epoch_triplets(graph, seed, epoch)
-        if a.numel() == 0:
+        a_all, p_all, n_all = epoch_triplets(graph, seed, epoch)
+        if a_all.numel() == 0:
             raise RuntimeError("No valid triplets were generated")
 
-        e_opt.zero_grad()
-        e_loss = euclidean.triplet_loss(a, p, n)
-        e_loss.backward()
-        e_opt.step()
+        e_total = p_total = 0.0
+        batches = 0
+        for start in range(0, a_all.numel(), BATCH_SIZE):
+            a = a_all[start:start + BATCH_SIZE]
+            p = p_all[start:start + BATCH_SIZE]
+            n = n_all[start:start + BATCH_SIZE]
 
-        p_opt.zero_grad()
-        p_loss = poincare.triplet_loss(a, p, n)
-        p_loss.backward()
-        p_opt.step()
+            e_opt.zero_grad()
+            e_loss = euclidean.triplet_loss(a, p, n)
+            e_loss.backward()
+            e_opt.step()
+
+            p_opt.zero_grad()
+            p_loss = poincare.triplet_loss(a, p, n)
+            p_loss.backward()
+            p_opt.step()
+
+            e_total += float(e_loss.detach())
+            p_total += float(p_loss.detach())
+            batches += 1
 
         history.append({
             "epoch": epoch + 1,
-            "euclidean_loss": float(e_loss.detach()),
-            "poincare_loss": float(p_loss.detach()),
+            "euclidean_loss": e_total / batches,
+            "poincare_loss": p_total / batches,
             "poincare_max_norm": poincare.max_norm(),
         })
     return euclidean, poincare, history
@@ -322,6 +340,8 @@ def main() -> None:
         "curvature": CURVATURE,
         "euclidean_learning_rate": EUCLIDEAN_LR,
         "poincare_learning_rate": POINCARE_LR,
+        "batch_size": BATCH_SIZE,
+        "optimizer": "mini-batch SGD (Euclidean) and Riemannian SGD (Poincare); identical batches and epochs; settings transferred from Hetionet validation tuning",
         "negative_sampling": "one deterministic type-matched negative per positive edge per epoch; shared across geometries",
         "leakage_control": "one disease-drug pair held out per disease with >=2 drugs; held-out links removed before graph construction",
     }

@@ -8,11 +8,13 @@
     101
   ],
   "dimension": 16,
-  "epochs": 40,
+  "epochs": 60,
   "margin": 0.45,
   "curvature": 1.0,
-  "euclidean_learning_rate": 0.03,
-  "poincare_learning_rate": 0.08,
+  "euclidean_learning_rate": 0.1,
+  "poincare_learning_rate": 0.1,
+  "batch_size": 256,
+  "optimizer": "mini-batch SGD (Euclidean) and Riemannian SGD (Poincare); identical batches and epochs; settings transferred from Hetionet validation tuning",
   "negative_sampling": "one deterministic type-matched negative per positive edge per epoch; shared across geometries",
   "leakage_control": "one disease-drug pair held out per disease with >=2 drugs; held-out links removed before graph construction"
 }
