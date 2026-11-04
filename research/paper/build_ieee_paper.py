@@ -132,8 +132,24 @@ def table_grounding():
     return header, body
 
 
+BASELINES = ROOT / "research" / "results" / "baselines"
+BASELINE_LABELS = {"euclidean": "Euclidean", "poincare": "Poincaré", "transe": "TransE", "murp": "MuRP"}
+
+
+def table_baselines():
+    rows = {(r["config"], r["split"]): r for r in _csv(BASELINES / "summary.csv")}
+    header = ["Model", "3-hop fMRR", "3-hop HHR@1", "2-hop fMRR", "2-hop HHR@1"]
+    body = []
+    for d in (8, 16):
+        for method, label in BASELINE_LABELS.items():
+            a, b = rows[(f"{method}_d{d}", "3hop_test")], rows[(f"{method}_d{d}", "2hop_test")]
+            body.append([f"{label}, d={d}", pm(a, "filtered_mrr"), pm(a, "hhr_at_1"),
+                         pm(b, "filtered_mrr"), pm(b, "hhr_at_1")])
+    return header, body
+
+
 TABLES = {"accuracy": table_accuracy, "sweep": table_sweep, "paired": table_paired,
-          "grounding": table_grounding}
+          "grounding": table_grounding, "baselines": table_baselines}
 
 
 # ------------------------------------------------------------------ layout
@@ -244,11 +260,15 @@ def add_table(doc, number: int, title: str, header: list[str], body: list[list[s
         p = table.rows[0].cells[i].paragraphs[0]
         _fmt(p, WD_ALIGN_PARAGRAPH.CENTER if i else WD_ALIGN_PARAGRAPH.LEFT)
         _run(p, text, 7, bold=True)
-    for row in body:
+    for i, text in enumerate(header):
+        table.rows[0].cells[i].paragraphs[0].paragraph_format.keep_with_next = True
+    for r_index, row in enumerate(body):
         cells = table.add_row().cells
         for i, text in enumerate(row):
             p = cells[i].paragraphs[0]
             _fmt(p, WD_ALIGN_PARAGRAPH.CENTER if i else WD_ALIGN_PARAGRAPH.LEFT)
+            # Keep the whole table in one column: every row but the last stays with the next.
+            p.paragraph_format.keep_with_next = r_index < len(body) - 1
             _run(p, text, 7)
     _fmt(doc.add_paragraph(), after=2)
 
@@ -362,7 +382,8 @@ def build() -> Path:
         else:
             buffer.append(s)
     flush()
-    out = PAPER / "RMF-RAG_IEEE.docx"
+    import sys
+    out = PAPER / (sys.argv[1] if len(sys.argv) > 1 else "RMF-RAG_IEEE.docx")
     doc.save(out)
     return out
 

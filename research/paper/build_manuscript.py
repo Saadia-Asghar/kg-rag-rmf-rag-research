@@ -184,7 +184,26 @@ def table_sweep_paired(split: str) -> tuple[list[str], list[list[str]]]:
     return header, body
 
 
+BASELINES = ROOT / "research" / "results" / "baselines"
+
+
+def table_baselines() -> tuple[list[str], list[list[str]]]:
+    with (BASELINES / "summary.csv").open(encoding="utf-8") as handle:
+        rows = {(r["config"], r["split"]): r for r in csv.DictReader(handle)}
+    labels = {"euclidean": "Euclidean (relation-free)", "poincare": "Poincaré (relation-free)",
+              "transe": "TransE-style (relational)", "murp": "MuRP-style (relational)"}
+    header = ["Model", "d", "3-hop fMRR", "3-hop HHR@1", "2-hop fMRR", "2-hop HHR@1"]
+    body = []
+    for d in (8, 16):
+        for method, label in labels.items():
+            a, b = rows[(f"{method}_d{d}", "3hop_test")], rows[(f"{method}_d{d}", "2hop_test")]
+            body.append([label, str(d), fmt(a, "filtered_mrr"), fmt(a, "hhr_at_1"),
+                         fmt(b, "filtered_mrr"), fmt(b, "hhr_at_1")])
+    return header, body
+
+
 TABLES = {
+    "baselines": table_baselines,
     "sweep_3hop": lambda: table_sweep("3hop_test"),
     "sweep_2hop": lambda: table_sweep("2hop_test"),
     "sweep_paired_3hop": lambda: table_sweep_paired("3hop_test"),

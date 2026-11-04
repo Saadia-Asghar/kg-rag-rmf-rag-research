@@ -108,6 +108,44 @@ def claims() -> list[tuple[str, bool, list[str]]]:
     first = statistics.mean(h["euclidean_loss"] for h in hist if h["epoch"] == 1)
     last = statistics.mean(h["euclidean_loss"] for h in hist if h["epoch"] == max(x["epoch"] for x in hist))
     out.append(("main loss", round(first, 3) == 0.448 and abs(last - 0.335) < 0.005, ["0.448", "0.335"]))
+
+    # Relation-aware baselines and filtered ranking.
+    base_dir = ROOT / "research" / "results" / "baselines"
+    if (base_dir / "summary.csv").exists():
+        bs = {(r["config"], r["split"]): r for r in _csv(base_dir / "summary.csv")}
+        bc = {(r["family"], r["a"], r["split"], r["metric"]): r for r in _csv(base_dir / "comparisons.csv")}
+        rel = [f"{m}_d{d}" for m in ("transe", "murp") for d in (8, 16)]
+        free = [f"{m}_d{d}" for m in ("euclidean", "poincare") for d in (8, 16)]
+
+        def rng(names, split, metric):
+            vals = [g(bs[(n, split)], f"{metric}_mean") for n in names]
+            return f"{min(vals):.3f}–{max(vals):.3f}"
+
+        out.append(("baseline 3-hop filtered MRR ranges", True,
+                    [rng(rel, "3hop_test", "filtered_mrr"), rng(free, "3hop_test", "filtered_mrr")]))
+        out.append(("baseline 3-hop HHR ranges", True,
+                    [rng(rel, "3hop_test", "hhr_at_1"), rng(free, "3hop_test", "hhr_at_1")]))
+        out.append(("baseline 2-hop ranges", True,
+                    [rng(rel, "2hop_test", "filtered_mrr"), rng(free, "2hop_test", "filtered_mrr"),
+                     rng(rel, "2hop_test", "hhr_at_1"), rng(free, "2hop_test", "hhr_at_1")]))
+        eight = [bc[("relational_vs_free_" + ("euclidean" if n.startswith("transe") else "hyperbolic"), n, "3hop_test", m)]
+                 for n in rel for m in ("filtered_mrr", "hhr_at_1")]
+        out.append(("all eight 3-hop relational vs relation-free differences significant",
+                    all(g(r, "p_holm") < 0.01 and max(int(r["positive"]), int(r["negative"])) >= 9 for r in eight), []))
+        geo3 = [bc[("geometry_relational", f"murp_d{d}", "3hop_test", m)] for d in (8, 16) for m in ("hhr_at_1", "filtered_mrr")]
+        out.append(("no significant 3-hop geometry effect within relational family",
+                    all(g(r, "p_holm") >= 0.05 for r in geo3), []))
+        m16 = bc[("geometry_relational", "murp_d16", "2hop_test", "hhr_at_1")]
+        f16 = bc[("geometry_relational", "murp_d16", "2hop_test", "filtered_mrr")]
+        out.append(("MuRP vs TransE 2-hop d16",
+                    g(m16, "p_holm") < 0.001 and int(m16["negative"]) == 10 and g(f16, "p_holm") >= 0.05,
+                    [f"{-100 * g(m16, 'mean_diff'):.1f} points",
+                     f"[{g(m16, 'ci95_low'):.3f}, {g(m16, 'ci95_high'):.3f}]".replace("-", "−"),
+                     f"+{g(f16, 'mean_diff'):.3f}"]))
+        ratios = [g(bs[(n, "2hop_test")], "filtered_mrr_mean") / g(bs[(n, "2hop_test")], "mrr_mean") for n in rel + free]
+        out.append(("filtered raises 2-hop MRR about 2-3x", 1.8 <= min(ratios) and max(ratios) <= 3.0, ["2–3"]))
+        pv_rel = {round(g(bs[(n, "3hop_test")], "pv_hhr_at_1_mean"), 3) for n in rel}
+        out.append(("path verification floor for relational models", pv_rel == {0.026}, []))
     return out
 
 
