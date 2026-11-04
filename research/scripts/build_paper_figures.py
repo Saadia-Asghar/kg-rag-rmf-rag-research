@@ -138,7 +138,92 @@ def main() -> None:
     figure_mrr()
     figure_loss()
     figure_sweep()
+    ieee_sweep_panels("hhr_at_1", "HHR@1 (lower is better)", "ieee_fig_hhr.png")
+    ieee_sweep_panels("mrr", "MRR", "ieee_fig_mrr.png")
+    ieee_pipeline()
     print(f"Wrote figures to {OUT}")
+
+
+# ------------------------------------------------- IEEE column-width figures
+def ieee_sweep_panels(metric: str, ylabel: str, filename: str) -> None:
+    """Two side-by-side panels (3-hop, 2-hop), 3.5 in wide, for one metric."""
+    path = ROOT / "research" / "results" / "hallucination_sweep" / "summary.csv"
+    with path.open(encoding="utf-8") as handle:
+        rows = {(r["config"], r["split"]): r for r in csv.DictReader(handle)}
+    dims = [2, 4, 8, 16]
+    series = [
+        ("Euclidean", "euclidean_d{}", COLORS["euclidean"], "o", "-"),
+        ("Poincaré, c=1", "poincare_d{}_c1", COLORS["poincare"], "s", "-"),
+        ("Poincaré, c=10", "poincare_d{}_c10", "#805ad5", "^", "--"),
+    ]
+    plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"]})
+    fig, axes = plt.subplots(1, 2, figsize=(3.5, 1.85))
+    for ax, (split, title) in zip(axes, (("3hop_test", "3-hop"), ("2hop_test", "2-hop"))):
+        for label, pattern, color, marker, style in series:
+            keys = [(pattern.format(d), split) for d in dims]
+            mean = [float(rows[k][f"{metric}_mean"]) for k in keys]
+            low = [m - float(rows[k][f"{metric}_ci95_low"]) for m, k in zip(mean, keys)]
+            high = [float(rows[k][f"{metric}_ci95_high"]) - m for m, k in zip(mean, keys)]
+            ax.errorbar(dims, mean, yerr=[low, high], label=label, color=color, marker=marker,
+                        linestyle=style, capsize=1.5, linewidth=0.9, markersize=2.5, elinewidth=0.6)
+        if metric == "mrr":
+            ax.axhline(chance_mrr(), color="black", linestyle=":", linewidth=0.7)
+        ax.set_xscale("log", base=2)
+        ax.set_xticks(dims)
+        ax.set_xticklabels([str(d) for d in dims])
+        ax.set_xlabel("Dimension", fontsize=7)
+        ax.set_title(title, fontsize=7.5)
+        ax.tick_params(labelsize=6, length=2)
+        ax.spines[["top", "right"]].set_visible(False)
+    axes[0].set_ylabel(ylabel, fontsize=7)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", ncol=3, fontsize=6, frameon=False,
+               bbox_to_anchor=(0.5, 1.02))
+    fig.tight_layout(rect=(0, 0, 1, 0.9), pad=0.3, w_pad=0.8)
+    fig.savefig(OUT / filename, dpi=600)
+    plt.close(fig)
+    plt.rcParams.update(plt.rcParamsDefault)
+
+
+def ieee_pipeline() -> None:
+    """Schematic of the evaluation pipeline, 3.5 in wide."""
+    from matplotlib.patches import FancyBboxPatch
+
+    plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"]})
+    fig, ax = plt.subplots(figsize=(3.5, 2.55))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 7.3)
+    ax.axis("off")
+
+    def box(x, y, w, h, text, color):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.05,rounding_size=0.15",
+                                    linewidth=0.6, edgecolor="#333333", facecolor=color))
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=6, linespacing=1.15)
+
+    def arrow(x1, y1, x2, y2):
+        ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
+                    arrowprops={"arrowstyle": "-|>", "linewidth": 0.6, "color": "#333333",
+                                "mutation_scale": 6})
+
+    box(0.1, 6.0, 4.6, 1.1, "Hetionet v1.0 (checksum-verified)\nlicence filter: G–D, D–C, G–C", "#edf2f7")
+    box(5.3, 6.0, 4.6, 1.1, "Seeded split of answer edges\nval./test edges removed", "#edf2f7")
+    arrow(4.7, 6.55, 5.3, 6.55)
+    box(0.1, 4.2, 4.6, 1.2, "Euclidean retriever\nSGD", "#dbeafe")
+    box(5.3, 4.2, 4.6, 1.2, "Poincaré retriever (curvature c)\nRiemannian SGD + projection", "#fde2cf")
+    arrow(6.2, 6.0, 2.4, 5.4)
+    arrow(7.6, 6.0, 7.6, 5.4)
+    box(0.1, 2.4, 9.8, 1.2, "Hop-weighted query composition (gene, disease, bridge gene)\n"
+        "rank all 666 compounds by distance", "#f0fff4")
+    arrow(2.4, 4.2, 2.4, 3.6)
+    arrow(7.6, 4.2, 7.6, 3.6)
+    box(0.1, 0.2, 4.6, 1.5, "Accuracy\nRecall@k, MRR\n(vs. random ranking)", "#fefcbf")
+    box(5.3, 0.2, 4.6, 1.5, "Groundedness\nHHR@1, Unsupported@10\n± typed-path verification", "#fed7d7")
+    arrow(2.4, 2.4, 2.4, 1.7)
+    arrow(7.6, 2.4, 7.6, 1.7)
+    fig.tight_layout(pad=0.1)
+    fig.savefig(OUT / "ieee_fig_pipeline.png", dpi=600)
+    plt.close(fig)
+    plt.rcParams.update(plt.rcParamsDefault)
 
 
 if __name__ == "__main__":
