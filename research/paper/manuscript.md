@@ -34,9 +34,9 @@ This paper asks: **under matched, leakage-controlled conditions, does Poincaré 
 
 **Knowledge-graph embeddings and multi-hop queries.** Translational models such as TransE [12] embed entities so that true triples are close. Query-embedding methods such as GQE [13] and Query2box [14] compose embeddings along relational paths to answer multi-hop queries without explicitly traversing them, so their answers need not be supported by an existing path. Large-scale re-evaluations show that training configuration often matters as much as model architecture [15, 16], which motivates our matched-training design.
 
-**Hyperbolic representations.** Real networks can have latent hyperbolic geometry [6], and trees embed with low distortion in the hyperbolic plane [7]. Poincaré embeddings trained with Riemannian SGD [5, 11] were followed by hyperbolic neural networks [8], multi-relational Poincaré embeddings (MuRP) [9], attention-based hyperbolic KG embeddings (AttH) [10] and mixed-curvature spaces [20]. These studies evaluate link-prediction accuracy; Recent hyperbolic RAG systems, HyperbolicRAG [21], HypRAG [22] and HyperRAG [23], report better retrieval or answer quality and cite hallucination as motivation, but, to our knowledge, none measures unsupported multi-hop answers against a Euclidean counterpart trained under matched conditions.
+**Hyperbolic representations.** Real networks can have latent hyperbolic geometry [6], and trees embed with low distortion in the hyperbolic plane [7]. Poincaré embeddings trained with Riemannian SGD [5, 11] were followed by hyperbolic neural networks [8], multi-relational Poincaré embeddings (MuRP) [9], attention-based hyperbolic KG embeddings (AttH) [10] and mixed-curvature spaces [20]. These studies evaluate link-prediction accuracy; Recent hyperbolic RAG systems, HyperbolicRAG [21], HypRAG [22] and HyperRAG [23], report better retrieval or answer quality, and [21], [22] cite hallucination as motivation, but, to our knowledge, none measures unsupported multi-hop answers against a Euclidean counterpart trained under matched conditions.
 
-**Biomedical KGs.** Hetionet integrates 29 public resources into a heterogeneous network of 47,031 nodes and 2,250,197 relationships and was used to prioritise drugs for repurposing [4, 18]. Bonner et al. [17] review biomedical KGs for drug discovery and highlight the licensing and provenance issues that motivate our relation filtering.
+**Biomedical KGs.** Hetionet integrates 29 public resources into a heterogeneous network of 47,031 nodes and 2,250,197 relationships and was used to prioritise drugs for repurposing [4, 18]. Bonner et al. [17] review public datasets for building drug-discovery KGs; we additionally restrict ours to relations whose reuse licence is recorded in Hetionet's edge metadata.
 
 ## 3. Methods
 
@@ -92,7 +92,7 @@ We report Recall@1/5/10 and MRR over all 666 candidates using raw ranking, in wh
 
 ### 3.8 Disease–drug pilot
 
-A small pilot built from 1,000 public disease–drug question–answer records links disease nodes, disease-name token nodes and drug nodes. For every disease with at least two drugs, one pair is held out before graph construction, and evaluation uses the held-out pairs whose drug remains reachable (16–23 queries per seed, about 468 candidate drugs). The pilot has no validation split, so it reuses the main benchmark's validation-selected settings (learning rate 0.1, 60 epochs, batch size 256).
+A small pilot built from 1,000 disease–drug question–answer records from a public Kaggle dataset [24] links disease nodes, disease-name token nodes and drug nodes. For every disease with at least two drugs, one pair is held out before graph construction, and evaluation uses the held-out pairs whose drug remains reachable (16–23 queries per seed, about 468 candidate drugs). The pilot has no validation split, so it reuses the main benchmark's validation-selected settings (learning rate 0.1, 60 epochs, batch size 256).
 
 ### 3.9 Relation-aware baselines (additional analysis)
 
@@ -152,7 +152,7 @@ Table 6. Sweep, 2-hop test: paired differences, Poincaré minus Euclidean of the
 
 ### 4.4 Grounding by typed-path verification
 
-Path verification is far more effective against hop hallucination than any geometry choice. It reduced 3-hop HHR@1 to 0.026 for every configuration and both geometries (Table 3, last column). The remaining 2.6% are queries for which no candidate is path-supported at all. On 2-hop queries it reduced HHR@1 to 0. On 3-hop queries this came at little or no cost in accuracy: in the main benchmark, path verification left MRR unchanged (0.092 versus 0.091; Table 7), and in the sweep it raised MRR for the weak low-dimensional models (for example from 0.035 to 0.077 for Euclidean *d* = 2). On 2-hop queries it *lowered* accuracy (main benchmark MRR 0.019 → 0.010). Because the held-out answer edge is removed, the correct compound is never path-supported, and promoting supported compounds pushes it down. Grounding to known paths therefore prevents hallucination but also prevents the discovery of genuinely new links, a trade-off that any KG-RAG system must make explicitly.
+Because HHR@1 is defined by path support, promoting path-supported compounds removes hop hallucination by construction: it reduced 3-hop HHR@1 to 0.026 for every configuration (Table 3, last column), the share of queries for which no candidate is path-supported at all, and 2-hop HHR@1 to 0. The informative result is therefore its cost in accuracy. On 3-hop queries, MRR changed by −0.013 to +0.015 for every model with d ≥ 4 (main benchmark: 0.092 versus 0.091; Table 7) and rose by 0.04–0.05 for the weak d = 2 models. On 2-hop queries it lowered MRR by 29–62% across all models (main benchmark: 0.019 → 0.010). Because the held-out answer edge is removed, the correct compound is never path-supported, and promoting supported compounds pushes it down. Grounding to known paths therefore prevents hallucination but also prevents the discovery of genuinely new links, a trade-off that any KG-RAG system must make explicitly.
 
 ### 4.5 Component ablations
 
@@ -184,7 +184,7 @@ Table 9. Relation-aware baselines and filtered ranking (test split; mean over te
 
 **Geometry and hop hallucination.** Our results support a qualified version of the original hypothesis. Hyperbolic embeddings did not improve retrieval *accuracy* in any configuration, but at intermediate dimension (4–8) they made the ranking more *grounded*: fewer of the top-ranked compounds were unsupported by a real typed path, with no loss of accuracy. This fits the motivation for hyperbolic geometry. Curved space can keep path-connected neighbourhoods compact with few dimensions, so a query composed from connected entities lands closer to compounds that are reachable from it. The effect is modest, confined to a range of dimensions and, on 3-hop queries, significant in only one of eight pre-registered configurations. It also depends on the training budget: in the 60-epoch main benchmark, 2-hop Poincaré top answers were *less* often path-supported than Euclidean ones (HHR@1 0.170 versus 0.080; Table 7 reports the complementary path-supported rates of 0.830 and 0.920). In the relation-aware family the effect reappeared on 2-hop queries at *d* = 16 but not on 3-hop queries, so where it appears depends on the model. It should therefore be read as evidence that geometry *can* contribute to groundedness, not as a general guarantee.
 
-**Geometry versus grounding.** Explicit typed-path verification reduced hop hallucination far more (to the floor of 2.6% on 3-hop queries) than the best geometry choice (a 14-point reduction). For a KG-RAG system whose main goal is to avoid ungrounded hops, structural grounding should therefore come first, and geometry is a secondary refinement. The two are complementary. Geometry shapes the order *within* supported and unsupported candidates, and it remains the only mechanism available when no supported candidate exists or when new links are sought.
+**Geometry versus grounding.** Enforcing path support eliminates hop hallucination by design, whereas the best geometry choice reduced it by 14 points; the practical question is therefore what grounding costs. For a KG-RAG system whose main goal is to avoid ungrounded hops, structural grounding should therefore come first, and geometry is a secondary refinement. The two are complementary. Geometry shapes the order *within* supported and unsupported candidates, and it remains the only mechanism available when no supported candidate exists or when new links are sought.
 
 **Relation modelling, groundedness and novelty.** The 2-hop task asks for a compound that treats a disease *without* the corresponding edge being observed. Relation-free models rank the disease's training-set compounds, which are also genuine treatments, first; this keeps their 2-hop HHR@1 low but is counted as error under raw ranking, and filtered ranking more than doubles their MRR. Relation-aware models generalise the *treats* relation and propose compounds that are not yet linked to the disease, as the held-out answers are: they are more accurate but return more unsupported answers. HHR@1 therefore exposes a trade-off between groundedness and novelty that accuracy alone hides, and a KG-RAG system should choose deliberately, applying path verification where ungrounded answers are unacceptable. On 3-hop queries, explicit relation modelling improved accuracy and groundedness at the same time, far more than any change of curvature.
 
@@ -227,7 +227,7 @@ Table 11. Main benchmark validation accuracy (mean over five seeds with 95% t-in
 
 [1] P. Lewis, E. Perez, A. Piktus, F. Petroni, V. Karpukhin, N. Goyal, H. Küttler, M. Lewis, W. Yih, T. Rocktäschel, S. Riedel and D. Kiela. Retrieval-augmented generation for knowledge-intensive NLP tasks. In *Advances in Neural Information Processing Systems 33 (NeurIPS)*, 2020.
 
-[2] D. Edge, H. Trinh, N. Cheng, J. Bradley, A. Chao, A. Mody, S. Truitt and J. Larson. From local to global: A graph RAG approach to query-focused summarization. *arXiv:2404.16130*, 2024.
+[2] D. Edge, H. Trinh, N. Cheng, J. Bradley, A. Chao, A. Mody, S. Truitt, D. Metropolitansky, R. O. Ness and J. Larson. From local to global: A graph RAG approach to query-focused summarization. *arXiv:2404.16130*, 2024.
 
 [3] K. Soman, P. W. Rose, J. H. Morris, R. E. Akbas, B. Smith, B. Peetoom, C. Villouta-Reyes, G. Cerono, Y. Shi, A. Rizk-Jackson, S. Israni, C. A. Nelson, S. Huang and S. E. Baranzini. Biomedical knowledge graph-optimized prompt generation for large language models. *Bioinformatics*, 40(9):btae560, 2024.
 
@@ -259,7 +259,7 @@ Table 11. Main benchmark validation accuracy (mean over five seeds with 95% t-in
 
 [17] S. Bonner, I. P. Barrett, C. Ye, R. Swiers, O. Engkvist, A. Bender, C. T. Hoyt and W. L. Hamilton. A review of biomedical datasets relating to drug discovery: a knowledge graph perspective. *Briefings in Bioinformatics*, 23(6):bbac404, 2022.
 
-[18] D. S. Himmelstein et al. Hetionet v1.0 data release. Zenodo, 2017. https://zenodo.org/records/268568
+[18] D. S. Himmelstein. dhimmel/hetionet v1.0.0: Hetionet v1.0 in JSON, TSV, and Neo4j formats. Zenodo, 2017. doi:10.5281/zenodo.268568
 
 [19] X. Bouthillier, P. Delaunay, M. Bronzi, A. Trofimov, B. Nichyporuk, J. Szeto, N. Sepah, E. Raff, K. Madan, V. Voleti, S. E. Kahou, V. Michalski, D. Serdyuk, T. Arbel, C. Pal, G. Varoquaux and P. Vincent. Accounting for variance in machine learning benchmarks. In *Proceedings of Machine Learning and Systems (MLSys)*, 2021.
 
@@ -270,3 +270,5 @@ Table 11. Main benchmark validation accuracy (mean over five seeds with 95% t-in
 [22] H. Madhu, N. Bui, A. Maatouk, L. Tassiulas, S. Krishnaswamy, M. Yang, S. Ganguly, K. Srinivasan and R. Ying. HypRAG: Hyperbolic dense retrieval for retrieval augmented generation. *arXiv:2602.07739*, 2026.
 
 [23] C. Zhou, J. Dong, Y. Xiao, S. Chen, S. Dong, D. Yin, X. Sun, Z. Xu and X. Huang. Query-aware knowledge retrieval via hyperbolic structuring. In *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL)*, pages 21601–21614, 2026.
+
+[24] erolatik. disease-drug-dataset. Kaggle. https://www.kaggle.com/datasets/erolatik/disease-drug-dataset (accessed 1 September 2026).

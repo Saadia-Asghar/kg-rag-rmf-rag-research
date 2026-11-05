@@ -30,9 +30,9 @@ Testing this fairly is difficult. Changing the geometry usually also changes the
 
 *KG embeddings and multi-hop queries.* TransE [12] embeds entities so that true triples are close, and query-embedding methods such as GQE [13] and Query2box [14] compose embeddings along relational paths without traversing them, so their answers need not be path-supported. Re-evaluations show that training configuration often matters as much as architecture [15], [16].
 
-*Hyperbolic representations.* Real networks can have latent hyperbolic geometry [6]. Poincaré embeddings trained with Riemannian SGD [5], [11] were followed by hyperbolic neural networks [8], MuRP [9], AttH [10] and mixed-curvature spaces [20]. These works evaluate link-prediction accuracy. Recent hyperbolic RAG systems, HyperbolicRAG [21], HypRAG [22] and HyperRAG [23], report better retrieval or answer quality and cite hallucination as motivation, but, to our knowledge, none measures unsupported multi-hop answers against a Euclidean counterpart trained under matched conditions.
+*Hyperbolic representations.* Real networks can have latent hyperbolic geometry [6]. Poincaré embeddings trained with Riemannian SGD [5], [11] were followed by hyperbolic neural networks [8], MuRP [9], AttH [10] and mixed-curvature spaces [20]. These works evaluate link-prediction accuracy. Recent hyperbolic RAG systems, HyperbolicRAG [21], HypRAG [22] and HyperRAG [23], report better retrieval or answer quality, and [21], [22] cite hallucination as motivation, but, to our knowledge, none measures unsupported multi-hop answers against a Euclidean counterpart trained under matched conditions.
 
-*Biomedical KGs.* Hetionet integrates 29 public resources into 47,031 nodes and 2,250,197 relationships [4], [18]. Bonner *et al.* [17] review biomedical KGs and highlight the licensing and provenance issues that motivate our relation filtering.
+*Biomedical KGs.* Hetionet integrates 29 public resources into 47,031 nodes and 2,250,197 relationships [4], [18]. Bonner *et al.* [17] review public datasets for building drug-discovery KGs; we additionally restrict ours to relations whose reuse licence is recorded in Hetionet's edge metadata.
 
 ## Methodology
 
@@ -42,7 +42,7 @@ Fig. 1 summarises the evaluation pipeline.
 
 ### Data and Relation Filtering
 
-We use the official Hetionet v1.0 snapshot [18], whose release archive matches the MD5 checksum published on Zenodo; the SHA-256 of the extracted file is recorded with every run. To keep every relation traceable to a reusable source, we retain Gene–Disease *associates* edges from DISEASES (CC BY 4.0; 3,200), Disease–Compound *treats*/*palliates* edges from PharmacotherapyDB (CC0; 1,145) and Gene–Compound *binds* edges from DrugCentral (CC BY 4.0; 823). The graph has 3,039 nodes: 2,240 genes, 133 diseases and 666 compounds.
+We use the official Hetionet v1.0 snapshot [18], whose release archive matches the MD5 checksum published on Zenodo; the SHA-256 of the extracted file is recorded with every run. To keep every relation traceable to a reusable source, we retain only edges whose licence, as recorded in Hetionet's edge metadata, permits reuse: Gene–Disease *associates* edges from DISEASES (CC BY 4.0; 3,200), Disease–Compound *treats*/*palliates* edges from PharmacotherapyDB (CC0; 1,145) and Gene–Compound *binds* edges from DrugCentral (CC BY 4.0; 823). The graph has 3,039 nodes: 2,240 genes, 133 diseases and 666 compounds.
 
 ### Tasks and Leakage Control
 
@@ -100,7 +100,7 @@ Because HHR@1 is defined by path support, promoting supported compounds removes 
 
 ### Ablations and Optimisation Confounds
 
-Hop weighting is the only composition component with a clear effect: removing it lowers 3-hop MRR from 0.091 to 0.070. Geodesic ranking and tangent-space composition change nothing at three decimals, consistent with the main-benchmark embeddings staying within radius 0.29, where the ball is nearly Euclidean. Three confounds would have misled us. A pilot that trained the Euclidean model with Adam and the Poincaré model with full-batch Riemannian SGD showed a spurious Euclidean advantage (MRR 0.107 vs. 0.020) that vanished with matched optimisers (0.074 vs. 0.059). An under-trained configuration (24 full-batch steps; loss 0.4495 → 0.4486) put both geometries at chance level. A single-seed validation comparison favoured Poincaré retrieval by about 30% but did not replicate across seeds.
+Hop weighting is the only composition component with a clear effect: removing it lowers 3-hop MRR from 0.091 to 0.070. Geodesic ranking and tangent-space composition change nothing at three decimals, consistent with the main-benchmark embeddings staying within radius 0.29, where the ball is nearly Euclidean. Three confounds would have misled us. A pilot on 1,000 disease–drug question–answer pairs from a public Kaggle dataset [27], which trained the Euclidean model with Adam and the Poincaré model with full-batch Riemannian SGD showed a spurious Euclidean advantage (MRR 0.107 vs. 0.020) that vanished with matched optimisers (0.074 vs. 0.059). An under-trained configuration (24 full-batch steps; loss 0.4495 → 0.4486) put both geometries at chance level. A single-seed validation comparison favoured Poincaré retrieval by about 30% but did not replicate across seeds.
 
 ## Discussion
 
@@ -156,7 +156,7 @@ The authors thank Prof. Shahabuddin Ansari, Ghulam Ishaq Khan Institute of Engin
 
 [17] S. Bonner *et al.*, “A review of biomedical datasets relating to drug discovery: A knowledge graph perspective,” *Briefings Bioinf.*, vol. 23, no. 6, Art. no. bbac404, 2022.
 
-[18] D. S. Himmelstein *et al.*, “Hetionet v1.0,” Zenodo, 2017. [Online]. Available: https://zenodo.org/records/268568
+[18] D. S. Himmelstein, “dhimmel/hetionet v1.0.0: Hetionet v1.0 in JSON, TSV, and Neo4j formats,” Zenodo, 2017, doi: 10.5281/zenodo.268568.
 
 [19] X. Bouthillier *et al.*, “Accounting for variance in machine learning benchmarks,” in *Proc. Mach. Learn. Syst. (MLSys)*, vol. 3, 2021.
 
@@ -173,3 +173,5 @@ The authors thank Prof. Shahabuddin Ansari, Ghulam Ishaq Khan Institute of Engin
 [25] L. Luo, Y.-F. Li, G. Haffari, and S. Pan, “Reasoning on graphs: Faithful and interpretable large language model reasoning,” in *Proc. Int. Conf. Learn. Represent. (ICLR)*, 2024.
 
 [26] L. Luo, Z. Zhao, G. Haffari, Y.-F. Li, C. Gong, and S. Pan, “Graph-constrained reasoning: Faithful reasoning on knowledge graphs with large language models,” in *Proc. Int. Conf. Mach. Learn. (ICML)*, 2025.
+
+[27] erolatik, “disease-drug-dataset,” Kaggle. [Online]. Available: https://www.kaggle.com/datasets/erolatik/disease-drug-dataset (accessed Sep. 1, 2026).
