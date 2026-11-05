@@ -146,6 +146,26 @@ def claims() -> list[tuple[str, bool, list[str]]]:
         out.append(("filtered raises 2-hop MRR about 2-3x", 1.8 <= min(ratios) and max(ratios) <= 3.0, ["2–3"]))
         pv_rel = {round(g(bs[(n, "3hop_test")], "pv_hhr_at_1_mean"), 3) for n in rel}
         out.append(("path verification floor for relational models", pv_rel == {0.026}, []))
+    # Cost of path verification across every trained configuration.
+    pv_rows = []
+    for name in ("baselines/summary.csv", "hallucination_sweep/summary.csv"):
+        f = ROOT / "research" / "results" / name
+        if f.exists():
+            for r in _csv(f):
+                if r["split"].endswith("test"):
+                    d = int(r["config"].split("_d")[1].split("_")[0])
+                    pv_rows.append((d, r["split"], g(r, "mrr_mean"), g(r, "pv_mrr_mean")))
+    for split in ("2hop_test", "3hop_test"):
+        pv_rows.append((16, split, g(main[(split, "poincare")], "mrr_mean"),
+                        g(main[(split, "poincare_with_path_verification")], "mrr_mean")))
+    d3 = [pv - raw for d, s, raw, pv in pv_rows if s == "3hop_test" and d >= 4]
+    d3_low = [pv - raw for d, s, raw, pv in pv_rows if s == "3hop_test" and d == 2]
+    r2 = [1 - pv / raw for d, s, raw, pv in pv_rows if s == "2hop_test"]
+    out.append(("path verification 3-hop cost (d>=4) and d=2 gain",
+                round(min(d3), 3) == -0.013 and round(max(d3), 3) == 0.015 and 0.035 < min(d3_low) and max(d3_low) < 0.05,
+                ["−0.013 to +0.015", "0.04–0.05"]))
+    out.append(("path verification 2-hop MRR reduction", round(100 * min(r2)) == 29 and round(100 * max(r2)) == 62,
+                ["29–62%"]))
     return out
 
 
