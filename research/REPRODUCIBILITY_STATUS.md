@@ -57,3 +57,7 @@ The first Hetionet run (one full-batch step per epoch, 24 epochs) was under-trai
 ## Pre-registered hop-hallucination sweep (November 2026)
 
 `research/scripts/run_hallucination_geometry_sweep.py` writes `research/results/hallucination_sweep/preregistration.json` before training, then trains Euclidean (d = 2, 4, 8, 16) and Poincare (same d, curvature 1 and 10) retrievers for 150 epochs with per-configuration learning rates selected on seed-7 validation MRR, and evaluates ten seeds. Hop hallucination (HHR@1) is the share of top-1 answers with no exact typed path in the training graph. Primary result: Poincare d = 8, c = 1 lowers 3-hop HHR@1 from 0.694 to 0.553 (Holm p = 0.030, 10/10 seeds) at unchanged MRR; the other seven primary comparisons are not significant. Outputs: tuning.csv, per_seed.csv, summary.csv, comparisons.csv, metadata.json.
+
+## Claim-evidence ledger (November 2026)
+
+Every factual statement in the IEEE manuscript is mapped to its evidence (result files, code, tests, git history or the verified original source) in `research/paper/CLAIM_EVIDENCE.md`. Numbers are re-checked by `research/paper/check_claims.py`; real-data leakage is tested by `research/tests/test_real_data_leakage.py`.
